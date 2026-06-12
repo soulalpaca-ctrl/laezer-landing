@@ -5,18 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="LaEzer Callus Repair - Солонгос гоо сайхны шинэ стандарт. Ургамлын үүдэл эс, 11 төрлийн гиалурон хүчил."
+      content="LaEzer — Шинжлэх ухаанаар батлагдсан K-Beauty. Патентлагдсан Derma-Clera™ үүдэл эс, байгалийн спикуль 5,000ppm, 11 төрлийн гиалурон хүчил. Монголын хуурай уур амьсгалд зориулсан арьсны саад сэргээх шийдэл."
     />
     <meta
       name="keywords"
-      content="LaEzer, Korean skincare, K-beauty, Mongolia, callus repair, plant stem cell, 라에젤"
+      content="LaEzer,라에젤, Korean skincare, K-beauty, Mongolia, Derma-Clera, callus repair, plant stem cell, spicule, vegan"
     />
-    <title>LaEzer Callus Repair - Солонгос гоо сайхны шинэ стандарт</title>
+    <title>LaEzer — Шинжлэх ухаанаар батлагдсан K-Beauty | Монгол</title>
+    <link rel="icon" type="image/png" href="images/logo.png" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Noto+Sans:wght@400;500;600;700&family=Cormorant+Garamond:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
     <link
@@ -25,767 +26,581 @@
     />
   </head>
   <body>
-    <!-- Header / Navigation -->
-    <header class="header">
+    <!-- ===== Header ===== -->
+    <header class="header" id="header">
       <nav class="nav container">
         <div class="nav-brand">
           <img src="images/logo.png" alt="LaEzer" class="brand-logo-img" />
         </div>
-        <ul class="nav-menu">
-          <li><a href="#about">Бүтээгдэхүүн</a></li>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#why">Яагаад LaEzer</a></li>
+          <li><a href="#brand">Брэнд</a></li>
+          <li><a href="#products">Бүтээгдэхүүн</a></li>
           <li><a href="#ingredients">Найрлага</a></li>
-          <li><a href="#results">Үр дүн</a></li>
-          <li><a href="#reviews">Сэтгэгдэл</a></li>
-          <li>
-            <a
-              href="https://laezer.co.kr/product/%EC%84%A4%EB%A7%9E%EC%9D%B4%ED%8A%B9%EA%B0%80%EC%A0%84-%EC%8B%9D%EB%AC%BC%EC%84%B1-%EC%A4%84%EA%B8%B0%EC%84%B8%ED%8F%AC-2%EC%A2%85-%EC%84%B8%ED%8A%B8/56/category/47/display/1/"
-              target="_blank"
-              class="btn-nav"
-              >Одоо худалдаж аваарай</a
-            >
-          </li>
+          <li><a href="#howto">Хэрэглээ</a></li>
+          <li><a href="#contact" class="btn-nav"><i class="fas fa-comment-dots"></i> Захиалах</a></li>
           <li class="lang-switcher-container">
-               <a href="#" class="lang-btn active">
-                  MGL
-              </a>
-              <a href="index_kr.html" class="lang-btn">
-                  KOR
-              </a>
-              <a href="index_jp.html" class="lang-btn">
-                  JPN
-              </a>
+            <a href="#" class="lang-btn active">MGL</a>
+            <a href="index_kr.html" class="lang-btn">KOR</a>
+            <a href="index_jp.html" class="lang-btn">JPN</a>
           </li>
         </ul>
-        <div class="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
+        <div class="hamburger" id="hamburger">
+          <span></span><span></span><span></span>
         </div>
       </nav>
     </header>
 
-    <!-- Brand Banner (New) -->
-    <section class="brand-banner">
-      <div class="banner-content">
-        <!-- Text is embedded in background image -->
-        <span class="visually-hidden">LaEzer - TIMELESS RADIANCE AND BEAUTY</span>
-      </div>
-    </section>
-
-    <!-- Hero Section -->
+    <!-- ===== 1. Hero ===== -->
     <section class="hero">
-      <div class="hero-background"></div>
-      <div class="container hero-content">
-        <div class="hero-text fade-in">
-          <span class="hero-badge">🌿 Солонгосын шилдэг ухаалаг арчилгаа</span>
-          <h1 class="hero-title">
-            Солонгос гоо сайхны<br />
-            <span class="highlight">шинэ стандарт</span>
+      <img src="images/hero_leaf.png" alt="" class="hero-leaf-deco" aria-hidden="true" />
+      <div class="container hero-grid">
+        <div class="hero-text reveal">
+          <span class="hero-badge"><i class="fas fa-flask"></i> Шинжлэх ухаанаар батлагдсан K-Beauty</span>
+          <h1>
+            Монголын арьсыг<br />
+            <span class="highlight">шинжлэх ухаанаар</span> хамгаална
           </h1>
-          <p class="hero-subtitle">
-            Ургамлын үүдэл эс + 11 төрлийн гиалурон хүчил<br />
-            Арьсны саадыг бэхжүүлэх, хуучрахыг удаашруулах
+          <p class="hero-sub">
+            Патентлагдсан үүдэл эс, байгалийн спикуль 5,000ppm, 11 төрлийн гиалурон хүчил.
+            Арьсны саадыг гүнээс нь сэргээдэг Солонгосын дермакосметик.
           </p>
-          <div class="hero-stats">
-            <div class="stat-item">
-              <span class="stat-number">138%</span>
-              <span class="stat-label">Чийгшүүлэх индекс</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-number">7.4%</span>
-              <span class="stat-label">Арьсны бүтэц</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-number">20%</span>
-              <span class="stat-label">Нүх багасгах</span>
-            </div>
+          <div class="hero-usp">
+            <span class="badge gold"><i class="fas fa-certificate"></i> Патентлагдсан найрлага</span>
+            <span class="badge"><i class="fas fa-leaf"></i> Веган гэрчилгээ</span>
+            <span class="badge"><i class="fas fa-microscope"></i> Эмнэлзүйн туршилт</span>
           </div>
           <div class="hero-cta">
-            <a href="#video" class="btn btn-secondary">
-              <i class="fas fa-play-circle"></i> Видео үзэх
-            </a>
+            <a href="#contact" class="btn btn-primary btn-lg"><i class="fas fa-comment-dots"></i> Монголд захиалах</a>
+            <a href="#products" class="btn btn-ghost btn-lg"><i class="fas fa-box-open"></i> Бүтээгдэхүүн үзэх</a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat-item"><span class="stat-number">+138%</span><span class="stat-label">Чийгшүүлэлт</span></div>
+            <div class="stat-item"><span class="stat-number">5,000<small style="font-size:.6em">ppm</small></span><span class="stat-label">Байгалийн спикуль</span></div>
+            <div class="stat-item"><span class="stat-number">11</span><span class="stat-label">Гиалурон хүчил</span></div>
           </div>
         </div>
-        <div class="hero-image slide-in-right">
-          <img
-            src="images/hero-main.jpg"
-            alt="LaEzer Callus Repair Амп ба Крем - Солонгос арьс арчилгаа"
-            loading="eager"
-          />
-          <div class="product-badge">
-            <i class="fas fa-leaf"></i> 100% Ургамлын гаралтай
+        <div class="hero-visual reveal d1">
+          <img src="images/model-portrait.jpg" alt="LaEzer арьс арчилгааны бүтээгдэхүүн ба загвар" loading="eager" />
+          <div class="hero-float-badge">
+            <span class="ico"><i class="fas fa-seedling"></i></span>
+            <span>100% ургамлын гаралтай<small>Derma-Clera™ патент технологи</small></span>
           </div>
         </div>
       </div>
-      <div class="scroll-indicator">
-        <span>Scroll</span>
-        <div class="scroll-line"></div>
-      </div>
+      <div class="scroll-cue"><span>Доош гүйлгэх</span><div class="line"></div></div>
     </section>
 
-    <!-- Video Section -->
-    <section id="video" class="video-section">
-      <div class="container">
-        <div class="section-header fade-in">
-          <span class="section-badge"
-            >📺 Солонгосын алдартай хүмүүсийн тойм</span
-          >
-          <h2 class="section-title">Солонгосын телевизэд нэвтэрсэн</h2>
-          <p class="section-subtitle">
-            Жүжигчин Пак Ха Сон зэрэг Солонгосын алдартай хүмүүсийн үнэнч санал
+    <!-- ===== 2. WHY (Mongolia empathy) ===== -->
+    <section class="why" id="why">
+      <div class="container why-grid">
+        <div class="why-content reveal">
+          <span class="eyebrow">Яагаад LaEzer гэж?</span>
+          <h2>-40°C-т таны арьс<br /><em>үргэлж хуурайшдаг</em> жинхэнэ шалтгаан</h2>
+          <p>
+            Монголын эх газрын эрс тэс уур амьсгал — өвлийн -40°C-аас зуны +30°C хүртэлх
+            хэмийн зөрүү — арьсны хамгаалалтын саадыг өдөр бүр сулруулдаг.
           </p>
-        </div>
-        <div class="video-container fade-in">
-          <div class="video-wrapper">
-            <iframe
-              src="https://www.youtube.com/embed/kkYFzxSf-iE?rel=0&cc_load_policy=1&cc_lang_pref=mn"
-              title="LaEzer Video"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-              loading="lazy"
-            >
-            </iframe>
+          <p>
+            Гаднаас чийг алдагдаж, дотроос нь хуурайшсан арьс улам мэдрэмтгий болж,
+            нарийн үрчлээ, нүх, барзгар байдал үүсдэг. Энэ бол гадаргуун дээр түрхдэг
+            энгийн чийгшүүлэгчээр шийдэгддэггүй, <strong style="color:#fff">арьсны саадны асуудал</strong> юм.
+          </p>
+          <div class="why-points">
+            <div class="why-point">
+              <i class="fas fa-temperature-low"></i>
+              <div><b>Эрс тэс хэмийн зөрүү</b><span>70°C-ийн улирлын хэлбэлзэл арьсны саадыг тасралтгүй ачаалдаг</span></div>
+            </div>
+            <div class="why-point">
+              <i class="fas fa-wind"></i>
+              <div><b>Хуурай эх газрын агаар</b><span>Чийгшил багатай орчинд арьс дотроосоо ус алддаг</span></div>
+            </div>
+            <div class="why-point">
+              <i class="fas fa-shield-halved"></i>
+              <div><b>Сулирсан арьсны саад</b><span>Гаднын өдөөгчөөс хамгаалах чадвар буурч, мэдрэг болдог</span></div>
+            </div>
           </div>
-          <div class="video-highlights">
-            <div class="editorial-review">
-              <div class="review-content">
-                <p class="review-quote">
-                  "Нэг удаа л хэрэглэсэн ч шууд мэдрэгдсэн.<br>
-                  Дотроос нь чийглэх мэдрэмж гайхалтай!"
-                </p>
-                <div class="review-divider"></div>
-                <span class="review-author">ACTRESS. PARK HA-SUN</span>
-                <span class="review-role">Жүжигчин Пак Ха Сон</span>
-              </div>
+        </div>
+        <div class="why-visual reveal d1">
+          <img src="images/model-cica.jpg" alt="LaEzer Сика спикуль амп" />
+          <div class="why-temp"><i class="fas fa-snowflake"></i> −40°C ~ +30°C</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 3. Brand Story ===== -->
+    <section class="brand bg-cream" id="brand">
+      <div class="container brand-grid">
+        <div class="brand-visual reveal">
+          <img src="images/model-trio.jpg" alt="LaEzer 3 шатлалт арьсны саад сэргээх шийдэл" />
+        </div>
+        <div class="brand-text reveal d1">
+          <span class="eyebrow">LaEzer гэж хэн бэ?</span>
+          <p class="brand-quote">
+            LaEzer бол <span class="hl">тайлбарладаг брэнд</span> —
+            яагаад энэ найрлага вэ, ямар зарчмаар ажилладаг вэ, хаана батлагдсан бэ.
+          </p>
+          <p>
+            «Шинжлэх ухаанаар батлагдсан K-Beauty, дэлхийн арьсны саадыг хамгаална» —
+            энэхүү алсын хараан дор (주)에젤 нь патентлагдсан Derma-Clera™ эдельвейс
+            үүдэл эсийн технологид суурилсан өндөр үр дүнтэй арьс арчилгааг бүтээдэг.
+          </p>
+          <p>
+            Бид хурдан гайхамшгийг амладаггүй. Арьсны өөрийн сэргэх хэмнэлийг хүндэтгэн,
+            өдөр бүр хуримтлагддаг <strong>Slow Aging</strong> гүн ухааныг баримталдаг.
+          </p>
+          <div class="brand-pillars">
+            <div class="brand-pillar"><i class="fas fa-certificate"></i><b>Патент</b><span>Derma-Clera™ 2 патент</span></div>
+            <div class="brand-pillar"><i class="fas fa-leaf"></i><b>Веган</b><span>Бүх бүтээгдэхүүн</span></div>
+            <div class="brand-pillar"><i class="fas fa-vial-circle-check"></i><b>Эмнэлзүй</b><span>IRB баталгаажсан</span></div>
+          </div>
+          <div class="ceo-sign">
+            <div>
+              <div class="ceo-name">Жон Хён Жон (정현정)</div>
+              <div class="ceo-role">(주)에젤 Гүйцэтгэх захирал · Үүсгэн байгуулагч</div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Clinical Results Section -->
-    <section id="results" class="results-section">
+    <!-- ===== 4. Technology (3 USP) ===== -->
+    <section class="tech" id="tech">
       <div class="container">
-        <div class="section-header fade-in">
-          <span class="section-badge">🔬 Клиник туршилт</span>
-          <h2 class="section-title">Нэг удаа хэрэглэхэд гарах үр дүн</h2>
-          <p class="section-subtitle">Эмнэлзүйн туршилтаар батлагдсан</p>
+        <div class="section-head reveal">
+          <span class="eyebrow center">Гол технологи</span>
+          <h2 class="section-title">LaEzer-ийг онцгой болгодог <span class="title-accent">3 хүч</span></h2>
+          <p class="section-sub">Зүгээр нэг найрлага биш — патент, шинжлэх ухаан, өндөр агууламжаар батлагдсан ялгаа</p>
         </div>
-        <div class="results-grid">
-          <div class="result-card fade-in">
-            <div class="result-icon">
-              <i class="fas fa-tint"></i>
-            </div>
-            <div class="result-number">
-              <span class="counter" data-target="138">0</span>
-              <span class="result-unit">%</span>
-            </div>
-            <h3 class="result-title">Чийгшүүлэх индекс</h3>
-            <p class="result-description">Арьсны чийг нэмэгдэх</p>
+        <div class="tech-grid">
+          <div class="tech-card gold reveal">
+            <span class="tech-num">01</span>
+            <div class="tech-icon"><i class="fas fa-award"></i></div>
+            <h3>Derma-Clera™ патент</h3>
+            <p>Эдельвейс ургамлын үүдэл эсийн ханд. Энгийн ургамлын хандаас 3 дахин өндөр
+              антиоксидант идэвхтэй, арьсны саадыг бэхжүүлж тайвшруулна.</p>
+            <span class="tech-meta"><i class="fas fa-shield-halved"></i> Патент №10-1768870</span>
           </div>
-          <div class="result-card fade-in">
-            <div class="result-icon">
-              <i class="fas fa-gem"></i>
-            </div>
-            <div class="result-number">
-              <span class="counter" data-target="7.4">0</span>
-              <span class="result-unit">%</span>
-            </div>
-            <h3 class="result-title">Арьсны бүтэц</h3>
-            <p class="result-description">Гөлгөр арьс</p>
+          <div class="tech-card reveal d1">
+            <span class="tech-num">02</span>
+            <div class="tech-icon"><i class="fas fa-bahai"></i></div>
+            <h3>Байгалийн спикуль 5,000ppm</h3>
+            <p>Далайн хөвөнгийн байгалийн микро-зүү. Арьсан дээр түр зуурын микро-суваг
+              үүсгэж, үр дүнтэй найрлагыг гүн рүү дамжуулна.</p>
+            <span class="tech-meta"><i class="fas fa-arrow-down-long"></i> Шингээлт 30 дахин</span>
           </div>
-          <div class="result-card fade-in">
-            <div class="result-icon">
-              <i class="fas fa-compress"></i>
-            </div>
-            <div class="result-number">
-              <span class="counter" data-target="20">0</span>
-              <span class="result-unit">%</span>
-            </div>
-            <h3 class="result-title">Нүх багасгах</h3>
-            <p class="result-description">Харагдах байдал сайжрах</p>
+          <div class="tech-card reveal d2">
+            <span class="tech-num">03</span>
+            <div class="tech-icon"><i class="fas fa-droplet"></i></div>
+            <h3>11 төрлийн гиалурон хүчил</h3>
+            <p>Молекул хэмжээ ялгаатай 11 төрлийн гиалурон хүчил арьсны өөр өөр давхаргад
+              нэвтэрч, олон давхар гүн чийгшлийг удаан хадгална.</p>
+            <span class="tech-meta"><i class="fas fa-layer-group"></i> Олон давхар чийгшил</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Product Section -->
-    <section id="about" class="product-section">
+    <!-- ===== 5. 3-Step Solution ===== -->
+    <section class="solution bg-mist" id="solution">
       <div class="container">
-        <div class="section-header fade-in">
-          <span class="section-badge">✨ Бүтээгдэхүүний танилцуулга</span>
-          <h2 class="section-title">Арьс арчилгааны 3 алхам</h2>
-          <p class="section-subtitle">Дотроос нь дүүргэж, гаднаас нь хамгаалах</p>
+        <div class="section-head reveal">
+          <span class="eyebrow center">3 шатлалт шийдэл</span>
+          <h2 class="section-title">Дүүргэж · Битүүмжилж · <span class="title-accent">Бэхжүүлнэ</span></h2>
+          <p class="section-sub">Арьсны саадыг сэргээх LaEzer-ийн энгийн боловч шинжлэх ухаанч 3 алхам</p>
+        </div>
+        <div class="steps-flow">
+          <div class="step-flow-card reveal">
+            <div class="step-flow-num">1</div>
+            <span class="step-verb">Нээх</span>
+            <h3>Шингээлтийн зам</h3>
+            <p>Сика спикуль амп микро-суваг үүсгэж, дараагийн найрлагыг гүн рүү хүлээн авахад бэлтгэнэ.</p>
+            <i class="fas fa-chevron-right step-arrow"></i>
+          </div>
+          <div class="step-flow-card reveal d1">
+            <div class="step-flow-num">2</div>
+            <span class="step-verb">Дүүргэх</span>
+            <h3>Гүний чийг & коллаген</h3>
+            <p>Каллус рипэйр амп эдельвейс үүдэл эс, гиалурон хүчлээр арьсыг дотроос нь дүүргэнэ.</p>
+            <i class="fas fa-chevron-right step-arrow"></i>
+          </div>
+          <div class="step-flow-card reveal d2">
+            <div class="step-flow-num">3</div>
+            <span class="step-verb">Битүүмжлэх</span>
+            <h3>Саадыг хамгаалах</h3>
+            <p>Каллус рипэйр крем чийгийг түгжиж, арьсны саадыг давхарлан бүрхэж бэхжүүлнэ.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 6. Products ===== -->
+    <section class="products" id="products">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow center">Бүтээгдэхүүн</span>
+          <h2 class="section-title">3 шатлалт арьсны саад <span class="title-accent">сэргээх иж бүрдэл</span></h2>
+          <p class="section-sub">Бүх бүтээгдэхүүн веган гэрчилгээтэй, cGMP + ISO 22716 үйлдвэрт үйлдвэрлэгдсэн</p>
         </div>
         <div class="products-grid">
-          <!-- STEP 01: CICA Ampoule -->
-          <div class="product-card fade-in">
-            <div class="product-image">
-              <img
-                src="images/ezer03.jpg"
-                alt="LaEzer CICA Capsule Spicule Ampoule"
-                loading="lazy"
-              />
-              <div class="product-badge-step">STEP 01</div>
+          <!-- STEP 01 — CICA Spicule Ampoule -->
+          <div class="product-card reveal">
+            <div class="product-media">
+              <span class="product-step-tag">STEP 01 · НЭЭХ</span>
+              <img src="images/products/LZ-001_cica-ampoule.png" alt="LaEzer CICA Capsule Spicule Ampoule" loading="lazy" />
             </div>
-            <div class="product-info" style="text-align: center;">
-               <span class="product-step-title">Тайвшруулж, шингээх эхлэл</span>
-              <h3 class="product-name" style="margin-bottom: 10px;">
-                CICA Capsule Spicule Амп<br />
-                <span class="product-name-mn">CICA Capsule Spicule Ampoule</span>
-              </h3>
-            </div>
-          </div>
-
-          <!-- STEP 02: Repair Ampoule -->
-          <div class="product-card fade-in">
-            <div class="product-image">
-              <img
-                src="images/ezer01.jpg"
-                alt="LaEzer Callus Repair Амп"
-                loading="lazy"
-              />
-              <div class="product-badge-step">STEP 02</div>
-            </div>
-            <div class="product-info" style="text-align: center;">
-              <span class="product-step-title">Гүнээс дүүргэх эрчимтэй арчилгаа</span>
-              <h3 class="product-name" style="margin-bottom: 10px;">
-                Callus Repair Амп<br />
-                <span class="product-name-mn">Callus Repair Ampoule</span>
-              </h3>
+            <div class="product-body">
+              <span class="product-role">Шингээлтийн замыг нээх</span>
+              <h3 class="product-name">Сика Капсул Спикуль Амп</h3>
+              <span class="product-name-en">CICA Capsule Spicule Ampoule · 30ml</span>
+              <p class="product-desc">Байгалийн спикуль 5,000ppm микро-суваг үүсгэж шингээлтийг нэмэгдүүлнэ.
+                CICA найрлага арьсыг тайвшруулж, сэргээнэ.</p>
+              <div class="product-ingredients">
+                <span>Спикуль 5,000ppm</span><span>CICA-TECA</span><span>Derma-Clera™</span>
+              </div>
+              <div class="product-foot">
+                <div class="product-price">
+                  <span class="vol">Солонгосын албан үнэ · 30ml</span>
+                  <span class="won">₩43,000</span>
+                </div>
+                <a href="#contact" class="btn btn-primary" style="padding:11px 18px;font-size:.9rem">Захиалах</a>
+              </div>
             </div>
           </div>
 
-          <!-- STEP 03: Repair Cream -->
-          <div class="product-card fade-in">
-            <div class="product-image">
-              <img
-                src="images/ezer02.jpg"
-                alt="LaEzer Callus Repair Крем"
-                loading="lazy"
-              />
-              <div class="product-badge-step">STEP 03</div>
+          <!-- STEP 02 — Callus Repair Ampoule -->
+          <div class="product-card reveal d1">
+            <div class="product-media">
+              <span class="product-step-tag">STEP 02 · ДҮҮРГЭХ</span>
+              <img src="images/products/LZ-002_peptide-ampoule.png" alt="LaEzer Callus Repair Ampoule" loading="lazy" />
             </div>
-            <div class="product-info" style="text-align: center;">
-              <span class="product-step-title">Арьсны саад бэхжүүлэх төгсгөл</span>
-              <h3 class="product-name" style="margin-bottom: 10px;">
-                Callus Repair Крем<br />
-                <span class="product-name-mn">Callus Repair Cream</span>
-              </h3>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Premium Showcase Section -->
-    <section class="premium-showcase">
-      <div class="container">
-        <div class="premium-grid">
-          <div class="premium-image slide-in-left">
-            <img
-              src="images/premium-duo.jpg"
-              alt="LaEzer Premium Duo"
-              loading="lazy"
-            />
-          </div>
-          <div class="premium-content slide-in-right">
-            <span class="section-badge">✨ Premium Experience</span>
-            <h2 class="section-title">The Perfect Synergy</h2>
-            <p class="section-text">
-              Арьсны гүнээс чийгшүүлж, гаднаас нь хамгаалах төгс хослол.
-              Ампын хурдан шингэх чадвар, кремийн удаан хугацааны чийгшил.
-              Таны арьсанд өгөх хамгийн нандин бэлэг.
-            </p>
-            <ul class="feature-list" style="list-style: none; padding: 0; margin-bottom: 30px;">
-              <li style="margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
-                <i class="fas fa-check-circle" style="color: var(--primary-gold);"></i>
-                <span>Давхар чийгшүүлэх эффект</span>
-              </li>
-              <li style="margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
-                <i class="fas fa-check-circle" style="color: var(--primary-gold);"></i>
-                <span>Арьсны саадыг иж бүрэн бэхжүүлэх</span>
-              </li>
-            </ul>
-
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Ingredients Section -->
-    <section id="ingredients" class="ingredients-section">
-      <div class="container">
-        <div class="section-header fade-in">
-          <span class="section-badge">🌿 Найрлага</span>
-          <h2 class="section-title">Зөвхөн сайн найрлага</h2>
-          <p class="section-subtitle">Эрүүл мэнд, арьсанд найдвартай</p>
-        </div>
-        <div class="ingredients-grid">
-          <div class="ingredient-card fade-in">
-            <div class="ingredient-icon">
-              <!-- <i class="fas fa-seedling"></i> -->
-               <img src="images/ing_edelweiss.png" alt="Edelweiss" class="icon-replacement-img">
-            </div>
-            <h3 class="ingredient-name">Ургамлын үүдэл эс</h3>
-            <p class="ingredient-description">
-              Эдельвейс ургамлын ханд. Витамин С-ээс 2 дахин хүчтэй
-              антиоксидант. Арьсны уян хатан байдал, гэрэлтсэн байдал.
-            </p>
-            <div class="ingredient-percentage">
-              <span>9 төрлийн пептид</span>
+            <div class="product-body">
+              <span class="product-role">Гүнээс чийгээр дүүргэх</span>
+              <h3 class="product-name">Каллус Рипэйр Амп</h3>
+              <span class="product-name-en">Callus Repair Ampoule · 30ml</span>
+              <p class="product-desc">Патентлагдсан эдельвейс үүдэл эс, 9 пептид, 11 гиалурон хүчил арьсыг
+                гүнээс нь чийгшүүлж, коллаген үүсэхэд тусална.</p>
+              <div class="product-ingredients">
+                <span>Эдельвейс үүдэл эс</span><span>9 пептид</span><span>11 гиалурон</span>
+              </div>
+              <div class="product-foot">
+                <div class="product-price">
+                  <span class="vol">Солонгосын албан үнэ · 30ml</span>
+                  <span class="won">₩42,000</span>
+                </div>
+                <a href="#contact" class="btn btn-primary" style="padding:11px 18px;font-size:.9rem">Захиалах</a>
+              </div>
             </div>
           </div>
 
-          <div class="ingredient-card fade-in">
-            <div class="ingredient-icon">
-              <!-- <i class="fas fa-droplet"></i> -->
-              <img src="images/ing_hyaluronic.png" alt="Hyaluronic" class="icon-replacement-img">
+          <!-- STEP 03 — Callus Repair Cream -->
+          <div class="product-card reveal d2">
+            <div class="product-media">
+              <span class="product-step-tag">STEP 03 · БИТҮҮМЖЛЭХ</span>
+              <img src="images/products/LZ-003_callus-cream.png" alt="LaEzer Callus Repair Cream" loading="lazy" />
             </div>
-            <h3 class="ingredient-name">11 төрлийн гиалурон хүчил</h3>
-            <p class="ingredient-description">
-              Гүн чийгшил ба чийгийг хадгалах. Арьсны гүнд нэвтэрч удаан
-              хугацаанд чийгшүүлнэ.
-            </p>
-            <div class="ingredient-percentage">
-              <span>138% чийгшүүлэх</span>
-            </div>
-          </div>
-
-          <div class="ingredient-card fade-in">
-            <div class="ingredient-icon">
-               <!-- <i class="fas fa-certificate"></i> -->
-              <img src="images/ing_dermaclera.png" alt="DermaClera" class="icon-replacement-img">
-            </div>
-            <h3 class="ingredient-name">DermaClera (патент)</h3>
-            <p class="ingredient-description">
-              Цагаан бадамлянхуа ургамлын ханд. Арьсны саадыг бэхжүүлж,
-              тайвшруулах нөлөө үзүүлнэ.
-            </p>
-            <div class="ingredient-percentage">
-              <span>Патентын технологи</span>
-            </div>
-          </div>
-
-          <div class="ingredient-card fade-in">
-            <div class="ingredient-icon">
-              <!-- <i class="fas fa-spa"></i> -->
-              <img src="images/ing_cica.png" alt="Cica" class="icon-replacement-img">
-            </div>
-            <h3 class="ingredient-name">Тайвшруулах найрлага</h3>
-            <p class="ingredient-description">
-              Центелла азиатика (тигрийн өвс), пантенол, алантоин. Мэдрэмтгий
-              арьсыг тайвшруулна.
-            </p>
-            <div class="ingredient-percentage">
-              <span>Мэдрэмтгий арьс OK</span>
+            <div class="product-body">
+              <span class="product-role">Битүүмжилж, бэхжүүлэх</span>
+              <h3 class="product-name">Каллус Рипэйр Крем</h3>
+              <span class="product-name-en">Callus Repair Cream · 50ml</span>
+              <p class="product-desc">Ниацинамид, церамид арьсны саадыг давхарлан бүрхэж, чийгийг түгжинэ.
+                Амп дараах төгсгөлийн алхам, шөнийн арчилгааг гүйцээнэ.</p>
+              <div class="product-ingredients">
+                <span>Ниацинамид</span><span>Церамид</span><span>Эдельвейс үүдэл эс</span>
+              </div>
+              <div class="product-foot">
+                <div class="product-price">
+                  <span class="vol">Солонгосын албан үнэ · 50ml</span>
+                  <span class="won">₩53,000</span>
+                </div>
+                <a href="#contact" class="btn btn-primary" style="padding:11px 18px;font-size:.9rem">Захиалах</a>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- How to Use Section -->
-    <section class="howto-section">
+    <!-- ===== 7. Clinical Results ===== -->
+    <section class="results bg-ivory" id="results">
       <div class="container">
-        <div class="section-header fade-in">
-          <span class="section-badge">📖 Хэрэглэх арга</span>
-          <h2 class="section-title">Үр дүнг нэмэгдүүлэх хэрэглээний арга</h2>
-          <p class="section-subtitle">
-            Амп + Крем хамтдаа хэрэглэснээр хамгийн сайн үр дүнд хүрнэ
-          </p>
+        <div class="section-head reveal">
+          <span class="eyebrow center">Эмнэлзүйн туршилт</span>
+          <h2 class="section-title">Хүн дээр <span class="title-accent">батлагдсан үр дүн</span></h2>
+          <p class="section-sub">Гуравдагч этгээдийн шинжилгээний байгууллага, IRB зөвшөөрөлтэй хүний биед хэрэглэх туршилт</p>
+        </div>
+        <div class="results-grid">
+          <div class="result-card reveal">
+            <div class="result-icon"><i class="fas fa-tint"></i></div>
+            <div class="result-number"><span class="sign">+</span><span class="counter" data-target="138">0</span>%</div>
+            <h3 class="result-title">Чийгшүүлэлт</h3>
+            <p class="result-desc">Хэрэглэснээс 8 цагийн дараа</p>
+          </div>
+          <div class="result-card reveal d1">
+            <div class="result-icon"><i class="fas fa-gem"></i></div>
+            <div class="result-number"><span class="sign">+</span><span class="counter" data-target="7.4">0</span>%</div>
+            <h3 class="result-title">Арьсны бүтэц</h3>
+            <p class="result-desc">Гөлгөр, тэгш арьс</p>
+          </div>
+          <div class="result-card reveal d2">
+            <div class="result-icon"><i class="fas fa-compress"></i></div>
+            <div class="result-number"><span class="sign">−</span><span class="counter" data-target="20">0</span>%</div>
+            <h3 class="result-title">Нүх багасгах</h3>
+            <p class="result-desc">4 долоо хоногийн дараа</p>
+          </div>
+        </div>
+        <p class="results-note">* (주)에젤 хүний биед хэрэглэх туршилтын тайлан (IRB зөвшөөрөл, 2025.06)</p>
+      </div>
+    </section>
+
+    <!-- ===== 8. Ingredients ===== -->
+    <section class="ingredients" id="ingredients">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow center">Найрлага</span>
+          <h2 class="section-title">Зөвхөн <span class="title-accent">найдвартай найрлага</span></h2>
+          <p class="section-sub">Арьсанд эелдэг, ургамлын гаралтай, шинжлэх ухаанаар сонгогдсон цөм найрлага</p>
+        </div>
+        <div class="ing-grid">
+          <div class="ing-card reveal">
+            <div class="ing-icon"><img src="images/ing_edelweiss.png" alt="Эдельвейс" /></div>
+            <h3>Ургамлын үүдэл эс</h3>
+            <p>Эдельвейс ургамлын ханд. Витамин С-ээс 2 дахин хүчтэй антиоксидант идэвх.</p>
+            <span class="ing-tag">9 төрлийн пептид</span>
+          </div>
+          <div class="ing-card reveal d1">
+            <div class="ing-icon"><img src="images/ing_hyaluronic.png" alt="Гиалурон" /></div>
+            <h3>11 гиалурон хүчил</h3>
+            <p>Олон давхар гүн чийгшил. Арьсны гүнд нэвтэрч чийгийг удаан хадгална.</p>
+            <span class="ing-tag">+138% чийгшил</span>
+          </div>
+          <div class="ing-card reveal d2">
+            <div class="ing-icon"><img src="images/ing_dermaclera.png" alt="Derma-Clera" /></div>
+            <h3>Derma-Clera™ (патент)</h3>
+            <p>Цагаан бадамлянхуа ургамлын ханд. Арьсны саадыг бэхжүүлж тайвшруулна.</p>
+            <span class="ing-tag">Патент технологи</span>
+          </div>
+          <div class="ing-card reveal d3">
+            <div class="ing-icon"><img src="images/ing_cica.png" alt="CICA" /></div>
+            <h3>Тайвшруулах найрлага</h3>
+            <p>Центелла азиатика, пантенол, аллантоин. Мэдрэмтгий арьсыг намжаана.</p>
+            <span class="ing-tag">Мэдрэмтгий арьс OK</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 9. How to Use (AM/PM routine) ===== -->
+    <section class="howto bg-cream" id="howto">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow center">Хэрэглэх арга</span>
+          <h2 class="section-title">Өглөө · оройн <span class="title-accent">арчилгааны хэмнэл</span></h2>
+          <p class="section-sub">Амп + крем хослуулан хэрэглэснээр хамгийн сайн үр дүнд хүрнэ</p>
         </div>
         <div class="howto-grid">
-          <div class="howto-step fade-in">
-            <div class="step-number">01</div>
-            <div class="step-icon">
-              <i class="fas fa-hand-sparkles"></i>
+          <div class="routine-card routine-am reveal">
+            <div class="routine-head">
+              <span class="ico"><i class="fas fa-sun"></i></span>
+              <div><h3>Өглөөний арчилгаа</h3><small>Хөнгөн, шингэц сайтай</small></div>
             </div>
-            <h3 class="step-title">Цэвэрлэж, тонер хэрэглэх</h3>
-            <p class="step-description">
-              Нүүрээ сайтар цэвэрлэж, тонероор арьсыг бэлтгэнэ.
-            </p>
+            <div class="routine-steps">
+              <div class="routine-step"><span class="n">1</span><div><b>Цэвэрлэж, тонер</b><p>Нүүрээ цэвэрлэж, тонероор арьсыг бэлтгэнэ.</p></div></div>
+              <div class="routine-step"><span class="n">2</span><div><b>Сика спикуль амп</b><p>Шингээлтийн замыг нээж, арьсыг тайвшруулна.</p></div></div>
+              <div class="routine-step"><span class="n">3</span><div><b>Каллус амп</b><p>Гүний чийг өгнө. Хурдан шингэж, гэрэлтэл өгнө.</p></div></div>
+              <div class="routine-step"><span class="n">4</span><div><b>Крем (хөнгөн)</b><p>Чийгийг түгжинэ. Өдрийн нар хамгаалалтаар гүйцээнэ.</p></div></div>
+            </div>
+            <div class="routine-tip"><i class="fas fa-lightbulb"></i><span>Өглөө: бага хэмжээгээр түрхэж, шингэсний дараа нар хамгаалалт хэрэглэнэ.</span></div>
           </div>
 
-          <div class="howto-step fade-in">
-            <div class="step-number">02</div>
-            <div class="step-icon">
-               <!-- <i class="fas fa-flask"></i> -->
-               <img src="images/howto_ampoule.png" alt="Ampoule Application" class="icon-replacement-img">
+          <div class="routine-card routine-pm reveal d1">
+            <div class="routine-head">
+              <span class="ico"><i class="fas fa-moon"></i></span>
+              <div><h3>Оройн арчилгаа</h3><small>Эрчимтэй, гүн сэргээлт</small></div>
             </div>
-            <h3 class="step-title">Амп түрхэх</h3>
-            <p class="step-description">
-              Callus Repair Ампыг хэрэглэж дотроос чийгшүүлнэ. Хурдан шингэж,
-              гэрэл цацруулах.
-            </p>
-            <div class="step-tips">
-              <strong>Tip:</strong> Өглөө - шинэхэн, орой - элбэг хэмжээгээр
+            <div class="routine-steps">
+              <div class="routine-step"><span class="n">1</span><div><b>Цэвэрлэж, тонер</b><p>Өдрийн бохирдлыг арилгаж, арьсыг бэлтгэнэ.</p></div></div>
+              <div class="routine-step"><span class="n">2</span><div><b>Сика спикуль амп</b><p>Микро-суваг нээж, дараагийн найрлагыг хүлээн авахад бэлдэнэ.</p></div></div>
+              <div class="routine-step"><span class="n">3</span><div><b>Каллус амп</b><p>Элбэг хэмжээгээр түрхэж, коллаген сэргэлтийг идэвхжүүлнэ.</p></div></div>
+              <div class="routine-step"><span class="n">4</span><div><b>Крем (элбэг)</b><p>Шөнийн турш чийгийг түгжиж, саадыг бэхжүүлнэ.</p></div></div>
             </div>
-          </div>
-
-          <div class="howto-step fade-in">
-            <div class="step-number">03</div>
-            <div class="step-icon">
-              <i class="fas fa-box"></i>
-            </div>
-            <h3 class="step-title">Кремээр дуусгах</h3>
-            <p class="step-description">
-              Callus Repair Кремээр чийгийг түгжиж, арьсны саадыг хамгаална.
-            </p>
-            <div class="step-tips">
-              <strong>Tip:</strong> Унтахын өмнө хэрэглэвэл өглөө хүртэл
-              чийглэнэ
-            </div>
+            <div class="routine-tip"><i class="fas fa-lightbulb"></i><span>Унтахын өмнө элбэг хэрэглэвэл өглөө хүртэл чийгшил хадгалагдана.</span></div>
           </div>
         </div>
       </div>
     </section>
 
-
-
-    <!-- Target Audience Section -->
-    <section class="target-section">
+    <!-- ===== 10a. Video ===== -->
+    <section class="video bg-mist" id="video">
       <div class="container">
-        <div class="section-header fade-in">
-          <span class="section-badge">👥 Зөвлөмж</span>
-          <h2 class="section-title">Танд тохиромжтой уу?</h2>
-          <p class="section-subtitle">
-            Дараах асуудалтай бол LaEzer нь танд тохирно
-          </p>
+        <div class="section-head reveal">
+          <span class="eyebrow center">Алдартны тойм</span>
+          <h2 class="section-title">Солонгосын телевизэд <span class="title-accent">нэвтэрсэн</span></h2>
         </div>
-        <div class="target-grid">
-          <div class="target-card fade-in">
-            <div class="target-icon">
-              <i class="fas fa-wind"></i>
-            </div>
-            <h3>Хуурай, мэдрэмтгий арьс</h3>
-            <p>Монголын хуурай уур амьсгалд тохирсон гүн чийгшүүлэлт</p>
+        <div class="video-wrap reveal d1">
+          <div class="video-frame">
+            <iframe
+              src="https://www.youtube.com/embed/kkYFzxSf-iE?rel=0&cc_load_policy=1&cc_lang_pref=mn"
+              title="LaEzer Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
           </div>
-          <div class="target-card fade-in">
-            <div class="target-icon">
-              <i class="fas fa-snowflake"></i>
-            </div>
-            <h3>Дотоод хуурайшилт</h3>
-            <p>Гадна чийглэг боловч дотор хуурай арьс</p>
-          </div>
-          <div class="target-card fade-in">
-            <div class="target-icon">
-              <i class="fas fa-shield-virus"></i>
-            </div>
-            <h3>Сул арьсны саад</h3>
-            <p>Гаднын орчноос хамгаалах хүч сул болсон арьс</p>
-          </div>
-          <div class="target-card fade-in">
-            <div class="target-icon">
-              <i class="fas fa-compress-arrows-alt"></i>
-            </div>
-            <h3>Нүх, арьсны бүтэц</h3>
-            <p>Нүхийг багасгаж, гөлгөр арьс хүсэгчид</p>
-          </div>
-          <div class="target-card fade-in">
-            <div class="target-icon">
-              <i class="fas fa-clock"></i>
-            </div>
-            <h3>Anti-aging эхлүүлэх</h3>
-            <p>Залуу байхдаа хөгшрөлтийн эсрэг арчилгаа эхлүүлэх</p>
-          </div>
-          <div class="target-card fade-in">
-            <div class="target-icon">
-              <i class="fas fa-heart"></i>
-            </div>
-            <h3>Slow Aging хийх</h3>
-            <p>Өдөр бүр арчилж, удаан хугацааны үр дүнд хүрэх</p>
+          <div class="video-quote">
+            <p>"Нэг удаа л хэрэглэсэн ч шууд мэдрэгдсэн. Дотроос нь чийглэх мэдрэмж гайхалтай!"</p>
+            <span class="author">ACTRESS PARK HA-SUN</span> · <span class="role">Жүжигчин Пак Ха Сон</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Reviews Section -->
-    <section id="reviews" class="reviews-section">
+    <!-- ===== 10b. Reviews ===== -->
+    <section class="reviews" id="reviews">
       <div class="container">
-        <div class="section-header fade-in">
-          <span class="section-badge">⭐ Хэрэглэгчийн сэтгэгдэл</span>
-          <h2 class="section-title">Жинхэнэ хэрэглэгчдийн туршлага</h2>
-          <p class="section-subtitle">Солонгосын хэрэглэгчдийн сэтгэгдэл</p>
+        <div class="section-head reveal">
+          <span class="eyebrow center">Хэрэглэгчийн сэтгэгдэл</span>
+          <h2 class="section-title">Жинхэнэ хэрэглэгчдийн <span class="title-accent">туршлага</span></h2>
         </div>
-        <div class="reviews-container-carousel">
-          <div class="reviews-track" id="reviewsTrack">
-            <!-- Review 1 -->
-            <div class="social-review-card">
-              <div class="social-header">
-                <div class="social-avatar">
-                   <img src="images/logo.png" alt="User" style="padding: 2px;">
-                </div>
-                <div class="social-user-info">
-                  <span class="social-username">park_hasun <i class="fas fa-check-circle verified-badge"></i></span>
-                  <span class="social-platform">Instagram Review</span>
-                </div>
-              </div>
-              <div class="social-body">
-                <div class="social-rating">
-                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                </div>
-                <p>"Нэг удаа л хэрэглэсэн ч шууд мэдрэгдсэн. Дотроос нь дүүрэн чийглэх мэдрэмж гайхалтай! Мэдрэмтгий арьстай миний хувьд бүр тохиромжтой. #LaEzer #АрьсАрчилгаа"</p>
-              </div>
-              <div class="social-footer">
-                <div class="social-actions">
-                  <i class="far fa-heart"></i>
-                  <i class="far fa-comment"></i>
-                  <i class="far fa-paper-plane"></i>
-                </div>
-                <div class="social-likes">Likes 1,243</div>
-                <span class="social-date">2024.12.15</span>
-              </div>
+      </div>
+      <div class="reviews-viewport reveal d1">
+        <div class="reviews-track" id="reviewsTrack">
+          <div class="review-card">
+            <div class="review-top">
+              <div class="review-avatar"><img src="images/logo.png" alt="" /></div>
+              <div><div class="review-user">park_hasun <i class="fas fa-circle-check verified"></i></div><div class="review-platform">Instagram</div></div>
             </div>
-
-            <!-- Review 2 -->
-            <div class="social-review-card">
-              <div class="social-header">
-                <div class="social-avatar">
-                  <img src="images/logo.png" alt="User">
-                </div>
-                <div class="social-user-info">
-                  <span class="social-username">k_beauty_lover</span>
-                  <span class="social-platform">Naver Blog Review</span>
-                </div>
-              </div>
-              <div class="social-body">
-                <div class="social-rating">
-                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                </div>
-                <p>"Амп зөвхөн хэрэглэсэн ч гэрэл цацруулж байна! Дотор чийглэж, гадна гэрэлтдэг. Кремийг хэрэглэвэл өглөө хүртэл чийглэнэ. #ШилэнАрьс #HomeCare"</p>
-              </div>
-              <div class="social-footer">
-                 <div class="social-actions">
-                  <i class="far fa-heart"></i>
-                  <i class="far fa-comment"></i>
-                </div>
-                <div class="social-likes">Likes 892</div>
-                <span class="social-date">2025.01.03</span>
-              </div>
+            <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <p class="review-body">"Нэг удаа л хэрэглэсэн ч шууд мэдрэгдсэн. Дотроос нь дүүрэн чийглэх мэдрэмж гайхалтай! Мэдрэмтгий арьстай надад бүр тохирлоо."</p>
+          </div>
+          <div class="review-card">
+            <div class="review-top">
+              <div class="review-avatar"><img src="images/logo.png" alt="" /></div>
+              <div><div class="review-user">k_beauty_lover</div><div class="review-platform">Naver Blog</div></div>
             </div>
-
-            <!-- Review 3 -->
-            <div class="social-review-card">
-               <div class="social-header">
-                <div class="social-avatar">
-                  <img src="images/logo.png" alt="User">
-                </div>
-                <div class="social-user-info">
-                  <span class="social-username">skincare_daily</span>
-                  <span class="social-platform">Instagram Review</span>
-                </div>
-              </div>
-              <div class="social-body">
-                 <div class="social-rating">
-                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                </div>
-                <p>"Өвлийн улиралд арьс маш хуурай болдог байсан. Энэ бүтээгдэхүүнийг хэрэглэснээс хойш арьсны нүх багасч, бүтэц нь гөлгөр болсон. #BestSerum"</p>
-              </div>
-              <div class="social-footer">
-                 <div class="social-actions">
-                  <i class="far fa-heart"></i>
-                  <i class="far fa-comment"></i>
-                </div>
-                <div class="social-likes">Likes 567</div>
-                <span class="social-date">2025.01.10</span>
-              </div>
+            <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <p class="review-body">"Амп зөвхөн хэрэглэсэн ч гэрэлтэл өгч байна! Дотор чийглэж, гадна гэрэлтдэг. Кремтэй хослуулбал өглөө хүртэл чийглэнэ."</p>
+          </div>
+          <div class="review-card">
+            <div class="review-top">
+              <div class="review-avatar"><img src="images/logo.png" alt="" /></div>
+              <div><div class="review-user">skincare_daily</div><div class="review-platform">Instagram</div></div>
             </div>
-
-             <!-- Review 4 -->
-            <div class="social-review-card">
-               <div class="social-header">
-                <div class="social-avatar">
-                   <img src="images/logo.png" alt="User" style="padding: 2px;">
-                </div>
-                <div class="social-user-info">
-                  <span class="social-username">vegan_life <i class="fas fa-check-circle verified-badge"></i></span>
-                  <span class="social-platform">Instagram Review</span>
-                </div>
-              </div>
-              <div class="social-body">
-                <div class="social-rating">
-                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                </div>
-                <p>"Веган гэдэгтээ итгэлтэй байна. Ургамлын гаралтай бүтээгдэхүүн гэдэгтээ сэтгэл тавьж байна. Найрлагад анхаарал хандуулдаг хүмүүст зөвлөж байна. #VeganBeauty"</p>
-              </div>
-              <div class="social-footer">
-                 <div class="social-actions">
-                  <i class="far fa-heart"></i>
-                  <i class="far fa-comment"></i>
-                </div>
-                <div class="social-likes">Likes 2,031</div>
-                <span class="social-date">2024.12.28</span>
-              </div>
+            <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <p class="review-body">"Өвлийн улиралд арьс маш хуурай болдог байсан. Хэрэглэснээс хойш нүх багасч, бүтэц нь гөлгөр болсон."</p>
+          </div>
+          <div class="review-card">
+            <div class="review-top">
+              <div class="review-avatar"><img src="images/logo.png" alt="" /></div>
+              <div><div class="review-user">vegan_life <i class="fas fa-circle-check verified"></i></div><div class="review-platform">Instagram</div></div>
             </div>
+            <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <p class="review-body">"Веган гэдэгт нь итгэлтэй байна. Ургамлын гаралтай найрлагад анхаардаг хүмүүст зөвлөж байна."</p>
           </div>
         </div>
-
-        <script>
-          document.addEventListener('DOMContentLoaded', function() {
-            const track = document.getElementById('reviewsTrack');
-            // Duplicate content for seamless loop
-             track.innerHTML += track.innerHTML;
-            
-            let scrollAmount = 0;
-            const cardWidth = 340; // Card width + gap (320 + 20)
-            
-            // Step-based scrolling (2s interval)
-            let currentIndex = 0;
-            const cards = track.children;
-            const totalCards = cards.length / 2; // original count
-
-            setInterval(() => {
-              currentIndex++;
-              const offset = currentIndex * cardWidth;
-              track.style.transition = 'transform 0.5s ease';
-              track.style.transform = `translateX(-${offset}px)`;
-
-              // Reset when reaching the end of the first set (for loop illusion)
-              if (currentIndex >= totalCards) {
-                 setTimeout(() => {
-                   currentIndex = 0;
-                   track.style.transition = 'none';
-                   track.style.transform = `translateX(0)`;
-                 }, 500);
-              }
-            }, 2000); // 2 seconds
-          });
-        </script>
       </div>
     </section>
 
-    <!-- Certifications Section -->
-    <section class="certifications-section" id="certifications">
+    <!-- ===== 11. Certifications ===== -->
+    <section class="certs" id="certs">
       <div class="container">
-        <div class="section-header fade-in">
-          <span class="section-badge">🏆 Баталгаажуулалт</span>
-          <h2 class="section-title">Итгэл найдвартай байдал</h2>
-          <p class="section-subtitle">
-            Олон улсын стандарт, баталгаажсан аюулгүй байдал
-          </p>
+        <div class="section-head reveal">
+          <span class="eyebrow center">Баталгаажуулалт</span>
+          <h2 class="section-title">Итгэлийг <span class="title-accent">баталсан</span></h2>
+          <p class="section-sub">Олон улсын стандарт, баталгаажсан аюулгүй байдал</p>
         </div>
         <div class="cert-grid">
-          <!-- Item 1: Vegan -->
-          <div class="cert-item">
-            <div class="cert-header">Веган Гэрчилгээтэй</div>
-            <div class="cert-visual">
-              <img src="images/001.png" alt="Vegan Certification">
-            </div>
-            <p class="cert-desc">
-              100% ургамлын гаралтай орцоор хийгдсэн<br>албан ёсны Веган батламж
-            </p>
+          <div class="cert-card reveal">
+            <div class="cert-visual"><img src="images/001.png" alt="Веган" /></div>
+            <div class="cert-body"><h4>Веган гэрчилгээ</h4><p>100% ургамлын гаралтай албан ёсны Веган батламж</p></div>
           </div>
-
-          <!-- Item 2: Sensitive Skin -->
-          <div class="cert-item">
-            <div class="cert-header">Эмзэг Арьсны Тест<br>Бүрэн Хийгдсэн</div>
-            <div class="cert-visual">
-              <img src="images/002.png" alt="Sensitive Skin Test Report">
-            </div>
-            <p class="cert-desc">
-              Эмзэг мэдрэмтгий арьсанд ч цочрол өгөхгүй<br>зөөлөн үйлчилгээтэй
-            </p>
+          <div class="cert-card reveal d1">
+            <div class="cert-visual"><img src="images/002.png" alt="Эмзэг арьс" /></div>
+            <div class="cert-body"><h4>Эмзэг арьсны тест</h4><p>Мэдрэмтгий арьсанд цочрол өгөхгүй зөөлөн томьёо</p></div>
           </div>
-
-          <!-- Item 3: Patent -->
-          <div class="cert-item">
-            <div class="cert-header">Патентлагдсан Орц</div>
-            <div class="cert-visual">
-              <img src="images/003.png" alt="Patent Certificate">
-            </div>
-            <p class="cert-desc">
-              Derma-Clera™ (Cynanchum Atratum)<br>тайвшруулах үйлчилгээтэй патенттай орц
-            </p>
+          <div class="cert-card reveal d2">
+            <div class="cert-visual"><img src="images/003.png" alt="Патент" /></div>
+            <div class="cert-body"><h4>Патентлагдсан орц</h4><p>Derma-Clera™ тайвшруулах үйлчилгээтэй патент орц</p></div>
           </div>
-
-          <!-- Item 4: KFDA -->
-          <div class="cert-item">
-            <div class="cert-header">KFDA Баталгаажуулалт</div>
-            <div class="cert-visual">
-              <img src="images/004.png" alt="KFDA Certification">
-            </div>
-            <p class="cert-desc">
-              Цайруулах болон үрчлээний эсрэг<br>давхар үйлчилгээтэй
-            </p>
+          <div class="cert-card reveal d3">
+            <div class="cert-visual"><img src="images/004.png" alt="KFDA" /></div>
+            <div class="cert-body"><h4>cGMP · ISO 22716</h4><p>Олон улсын GMP стандартын үйлдвэрт үйлдвэрлэгдсэн</p></div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Footer -->
+    <!-- ===== 12. CTA (purchase / contact) ===== -->
+    <section class="cta" id="contact">
+      <div class="container">
+        <div class="cta-inner reveal">
+          <span class="eyebrow center">Худалдан авах</span>
+          <h2>LaEzer-ийг Монголд<br />хүлээн аваарай</h2>
+          <p>Монгол дахь албан ёсны түнш <strong>Otkhan Khugjil LLC</strong> танд бүтээгдэхүүн,
+            үнэ, хүргэлтийн талаар хариулна.</p>
+          <div class="cta-channels">
+            <a href="tel:+97690518888" class="cta-channel primary">
+              <span class="ch-label"><i class="fas fa-phone"></i> Монгол дахь захиалга</span>
+              <span class="ch-sub">Otkhan Khugjil LLC · албан ёсны импортлогч</span>
+              <span class="ch-val">+976 9051 8888</span>
+            </a>
+            <a href="https://m.me/soulalpaca" target="_blank" rel="noopener" class="cta-channel">
+              <span class="ch-label"><i class="fab fa-facebook-messenger"></i> Messenger лавлагаа</span>
+              <span class="ch-sub">Бүтээгдэхүүний дэлгэрэнгүй асуулт</span>
+              <span class="ch-val">@LaEzer</span>
+            </a>
+          </div>
+          <p class="cta-note">
+            Солонгосын албан ёсны онлайн дэлгүүр:
+            <a href="https://laezer.co.kr" target="_blank" rel="noopener" style="color:var(--green-crystal);text-decoration:underline">laezer.co.kr</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Footer ===== -->
     <footer class="footer">
       <div class="container">
-        <div class="footer-content">
+        <div class="footer-top">
           <div class="footer-brand">
-            <h3 class="footer-logo">LaEzer</h3>
-            <p class="footer-tagline">Солонгос гоо сайхны шинэ стандарт</p>
+            <div class="footer-logo">LaEzer</div>
+            <p class="footer-tagline">Шинжлэх ухаанаар батлагдсан K-Beauty. Дэлхийн арьсны саадыг хамгаална.</p>
             <div class="footer-social">
-              <a href="#" aria-label="Instagram"
-                ><i class="fab fa-instagram"></i
-              ></a>
-              <a href="#" aria-label="Facebook"
-                ><i class="fab fa-facebook"></i
-              ></a>
-              <a
-                href="https://www.youtube.com/watch?v=FHtmHfhk6FY"
-                target="_blank"
-                aria-label="YouTube"
-                ><i class="fab fa-youtube"></i
-              ></a>
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="https://m.me/soulalpaca" target="_blank" rel="noopener" aria-label="Messenger"><i class="fab fa-facebook-messenger"></i></a>
+              <a href="https://www.youtube.com/watch?v=FHtmHfhk6FY" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
             </div>
           </div>
-          <div class="footer-links">
-            <div class="footer-column">
-              <h4>Бүтээгдэхүүн</h4>
-              <ul>
-                <li><a href="#about">Callus Repair Амп</a></li>
-                <li><a href="#about">Callus Repair Крем</a></li>
-                <li><a href="#ingredients">Найрлага</a></li>
-              </ul>
-            </div>
-            <div class="footer-column">
-              <h4>Мэдээлэл</h4>
-              <ul>
-                <li><a href="#results">Клиник туршилт</a></li>
-                <li><a href="#reviews">Хэрэглэгчийн сэтгэгдэл</a></li>
-                <li><a href="#video">Видео</a></li>
-              </ul>
-            </div>
-            <div class="footer-column">
-              <h4>Холбоо барих</h4>
-              <ul>
-                <li>
-                  <a href="https://laezer.co.kr" target="_blank"
-                    >Албан ёсны сайт</a
-                  >
-                </li>
-                <li>
-                  <a href="https://m.me/soulalpaca" target="_blank">Бүтээгдэхүүний лавлагаа</a>
-                </li>
-              </ul>
-            </div>
+          <div class="footer-col">
+            <h4>Бүтээгдэхүүн</h4>
+            <ul>
+              <li><a href="#products">Сика спикуль амп</a></li>
+              <li><a href="#products">Каллус рипэйр амп</a></li>
+              <li><a href="#products">Каллус рипэйр крем</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Мэдээлэл</h4>
+            <ul>
+              <li><a href="#why">Яагаад LaEzer</a></li>
+              <li><a href="#results">Эмнэлзүйн туршилт</a></li>
+              <li><a href="#ingredients">Найрлага</a></li>
+              <li><a href="#howto">Хэрэглэх арга</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Холбоо барих</h4>
+            <ul>
+              <li><a href="tel:+97690518888">+976 9051 8888</a></li>
+              <li><a href="https://m.me/soulalpaca" target="_blank" rel="noopener">Messenger лавлагаа</a></li>
+              <li><a href="https://laezer.co.kr" target="_blank" rel="noopener">Албан ёсны сайт</a></li>
+            </ul>
           </div>
         </div>
         <div class="footer-bottom">
-          <p>&copy; 2025 LaEzer. Бүх эрх хуулиар хамгаалагдсан.</p>
-          <p class="footer-disclaimer">
-            Энэхүү сайт нь LaEzer бүтээгдэхүүнийг Монголын зах зээлд танилцуулах
-            зорилготой.<br />
-            Албан ёсны худалдааны мэдээллийг
-            <a href="https://laezer.co.kr" target="_blank">laezer.co.kr</a>
-            сайтаас үзнэ үү.
-          </p>
+          <p>&copy; 2026 LaEzer · (주)에젤. Бүх эрх хуулиар хамгаалагдсан.</p>
+          <p>Монгол дахь албан ёсны түнш: Otkhan Khugjil LLC</p>
         </div>
       </div>
     </footer>
 
-    <!-- Scroll to Top Button -->
-    <button id="scrollTop" class="scroll-top" aria-label="Дээш гарах">
-      <i class="fas fa-arrow-up"></i>
-    </button>
-
+    <button id="scrollTop" class="scroll-top" aria-label="Дээш гарах"><i class="fas fa-arrow-up"></i></button>
     <script src="js/script.js"></script>
   </body>
 </html>

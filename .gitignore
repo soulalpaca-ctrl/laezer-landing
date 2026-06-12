@@ -1,2 +1,8 @@
 # Local Netlify folder
 .netlify
+.DS_Store
+*.bak-*
+docs/.bkit-memory.json
+docs/.pdca-status.json
+docs/.pdca-snapshots/
+.playwright-mcp/

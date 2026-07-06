@@ -5,797 +5,549 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="ラエゼル Callus Repair - 韓国ビューティーの新基準。植物性幹細胞、11種ヒアルロン酸配合。"
+      content="ラエゼル LaEzer — 科学で語る K-Beauty。特許取得の Derma-Clera™ エーデルワイス幹細胞、天然スピキュール5,000ppm、11種のヒアルロン酸。うるおいで肌を守る韓国ダーマコスメティック。"
     />
     <meta
       name="keywords"
-      content="LaEzer, ラエゼル, 韓国スキンケア, K-beauty, Japan, callus repair, plant stem cell, 植物性幹細胞"
+      content="ラエゼル,LaEzer, 韓国スキンケア, K-beauty, エーデルワイス幹細胞, スピキュール, ヴィーガンコスメ, ダーマコスメ"
     />
-    <title>ラエゼル Callus Repair - 韓国ビューティーの新基準</title>
+    <title>ラエゼル LaEzer — 科学で語る K-Beauty | うるおいバリアケア</title>
+    <link rel="icon" type="image/png" href="images/logo.png" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&family=Noto+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css"
     />
+    <style>
+      :root {
+        --font-body: "Noto Sans JP", "Noto Sans", -apple-system, sans-serif;
+        --font-head: "Manrope", "Noto Sans JP", sans-serif;
+      }
+      .results .results-grid { grid-template-columns: repeat(2, 1fr); max-width: 680px; margin-left: auto; margin-right: auto; }
+      .product-name { word-break: keep-all; }
+      @media (max-width: 680px) { .results .results-grid { grid-template-columns: 1fr; } }
+    </style>
   </head>
   <body>
-    <!-- Header / Navigation -->
-    <header class="header">
+    <!-- ===== Header ===== -->
+    <header class="header" id="header">
       <nav class="nav container">
         <div class="nav-brand">
           <img src="images/logo.png" alt="LaEzer" class="brand-logo-img" />
         </div>
-        <ul class="nav-menu">
-          <li><a href="#about">製品紹介</a></li>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#why">なぜ LaEzer</a></li>
+          <li><a href="#brand">ブランド</a></li>
+          <li><a href="#products">製品</a></li>
           <li><a href="#ingredients">成分</a></li>
-          <li><a href="#results">効果</a></li>
-          <li><a href="#reviews">レビュー</a></li>
-          <li>
-            <a href="https://m.me/soulalpaca" target="_blank" class="btn-nav">お問い合わせ</a>
-          </li>
-
+          <li><a href="#howto">使い方</a></li>
+          <li><a href="#contact" class="btn-nav"><i class="fas fa-comment-dots"></i> お問い合わせ</a></li>
           <li class="lang-switcher-container">
-               <a href="index.html" class="lang-btn">
-                  MGL
-              </a>
-              <a href="index_kr.html" class="lang-btn">
-                  KOR
-              </a>
-              <a href="#" class="lang-btn active">
-                  JPN
-              </a>
+            <a href="index.html" class="lang-btn">MGL</a>
+            <a href="index_kr.html" class="lang-btn">KOR</a>
+            <a href="#" class="lang-btn active">JPN</a>
           </li>
         </ul>
-        <div class="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
+        <div class="hamburger" id="hamburger">
+          <span></span><span></span><span></span>
         </div>
       </nav>
     </header>
 
-    <!-- Brand Banner (New) -->
-    <section class="brand-banner">
-      <div class="banner-content">
-        <!-- Text is embedded in background image -->
-        <span class="visually-hidden">LaEzer - TIMELESS RADIANCE AND BEAUTY</span>
-      </div>
-    </section>
-
-    <!-- Hero Section -->
-    <header class="hero">
-      <div class="hero-background"></div>
-      <div class="container">
-        <div class="hero-content">
-          <div class="hero-text fade-in-up">
-            <span class="hero-badge">🌿 韓国最高のスマートケア</span>
-            <h1 class="hero-title">
-              韓国ビューティーの<br />
-              <span class="highlight">新しい基準</span>
-            </h1>
-            <p class="hero-subtitle">
-              植物性幹細胞 + 11種ヒアルロン酸<br />
-              肌バリア強化、エイジングケア
-            </p>
-
-            <div class="hero-stats" style="display: flex; gap: 30px; margin-bottom: 30px;">
-              <div class="stat-item">
-                <span class="stat-number">138%</span>
-                <span class="stat-label" style="font-size: 14px; color: #666;">保湿改善</span>
-              </div>
-              <div class="stat-item">
-                 <span class="stat-number">7.4%</span>
-                <span class="stat-label" style="font-size: 14px; color: #666;">肌キメ改善</span>
-              </div>
-              <div class="stat-item">
-                 <span class="stat-number">20%</span>
-                <span class="stat-label" style="font-size: 14px; color: #666;">毛穴縮小</span>
-              </div>
-            </div>
-
-            <div class="hero-cta">
-              <a href="#video" class="btn btn-secondary" style="border-radius: 50px; padding: 12px 30px;">
-                <i class="fas fa-play-circle" style="color: var(--primary-gold); margin-right: 5px;"></i> 動画を見る
-              </a>
-            </div>
-          </div>
-          <div class="hero-image fade-in-up delay-200">
-            <!-- Base Image: Model -->
-            <img
-              src="images/hero-main.jpg"
-              alt="LaEzer Model"
-              class="hero-main-img"
-              style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;"
-            />
-            <div class="product-badge">
-              <i class="fas fa-leaf"></i> 100% 植物由来
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="scroll-indicator">
-        <span>Scroll</span>
-        <div class="scroll-line"></div>
-      </div>
-    </header>
-
-    <!-- Video Section -->
-    <section id="video" class="video-section">
-      <div class="container">
-        <div class="section-header fade-in">
-          <span class="section-badge"
-            >📺 韓国セレブが選んだ</span
-          >
-          <h2 class="section-title">韓国TV放映で話題</h2>
-          <p class="section-subtitle">
-            女優パク・ハソンなど韓国芸能人のリアルおすすめ
+    <!-- ===== 1. Hero ===== -->
+    <section class="hero">
+      <img src="images/hero_leaf.png" alt="" class="hero-leaf-deco" aria-hidden="true" />
+      <div class="container hero-grid">
+        <div class="hero-text reveal">
+          <span class="hero-badge"><i class="fas fa-flask"></i> 科学で語る K-Beauty</span>
+          <h1>
+            ゆらぎがちな肌に、<br />
+            <span class="highlight">科学の答え</span>を。
+          </h1>
+          <p class="hero-sub">
+            特許取得のエーデルワイス幹細胞エキス、天然スピキュール5,000ppm、11種のヒアルロン酸。
+            うるおいで肌を守る、韓国生まれのダーマコスメティックです。
           </p>
+          <div class="hero-usp">
+            <span class="badge gold"><i class="fas fa-certificate"></i> 特許成分配合</span>
+            <span class="badge"><i class="fas fa-leaf"></i> ヴィーガン認証</span>
+            <span class="badge"><i class="fas fa-microscope"></i> ヒト試験実施</span>
+          </div>
+          <div class="hero-cta">
+            <a href="#contact" class="btn btn-primary btn-lg"><i class="fas fa-comment-dots"></i> 購入・お問い合わせ</a>
+            <a href="#products" class="btn btn-ghost btn-lg"><i class="fas fa-box-open"></i> 製品を見る</a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat-item"><span class="stat-number">+138%</span><span class="stat-label">保湿指数<small style="font-size:.75em">※1</small></span></div>
+            <div class="stat-item"><span class="stat-number">5,000<small style="font-size:.6em">ppm</small></span><span class="stat-label">天然スピキュール</span></div>
+            <div class="stat-item"><span class="stat-number">11</span><span class="stat-label">種のヒアルロン酸</span></div>
+          </div>
         </div>
-        <div class="video-container fade-in">
-          <div class="video-wrapper">
+        <div class="hero-visual reveal d1">
+          <img src="images/model-portrait.jpg" alt="LaEzer スキンケア製品とモデル" loading="eager" />
+          <div class="hero-float-badge">
+            <span class="ico"><i class="fas fa-seedling"></i></span>
+            <span>ヴィーガン認証処方<small>Derma-Clera™ 特許技術</small></span>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-cue"><span>スクロール</span><div class="line"></div></div>
+    </section>
+
+    <!-- ===== Video ===== -->
+    <section class="video bg-mist" id="video">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow center">女優も注目</span>
+          <h2 class="section-title">韓国のTV番組で<span class="title-accent">紹介されました</span></h2>
+        </div>
+        <div class="video-wrap reveal d1">
+          <div class="video-frame">
             <iframe
-              src="https://www.youtube.com/embed/kkYFzxSf-iE?rel=0&cc_load_policy=1&cc_lang_pref=ja"
-              title="ラエゼル Callus Repair - 韓国セレブレビュー"
-              frameborder="0"
-              allow="
-                accelerometer;
-                autoplay;
-                clipboard-write;
-                encrypted-media;
-                gyroscope;
-                picture-in-picture;
-              "
-              allowfullscreen
-              loading="lazy"
-            >
-            </iframe>
+              src="https://www.youtube.com/embed/kkYFzxSf-iE?rel=0"
+              title="LaEzer Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
           </div>
-          <div class="video-highlights">
-            <div class="editorial-review">
-              <div class="review-content">
-                <p class="review-quote">
-                  "一度使うだけですぐ実感できます。<br>
-                  内側から溢れる潤いに本当に驚きました！"
-                </p>
-                <div class="review-divider"></div>
-                <span class="review-author">ACTRESS. PARK HA-SUN</span>
-                <span class="review-role">女優 パク・ハソン</span>
-              </div>
+          <div class="video-quote">
+            <p>「一度使っただけで、すぐに実感。内側から満ちてくるようなうるおい感に本当に驚きました!」</p>
+            <p style="font-size:.78rem;opacity:.65;margin-top:6px">※個人の感想です。</p>
+            <span class="author">ACTRESS PARK HA-SUN</span> · <span class="role">女優 パク・ハソン</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 2. WHY ===== -->
+    <section class="why" id="why">
+      <div class="container why-grid">
+        <div class="why-content reveal">
+          <span class="eyebrow">なぜ LaEzer なのか</span>
+          <h2>季節の変わり目に<br /><em>肌がゆらぎやすい</em>本当の理由</h2>
+          <p>
+            朝晩の寒暖差、エアコンや暖房で乾いた室内の空気、外気の乾燥 —
+            毎日の環境は、肌のうるおいを保つ力に少しずつ負担をかけています。
+          </p>
+          <p>
+            うるおいが外へ逃げて内側から乾いた肌は、次第にゆらぎやすくなり、
+            乾燥による小じわや、キメの乱れ、毛穴の目立ちにつながります。表面的な保湿だけでは
+            届かない、<strong style="color:#fff">うるおいバリアの問題</strong>です。
+          </p>
+          <div class="why-points">
+            <div class="why-point">
+              <i class="fas fa-temperature-low"></i>
+              <div><b>朝晩の寒暖差</b><span>季節の変わり目の急な温度変化が、肌に繰り返し負担をかけます</span></div>
+            </div>
+            <div class="why-point">
+              <i class="fas fa-wind"></i>
+              <div><b>乾いた室内の空気</b><span>冷暖房で湿度が下がった室内で、肌は内側のうるおいを失います</span></div>
+            </div>
+            <div class="why-point">
+              <i class="fas fa-shield-halved"></i>
+              <div><b>ゆらぎやすい肌</b><span>外的刺激から肌を守る力が弱まり、敏感に傾きやすくなります</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="why-visual reveal d1">
+          <img src="images/model-cica.jpg" alt="LaEzer シカ スピキュール アンプル" />
+          <div class="why-temp"><i class="fas fa-snowflake"></i> 寒暖差 10°C+</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 3. Brand Story ===== -->
+    <section class="brand bg-cream" id="brand">
+      <div class="container brand-grid">
+        <div class="brand-visual reveal">
+          <img src="images/model-trio.jpg" alt="LaEzer 3ステップ うるおいバリアケアセット" />
+        </div>
+        <div class="brand-text reveal d1">
+          <span class="eyebrow">LaEzer とは</span>
+          <p class="brand-quote">
+            LaEzer は<span class="hl">説明するブランド</span>です —
+            なぜこの成分なのか、どんな仕組みで働くのか、どこで検証されたのか。
+          </p>
+          <p>
+            「科学で語る K-Beauty で、肌のうるおいバリアを守る」— このビジョンのもと、
+            (株)エゼルは特許取得の Derma-Clera™ エーデルワイス幹細胞エキス技術をベースに、
+            高機能スキンケアをつくっています。
+          </p>
+          <p>
+            一晩の奇跡は約束しません。肌本来のリズムを尊重しながら、毎日少しずつ積み重ねる
+            <strong>スローエイジング</strong>の哲学を大切にしています。
+          </p>
+          <div class="brand-pillars">
+            <div class="brand-pillar"><i class="fas fa-certificate"></i><b>特許</b><span>Derma-Clera™ 特許2件</span></div>
+            <div class="brand-pillar"><i class="fas fa-leaf"></i><b>ヴィーガン</b><span>全製品認証</span></div>
+            <div class="brand-pillar"><i class="fas fa-vial-circle-check"></i><b>検証</b><span>IRB承認 ヒト試験</span></div>
+          </div>
+          <div class="ceo-sign">
+            <div>
+              <div class="ceo-name">チョン・ヒョンジョン</div>
+              <div class="ceo-role">(株)エゼル 代表取締役 · 創業者</div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Clinical Results Section -->
-    <section id="results" class="results-section">
+    <!-- ===== 4. Technology (3 USP) ===== -->
+    <section class="tech" id="tech">
       <div class="container">
-        <div class="section-header fade-in">
-          <span class="section-badge">🔬 臨床試験</span>
-          <h2 class="section-title">たった1回の使用で変わる変化</h2>
-          <p class="section-subtitle">臨床試験で実証された効果</p>
+        <div class="section-head reveal">
+          <span class="eyebrow center">コア技術</span>
+          <h2 class="section-title">LaEzer を特別にする<span class="title-accent">3つの力</span></h2>
+          <p class="section-sub">ただの良い成分ではなく — 特許・科学・高配合で示す違いです</p>
         </div>
-        <div class="results-grid">
-          <div class="result-card fade-in">
-            <div class="result-icon">
-              <i class="fas fa-tint"></i>
-            </div>
-            <div class="result-number">
-              <span class="counter" data-target="138">0</span>
-              <span class="result-unit">%</span>
-            </div>
-            <h3 class="result-title">保湿改善</h3>
-            <p class="result-description">肌の水分量が増加</p>
+        <div class="tech-grid">
+          <div class="tech-card gold reveal">
+            <span class="tech-num">01</span>
+            <div class="tech-icon"><i class="fas fa-award"></i></div>
+            <h3>Derma-Clera™ 特許</h3>
+            <p>エーデルワイス幹細胞エキスをベースにした特許成分。うるおいを与え、
+              乾燥でゆらぎがちな肌をすこやかに整えます。</p>
+            <span class="tech-meta"><i class="fas fa-shield-halved"></i> 特許 第10-1768870号(韓国)</span>
           </div>
-          <div class="result-card fade-in">
-            <div class="result-icon">
-              <i class="fas fa-gem"></i>
-            </div>
-            <div class="result-number">
-              <span class="counter" data-target="7.4">0</span>
-              <span class="result-unit">%</span>
-            </div>
-            <h3 class="result-title">肌キメ改善</h3>
-            <p class="result-description">なめらかな肌へ</p>
+          <div class="tech-card reveal d1">
+            <span class="tech-num">02</span>
+            <div class="tech-icon"><i class="fas fa-bahai"></i></div>
+            <h3>天然スピキュール 5,000ppm</h3>
+            <p>海綿由来の天然マイクロニードルが、美容成分を角質層のすみずみまで
+              しっかり届けます。</p>
+            <span class="tech-meta"><i class="fas fa-arrow-down-long"></i> 浸透サポート ※角質層まで</span>
           </div>
-          <div class="result-card fade-in">
-            <div class="result-icon">
-              <i class="fas fa-compress"></i>
-            </div>
-            <div class="result-number">
-              <span class="counter" data-target="20">0</span>
-              <span class="result-unit">%</span>
-            </div>
-            <h3 class="result-title">毛穴縮小</h3>
-            <p class="result-description">毛穴面積の減少</p>
+          <div class="tech-card reveal d2">
+            <span class="tech-num">03</span>
+            <div class="tech-icon"><i class="fas fa-droplet"></i></div>
+            <h3>11種のヒアルロン酸</h3>
+            <p>分子サイズの異なる11種のヒアルロン酸が角質層の層ごとにうるおいを重ね、
+              しっとり感を長く保ちます。</p>
+            <span class="tech-meta"><i class="fas fa-layer-group"></i> 多層うるおいケア</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Product Section -->
-    <section id="about" class="product-section">
+    <!-- ===== 5. 3-Step Solution ===== -->
+    <section class="solution bg-mist" id="solution">
       <div class="container">
-        <div class="section-header fade-in">
-          <span class="section-badge">✨ 製品紹介</span>
-          <h2 class="section-title">3ステップ スキンケアルーティン</h2>
-          <p class="section-subtitle">内側から満たし、外側から守るダブルケア</p>
+        <div class="section-head reveal">
+          <span class="eyebrow center">3ステップ ソリューション</span>
+          <h2 class="section-title">ひらく · 満たす · <span class="title-accent">とじこめる</span></h2>
+          <p class="section-sub">うるおいバリアを守る、シンプルで科学的な LaEzer の3ステップ</p>
+        </div>
+        <div class="steps-flow">
+          <div class="step-flow-card reveal">
+            <div class="step-flow-num">1</div>
+            <span class="step-verb">ひらく</span>
+            <h3>浸透の下準備 ※角質層まで</h3>
+            <p>美容成分を受け入れやすい肌に整える、下準備のステップです。※角質層まで</p>
+            <i class="fas fa-chevron-right step-arrow"></i>
+          </div>
+          <div class="step-flow-card reveal d1">
+            <div class="step-flow-num">2</div>
+            <span class="step-verb">満たす</span>
+            <h3>うるおいとハリ</h3>
+            <p>カルス リペア アンプルが、エーデルワイス幹細胞エキスとヒアルロン酸でうるおいを重ねます。</p>
+            <i class="fas fa-chevron-right step-arrow"></i>
+          </div>
+          <div class="step-flow-card reveal d2">
+            <div class="step-flow-num">3</div>
+            <span class="step-verb">とじこめる</span>
+            <h3>うるおいキープ</h3>
+            <p>カルス リペア クリームがうるおいを閉じ込め、乾燥から肌を守ります。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 6. Products ===== -->
+    <section class="products" id="products">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow center">製品ラインナップ</span>
+          <h2 class="section-title">うるおいバリアを育てる<br /><span class="title-accent" style="display:inline-block">3ステップセット</span></h2>
+          <p class="section-sub">全製品ヴィーガン認証、cGMP · ISO 22716 認証工場で生産しています</p>
         </div>
         <div class="products-grid">
-          <!-- STEP 01: CICA Ampoule -->
-          <div class="product-card fade-in">
-            <div class="product-image">
-              <img
-                src="images/ezer03.jpg"
-                alt="ラエゼル CICAカプセル スピキュール アンプル"
-                loading="lazy"
-              />
-              <div class="product-badge-step">STEP 01</div>
+          <!-- STEP 01 — CICA Spicule Ampoule -->
+          <div class="product-card reveal">
+            <div class="product-media">
+              <span class="product-step-tag">STEP 01 · ひらく</span>
+              <img src="images/products/LZ-001_cica-ampoule.png" alt="LaEzer シカ カプセル スピキュール アンプル" loading="lazy" />
             </div>
-            <div class="product-info" style="text-align: center;">
-              <span class="product-step-title">鎮静と浸透のスタート</span>
-              <h3 class="product-name" style="margin-bottom: 10px;">
-                シカ カプセル スピキュール アンプル<br />
-                <span class="product-name-mn">CICA Capsule Spicule Ampoule</span>
-              </h3>
-            </div>
-          </div>
-
-          <!-- STEP 02: Repair Ampoule -->
-          <div class="product-card fade-in">
-            <div class="product-image">
-              <img
-                src="images/ezer01.jpg"
-                alt="ラエゼル Callus Repair アンプル"
-                loading="lazy"
-              />
-               <div class="product-badge-step">STEP 02</div>
-            </div>
-            <div class="product-info" style="text-align: center;">
-              <span class="product-step-title">肌の奥から満たす集中ケア</span>
-              <h3 class="product-name" style="margin-bottom: 10px;">
-                カルス リペア アンプル<br />
-                <span class="product-name-mn">Callus Repair Ampoule</span>
-              </h3>
+            <div class="product-body">
+              <span class="product-role">浸透の下準備 ※角質層まで</span>
+              <h3 class="product-name">シカ カプセル スピキュール アンプル</h3>
+              <span class="product-name-en">CICA Capsule Spicule Ampoule · 30ml</span>
+              <p class="product-desc">天然スピキュール5,000ppmが美容成分を角質層まで届け、
+                シカ成分がゆらぎがちな肌をやさしく整えます。</p>
+              <div class="product-ingredients">
+                <span>スピキュール 5,000ppm</span><span>CICA-TECA</span><span>Derma-Clera™</span>
+              </div>
+              <div class="product-foot">
+                <a href="#contact" class="btn btn-primary" style="padding:11px 18px;font-size:.9rem;width:100%">お問い合わせ</a>
+              </div>
             </div>
           </div>
 
-          <!-- STEP 03: Repair Cream -->
-          <div class="product-card fade-in">
-            <div class="product-image">
-              <img
-                src="images/ezer02.jpg"
-                alt="ラエゼル Callus Repair クリーム"
-                loading="lazy"
-              />
-               <div class="product-badge-step">STEP 03</div>
+          <!-- STEP 02 — Callus Repair Ampoule -->
+          <div class="product-card reveal d1">
+            <div class="product-media">
+              <span class="product-step-tag">STEP 02 · 満たす</span>
+              <img src="images/products/LZ-002_peptide-ampoule.png" alt="LaEzer カルス リペア アンプル" loading="lazy" />
             </div>
-            <div class="product-info" style="text-align: center;">
-               <span class="product-step-title">仕上げは肌バリア強化</span>
-              <h3 class="product-name" style="margin-bottom: 10px;">
-                カルス リペア クリーム<br />
-                <span class="product-name-mn">Callus Repair Cream</span>
-              </h3>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Premium Showcase Section -->
-    <section class="premium-showcase">
-      <div class="container">
-        <div class="premium-grid">
-          <div class="premium-image slide-in-left">
-            <img
-              src="images/premium-duo.jpg"
-              alt="LaEzer Premium Duo"
-              loading="lazy"
-            />
-          </div>
-          <div class="premium-content slide-in-right">
-            <span class="section-badge">✨ Premium Experience</span>
-            <h2 class="section-title">完璧なシナジー効果</h2>
-            <p class="section-text">
-              肌の奥深くまで潤いを届けるアンプルと、潤いを閉じ込めるクリームの出会い。<br>
-              ダブルスピキュールシステムで有効成分を真皮層まで届けて、<br>
-              驚くべき肌の変化を体験してください。
-            </p>
-            <ul class="feature-list" style="list-style: none; padding: 0; margin-bottom: 30px;">
-              <li style="margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
-                <i class="fas fa-check-circle" style="color: var(--primary-gold);"></i>
-                <span>ダブルレイヤー保湿効果</span>
-              </li>
-              <li style="margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
-                <i class="fas fa-check-circle" style="color: var(--primary-gold);"></i>
-                <span>肌バリア徹底強化ソリューション</span>
-              </li>
-            </ul>
-
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Ingredients Section -->
-    <section id="ingredients" class="ingredients-section">
-      <div class="container">
-        <div class="section-header fade-in">
-          <span class="section-badge">🌿 成分</span>
-          <h2 class="section-title">妥協しない成分哲学</h2>
-          <p class="section-subtitle">肌と健康を考えた安全な成分</p>
-        </div>
-        <div class="ingredients-grid">
-          <div class="ingredient-card fade-in">
-            <div class="ingredient-icon">
-               <img src="images/ing_edelweiss.png" alt="Edelweiss" class="icon-replacement-img">
-            </div>
-            <h3 class="ingredient-name">植物性幹細胞</h3>
-            <p class="ingredient-description">
-              エーデルワイスカルス抽出物。ビタミンCの2倍の強力な抗酸化効果。
-              肌のハリ、ツヤ、シワ改善。
-            </p>
-            <div class="ingredient-percentage">
-              <span>9種ペプチド</span>
+            <div class="product-body">
+              <span class="product-role">うるおいで満たす ※角質層まで</span>
+              <h3 class="product-name">カルス リペア アンプル</h3>
+              <span class="product-name-en">Callus Repair Ampoule · 30ml</span>
+              <p class="product-desc">特許取得のエーデルワイス幹細胞エキスと9種のペプチド、11種のヒアルロン酸が
+                うるおいとハリを与えます。※角質層まで</p>
+              <div class="product-ingredients">
+                <span>エーデルワイス幹細胞エキス</span><span>9種ペプチド</span><span>11種ヒアルロン酸</span>
+              </div>
+              <div class="product-foot">
+                <a href="#contact" class="btn btn-primary" style="padding:11px 18px;font-size:.9rem;width:100%">お問い合わせ</a>
+              </div>
             </div>
           </div>
 
-          <div class="ingredient-card fade-in">
-            <div class="ingredient-icon">
-              <img src="images/ing_hyaluronic.png" alt="Hyaluronic" class="icon-replacement-img">
+          <!-- STEP 03 — Callus Repair Cream -->
+          <div class="product-card reveal d2">
+            <div class="product-media">
+              <span class="product-step-tag">STEP 03 · とじこめる</span>
+              <img src="images/products/LZ-003_callus-cream.png" alt="LaEzer カルス リペア クリーム" loading="lazy" />
             </div>
-            <h3 class="ingredient-name">11種ヒアルロン酸</h3>
-            <p class="ingredient-description">
-              深い保湿と水分キープ。肌の層に浸透し、長時間しっとり潤いをキープ。
-            </p>
-            <div class="ingredient-percentage">
-              <span>138% 保湿力</span>
-            </div>
-          </div>
-
-          <div class="ingredient-card fade-in">
-            <div class="ingredient-icon">
-              <img src="images/ing_dermaclera.png" alt="DermaClera" class="icon-replacement-img">
-            </div>
-            <h3 class="ingredient-name">DermaClera (特許)</h3>
-            <p class="ingredient-description">
-              白花蛇舌草抽出物。肌バリアを強化し、優れた鎮静効果。
-            </p>
-            <div class="ingredient-percentage">
-              <span>特許技術適用</span>
-            </div>
-          </div>
-
-          <div class="ingredient-card fade-in">
-            <div class="ingredient-icon">
-              <img src="images/ing_cica.png" alt="Cica" class="icon-replacement-img">
-            </div>
-            <h3 class="ingredient-name">鎮静成分</h3>
-            <p class="ingredient-description">
-              ツボクサエキス（シカ）、パンテノール、アラントイン。敏感肌も安心の鎮静ケア。
-            </p>
-            <div class="ingredient-percentage">
-              <span>敏感肌OK</span>
+            <div class="product-body">
+              <span class="product-role">うるおいを閉じ込めて守る</span>
+              <h3 class="product-name">カルス リペア クリーム</h3>
+              <span class="product-name-en">Callus Repair Cream · 50ml</span>
+              <p class="product-desc">ナイアシンアミドとセラミドがうるおいの膜で肌を包み、乾燥から守ります。
+                アンプルの後の仕上げステップとして、夜のお手入れを完成させます。</p>
+              <div class="product-ingredients">
+                <span>ナイアシンアミド</span><span>セラミド</span><span>エーデルワイス幹細胞エキス</span>
+              </div>
+              <div class="product-foot">
+                <a href="#contact" class="btn btn-primary" style="padding:11px 18px;font-size:.9rem;width:100%">お問い合わせ</a>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- How to Use Section -->
-    <section class="howto-section">
+    <!-- ===== 7. Clinical Results ===== -->
+    <section class="results bg-ivory" id="results">
       <div class="container">
-        <div class="section-header fade-in">
-          <span class="section-badge">📖 使い方</span>
-          <h2 class="section-title">効果を最大化するルーティン</h2>
-          <p class="section-subtitle">
-            アンプル + クリームを併用して最高のシナジー効果を体験してください
-          </p>
+        <div class="section-head reveal">
+          <span class="eyebrow center">ヒト試験</span>
+          <h2 class="section-title">ヒトの肌で<span class="title-accent">確認した結果</span></h2>
+          <p class="section-sub">第三者試験機関にて、IRB承認のもと実施したヒト試験の結果です</p>
+        </div>
+        <div class="results-grid">
+          <div class="result-card reveal">
+            <div class="result-icon"><i class="fas fa-tint"></i></div>
+            <div class="result-number"><span class="sign">+</span><span class="counter" data-target="138">0</span>%</div>
+            <h3 class="result-title">保湿指数</h3>
+            <p class="result-desc">使用8時間後に測定</p>
+          </div>
+          <div class="result-card reveal d1">
+            <div class="result-icon"><i class="fas fa-gem"></i></div>
+            <div class="result-number"><span class="sign">+</span><span class="counter" data-target="7.4">0</span>%</div>
+            <h3 class="result-title">キメの改善</h3>
+            <p class="result-desc">なめらかで整ったキメ</p>
+          </div>
+        </div>
+        <p class="results-note">※1 (株)エゼルによるヒト試験結果 (IRB承認、2025.06)。効果の感じ方には個人差があります。</p>
+      </div>
+    </section>
+
+    <!-- ===== 8. Ingredients ===== -->
+    <section class="ingredients" id="ingredients">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow center">成分</span>
+          <h2 class="section-title">信頼できる<span class="title-accent">成分だけを</span></h2>
+          <p class="section-sub">肌にやさしく、植物から生まれ、科学で選び抜いたコア成分</p>
+        </div>
+        <div class="ing-grid">
+          <div class="ing-card reveal">
+            <div class="ing-icon"><img src="images/ing_edelweiss.png" alt="エーデルワイス" /></div>
+            <h3>植物幹細胞</h3>
+            <p>エーデルワイス幹細胞エキス。うるおいを与え、乾燥から肌を守ります。</p>
+            <span class="ing-tag">9種のペプチドと共に</span>
+          </div>
+          <div class="ing-card reveal d1">
+            <div class="ing-icon"><img src="images/ing_hyaluronic.png" alt="ヒアルロン酸" /></div>
+            <h3>11種のヒアルロン酸</h3>
+            <p>分子サイズ別に角質層へ浸透し、多層のうるおいを長時間キープします。</p>
+            <span class="ing-tag">+138% 保湿指数 ※1</span>
+          </div>
+          <div class="ing-card reveal d2">
+            <div class="ing-icon"><img src="images/ing_dermaclera.png" alt="Derma-Clera" /></div>
+            <h3>Derma-Clera™ (特許)</h3>
+            <p>エーデルワイス幹細胞エキスベースの特許成分。乾燥しがちな肌をすこやかに保ちます。</p>
+            <span class="ing-tag">特許 第10-1768870号(韓国)</span>
+          </div>
+          <div class="ing-card reveal d3">
+            <div class="ing-icon"><img src="images/ing_cica.png" alt="CICA" /></div>
+            <h3>整肌成分</h3>
+            <p>ツボクサエキス(シカ)、パンテノール、アラントインが、ゆらぎがちな肌を整えます。</p>
+            <span class="ing-tag">敏感肌パッチテスト済み ※2</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 9. How to Use ===== -->
+    <section class="howto bg-cream" id="howto">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow center">使い方</span>
+          <h2 class="section-title">朝 · 夜の<span class="title-accent">お手入れルーティン</span></h2>
+          <p class="section-sub">アンプルとクリームを一緒に使うことで、より心地よい仕上がりに</p>
         </div>
         <div class="howto-grid">
-          <div class="howto-step fade-in">
-            <div class="step-number">01</div>
-            <div class="step-icon">
-              <i class="fas fa-hand-sparkles"></i>
+          <div class="routine-card routine-am reveal">
+            <div class="routine-head">
+              <span class="ico"><i class="fas fa-sun"></i></span>
+              <div><h3>朝のお手入れ</h3><small>軽やかに、すっとなじむ</small></div>
             </div>
-            <h3 class="step-title">クレンジング & トナー</h3>
-            <p class="step-description">
-              洗顔後、トナーで肌を整え、次のステップの浸透をサポートします。
-            </p>
+            <div class="routine-steps">
+              <div class="routine-step"><span class="n">1</span><div><b>洗顔と化粧水</b><p>顔を洗い、化粧水で肌を整えます。</p></div></div>
+              <div class="routine-step"><span class="n">2</span><div><b>シカ スピキュール アンプル</b><p>肌を落ち着かせ、次のステップへの下準備をします。</p></div></div>
+              <div class="routine-step"><span class="n">3</span><div><b>カルス アンプル</b><p>うるおいを与えます。すっとなじんでツヤを残します。</p></div></div>
+              <div class="routine-step"><span class="n">4</span><div><b>クリーム (薄く)</b><p>うるおいを閉じ込めます。日焼け止めで仕上げます。</p></div></div>
+            </div>
+            <div class="routine-tip"><i class="fas fa-lightbulb"></i><span>朝は薄くのばし、なじんだ後に日焼け止めを重ねてください。</span></div>
           </div>
 
-          <div class="howto-step fade-in">
-            <div class="step-number">02</div>
-            <div class="step-icon">
-               <img src="images/howto_ampoule.png" alt="Ampoule Application" class="icon-replacement-img">
+          <div class="routine-card routine-pm reveal d1">
+            <div class="routine-head">
+              <span class="ico"><i class="fas fa-moon"></i></span>
+              <div><h3>夜のお手入れ</h3><small>じっくり集中ケア</small></div>
             </div>
-            <h3 class="step-title">アンプル使用</h3>
-            <p class="step-description">
-              カルスリペアアンプルで内側の水分を補給。素早い浸透と即座にツヤ肌へ。
-            </p>
-            <div class="step-tips">
-              <strong>Tip:</strong> 朝はさっぱりと、夜はたっぷりと！
+            <div class="routine-steps">
+              <div class="routine-step"><span class="n">1</span><div><b>洗顔と化粧水</b><p>一日の汚れを落とし、肌を整えます。</p></div></div>
+              <div class="routine-step"><span class="n">2</span><div><b>シカ スピキュール アンプル</b><p>次の美容成分を受け入れる下準備をします。</p></div></div>
+              <div class="routine-step"><span class="n">3</span><div><b>カルス アンプル (たっぷり)</b><p>たっぷりなじませ、うるおいとハリのケアに集中します。</p></div></div>
+              <div class="routine-step"><span class="n">4</span><div><b>クリーム (たっぷり)</b><p>夜の間うるおいを閉じ込め、乾燥から肌を守ります。</p></div></div>
             </div>
-          </div>
-
-          <div class="howto-step fade-in">
-            <div class="step-number">03</div>
-            <div class="step-icon">
-              <i class="fas fa-box"></i>
-            </div>
-            <h3 class="step-title">クリームで仕上げ</h3>
-            <p class="step-description">
-              カルスリペアクリームで潤いを閉じ込め、バリアを守ります。
-            </p>
-            <div class="step-tips">
-              <strong>Tip:</strong> スリーピングパックのように厚めに塗ると朝までしっとり！
-            </div>
+            <div class="routine-tip"><i class="fas fa-lightbulb"></i><span>寝る前にたっぷり塗ると、朝までしっとり感が続きます。</span></div>
           </div>
         </div>
       </div>
     </section>
 
-
-
-    <!-- Target Audience Section -->
-    <section class="target-section">
+    <!-- ===== 10. Certifications ===== -->
+    <section class="certs" id="certs">
       <div class="container">
-        <div class="section-header fade-in">
-          <span class="section-badge">👥 おすすめ対象</span>
-          <h2 class="section-title">こんな方におすすめです</h2>
-          <p class="section-subtitle">
-            肌悩み解決のためのラエゼル ソリューション
-          </p>
-        </div>
-        <div class="target-grid">
-          <div class="target-card fade-in">
-            <div class="target-icon">
-              <i class="fas fa-wind"></i>
-            </div>
-            <h3>乾燥・敏感肌</h3>
-            <p>乾燥した環境でも揺るがない深い保湿感</p>
-          </div>
-          <div class="target-card fade-in">
-            <div class="target-icon">
-              <i class="fas fa-snowflake"></i>
-            </div>
-            <h3>インナードライ改善</h3>
-            <p>表面はテカるのに内側がつっぱる肌に</p>
-          </div>
-          <div class="target-card fade-in">
-            <div class="target-icon">
-              <i class="fas fa-shield-virus"></i>
-            </div>
-            <h3>弱った肌バリア</h3>
-            <p>外部刺激ですぐ赤くなる肌に</p>
-          </div>
-          <div class="target-card fade-in">
-            <div class="target-icon">
-              <i class="fas fa-compress-arrows-alt"></i>
-            </div>
-            <h3>毛穴・肌キメ</h3>
-            <p>毛穴の開きやざらつきが気になる方に</p>
-          </div>
-          <div class="target-card fade-in">
-            <div class="target-icon">
-              <i class="fas fa-clock"></i>
-            </div>
-            <h3>初期エイジングケア</h3>
-            <p>早めに始めるアンチエイジングケア</p>
-          </div>
-          <div class="target-card fade-in">
-            <div class="target-icon">
-              <i class="fas fa-heart"></i>
-            </div>
-            <h3>スローエイジング</h3>
-            <p>毎日コツコツとケアしてエイジングを遅らせたい方に</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Reviews Section -->
-    <section id="reviews" class="reviews-section">
-      <div class="container">
-        <div class="section-header fade-in">
-          <span class="section-badge">⭐ お客様レビュー</span>
-          <h2 class="section-title">リアルなレビュー</h2>
-          <p class="section-subtitle">韓国のお客様からの率直な感想</p>
-        </div>
-        <div class="reviews-container-carousel">
-          <div class="reviews-track" id="reviewsTrack">
-            <!-- Review 1 -->
-            <div class="social-review-card">
-              <div class="social-header">
-                <div class="social-avatar">
-                   <img src="images/logo.png" alt="User" style="padding: 2px;">
-                </div>
-                <div class="social-user-info">
-                  <span class="social-username">park_hasun <i class="fas fa-check-circle verified-badge"></i></span>
-                  <span class="social-platform">Instagram Review</span>
-                </div>
-              </div>
-              <div class="social-body">
-                <div class="social-rating">
-                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                </div>
-                <p>"一度使うだけですぐわかります。内側から潤いがぎゅっと詰まる感じ！敏感肌ですが刺激がなくてとても優しいです。#ラエゼル #人生アンプル"</p>
-              </div>
-              <div class="social-footer">
-                <div class="social-actions">
-                  <i class="far fa-heart"></i>
-                  <i class="far fa-comment"></i>
-                  <i class="far fa-paper-plane"></i>
-                </div>
-                <div class="social-likes">いいね 1,243件</div>
-                <span class="social-date">2024年12月15日</span>
-              </div>
-            </div>
-
-            <!-- Review 2 -->
-            <div class="social-review-card">
-              <div class="social-header">
-                <div class="social-avatar">
-                  <img src="images/logo.png" alt="User">
-                </div>
-                <div class="social-user-info">
-                  <span class="social-username">k_beauty_lover</span>
-                  <span class="social-platform">Naver Blog Review</span>
-                </div>
-              </div>
-              <div class="social-body">
-                <div class="social-rating">
-                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                </div>
-                <p>"アンプルだけでもツヤが出ます！内側はしっとり、表面はキラキラ。クリームまで塗ると翌朝までもっちり。#水光肌 #ホームケア"</p>
-              </div>
-              <div class="social-footer">
-                 <div class="social-actions">
-                  <i class="far fa-heart"></i>
-                  <i class="far fa-comment"></i>
-                </div>
-                <div class="social-likes">いいね 892件</div>
-                <span class="social-date">2025年1月3日</span>
-              </div>
-            </div>
-
-            <!-- Review 3 -->
-            <div class="social-review-card">
-               <div class="social-header">
-                <div class="social-avatar">
-                  <img src="images/logo.png" alt="User">
-                </div>
-                <div class="social-user-info">
-                  <span class="social-username">skincare_daily</span>
-                  <span class="social-platform">Instagram Review</span>
-                </div>
-              </div>
-              <div class="social-body">
-                 <div class="social-rating">
-                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                </div>
-                <p>"冬になると肌が裂けるほど乾燥していたのに、これを使い始めてからつっぱりがすっかりなくなりました。毛穴もキュッと引き締まって肌がすべすべに！最高です！"</p>
-              </div>
-              <div class="social-footer">
-                 <div class="social-actions">
-                  <i class="far fa-heart"></i>
-                  <i class="far fa-comment"></i>
-                </div>
-                <div class="social-likes">いいね 567件</div>
-                <span class="social-date">2025年1月10日</span>
-              </div>
-            </div>
-
-             <!-- Review 4 -->
-            <div class="social-review-card">
-               <div class="social-header">
-                <div class="social-avatar">
-                   <img src="images/logo.png" alt="User" style="padding: 2px;">
-                </div>
-                <div class="social-user-info">
-                  <span class="social-username">vegan_life <i class="fas fa-check-circle verified-badge"></i></span>
-                  <span class="social-platform">Instagram Review</span>
-                </div>
-              </div>
-              <div class="social-body">
-                <div class="social-rating">
-                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                </div>
-                <p>"ヴィーガンだから安心して使えます。成分を一つ一つ確認するタイプですが、植物由来なので安心。優しい成分なのに効果もバッチリなので定番になりました。"</p>
-              </div>
-              <div class="social-footer">
-                 <div class="social-actions">
-                  <i class="far fa-heart"></i>
-                  <i class="far fa-comment"></i>
-                </div>
-                <div class="social-likes">いいね 2,031件</div>
-                <span class="social-date">2024年12月28日</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <script>
-          document.addEventListener('DOMContentLoaded', function() {
-            const track = document.getElementById('reviewsTrack');
-            // Duplicate content for seamless loop
-             track.innerHTML += track.innerHTML;
-
-            let scrollAmount = 0;
-            const cardWidth = 340; // Card width + gap (320 + 20)
-            const speed = 1; // px per frame, adjust for smoothness
-
-            // Auto scroll function
-            function scrollReviews() {
-              scrollAmount += 1;
-            }
-
-            // Step-based scrolling (2s interval)
-            let currentIndex = 0;
-            const cards = track.children;
-            const totalCards = cards.length / 2; // original count
-
-            setInterval(() => {
-              currentIndex++;
-              const offset = currentIndex * cardWidth;
-              track.style.transition = 'transform 0.5s ease';
-              track.style.transform = `translateX(-${offset}px)`;
-
-              if (currentIndex >= totalCards) {
-                 setTimeout(() => {
-                   currentIndex = 0;
-                   track.style.transition = 'none';
-                   track.style.transform = `translateX(0)`;
-                 }, 500);
-              }
-            }, 2000); // 2 seconds
-          });
-        </script>
-      </div>
-    </section>
-
-    <!-- Certifications Section -->
-    <section class="certifications-section" id="certifications">
-      <div class="container">
-        <div class="section-header fade-in">
-          <span class="section-badge">🏆 認証</span>
-          <h2 class="section-title">信頼できる品質</h2>
-          <p class="section-subtitle">
-            国際基準と安全性検証完了
-          </p>
+        <div class="section-head reveal">
+          <span class="eyebrow center">認証と検証</span>
+          <h2 class="section-title">言葉ではなく<span class="title-accent">書類で示します</span></h2>
+          <p class="section-sub">国際基準の認証と、検証された安全性</p>
         </div>
         <div class="cert-grid">
-          <!-- Item 1: Vegan -->
-          <div class="cert-item">
-            <div class="cert-header">ヴィーガン認証取得</div>
-            <div class="cert-visual">
-              <img src="images/001.png" alt="ヴィーガン認証書">
-            </div>
-            <p class="cert-desc">
-              100% 植物由来原料使用<br>韓国ヴィーガン認証院 認証取得
-            </p>
+          <div class="cert-card reveal">
+            <div class="cert-visual"><img src="images/001.png" alt="ヴィーガン認証" /></div>
+            <div class="cert-body"><h4>ヴィーガン認証</h4><p>動物由来原料・動物実験を行わないヴィーガン認証処方</p></div>
           </div>
+          <div class="cert-card reveal d1">
+            <div class="cert-visual"><img src="images/002.png" alt="敏感肌テスト成績書" /></div>
+            <div class="cert-body"><h4>敏感肌テスト済み</h4><p>敏感肌の方の協力によるパッチテスト実施済み ※2</p></div>
+          </div>
+          <div class="cert-card reveal d2">
+            <div class="cert-visual"><img src="images/003.png" alt="特許証" /></div>
+            <div class="cert-body"><h4>特許成分配合</h4><p>Derma-Clera™ 配合 · 特許 第10-1768870号(韓国)</p></div>
+          </div>
+          <div class="cert-card reveal d3">
+            <div class="cert-visual"><img src="images/004.png" alt="cGMP·ISO 22716 認証" /></div>
+            <div class="cert-body"><h4>cGMP · ISO 22716</h4><p>国際GMP基準の認証工場で生産</p></div>
+          </div>
+        </div>
+        <p class="results-note" style="margin-top:24px">※2 すべての方に肌トラブルが起こらないというわけではありません。</p>
+      </div>
+    </section>
 
-          <!-- Item 2: Sensitive Skin -->
-          <div class="cert-item">
-            <div class="cert-header">敏感肌<br>使用適合テスト済み</div>
-            <div class="cert-visual">
-              <img src="images/002.png" alt="敏感肌テスト成績書">
-            </div>
-            <p class="cert-desc">
-              敏感な肌にも安心して使える<br>無刺激製品判定
-            </p>
+    <!-- ===== 11. CTA (purchase / contact) ===== -->
+    <section class="cta" id="contact">
+      <div class="container">
+        <div class="cta-inner reveal">
+          <span class="eyebrow center">ご購入・お問い合わせ</span>
+          <h2>LaEzer を<br />はじめてみませんか</h2>
+          <p>日本からのご購入・お取り扱い(卸)のご相談は、<strong>Messenger</strong> にて
+            日本語でお気軽にお問い合わせください。</p>
+          <div class="cta-channels">
+            <a href="https://m.me/soulalpaca" target="_blank" rel="noopener" class="cta-channel primary">
+              <span class="ch-label"><i class="fab fa-facebook-messenger"></i> Messenger お問い合わせ</span>
+              <span class="ch-sub">ご購入・卸・製品についてのご質問</span>
+              <span class="ch-val">メッセージを送る</span>
+            </a>
+            <a href="https://laezer.co.kr" target="_blank" rel="noopener" class="cta-channel">
+              <span class="ch-label"><i class="fas fa-shopping-bag"></i> 公式オンラインショップ</span>
+              <span class="ch-sub">韓国公式ストア</span>
+              <span class="ch-val">laezer.co.kr</span>
+            </a>
           </div>
-
-          <!-- Item 3: Patent -->
-          <div class="cert-item">
-            <div class="cert-header">特許成分配合</div>
-            <div class="cert-visual">
-              <img src="images/003.png" alt="特許証">
-            </div>
-            <p class="cert-desc">
-              白花蛇舌草抽出物由来の鎮静特許成分<br>Derma-Clera™ 配合
-            </p>
-          </div>
-
-          <!-- Item 4: KFDA -->
-          <div class="cert-item">
-            <div class="cert-header">韓国MFDS 機能性審査完了</div>
-            <div class="cert-visual">
-              <img src="images/004.png" alt="機能性化粧品審査報告書">
-            </div>
-            <p class="cert-desc">
-              美白・シワ改善<br>2重機能性化粧品
-            </p>
-          </div>
+          <p class="cta-note">
+            メールでのお問い合わせ:
+            <a href="mailto:help@laezer.co.kr" style="color:var(--green-crystal);text-decoration:underline">help@laezer.co.kr</a>
+          </p>
         </div>
       </div>
     </section>
 
-    <!-- Footer -->
+    <!-- ===== Footer ===== -->
     <footer class="footer">
       <div class="container">
-        <div class="footer-content">
+        <div class="footer-top">
           <div class="footer-brand">
-            <h3 class="footer-logo">LaEzer</h3>
-            <p class="footer-tagline">韓国ビューティーの新しい基準</p>
+            <div class="footer-logo">LaEzer</div>
+            <p class="footer-tagline">科学で語る K-Beauty。うるおいで肌を守ります。</p>
             <div class="footer-social">
-              <a href="#" aria-label="Instagram"
-                ><i class="fab fa-instagram"></i
-              ></a>
-              <a href="#" aria-label="Facebook"
-                ><i class="fab fa-facebook"></i
-              ></a>
-              <a
-                href="https://www.youtube.com/watch?v=kkYFzxSf-iE"
-                target="_blank"
-                aria-label="YouTube"
-                ><i class="fab fa-youtube"></i
-              ></a>
+              <a href="https://www.instagram.com/zia.laezer" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="https://m.me/soulalpaca" target="_blank" rel="noopener" aria-label="Messenger"><i class="fab fa-facebook-messenger"></i></a>
+              <a href="https://www.youtube.com/watch?v=FHtmHfhk6FY" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
             </div>
           </div>
-          <div class="footer-links">
-            <div class="footer-column">
-              <h4>製品</h4>
-              <ul>
-                <li><a href="#about">カルス リペア アンプル</a></li>
-                <li><a href="#about">カルス リペア クリーム</a></li>
-                <li><a href="#ingredients">成分について</a></li>
-              </ul>
-            </div>
-            <div class="footer-column">
-              <h4>情報</h4>
-              <ul>
-                <li><a href="#results">臨床結果</a></li>
-                <li><a href="#reviews">お客様レビュー</a></li>
-                <li><a href="#video">PR動画</a></li>
-              </ul>
-            </div>
-            <div class="footer-column">
-              <h4>カスタマーサポート</h4>
-              <ul>
-                <li>
-                  <a href="https://laezer.co.kr" target="_blank"
-                    >公式サイト</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://laezer.co.kr/product/%EC%84%A4%EB%A7%9E%EC%9D%B4%ED%8A%B9%EA%B0%80%EC%A0%84-%EC%8B%9D%EB%AC%BC%EC%84%B1-%EC%A4%84%EA%B8%B0%EC%84%B8%ED%8F%AC-2%EC%A2%85-%EC%84%B8%ED%8A%B8/56/category/47/display/1/"
-                    target="_blank"
-                    >購入はこちら</a
-                  >
-                </li>
-                <li>
-                  <a href="https://m.me/soulalpaca" target="_blank">お問い合わせ</a>
-                </li>
-              </ul>
-            </div>
+          <div class="footer-col">
+            <h4>製品</h4>
+            <ul>
+              <li><a href="#products">シカ カプセル スピキュール アンプル</a></li>
+              <li><a href="#products">カルス リペア アンプル</a></li>
+              <li><a href="#products">カルス リペア クリーム</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>インフォメーション</h4>
+            <ul>
+              <li><a href="#why">なぜ LaEzer</a></li>
+              <li><a href="#results">ヒト試験</a></li>
+              <li><a href="#ingredients">成分</a></li>
+              <li><a href="#howto">使い方</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>お問い合わせ</h4>
+            <ul>
+              <li><a href="https://m.me/soulalpaca" target="_blank" rel="noopener">Messenger</a></li>
+              <li><a href="mailto:help@laezer.co.kr">help@laezer.co.kr</a></li>
+              <li><a href="https://laezer.co.kr" target="_blank" rel="noopener">公式サイト(韓国)</a></li>
+            </ul>
           </div>
         </div>
         <div class="footer-bottom">
-          <p>&copy; 2025 LaEzer. All rights reserved.</p>
-          <p class="footer-disclaimer">
-            このサイトはラエゼル製品を日本市場に紹介するためのページです。<br />
-            公式購入および詳細情報は
-            <a href="https://laezer.co.kr" target="_blank">laezer.co.kr</a>
-            でご確認いただけます。
-          </p>
+          <p>&copy; 2026 LaEzer · (株)エゼル. All rights reserved.</p>
+          <p>Ezel Co., Ltd. · 66, Daehwa-ro 106beon-gil, Daedeok-gu, Daejeon, Korea</p>
         </div>
       </div>
     </footer>
 
-    <!-- Scroll to Top Button -->
-    <button id="scrollTop" class="scroll-top" aria-label="トップへ">
-      <i class="fas fa-arrow-up"></i>
-    </button>
-
+    <button id="scrollTop" class="scroll-top" aria-label="トップへ戻る"><i class="fas fa-arrow-up"></i></button>
     <script src="js/script.js"></script>
   </body>
 </html>

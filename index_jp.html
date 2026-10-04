@@ -33,6 +33,16 @@
       .product-name { word-break: keep-all; }
       @media (max-width: 680px) { .results .results-grid { grid-template-columns: 1fr; } }
     </style>
+    <link rel="alternate" hreflang="mn" href="https://laezer-landing.netlify.app/" />
+    <link rel="alternate" hreflang="ko" href="https://laezer-landing.netlify.app/index_kr" />
+    <link rel="alternate" hreflang="ja" href="https://laezer-landing.netlify.app/index_jp" />
+    <link rel="alternate" hreflang="ru" href="https://laezer-landing.netlify.app/index_ru" />
+    <link rel="alternate" hreflang="x-default" href="https://laezer-landing.netlify.app/" />
+    <link rel="canonical" href="https://laezer-landing.netlify.app/index_jp" />
+    <meta property="og:locale" content="ja_JP" />
+    <meta property="og:locale:alternate" content="mn_MN" />
+    <meta property="og:locale:alternate" content="ko_KR" />
+    <meta property="og:locale:alternate" content="ru_RU" />
   </head>
   <body>
     <!-- ===== Header ===== -->
@@ -49,9 +59,10 @@
           <li><a href="#howto">使い方</a></li>
           <li><a href="#contact" class="btn-nav"><i class="fas fa-comment-dots"></i> お問い合わせ</a></li>
           <li class="lang-switcher-container">
-            <a href="index.html" class="lang-btn">MGL</a>
-            <a href="index_kr.html" class="lang-btn">KOR</a>
-            <a href="#" class="lang-btn active">JPN</a>
+            <a href="index.html" class="lang-btn" data-lang-pick="mn">MGL</a>
+            <a href="index_kr.html" class="lang-btn" data-lang-pick="ko">KOR</a>
+            <a href="#" class="lang-btn active" data-lang-pick="ja">JPN</a>
+            <a href="index_ru.html" class="lang-btn" data-lang-pick="ru">RUS</a>
           </li>
         </ul>
         <div class="hamburger" id="hamburger">
@@ -549,5 +560,6 @@
 
     <button id="scrollTop" class="scroll-top" aria-label="トップへ戻る"><i class="fas fa-arrow-up"></i></button>
     <script src="js/script.js"></script>
+    <script src="js/lang-pref.js"></script>
   </body>
 </html>

@@ -117,3 +117,80 @@ git push origin main
 - **언어 추가 시**: 언어 선택기가 하드코딩 링크라 **모든 페이지를 고쳐야** 합니다. 한 곳이라도 빠지면 그 페이지에서 신규 언어로 갈 수 없습니다.
 - **`js/lang-pref.js`는 모든 언어 페이지에 들어가야 합니다.** 빠진 페이지에서 언어를 고르면 쿠키가 안 생겨 러시아 사용자가 계속 러시아어로 튕깁니다.
 - **BSD grep `-i`가 키릴 대문자를 못 잡습니다.** 몽골어·러시아어 검증은 Python `(?i)` 정규식으로.
+
+---
+
+## 7. 로컬 확인 체크리스트 (`netlify dev`)
+
+### 먼저 — 기동 로그에서 확인할 것
+
+```bash
+netlify dev
+```
+
+| 보여야 하는 것 | 의미 |
+|---|---|
+| `Loaded edge function geo-ru` (또는 `Edge Functions: geo-ru`) | **지역 분기 등록됨.** 이 줄이 없으면 분기 안 됨 |
+| `Running static server from "laezer-landing"` | 정상 (레포 루트가 publish 디렉터리) |
+| ~~`Unable to determine public folder`~~ | **이제 안 나와야 함.** 나오면 netlify.toml이 안 읽힌 것 |
+| `Failed to fetch AI Gateway token: Forbidden` | **무시해도 됨.** Netlify CLI의 AI Gateway 기능이 계정 권한이 없어 내는 메시지로, 이 사이트와 무관합니다 |
+
+### A. 4개 언어 전환
+
+http://localhost:8888 부터 시작.
+
+- [ ] 우상단 언어 버튼이 **MGL / KOR / JPN / RUS 4개**
+- [ ] `/` 몽골어 → KOR → JPN → RUS → MGL 한 바퀴 돌아 원위치
+- [ ] 러시아어판에서 키릴 글자 깨짐(네모·물음표) 없음
+- [ ] 러시아어판 히어로 버튼("Купить в официальном магазине")·배지가 카드 밖으로 안 터짐
+- [ ] 브라우저 창을 폭 375px까지 줄여도 가로 스크롤바 안 생김
+
+### B. 언어 선택 기억 (쿠키)
+
+1. 아무 언어 버튼이나 클릭
+2. DevTools(`⌥⌘I`) → **Application → Cookies → http://localhost:8888**
+- [ ] `lzr_lang` 쿠키가 생성됨 (값: `mn`/`ko`/`ja`/`ru` 중 하나, 만료 1년 뒤)
+- [ ] 다른 언어를 누르면 값이 그 언어로 바뀜
+
+### C. 지역 분기 시뮬레이션
+
+**방법 1 — CLI 플래그 (가장 정확, 권장)**
+
+```bash
+# 현재 netlify dev 종료(Ctrl+C) 후 RU로 위장해 재기동
+netlify dev --geo=mock --country=RU
+```
+
+- [ ] http://localhost:8888/ 접속 → **`/index_ru`로 자동 이동**, 러시아어판이 뜸
+- [ ] http://localhost:8888/index_kr 접속 → **이동 없이 한국어판 그대로** (직접 URL은 불간섭)
+- [ ] http://localhost:8888/index_ru 접속 → 이동 없음 (무한 리다이렉트 안 남)
+
+**사용자 선택 우선 확인 — 가장 중요**
+
+4. 위 상태(RU 위장)에서 러시아어판의 **MGL 버튼 클릭** → 몽골어판으로 이동
+5. 주소창에 다시 `http://localhost:8888/` 입력
+- [ ] **몽골어판이 그대로 뜸** (러시아어로 다시 튕기지 않음) ← 이게 통과해야 합니다
+
+**방법 2 — curl (브라우저 없이 빠르게)**
+
+```bash
+# RU: 302 + location: /index_ru 가 나와야 정상
+curl -sI http://localhost:8888/ | grep -iE 'HTTP/|location'
+
+# 쿠키가 있으면 200 (분기 안 함)
+curl -sI -H 'cookie: lzr_lang=ko' http://localhost:8888/ | grep -iE 'HTTP/|location'
+
+# 크롤러는 분기 안 함 → 200
+curl -sI -H 'user-agent: Mozilla/5.0 (compatible; Googlebot/2.1)' http://localhost:8888/ | grep -iE 'HTTP/|location'
+```
+
+> `netlify dev`를 `--country` 없이 띄우면 geo가 비어 있어 **분기가 안 되는 게 정상**입니다. 분기를 보려면 반드시 `--country=RU`로 띄우세요.
+
+### D. 4개 URL 응답
+
+```bash
+for u in / /index_kr /index_jp /index_ru; do
+  echo -n "$u -> "; curl -s -o /dev/null -w "%{http_code}\n" "http://localhost:8888$u"
+done
+```
+- [ ] 4개 전부 `200` (단, `--country=RU`로 띄웠다면 `/`는 `302`가 정상)

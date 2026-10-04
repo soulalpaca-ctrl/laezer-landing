@@ -1,21 +1,39 @@
-# example netlify.toml
+# netlify.toml — laezer-landing
+#
+# 2026-10-04: Netlify 생성 예제 템플릿 그대로였던 것을 실제 구조에 맞게 정리.
+#   - publish = ""  → "."  (빈 문자열이라 `netlify dev`가 "Unable to determine
+#     public folder"를 내고 있었음. 이 사이트는 레포 루트에 index.html이 있는
+#     순수 정적 사이트이므로 루트가 publish 디렉터리가 맞음 — 기존 배포 동작과 동일)
+#   - edge_functions 디렉터리 + geo-ru 등록 추가 (이게 없어서 로컬에서 로드 안 됨)
+
 [build]
-  command = "# no build command"
-  functions = "netlify/functions"
-  publish = ""
+  # 빌드 과정 없는 정적 사이트
+  command = ""
+  # 레포 루트에 index.html / index_kr.html / index_jp.html / index_ru.html 이 있음
+  publish = "."
+  # Edge Functions 소스 디렉터리 (기본값과 동일하나 명시해 둠)
+  edge_functions = "netlify/edge-functions"
 
-  ## Uncomment to use this redirect for Single Page Applications like create-react-app.
-  ## Not needed for static site generators.
-  #[[redirects]]
-  #  from = "/*"
-  #  to = "/index.html"
-  #  status = 200
+# ─────────────────────────────────────────────────────────────
+# Edge Functions
+# ─────────────────────────────────────────────────────────────
+# geo-ru: 러시아(RU)에서 들어온 최초 방문자를 러시아어판으로 보냄.
+#
+# path를 "/" 와 "/index.html" 로만 한정하는 이유 — 중요:
+#   이 둘은 "언어를 고르지 않은 채 들어온 상태"를 뜻하는 유일한 경로입니다.
+#   /index_kr · /index_jp · /index_ru 는 방문자가 이미 언어를 특정한 URL이므로
+#   가로채면 안 됩니다. (공유 링크·검색결과·북마크로 /index_kr 에 처음 들어온
+#   러시아 사용자를 러시아어판으로 튕기는 것은 "사용자 선택 존중" 원칙 위반이고,
+#   /index_ru 를 포함하면 무한 리다이렉트가 납니다.)
+#   geo-ru.js 안에도 동일한 경로 가드가 있어 이중으로 막혀 있습니다.
+#
+# 분기를 끄려면: 아래 [[edge_functions]] 두 블록을 지우거나 주석 처리.
+#   (파일 삭제까지 할 필요 없음)
 
-  ## (optional) Settings for Netlify Dev
-  ## https://github.com/netlify/cli/blob/main/docs/netlify-dev.md#project-detection
-  #[dev]
-  #  command = "yarn start" # Command to start your dev server
-  #  port = 3000 # Port that the dev server will be listening on
-  #  publish = "dist" # Folder with the static content for _redirect file
+[[edge_functions]]
+  path = "/"
+  function = "geo-ru"
 
-  ## more info on configuring this file: https://ntl.fyi/file-based-build-config
+[[edge_functions]]
+  path = "/index.html"
+  function = "geo-ru"

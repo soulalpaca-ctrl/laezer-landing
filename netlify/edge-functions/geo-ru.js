@@ -1,9 +1,13 @@
 /* LaEzer landing — Netlify Edge Function: geo routing for Russian-speaking visitors
  *
  * Deploy path:  netlify/edge-functions/geo-ru.js
- * Netlify auto-registers edge functions from that directory. Edge Functions are
- * available on the FREE tier (unlike `_redirects` Country conditions, which need
- * Business/Enterprise) — this is why we use an edge function here.
+ * 등록은 netlify.toml 의 [[edge_functions]] 블록에서 합니다 (path = "/" 와
+ * "/index.html"). 인라인 `export const config` 는 일부러 쓰지 않습니다 —
+ * 양쪽에 선언하면 Netlify가 두 설정을 합쳐 의도보다 넓은 경로에서 돌 수 있어
+ * 설정 출처를 netlify.toml 하나로 못박았습니다. 경로를 바꾸려면 거기서 바꾸세요.
+ *
+ * Edge Functions are available on the FREE tier (unlike `_redirects` Country
+ * conditions, which need Business/Enterprise) — this is why we use one here.
  *
  * Behaviour
  *  - Only the root path "/" is intercepted. Direct URLs (/index_kr, /index_jp,
@@ -54,4 +58,4 @@ export default async (request, context) => {
   return Response.redirect(url.toString(), 302);
 };
 
-export const config = { path: "/" };
+// 경로 등록은 netlify.toml [[edge_functions]] 참조 (인라인 config 의도적으로 없음)

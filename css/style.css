@@ -138,6 +138,28 @@ section { padding: clamp(72px, 10vw, 128px) 0; position: relative; }
 .lang-btn { font-family: var(--font-head); font-size: 0.78rem; font-weight: 700; letter-spacing: .04em; color: var(--ink-faint); padding: 5px 9px; border-radius: 8px; transition: all .2s; }
 .lang-btn.active { background: var(--green-mist); color: var(--green-deep); }
 .lang-btn:hover { color: var(--green-sage); }
+
+/* ---------- 언어 선택기 원형 국기 (2026-10-04 추가) ---------- */
+/* 국기는 SVG data URL 인라인 — 외부 이미지 요청 0건, 아이콘 깨짐 없음.
+   이모지 국기(🇰🇷 등)는 Windows Chrome에서 글자로 깨지므로 쓰지 않음.
+   정사각 viewBox로 그려 원형 크롭 시 좌우가 잘리지 않게 함.
+   KOR: 건곤감리 4괘는 원형 크롭 바깥(모서리)이라 잘려 지저분해져 제외.
+        태극만 실제 국기 각도(-33.69도)로 회전해 16px에서도 또렷하게. */
+.lang-btn { display: inline-flex; align-items: center; gap: 5px; }
+.lang-flag {
+  width: 16px; height: 16px; flex: 0 0 16px;
+  border-radius: 50%;
+  background-size: cover; background-position: center;
+  box-shadow: 0 0 0 1px rgba(26, 44, 26, .14), 0 1px 2px rgba(26, 44, 26, .12);
+  transition: transform .2s, box-shadow .2s;
+}
+.lang-btn:hover .lang-flag { transform: scale(1.12); }
+.lang-btn.active .lang-flag { box-shadow: 0 0 0 2px var(--green-sage), 0 1px 3px rgba(26, 44, 26, .18); }
+.lang-flag--mn { background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2 2'><rect width='2' height='2' fill='%230066b3'/><rect width='.667' height='2' fill='%23da2032'/><rect x='1.333' width='.667' height='2' fill='%23da2032'/><g fill='%23ffd900'><circle cx='.333' cy='.58' r='.13'/><rect x='.2' y='.8' width='.27' height='.09'/><rect x='.2' y='.96' width='.27' height='.09'/><rect x='.26' y='1.12' width='.15' height='.44'/></g></svg>"); }
+.lang-flag--ko { background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2 2'><rect width='2' height='2' fill='%23ffffff'/><g transform='rotate(-33.69 1 1)'><path d='M.42 1a.58.58 0 0 1 1.16 0 .29.29 0 0 1-.58 0 .29.29 0 0 0-.58 0z' fill='%23cd2e3a'/><path d='M.42 1a.58.58 0 0 0 1.16 0 .29.29 0 0 0-.58 0 .29.29 0 0 1-.58 0z' fill='%230047a0'/></g></svg>"); }
+.lang-flag--ja { background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2 2'><rect width='2' height='2' fill='%23ffffff'/><circle cx='1' cy='1' r='.6' fill='%23bc002d'/></svg>"); }
+.lang-flag--ru { background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2 2'><rect width='2' height='.667' fill='%23ffffff'/><rect y='.667' width='2' height='.667' fill='%230039a6'/><rect y='1.334' width='2' height='.666' fill='%23d52b1e'/></svg>"); }
+
 .hamburger { display: none; flex-direction: column; gap: 5px; padding: 8px; cursor: pointer; }
 .hamburger span { width: 24px; height: 2px; background: var(--ink); border-radius: 2px; transition: .3s; }
 .hamburger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
@@ -411,6 +433,7 @@ section { padding: clamp(72px, 10vw, 128px) 0; position: relative; }
   .nav-menu > li > a:not(.btn-nav) { display: block; padding: 14px 4px; border-bottom: 1px solid var(--line); }
   .btn-nav { width: 100%; justify-content: center; margin: 10px 0; padding: 14px; }
   .lang-switcher-container { border-left: none; padding-left: 0; margin-left: 0; justify-content: center; gap: 8px; padding-top: 6px; }
+  .lang-flag { width: 18px; height: 18px; flex-basis: 18px; }
   .hamburger { display: flex; }
   .tech-grid, .steps-flow, .products-grid, .results-grid, .ing-grid, .cert-grid, .target-grid, .howto-grid, .cta-channels { grid-template-columns: 1fr; }
   .hero-stats { flex-direction: column; }

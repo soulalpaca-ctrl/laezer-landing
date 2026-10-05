@@ -62,7 +62,27 @@
       .hero-stats .stat-number { font-size: clamp(1.4rem, 3vw, 2rem); }
       .btn, .btn-nav, .cta-channel .ch-label { white-space: normal; text-align: center; }
       .btn-lg { padding-left: 20px; padding-right: 20px; }
-      .nav-menu > li > a { font-size: .86rem; }
+      /* 러시아어 메뉴 라벨은 한국어보다 훨씬 길다 (제품 2자 ↔ Продукты 8자).
+         hyphens:auto 때문에 중간 폭에서 "Про-дукты"처럼 하이픈으로 쪼개져
+         메뉴가 2~3줄로 터졌음. 하이픈 금지 + 햄버거 전환 지점을
+         680px → 1150px 로 올려 해결. 러시아어판에만 적용된다. */
+      .nav-menu > li > a { font-size: .86rem; hyphens: none; }
+      @media (max-width: 1150px) and (min-width: 681px) {
+        .nav-menu {
+          position: fixed; top: var(--header-h); left: 0; right: 0;
+          flex-direction: column; align-items: stretch; gap: 0;
+          background: #fff; padding: 14px var(--gutter) 24px;
+          box-shadow: var(--shadow-md); border-top: 1px solid var(--line);
+          transform: translateY(-130%); transition: transform .35s ease; z-index: 999;
+        }
+        .nav-menu.open { transform: translateY(0); }
+        .nav-menu > li { width: 100%; }
+        .nav-menu > li > a:not(.btn-nav) { display: block; padding: 14px 4px; border-bottom: 1px solid var(--line); font-size: .96rem; }
+        .btn-nav { width: 100%; justify-content: center; margin: 10px 0; padding: 14px; }
+        .lang-switcher-container { border-left: none; padding-left: 0; margin-left: 0; justify-content: center; gap: 8px; padding-top: 6px; }
+        .lang-flag { width: 18px; height: 18px; flex-basis: 18px; }
+        .hamburger { display: flex; }
+      }
       .product-name { font-size: 1.12rem; line-height: 1.3; }
       .product-name-en { font-size: .76rem; }
       .section-title { overflow-wrap: break-word; }

@@ -145,8 +145,14 @@ section { padding: clamp(72px, 10vw, 128px) 0; position: relative; }
    정사각 viewBox로 그려 원형 크롭 시 좌우가 잘리지 않게 함.
    KOR: 건곤감리 4괘는 원형 크롭 바깥(모서리)이라 잘려 지저분해져 제외.
         태극만 실제 국기 각도(-33.69도)로 회전해 16px에서도 또렷하게. */
-.lang-btn { display: inline-flex; align-items: center; gap: 5px; }
+.lang-btn { display: inline-flex; align-items: center; }
+/* display:inline-block + margin (flex gap 아님) 인 이유:
+   햄버거 드로어에서는 .nav-menu > li > a 가 display:block 으로 덮어써져
+   .lang-btn 의 inline-flex 가 무효화된다. 그때 자식 span 이 inline 이 되면
+   width/height 가 먹지 않아 국기가 0px 로 사라진다 (드로어 열면 글자만 남음).
+   inline-block 으로 두면 부모가 flex든 block이든 항상 원형으로 렌더된다. */
 .lang-flag {
+  display: inline-block; vertical-align: -3px; margin-right: 5px;
   width: 16px; height: 16px; flex: 0 0 16px;
   border-radius: 50%;
   background-size: cover; background-position: center;

@@ -14,7 +14,7 @@
 
   var COOKIE = "lzr_lang";
   var MAX_AGE = 60 * 60 * 24 * 365; // 1 year
-  var VALID = { mn: 1, ko: 1, ja: 1, ru: 1 };
+  var VALID = { mn: 1, ko: 1, ja: 1, ru: 1 , en: 1};
 
   function setPref(lang) {
     if (!VALID[lang]) return;

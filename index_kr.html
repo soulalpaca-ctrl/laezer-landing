@@ -12,9 +12,9 @@
       content="라에젤,LaEzer, 피부장벽, 더마코스메틱, 에델바이스 줄기세포, 스피큘 앰플, 캘러스 리페어, 비건 화장품"
     />
     <title>라에젤 LaEzer — 과학으로 증명하는 K-Beauty | 피부 장벽 케어</title>
-    <link rel="icon" type="image/png" href="images/logo.png" />
+    <link rel="icon" type="image/png" href="images/logo-transparent.png" />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/laezer-2026.css?v=redesign1" />
+    <link rel="stylesheet" href="css/laezer-2026.css?v=redesign3" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
@@ -67,7 +67,7 @@
       "url": "https://laezer-landing.netlify.app/",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://laezer-landing.netlify.app/images/logo.png"
+        "url": "https://laezer-landing.netlify.app/images/logo-transparent.png"
       },
       "email": "help@laezer.co.kr",
       "address": {
@@ -114,7 +114,7 @@
     <header class="header" id="header">
       <nav class="nav container">
         <div class="nav-brand">
-          <img src="images/logo.png" alt="LaEzer" class="brand-logo-img" />
+          <img src="images/logo-transparent.png" alt="LaEzer" class="brand-logo-img" />
         </div>
         <ul class="nav-menu" id="navMenu">
           <li><a href="#why">왜 라에젤인가</a></li>
@@ -620,6 +620,104 @@
             제품이 궁금하신가요? <a href="mailto:help@laezer.co.kr" style="color:var(--green-crystal);text-decoration:underline">help@laezer.co.kr</a>로 문의해 주세요.
           </p>
         </div>
+      </div>
+    </section>
+
+
+    <!-- ===== 12. 바이어 상담창구 ===== -->
+    <section class="buyer" id="buyer">
+      <div class="container container--narrow">
+        <div class="section-head reveal">
+          <h2 class="section-title">바이어 상담 창구</h2>
+          <p class="section-sub">
+            유통·수입·총판을 검토 중이시라면 연락처를 남겨 주세요.
+            담당자가 영업일 기준 1일 안에 회신드립니다.
+          </p>
+        </div>
+
+
+        <div class="buyer-fit reveal">
+          <p class="buyer-fit__title">이런 분께 제안드립니다</p>
+          <ul class="buyer-fit__list">
+            <li>자국에서 화장품 유통망을 운영 중인 수입사</li>
+            <li>더마코스메틱·스킨케어를 취급하는 총판과 편집숍</li>
+            <li>OEM·ODM으로 자체 브랜드를 준비하는 기업</li>
+          </ul>
+          <ul class="buyer-fit__trust" aria-label="보유 인증">
+            <li>비건 인증</li>
+            <li>cGMP · ISO 22716</li>
+            <li>IRB 인체적용시험</li>
+            <li>특허 제10-1768870호</li>
+          </ul>
+        </div>
+
+        <form
+          class="buyer-form reveal"
+          name="buyer-inquiry"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          action="/thanks-buyer.html">
+          <input type="hidden" name="form-name" value="buyer-inquiry" />
+          <p class="buyer-form__hp">
+            <label>이 칸은 비워 두세요 <input name="bot-field" tabindex="-1" autocomplete="off" /></label>
+          </p>
+
+          <div class="buyer-form__grid">
+            <div class="field">
+              <label for="bf-company">회사명 <span class="req">필수</span></label>
+              <input id="bf-company" name="회사명" type="text" required autocomplete="organization" />
+            </div>
+            <div class="field">
+              <label for="bf-name">담당자명 <span class="req">필수</span></label>
+              <input id="bf-name" name="담당자명" type="text" required autocomplete="name" />
+            </div>
+            <div class="field">
+              <label for="bf-email">이메일 <span class="req">필수</span></label>
+              <input id="bf-email" name="이메일" type="email" required inputmode="email" autocomplete="email" />
+              <span class="field__help">회신은 이 주소로 드립니다</span>
+            </div>
+            <div class="field">
+              <label for="bf-phone">전화번호 <span class="opt">선택</span></label>
+              <input id="bf-phone" name="전화번호" type="tel" inputmode="tel" autocomplete="tel" placeholder="국가번호 포함" />
+            </div>
+            <div class="field">
+              <label for="bf-country">국가 · 지역 <span class="req">필수</span></label>
+              <input id="bf-country" name="국가" type="text" required autocomplete="country-name" placeholder="예: 몽골, 일본, 대한민국" />
+            </div>
+            <div class="field">
+              <label for="bf-interest">관심 품목 <span class="opt">선택</span></label>
+              <select id="bf-interest" name="관심품목">
+                <option value="">선택해 주세요</option>
+                <option>3단계 세트 전체</option>
+                <option>시카 캡슐 스피큘 앰플</option>
+                <option>캘러스 리페어 앰플</option>
+                <option>캘러스 리페어 크림</option>
+                <option>OEM · ODM 문의</option>
+                <option>아직 정하지 않음</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field field--full">
+            <label for="bf-message">문의 내용 <span class="opt">선택</span></label>
+            <textarea id="bf-message" name="문의내용" rows="3" placeholder="유통 채널, 예상 물량, 일정 등 알려주시면 더 정확히 준비하겠습니다"></textarea>
+          </div>
+
+          <label class="buyer-form__consent">
+            <input type="checkbox" name="개인정보동의" value="동의" required />
+            <span>
+              상담 회신을 위해 회사명·담당자명·연락처를 수집하며, 문의 종결 후 3년간 보관한 뒤 파기합니다.
+              동의하지 않으셔도 되지만, 이 경우 회신이 어렵습니다.
+            </span>
+          </label>
+
+          <button type="submit" class="btn btn-primary btn-lg btn-block">상담 요청하기</button>
+
+          <p class="buyer-form__note">
+            바로 연락이 필요하시면 <a href="mailto:help@laezer.co.kr">help@laezer.co.kr</a>로 보내주셔도 됩니다.
+          </p>
+        </form>
       </div>
     </section>
 

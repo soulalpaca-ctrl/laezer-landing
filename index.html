@@ -12,9 +12,9 @@
       content="LaEzer,라에젤, Korean skincare, K-beauty, Mongolia, Derma-Clera, callus repair, plant stem cell, spicule, vegan"
     />
     <title>LaEzer — Шинжлэх ухаанаар батлагдсан K-Beauty | Монгол</title>
-    <link rel="icon" type="image/png" href="images/logo.png" />
+    <link rel="icon" type="image/png" href="images/logo-transparent.png" />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/laezer-2026.css?v=redesign1" />
+    <link rel="stylesheet" href="css/laezer-2026.css?v=redesign3" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -58,7 +58,7 @@
       "url": "https://laezer-landing.netlify.app/",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://laezer-landing.netlify.app/images/logo.png"
+        "url": "https://laezer-landing.netlify.app/images/logo-transparent.png"
       },
       "email": "help@laezer.co.kr",
       "address": {
@@ -105,7 +105,7 @@
     <header class="header" id="header">
       <nav class="nav container">
         <div class="nav-brand">
-          <img src="images/logo.png" alt="LaEzer" class="brand-logo-img" />
+          <img src="images/logo-transparent.png" alt="LaEzer" class="brand-logo-img" />
         </div>
         <ul class="nav-menu" id="navMenu">
           <li><a href="#why">Яагаад LaEzer</a></li>
@@ -555,7 +555,7 @@
         <div class="reviews-track" id="reviewsTrack">
           <div class="review-card">
             <div class="review-top">
-              <div class="review-avatar"><img src="images/logo.png" alt="" /></div>
+              <div class="review-avatar"><img src="images/logo-transparent.png" alt="" /></div>
               <div><div class="review-user">park_hasun <i class="fas fa-circle-check verified"></i></div><div class="review-platform">Instagram</div></div>
             </div>
             <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
@@ -563,7 +563,7 @@
           </div>
           <div class="review-card">
             <div class="review-top">
-              <div class="review-avatar"><img src="images/logo.png" alt="" /></div>
+              <div class="review-avatar"><img src="images/logo-transparent.png" alt="" /></div>
               <div><div class="review-user">k_beauty_lover</div><div class="review-platform">Naver Blog</div></div>
             </div>
             <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
@@ -571,7 +571,7 @@
           </div>
           <div class="review-card">
             <div class="review-top">
-              <div class="review-avatar"><img src="images/logo.png" alt="" /></div>
+              <div class="review-avatar"><img src="images/logo-transparent.png" alt="" /></div>
               <div><div class="review-user">skincare_daily</div><div class="review-platform">Instagram</div></div>
             </div>
             <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
@@ -579,7 +579,7 @@
           </div>
           <div class="review-card">
             <div class="review-top">
-              <div class="review-avatar"><img src="images/logo.png" alt="" /></div>
+              <div class="review-avatar"><img src="images/logo-transparent.png" alt="" /></div>
               <div><div class="review-user">vegan_life <i class="fas fa-circle-check verified"></i></div><div class="review-platform">Instagram</div></div>
             </div>
             <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
@@ -648,6 +648,104 @@
             <a href="https://laezer.co.kr" target="_blank" rel="noopener" style="color:var(--green-crystal);text-decoration:underline">laezer.co.kr</a>
           </p>
         </div>
+      </div>
+    </section>
+
+
+    <!-- ===== 12. Buyer inquiry ===== -->
+    <section class="buyer" id="buyer">
+      <div class="container container--narrow">
+        <div class="section-head reveal">
+          <h2 class="section-title">Buyer Inquiries</h2>
+          <p class="section-sub">
+            If you are considering distribution, import or exclusive rights,
+            leave your details and our team will reply within one business day.
+          </p>
+        </div>
+
+
+        <div class="buyer-fit reveal">
+          <p class="buyer-fit__title">We are looking to work with</p>
+          <ul class="buyer-fit__list">
+            <li>Importers running a cosmetics distribution network in their market</li>
+            <li>Distributors and select retailers in dermo-cosmetics and skincare</li>
+            <li>Companies preparing their own brand through OEM / ODM</li>
+          </ul>
+          <ul class="buyer-fit__trust" aria-label="Certifications">
+            <li>Vegan certified</li>
+            <li>cGMP · ISO 22716</li>
+            <li>IRB clinical trial</li>
+            <li>Patent 10-1768870</li>
+          </ul>
+        </div>
+
+        <form
+          class="buyer-form reveal"
+          name="buyer-inquiry"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          action="/thanks-buyer.html">
+          <input type="hidden" name="form-name" value="buyer-inquiry" />
+          <p class="buyer-form__hp">
+            <label>Leave this field empty <input name="bot-field" tabindex="-1" autocomplete="off" /></label>
+          </p>
+
+          <div class="buyer-form__grid">
+            <div class="field">
+              <label for="bf-company">Company <span class="req">Required</span></label>
+              <input id="bf-company" name="회사명" type="text" required autocomplete="organization" />
+            </div>
+            <div class="field">
+              <label for="bf-name">Contact name <span class="req">Required</span></label>
+              <input id="bf-name" name="담당자명" type="text" required autocomplete="name" />
+            </div>
+            <div class="field">
+              <label for="bf-email">Email <span class="req">Required</span></label>
+              <input id="bf-email" name="이메일" type="email" required inputmode="email" autocomplete="email" />
+              <span class="field__help">We will reply to this address</span>
+            </div>
+            <div class="field">
+              <label for="bf-phone">Phone <span class="opt">Optional</span></label>
+              <input id="bf-phone" name="전화번호" type="tel" inputmode="tel" autocomplete="tel" placeholder="Include country code" />
+            </div>
+            <div class="field">
+              <label for="bf-country">Country / Region <span class="req">Required</span></label>
+              <input id="bf-country" name="국가" type="text" required autocomplete="country-name" placeholder="e.g. Mongolia, Japan, Korea" />
+            </div>
+            <div class="field">
+              <label for="bf-interest">Product interest <span class="opt">Optional</span></label>
+              <select id="bf-interest" name="관심품목">
+                <option value="">Please select</option>
+                <option>Full 3-step set</option>
+                <option>CICA Capsule Spicule Ampoule</option>
+                <option>Callus Repair Ampoule</option>
+                <option>Callus Repair Cream</option>
+                <option>OEM / ODM</option>
+                <option>Not decided yet</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field field--full">
+            <label for="bf-message">Message <span class="opt">Optional</span></label>
+            <textarea id="bf-message" name="문의내용" rows="3" placeholder="Distribution channel, expected volume, timeline"></textarea>
+          </div>
+
+          <label class="buyer-form__consent">
+            <input type="checkbox" name="개인정보동의" value="동의" required />
+            <span>
+              We collect your company name, contact name and contact details to respond to this
+              inquiry, and keep them for three years after the inquiry closes.
+            </span>
+          </label>
+
+          <button type="submit" class="btn btn-primary btn-lg btn-block">Send inquiry</button>
+
+          <p class="buyer-form__note">
+            You can also email us directly at <a href="mailto:help@laezer.co.kr">help@laezer.co.kr</a>.
+          </p>
+        </form>
       </div>
     </section>
 

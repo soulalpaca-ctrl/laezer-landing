@@ -1,0 +1,768 @@
+/* =========================================================
+   LaEzer 2026 Redesign Layer
+   라에젤 랜딩 전면 개편 (2026-10-27)
+
+   css/style.css 뒤에 로드되는 레이어. 5개 언어판(mn/kr/jp/ru/en)이
+   같은 CSS를 쓰므로 이 파일 하나로 전 언어에 반영된다.
+
+   방향: 임상 데이터를 앞세운 클린 사이언스
+   - brand-dna.md의 공식 컬러로 복원하고 골드 액센트를 걷어낸다
+     (크림 + 브라스 조합은 프리미엄 브리프에서 가장 흔한 기본값이라
+      브랜드가 묻힌다. 공식 가이드에도 골드는 없다.)
+   - 모서리 규칙: 카드/이미지/컨테이너 4px, 버튼/배지/칩은 pill
+   - 3등분 동일 카드가 네 섹션 반복되던 것을 섹션마다 다른 짜임으로
+   ========================================================= */
+
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css');
+
+/* ── 1. 토큰 재정의 ───────────────────────────────────── */
+:root {
+  /* brand-dna.md 공식 컬러 */
+  --green-sage: #2D6A4F;      /* 주 색상 */
+  --green-deep: #1B4332;      /* 텍스트·강조 */
+  --green-crystal: #B7E4C7;   /* 보조 */
+  --green-mist: #EDF6F0;
+  --green-mist-2: #DCEDE3;
+
+  /* 중립: 크림 대신 그린빛 오프화이트 */
+  --cream: #F7FAF8;
+  --ivory: #F4F1E8;           /* 따뜻한 대비는 한 섹션에만 */
+  --white: #FFFFFF;
+  --ink: #16281F;
+  --ink-soft: #4A5F54;
+  --ink-faint: #7E9088;
+  --line: #E0E9E4;
+
+  /* 골드 자리를 그린 위계로 재매핑 (액센트는 하나로 고정) */
+  --gold: #2D6A4F;
+  --gold-soft: #B7E4C7;
+  --gold-deep: #1B4332;
+
+  /* 서체: 한국어 가독성을 위해 Pretendard로 교체.
+     로고의 Cormorant Garamond는 브랜드 자산이라 그대로 둔다. */
+  --font-body: "Pretendard Variable", Pretendard, "Noto Sans KR", -apple-system, system-ui, sans-serif;
+  --font-head: "Pretendard Variable", Pretendard, "Noto Sans KR", -apple-system, system-ui, sans-serif;
+
+  /* 모서리: 카드류는 4px로 통일 */
+  --r-sm: 4px;
+  --r-md: 4px;
+  --r-lg: 4px;
+  --r-pill: 100px;
+
+  /* 그림자: 떠다니는 느낌을 줄이고 경계선으로 위계를 만든다 */
+  --shadow-sm: 0 1px 2px rgba(27, 67, 50, .04);
+  --shadow-md: 0 2px 8px rgba(27, 67, 50, .06);
+  --shadow-lg: 0 8px 28px rgba(27, 67, 50, .10);
+
+  --container: 1240px;
+  --lz-ease: cubic-bezier(.22, 1, .36, 1);
+}
+
+body { letter-spacing: -0.02em; }
+
+h1, h2, h3, h4 { letter-spacing: -0.035em; }
+
+/* ── 2. 섹션 헤더: 가운데 정렬을 좌측 비대칭으로 ──────── */
+.section-head {
+  max-width: 780px;
+  margin: 0 0 clamp(36px, 4.4vw, 60px);
+  text-align: left;
+}
+.section-head.center,
+.section-head[style*="center"] { text-align: left; }
+
+.section-title {
+  font-size: clamp(1.95rem, 4.3vw, 3.1rem);
+  line-height: 1.16;
+  margin-bottom: 16px;
+}
+.section-title::after {
+  content: "";
+  display: block;
+  width: 42px;
+  height: 3px;
+  margin-top: 18px;
+  background: var(--green-sage);
+}
+.section-sub {
+  font-size: 1.04rem;
+  color: var(--ink-soft);
+  max-width: 62ch;
+}
+
+/* eyebrow: 장식 대시를 빼고 크기를 줄인다.
+   한국어라 uppercase는 의미가 없어 해제. */
+.eyebrow {
+  font-size: .78rem;
+  letter-spacing: .1em;
+  text-transform: none;
+  color: var(--green-sage);
+  gap: 0;
+  margin-bottom: 14px;
+}
+.eyebrow::before { display: none; }
+.eyebrow.center { justify-content: flex-start; }
+
+/* ── 3. 버튼·배지 ─────────────────────────────────────── */
+.btn {
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  transition: background .22s var(--lz-ease), transform .16s var(--lz-ease),
+              border-color .22s var(--lz-ease), color .22s var(--lz-ease);
+}
+.btn:hover { transform: none; }
+.btn:active { transform: translateY(1px); }
+
+.btn-primary {
+  background: var(--green-sage);
+  box-shadow: none;
+}
+.btn-primary:hover { background: var(--green-deep); box-shadow: none; }
+
+/* 골드 버튼을 주 색상으로 흡수 */
+.btn-gold {
+  background: var(--green-sage);
+  background-image: none;
+  box-shadow: none;
+  color: #fff;
+}
+.btn-gold:hover { background: var(--green-deep); box-shadow: none; }
+
+.btn-ghost {
+  background: transparent;
+  border: 1.5px solid var(--line);
+  color: var(--green-deep);
+  backdrop-filter: none;
+}
+.btn-ghost:hover { background: var(--green-mist); border-color: var(--green-sage); box-shadow: none; }
+
+.badge { box-shadow: none; border-color: var(--line); }
+.badge.gold { border-color: var(--green-mist-2); color: var(--green-deep); }
+.badge.gold i { color: var(--green-sage); }
+.gold-text { color: var(--green-sage); }
+
+/* ── 4. 히어로 ────────────────────────────────────────── */
+.hero-badge { box-shadow: none; border-color: var(--green-mist-2); }
+
+.hero h1,
+.hero-grid h1 {
+  font-size: clamp(2.3rem, 5.4vw, 4.1rem);
+  line-height: 1.1;
+  letter-spacing: -0.045em;
+}
+.hero-sub {
+  font-size: clamp(1rem, 1.5vw, 1.12rem);
+  color: var(--ink-soft);
+  max-width: 46ch;
+}
+
+/* 히어로 수치: 카드 없이 선으로 끊어 읽히게 */
+.hero-stats {
+  border-top: 1px solid var(--line);
+  padding-top: 26px;
+  gap: clamp(20px, 3vw, 44px);
+}
+.hero-stats > * { background: none; box-shadow: none; border: 0; padding: 0; }
+
+/* 스크롤 안내는 걷어낸다. 첫 화면에 있는 사람은 스크롤을 안다. */
+.hero-scroll,
+.scroll-cue,
+.scroll-down,
+[class*="scroll-hint"] { display: none !important; }
+
+/* ── 5. 핵심 기술: 3등분을 비대칭으로 ─────────────────── */
+.tech-grid {
+  grid-template-columns: 1.35fr 1fr 1fr;
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+.tech-card {
+  border: 0;
+  border-radius: 0;
+  padding: clamp(28px, 3vw, 40px) clamp(22px, 2.4vw, 32px);
+  transition: background .26s var(--lz-ease);
+}
+.tech-card:hover { transform: none; box-shadow: none; background: var(--green-mist); }
+/* 상단 그라데이션 바와 01/02/03 번호를 뺀다 */
+.tech-card::before { display: none; }
+.tech-num { display: none; }
+.tech-card.gold::before { display: none; }
+
+.tech-icon {
+  width: 46px; height: 46px;
+  margin: 0 0 20px;
+  background: transparent;
+  color: var(--green-sage);
+  font-size: 1.7rem;
+  border-radius: 0;
+  place-items: start center;
+}
+.tech-card.gold .tech-icon { background: transparent; color: var(--green-sage); }
+.tech-card h3 { font-size: 1.28rem; color: var(--green-deep); }
+.tech-meta { background: var(--green-mist); color: var(--green-deep); }
+.tech-card.gold .tech-meta { background: var(--green-mist); color: var(--green-deep); }
+
+/* 첫 칸은 조금 더 크게 읽히도록 */
+.tech-grid > .tech-card:first-child h3 { font-size: 1.5rem; }
+
+/* ── 6. 3단계 솔루션: 카드를 걷고 흐름선으로 ──────────── */
+.steps-flow { gap: 0; }
+.step-flow-card {
+  background: transparent;
+  border: 0;
+  border-left: 1px solid var(--line);
+  border-radius: 0;
+  text-align: left;
+  padding: 8px clamp(20px, 2.6vw, 34px) 8px clamp(20px, 2.6vw, 32px);
+}
+.steps-flow > .step-flow-card:first-child { border-left: 0; padding-left: 0; }
+.step-flow-num {
+  margin: 0 0 18px;
+  width: 38px; height: 38px;
+  background: var(--green-sage);
+  box-shadow: none;
+  font-size: 1rem;
+}
+.step-flow-card .step-verb { font-size: 1.55rem; color: var(--green-deep); }
+.step-flow-card h3 { font-size: .96rem; color: var(--green-sage); font-weight: 600; }
+.step-arrow { display: none; }
+
+/* ── 7. 제품 카드 ─────────────────────────────────────── */
+.products-grid { gap: 20px; }
+.product-card { border-color: var(--line); }
+.product-card:hover {
+  transform: none;
+  box-shadow: none;
+  border-color: var(--green-sage);
+}
+.product-media {
+  background: var(--green-mist);
+  padding: 34px 30px 26px;
+}
+.product-media img { filter: drop-shadow(0 12px 20px rgba(27, 67, 50, .12)); }
+.product-name { color: var(--green-deep); font-size: 1.2rem; }
+.product-ingredients span { background: var(--green-mist); color: var(--green-deep); }
+
+/* ── 8. 임상 결과: 카드를 없애고 숫자가 숨 쉬게 ───────── */
+.results-grid {
+  gap: 0;
+  border-top: 1px solid var(--green-mist-2);
+}
+.result-card {
+  background: transparent;
+  border: 0;
+  border-left: 1px solid var(--green-mist-2);
+  border-radius: 0;
+  text-align: left;
+  padding: clamp(30px, 3.4vw, 46px) clamp(20px, 2.6vw, 36px);
+}
+.results-grid > .result-card:first-child { border-left: 0; padding-left: 0; }
+.result-card:hover { transform: none; box-shadow: none; }
+.result-icon { display: none; }
+.result-number {
+  font-size: clamp(2.6rem, 5.4vw, 4rem);
+  color: var(--green-deep);
+  letter-spacing: -0.05em;
+  font-variant-numeric: tabular-nums;
+}
+.result-number .sign { color: var(--green-sage); }
+.result-title { font-size: 1.04rem; color: var(--green-deep); margin: 14px 0 5px; }
+.results-note { text-align: left; }
+
+/* ── 9. 성분·인증 카드 ────────────────────────────────── */
+.ing-card,
+.cert-card,
+.routine-card,
+.brand-pillar {
+  border-color: var(--line);
+  box-shadow: none;
+}
+.ing-card:hover,
+.cert-card:hover { border-color: var(--green-sage); transform: none; box-shadow: none; }
+.ing-icon { background: var(--green-mist); color: var(--green-sage); }
+.ing-tag { background: var(--green-mist); color: var(--green-deep); }
+
+/* ── 10. 배경 유틸 ────────────────────────────────────── */
+.bg-deep { background: var(--green-deep); }
+.bg-deep .section-title,
+.bg-deep h2,
+.bg-deep h3 { color: #fff; }
+.bg-deep .section-sub,
+.bg-deep p { color: rgba(255,255,255,.80); }
+.bg-deep .eyebrow { color: var(--green-crystal); }
+.bg-deep .section-title::after { background: var(--green-crystal); }
+
+/* ── 11. 헤더 ─────────────────────────────────────────── */
+.header { box-shadow: none; border-bottom: 1px solid var(--line); }
+.btn-nav { box-shadow: none; }
+
+/* ── 12. CTA ──────────────────────────────────────────── */
+.cta-inner { border-radius: var(--r-sm); }
+.cta-channel { border-radius: var(--r-sm); box-shadow: none; }
+
+/* ── 13. 푸터 ─────────────────────────────────────────── */
+.footer { background: var(--green-deep); }
+
+/* ── 14. 반응형 ───────────────────────────────────────── */
+@media (max-width: 1000px) {
+  .tech-grid { grid-template-columns: 1fr 1fr; }
+  .tech-grid > .tech-card:first-child { grid-column: 1 / -1; }
+}
+
+@media (max-width: 760px) {
+  .tech-grid { grid-template-columns: 1fr; }
+  .tech-grid > .tech-card:first-child { grid-column: auto; }
+
+  .steps-flow { grid-template-columns: 1fr; }
+  .step-flow-card {
+    border-left: 0;
+    border-top: 1px solid var(--line);
+    padding: 24px 0;
+  }
+  .steps-flow > .step-flow-card:first-child { border-top: 0; padding-top: 0; }
+
+  .results-grid { grid-template-columns: 1fr; border-top: 0; }
+  .result-card {
+    border-left: 0;
+    border-top: 1px solid var(--green-mist-2);
+    padding: 26px 0;
+  }
+  .results-grid > .result-card:first-child { border-top: 0; padding-top: 0; }
+
+  .hero-stats { flex-wrap: wrap; gap: 20px 28px; }
+}
+
+/* ── 15. 접근성 ───────────────────────────────────────── */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--green-sage);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .reveal.in { opacity: 1 !important; transform: none !important; transition: none !important; }
+  *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+}
+
+/* ── 16. 장식 아이콘 정리 ─────────────────────────────────
+   기존 페이지는 아이콘 36개를 썼는데 대부분이 개념을 그림으로
+   1:1 치환한 것이었다. 과학은 플라스크, 자연은 잎사귀, 보습은
+   물방울, 프리미엄은 보석. 배지·칩·버튼·카드마다 하나씩 붙으니
+   브랜드가 아니라 템플릿처럼 읽힌다.
+
+   브랜드 식별에 필요한 소셜 로고와 기능 버튼만 남기고 걷어낸 뒤,
+   그 자리는 타이포 위계와 선으로 대신한다. */
+i[class*="fa-"] { display: none; }
+
+/* 되살리는 것: 소셜 채널 로고(브랜드 식별), 맨 위로(기능) */
+.footer-social i,
+#scrollTop i,
+.scroll-top i { display: inline-block; }
+
+/* 아이콘을 담던 빈 상자도 함께 걷는다 */
+.tech-icon,
+.ing-icon,
+.result-icon { display: none; }
+
+/* ── 17. 아이콘이 빠진 자리 메우기 ───────────────────────── */
+
+/* 히어로 칩: 아이콘 없이 텍스트만으로 읽히게 간격 조정 */
+.hero-usp .badge,
+.hero-usp span { padding: 9px 18px; }
+
+/* 버튼: 아이콘이 빠졌으니 좌우 여백을 고르게 */
+.btn { gap: 0; }
+
+/* WHY 항목: 아이콘 대신 왼쪽 선으로 묶음을 표시 */
+.why-point {
+  border-left: 2px solid var(--green-crystal);
+  padding-left: 18px;
+  gap: 0;
+}
+.why-point b { display: block; margin-bottom: 4px; }
+
+/* 브랜드 필러: 라벨이 이미 있으므로 아이콘 자리는 여백으로 */
+.brand-pillar { padding-left: 0; }
+
+/* 기술 카드: 아이콘이 차지하던 높이를 제목 위 여백으로 환산 */
+.tech-card h3 { margin-top: 4px; }
+
+/* 성분 카드: 제목이 카드 맨 위에 오도록 */
+.ing-card h3 { margin-top: 0; }
+
+/* 루틴 카드: 해/달 아이콘 없이 제목만 */
+.routine-card h3 { gap: 0; }
+
+/* CTA 채널: 쇼핑백·상점 아이콘 없이 채널명만 */
+.cta-channel .ch-label { gap: 0; }
+
+/* 아이콘만 들어 있던 빈 상자(.ico)가 40~46px 자리를 잡고 있어 함께 정리 */
+.ico { display: none; }
+.hero-float-badge { gap: 0; }
+
+/* ── 18. 이미지 중심 재구성 ───────────────────────────────
+   보유 사진 33장 중 절반을 안 쓰고 텍스트 카드로 채워 둔 섹션이
+   여섯이었다. 화장품 사이트에서 글자만 연속되면 서체를 아무리
+   다듬어도 고급으로 읽히지 않는다. 묵혀 있던 컷을 섹션마다
+   다른 짜임으로 투입한다. */
+
+/* 18-1. 전폭 비주얼: 와이드 텍스처컷 위에 좌측 카피
+   (원본 사진의 좌측이 비어 있어 글이 제품을 가리지 않는다) */
+.showcase {
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+  background: var(--green-mist);
+}
+.showcase__img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+.showcase__overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+}
+.showcase__lead {
+  font-size: clamp(1.4rem, 3vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.32;
+  letter-spacing: -0.04em;
+  color: var(--green-deep);
+  margin: 0 0 14px;
+  max-width: 16ch;
+}
+.showcase__sub {
+  font-size: clamp(.84rem, 1.2vw, .96rem);
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+/* 18-2. 3단계 솔루션: 세트컷을 왼쪽에 두고 단계를 오른쪽에 */
+.solution > .container {
+  display: grid;
+  grid-template-columns: 0.82fr 1.18fr;
+  grid-template-areas:
+    "head  head"
+    "media steps";
+  column-gap: clamp(28px, 4vw, 60px);
+  row-gap: 0;
+  align-items: center;
+}
+.solution .section-head { grid-area: head; }
+.solution-media { grid-area: media; margin: 0; }
+.solution .steps-flow { grid-area: steps; }
+.solution-media img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--r);
+}
+
+/* 18-3. 제품 섹션 도입: 자연광 스틸컷을 가로 띠로 크롭 */
+.products-lead {
+  margin: 0 0 clamp(26px, 3.2vw, 44px);
+  overflow: hidden;
+  border-radius: var(--r);
+}
+.products-lead img {
+  width: 100%;
+  /* 원본이 세로컷이라 21:9로 자르면 제품이 거의 안 남는다 */
+  aspect-ratio: 2 / 1;
+  object-fit: cover;
+  object-position: center 62%;
+  display: block;
+}
+
+/* 18-4. 임상 전후 비교: 측정 사진이 설득의 핵심이므로 전폭으로 */
+.proof-figure {
+  margin: clamp(32px, 4vw, 52px) 0 clamp(20px, 2.4vw, 28px);
+}
+.proof-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  background: #fff;
+}
+.proof-figure figcaption {
+  margin-top: 14px;
+  font-size: .88rem;
+  color: var(--ink-soft);
+  line-height: 1.6;
+}
+
+/* ── 19. 이미지 공통 ──────────────────────────────────── */
+.brand-visual img,
+.why-visual img,
+.ing-visual img {
+  border-radius: var(--r);
+}
+
+/* ── 20. 이미지 재구성 반응형 ─────────────────────────── */
+@media (max-width: 900px) {
+  .solution > .container {
+    grid-template-columns: 1fr;
+    grid-template-areas: "head" "media" "steps";
+    row-gap: clamp(24px, 4vw, 36px);
+  }
+  .solution-media { max-width: 420px; margin-inline: auto; }
+}
+
+@media (max-width: 767px) {
+  /* 좁은 화면에서는 오버레이 글이 사진을 덮으므로 아래로 내린다 */
+  .showcase__img { aspect-ratio: 4 / 3; object-position: 72% center; }
+  .showcase__overlay {
+    position: static;
+    padding: 22px 0 28px;
+    background: var(--green-mist);
+  }
+  .showcase__lead { max-width: none; }
+
+  .products-lead img { aspect-ratio: 3 / 2; }
+
+  /* 전후 비교 사진은 가로로 길어 좁은 화면에서 글씨가 작아진다.
+     좌우로 밀어 볼 수 있게 두고 안내를 남긴다. */
+  .proof-figure {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .proof-figure img { min-width: 620px; }
+}
+
+/* 18-5. 성분 섹션: 솔루션이 왼쪽 사진이었으므로 여기는 오른쪽에 둔다
+   (같은 좌우 배치가 연달아 나오면 스크롤 리듬이 단조로워진다) */
+.ingredients > .container {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  grid-template-areas:
+    "head  head"
+    "grid  media";
+  column-gap: clamp(26px, 3.6vw, 52px);
+  align-items: center;
+}
+.ingredients .section-head { grid-area: head; }
+.ingredients .ing-grid { grid-area: grid; grid-template-columns: repeat(2, 1fr); }
+.ing-lead { grid-area: media; margin: 0; overflow: hidden; border-radius: var(--r); }
+.ing-lead img {
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+}
+
+@media (max-width: 900px) {
+  .ingredients > .container {
+    grid-template-columns: 1fr;
+    grid-template-areas: "head" "media" "grid";
+    row-gap: clamp(22px, 3.4vw, 32px);
+  }
+  .ing-lead { max-width: 380px; margin-inline: auto; }
+  .ing-lead img { aspect-ratio: 16 / 10; }
+}
+
+/* ── 21. 바이어 상담창구 ──────────────────────────────────
+   form-cro 기준으로 설계. 라벨은 항상 필드 위(placeholder를 라벨로
+   쓰지 않는다), 전화번호는 선택(해외 바이어는 전화 공개를 꺼린다),
+   동의는 수집 항목·보관 기간을 문장으로 밝힌다. */
+.buyer { background: var(--green-mist); }
+
+.buyer-form {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  padding: clamp(24px, 3.4vw, 42px);
+}
+.buyer-form__hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+
+.buyer-form__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(16px, 2vw, 22px);
+}
+
+.field { display: flex; flex-direction: column; gap: 8px; }
+.field--full { margin-top: clamp(16px, 2vw, 22px); }
+
+.field label {
+  font-size: .92rem;
+  font-weight: 600;
+  color: var(--green-deep);
+  letter-spacing: -0.02em;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.field .req,
+.field .opt {
+  font-size: .72rem;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: var(--r-pill);
+  letter-spacing: 0;
+}
+.field .req { background: var(--green-sage); color: #fff; }
+.field .opt { background: var(--green-mist); color: var(--ink-soft); }
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  /* 모바일 자동 확대를 막으려면 16px 이상이어야 한다 */
+  font: 400 1rem/1.5 var(--font-body);
+  color: var(--ink);
+  background: #fff;
+  border: 1.5px solid var(--line);
+  border-radius: var(--r);
+  padding: 13px 14px;
+  min-height: 48px;
+  transition: border-color .18s var(--lz-ease), box-shadow .18s var(--lz-ease);
+  appearance: none;
+}
+.field textarea { min-height: 92px; resize: vertical; }
+.field select {
+  background-image: linear-gradient(45deg, transparent 50%, var(--ink-soft) 50%),
+                    linear-gradient(135deg, var(--ink-soft) 50%, transparent 50%);
+  background-position: calc(100% - 20px) 21px, calc(100% - 14px) 21px;
+  background-size: 6px 6px, 6px 6px;
+  background-repeat: no-repeat;
+  padding-right: 40px;
+}
+.field input::placeholder,
+.field textarea::placeholder { color: var(--ink-faint); }
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: var(--green-sage);
+  box-shadow: 0 0 0 3px rgba(45, 106, 79, .14);
+}
+/* 오류 표시는 사용자가 실제로 건드린 뒤에만.
+   :invalid만 쓰면 placeholder가 없는 필수 필드가 빈 상태에서도
+   빨갛게 보여 들어오자마자 혼난 느낌을 준다. */
+.field input:user-invalid,
+.field select:user-invalid,
+.field textarea:user-invalid {
+  border-color: #C0392B;
+  box-shadow: 0 0 0 3px rgba(192, 57, 43, .12);
+}
+
+.field__help { font-size: .82rem; color: var(--ink-faint); }
+
+.buyer-form__consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  margin: clamp(18px, 2.4vw, 26px) 0 clamp(18px, 2.2vw, 24px);
+  font-size: .88rem;
+  line-height: 1.65;
+  color: var(--ink-soft);
+  cursor: pointer;
+}
+.buyer-form__consent input[type="checkbox"] {
+  flex: 0 0 auto;
+  width: 20px; height: 20px;
+  margin-top: 2px;
+  accent-color: var(--green-sage);
+  cursor: pointer;
+}
+
+.buyer-form button[type="submit"] { margin-top: 2px; }
+
+.buyer-form__note {
+  margin: 16px 0 0;
+  font-size: .86rem;
+  color: var(--ink-faint);
+  text-align: center;
+}
+.buyer-form__note a { color: var(--green-sage); font-weight: 600; text-decoration: underline; }
+
+@media (max-width: 680px) {
+  .buyer-form__grid { grid-template-columns: 1fr; }
+}
+
+/* 제출 완료 페이지 */
+.thanks {
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  background: var(--green-mist);
+  padding: 40px 0;
+}
+.thanks__logo { width: 150px; margin: 0 auto 32px; }
+.thanks__title {
+  font-size: clamp(1.7rem, 4vw, 2.5rem);
+  color: var(--green-deep);
+  margin: 0 0 16px;
+  letter-spacing: -0.04em;
+}
+.thanks__body { color: var(--ink-soft); line-height: 1.8; margin: 0 0 32px; }
+.thanks__body a { color: var(--green-sage); font-weight: 600; text-decoration: underline; }
+
+/* ── 22. 바이어 자격 안내 + 신뢰 요소 ────────────────────
+   13섹션 프레임워크의 filter(타깃 자가진단)와 risk(리스크 제거)가
+   비어 있었다. 바이어는 "내가 연락할 자리인가"를 먼저 판단하므로
+   폼 바로 위에 둔다. 수치가 필요한 항목(MOQ·리드타임·가격)은
+   확인된 자료가 없어 넣지 않았다. */
+.buyer-fit {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  padding: clamp(22px, 2.8vw, 32px);
+  margin-bottom: clamp(16px, 2vw, 22px);
+}
+.buyer-fit__title {
+  font-size: .92rem;
+  font-weight: 700;
+  color: var(--green-sage);
+  margin: 0 0 14px;
+  letter-spacing: -0.02em;
+}
+.buyer-fit__list {
+  list-style: none;
+  margin: 0 0 clamp(18px, 2.2vw, 24px);
+  padding: 0;
+  display: grid;
+  gap: 9px;
+}
+.buyer-fit__list li {
+  position: relative;
+  padding-left: 17px;
+  font-size: .98rem;
+  line-height: 1.6;
+  color: var(--ink);
+}
+.buyer-fit__list li::before {
+  content: "";
+  position: absolute;
+  left: 0; top: .62em;
+  width: 6px; height: 6px;
+  background: var(--green-crystal);
+}
+.buyer-fit__trust {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 0;
+  padding: 16px 0 0;
+  border-top: 1px solid var(--line);
+}
+.buyer-fit__trust li {
+  font-size: .8rem;
+  font-weight: 600;
+  color: var(--green-deep);
+  background: var(--green-mist);
+  padding: 7px 13px;
+  border-radius: var(--r-pill);
+}

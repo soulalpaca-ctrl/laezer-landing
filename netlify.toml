@@ -13,6 +13,8 @@
   publish = "."
   # Edge Functions 소스 디렉터리 (기본값과 동일하나 명시해 둠)
   edge_functions = "netlify/edge-functions"
+  # 폼 제출 알림용 서버리스 함수 (submission-created)
+  functions = "netlify/functions"
 
 # ─────────────────────────────────────────────────────────────
 # Edge Functions

@@ -766,3 +766,40 @@ i[class*="fa-"] { display: none; }
   padding: 7px 13px;
   border-radius: var(--r-pill);
 }
+
+/* ── 23. 누끼 이미지 보정 ─────────────────────────────────
+   배경을 지운 컷은 테두리와 그림자가 오히려 거슬린다.
+   사진 경계가 보이던 문제(흰 배경 모델컷이 그린 면 위에 네모로
+   얹히던 것)를 없애려고 누끼로 바꿨으므로 상자 장식을 뺀다. */
+.brand-visual img[src$="zia-cutout.png"],
+.solution-media img[src$="products-3set-cutout.png"] {
+  border-radius: 0;
+  box-shadow: none;
+  background: transparent;
+  /* 누끼는 여백 포함이라 조금 키워야 제자리에 앉는다 */
+  width: 100%;
+  height: auto;
+}
+.brand-visual:has(img[src$="zia-cutout.png"]) {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  overflow: visible;
+}
+.solution-media:has(img[src$="products-3set-cutout.png"]) {
+  background: transparent;
+  overflow: visible;
+}
+
+/* ── 24. 해상도에 맞춘 표시 크기 ──────────────────────────
+   detail-duo.jpg는 원본이 853px인데 전폭(1192px)으로 깔면
+   늘어나서 흐려진다. 원본 폭 아래로 제한해 선명하게 둔다. */
+.products-lead {
+  max-width: 840px;
+  margin-inline: auto;
+}
+.products-lead img { aspect-ratio: 16 / 9; }
+
+@media (max-width: 900px) {
+  .products-lead { max-width: none; }
+}

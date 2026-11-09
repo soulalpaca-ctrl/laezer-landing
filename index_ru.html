@@ -61,7 +61,7 @@
       .hero h1 { font-size: clamp(1.9rem, 4.6vw, 3.2rem); line-height: 1.18; }
       .hero-badge, .badge, .product-ingredients span, .ing-tag, .tech-meta,
       .product-step-tag, .step-verb, .eyebrow { white-space: normal; }
-      .hero-stats .stat-label { font-size: .72rem; line-height: 1.3; }
+      .hero-stats .stat-label { font-size: var(--fs-min); line-height: 1.3; }
       .hero-stats .stat-number { font-size: clamp(1.4rem, 3vw, 2rem); }
       .btn, .btn-nav, .cta-channel .ch-label { white-space: normal; text-align: center; }
       .btn-lg { padding-left: 20px; padding-right: 20px; }
@@ -87,12 +87,12 @@
         .hamburger { display: flex; }
       }
       .product-name { font-size: 1.12rem; line-height: 1.3; }
-      .product-name-en { font-size: .76rem; }
+      .product-name-en { font-size: var(--fs-min); }
       .section-title { overflow-wrap: break-word; }
-      .cta-channel .ch-val { font-size: .8rem; word-break: break-all; }
+      .cta-channel .ch-val { font-size: var(--fs-min); word-break: break-all; }
       @media (max-width: 420px) {
-        .hero-stats .stat-label { font-size: .66rem; }
-        .nav-menu > li > a { font-size: .8rem; }
+        /* .stat-label 을 여기서 더 줄이던 줄은 제거했다 — 기본값이 이미 13px 바닥이다. */
+        .nav-menu > li > a { font-size: var(--fs-min); }
       }
     </style>
   <script type="application/ld+json">
@@ -236,7 +236,7 @@
           </div>
           <div class="video-quote">
             <p>«Достаточно одного применения, чтобы почувствовать разницу. Удивительное ощущение увлажнённости, которое идёт изнутри!»</p>
-            <p style="font-size:.78rem;opacity:.65;margin-top:6px">※ Личное впечатление от использования.</p>
+            <p style="font-size:var(--fs-min);opacity:.65;margin-top:6px">※ Личное впечатление от использования.</p>
             <span class="author">Актриса Пак Ха Сон</span>
           </div>
         </div>

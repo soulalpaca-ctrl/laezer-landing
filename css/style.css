@@ -34,7 +34,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   --white: #FFFFFF;
   --ink: #1A2C1A;
   --ink-soft: #51624F;
-  --ink-faint: #8A988A;
+  --ink-faint: #5C6B64;   /* 2026-11-09 대비 수정. laezer-2026.css 와 같은 값으로 맞춘다 */
   --line: #E7E3D8;
   /* Accent */
   --gold: #C9A84C;
@@ -404,7 +404,9 @@ section { padding: clamp(72px, 10vw, 128px) 0; position: relative; }
 .footer-col ul { display: grid; gap: 10px; }
 .footer-col a { font-size: 0.9rem; transition: color .2s; }
 .footer-col a:hover { color: var(--green-crystal); }
-.footer-bottom { padding-top: 26px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: 0.82rem; color: rgba(245,239,230,.5); }
+/* 2026-11-09 대비 수정: α.5 는 실제 푸터 배경 #1B4332 위에서 3.68:1 로 WCAG AA 미달.
+   α.6 부터 통과(4.59:1)이나 여유가 0.09 뿐이라 .65 로 올림 → 5.10:1 (브라우저 실측) */
+.footer-bottom { padding-top: 26px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: 0.82rem; color: rgba(245,239,230,.65); }
 .footer-bottom a { color: var(--green-crystal); }
 
 /* ---------- 22. Scroll-to-top ---------- */

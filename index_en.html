@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="LaEzer — Korean dermocosmetics with patented Derma-Clera™ from Cynanchum atratum, 5,000 ppm spicules and 11 types of hyaluronic acid for the skin barrier."
+      content="LaEzer — Korean dermocosmetics by Ezer Co., Ltd. Patented Derma-Clera™ from Cynanchum atratum, edelweiss callus culture extract, 5,000 ppm sponge-derived spicules. Buyer inquiries and sample requests welcome."
     />
     <meta
       name="keywords"
@@ -33,11 +33,12 @@
         --font-head: "Manrope", "Pretendard Variable", Pretendard, sans-serif;
       }
       body { word-break: keep-all; }
+      .nav-menu > li > a { white-space: nowrap; }
       /* EN nav labels are much wider than the 2-3 character KR labels and the
-         switcher has 5 buttons, so between 681px and 1150px the desktop nav wraps and
+         switcher has 6 buttons, so between 681px and 1240px the desktop nav wraps and
          the language buttons overflow. Same fix as index_ru.html: open the hamburger
          drawer earlier. Page-local on purpose — shared css/style.css is untouched. */
-      @media (max-width: 1150px) and (min-width: 681px) {
+      @media (max-width: 1240px) and (min-width: 681px) {
         .nav-menu {
           position: fixed; top: var(--header-h); left: 0; right: 0;
           flex-direction: column; align-items: stretch; gap: 0;
@@ -59,19 +60,21 @@
     <link rel="alternate" hreflang="ja" href="https://laezer-landing.netlify.app/index_jp" />
     <link rel="alternate" hreflang="ru" href="https://laezer-landing.netlify.app/index_ru" />
     <link rel="alternate" hreflang="en" href="https://laezer-landing.netlify.app/index_en" />
+    <link rel="alternate" hreflang="uz" href="https://laezer-landing.netlify.app/index_uz" />
     <link rel="alternate" hreflang="x-default" href="https://laezer-landing.netlify.app/" />
     <link rel="canonical" href="https://laezer-landing.netlify.app/index_en" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://laezer-landing.netlify.app/index_en" />
     <meta property="og:title" content="LaEzer — K-Beauty Proven by Science | Skin Barrier Care" />
-    <meta property="og:description" content="LaEzer — Korean dermocosmetics with patented Derma-Clera™ from Cynanchum atratum, 5,000 ppm spicules and 11 types of hyaluronic acid for the skin barrier." />
+    <meta property="og:description" content="LaEzer — Korean dermocosmetics by Ezer Co., Ltd. Patented Derma-Clera™ from Cynanchum atratum, edelweiss callus culture extract, 5,000 ppm sponge-derived spicules. Buyer inquiries and sample requests welcome." />
     <meta property="og:image" content="https://laezer-landing.netlify.app/images/model-portrait.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta property="og:locale:alternate" content="mn_MN" />
     <meta property="og:locale:alternate" content="ko_KR" />
     <meta property="og:locale:alternate" content="ja_JP" />
     <meta property="og:locale:alternate" content="ru_RU" />
+    <meta property="og:locale:alternate" content="uz_UZ" />
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -90,7 +93,7 @@
         "@type": "ImageObject",
         "url": "https://laezer-landing.netlify.app/images/logo-transparent.png"
       },
-      "email": "help@laezer.co.kr",
+      "email": "laezer@naver.com",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "#1018, 66 Daehwa-ro 106beon-gil, Daedeok-gu",
@@ -117,7 +120,7 @@
       "@id": "https://laezer-landing.netlify.app/index_en#webpage",
       "url": "https://laezer-landing.netlify.app/index_en",
       "name": "LaEzer — K-Beauty Proven by Science | Skin Barrier Care",
-      "description": "LaEzer — K-Beauty proven by science. Korean dermocosmetics by Ezer Co., Ltd (Daejeon, Korea): patented Derma-Clera™ derived from Cynanchum atratum, natural spicules at 5,000 ppm and 11 types of hyaluronic acid that help strengthen the skin barrier.",
+      "description": "LaEzer — Korean dermocosmetics by Ezer Co., Ltd (Daejeon, Korea): patented Derma-Clera™ derived from Cynanchum atratum, edelweiss callus culture extract, sponge-derived spicules at 5,000 ppm and 11 hyaluronic acids. Buyer inquiries and sample requests welcome.",
       "inLanguage": "en",
       "isPartOf": {
         "@id": "https://laezer-landing.netlify.app/#website"
@@ -138,18 +141,18 @@
           <img src="images/logo-transparent.png" alt="LaEzer" class="brand-logo-img" />
         </div>
         <ul class="nav-menu" id="navMenu">
-          <li><a href="#why">Why LaEzer</a></li>
-          <li><a href="#brand">Brand</a></li>
+          <li><a href="#company">Company</a></li>
           <li><a href="#products">Products</a></li>
-          <li><a href="#ingredients">Ingredients</a></li>
-          <li><a href="#howto">How to Use</a></li>
-          <li><a href="#contact" class="btn-nav"><i class="fas fa-shopping-bag"></i> Shop</a></li>
+          <li><a href="#lineup">Upcoming</a></li>
+          <li><a href="#results">Tests</a></li>
+          <li><a href="#buyer" class="btn-nav">Request Samples</a></li>
           <li class="lang-switcher-container">
             <a href="index.html" class="lang-btn" data-lang-pick="mn"><span class="lang-flag lang-flag--mn" aria-hidden="true"></span>MGL</a>
             <a href="index_kr.html" class="lang-btn" data-lang-pick="ko"><span class="lang-flag lang-flag--ko" aria-hidden="true"></span>KOR</a>
             <a href="index_jp.html" class="lang-btn" data-lang-pick="ja"><span class="lang-flag lang-flag--ja" aria-hidden="true"></span>JPN</a>
             <a href="index_ru.html" class="lang-btn" data-lang-pick="ru"><span class="lang-flag lang-flag--ru" aria-hidden="true"></span>RUS</a>
             <a href="#" class="lang-btn active" data-lang-pick="en"><span class="lang-flag lang-flag--en" style="background-image:url(&quot;data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2 2'><rect width='2' height='2' fill='%23012169'/><path d='M0 0L2 2M2 0L0 2' stroke='%23fff' stroke-width='.4'/><path d='M0 0L2 2M2 0L0 2' stroke='%23c8102e' stroke-width='.14'/><path d='M1 0V2M0 1H2' stroke='%23fff' stroke-width='.56'/><path d='M1 0V2M0 1H2' stroke='%23c8102e' stroke-width='.32'/></svg>&quot;)" aria-hidden="true"></span>ENG</a>
+            <a href="index_uz.html" class="lang-btn" data-lang-pick="uz"><span class="lang-flag lang-flag--uz" aria-hidden="true"></span>UZB</a>
           </li>
         </ul>
         <div class="hamburger" id="hamburger">
@@ -169,8 +172,8 @@
             <span class="highlight">runs dry</span>
           </h1>
           <p class="hero-sub">
-            Patented Derma-Clera™, natural spicules at 5,000 ppm and 11 types of hyaluronic acid.
-            Korean dermocosmetics. Hydration was measured eight hours after application.
+            Patented Derma-Clera™ from Cynanchum atratum, edelweiss callus culture extract and sponge-derived spicules at 5,000 ppm.
+            This page gathers the human application test figures and certificates for the three products on sale.
           </p>
           <div class="hero-usp">
             <span class="badge gold"><i class="fas fa-certificate"></i> Patented Ingredient</span>
@@ -178,11 +181,11 @@
             <span class="badge"><i class="fas fa-microscope"></i> Clinically Tested</span>
           </div>
           <div class="hero-cta">
-            <a href="#contact" class="btn btn-primary btn-lg"><i class="fas fa-shopping-bag"></i> Shop the Official Store</a>
+            <a href="#buyer" class="btn btn-primary btn-lg">Request Samples · Inquiry</a>
             <a href="#products" class="btn btn-ghost btn-lg"><i class="fas fa-box-open"></i> Explore Products</a>
           </div>
           <div class="hero-stats">
-            <div class="stat-item"><span class="stat-number">+138%</span><span class="stat-label">Hydration index increase ※</span></div>
+            <div class="stat-item"><span class="stat-number">+138%</span><span class="stat-label">Moisture improvement ※</span></div>
             <div class="stat-item"><span class="stat-number">5,000<small style="font-size:.6em">ppm</small></span><span class="stat-label">Natural spicules</span></div>
             <div class="stat-item"><span class="stat-number">11</span><span class="stat-label">Types of hyaluronic acid</span></div>
           </div>
@@ -191,7 +194,7 @@
           <img src="images/model-portrait.jpg" alt="LaEzer skincare products with a model" loading="eager" />
           <div class="hero-float-badge">
             <span class="ico"><i class="fas fa-seedling"></i></span>
-            <span>Vegan certified<small>Derma-Clera™ patented technology</small></span>
+            <span>Dual functional: brightening · anti-wrinkle<small>Patented Derma-Clera™</small></span>
           </div>
         </div>
       </div>
@@ -220,40 +223,62 @@
       </div>
     </section>
 
-    <!-- ===== 2. WHY ===== -->
-    <section class="why" id="why">
+    <!-- ===== 2. Company ===== -->
+    <section class="why" id="company">
       <div class="container why-grid">
         <div class="why-content reveal">
-          <span class="eyebrow">Why LaEzer</span>
-          <h2>A 10°C swing,<br /><em>and skin reacts first</em></h2>
+          <span class="eyebrow">Company</span>
+          <h2>Ezer:<br /><em>The One Who Helps</em></h2>
           <p>
-            Daily temperature swings of more than 10°C between seasons, and indoor air dried out by summer cooling and winter heating.
-            everyday environments like these put strain on the skin barrier, day after day.
+            Ezer is the Hebrew word for “one who helps.” LaEzer’s philosophy begins with this name:
+            helping each person discover their own unique beauty. We aim to be a company that
+            customers and business partners alike can rely on.
           </p>
           <p>
-            As moisture escapes, skin dries from within and grows more sensitive, leading to fine lines,
-            enlarged pores and a rough texture. This is a <strong style="color:#fff">skin-barrier problem</strong> that an ordinary
-            surface moisturizer alone cannot solve.
+            Founded in Daejeon, Korea in 2024, we entered Mongolia as our first export market and
+            are now preparing to expand into <strong style="color:#fff">Russia, Central Asia, Japan and Vietnam</strong>.
           </p>
           <div class="why-points">
             <div class="why-point">
-              <i class="fas fa-temperature-low"></i>
-              <div><b>Sudden temperature changes</b><span>Daily swings of more than 10°C between seasons put repeated strain on the skin barrier</span></div>
+              <i class="fas fa-flask"></i>
+              <div><b>Systematic R&amp;D grounded in scientific evidence</b><span>We design precise formulas from skin science and ingredient efficacy data, and objectively verify efficacy and irritation through human application and irritation tests</span></div>
             </div>
             <div class="why-point">
-              <i class="fas fa-wind"></i>
-              <div><b>Dry indoor air</b><span>Indoors, where cooling and heating lower the humidity, skin loses its inner moisture</span></div>
+              <i class="fas fa-vials"></i>
+              <div><b>Precise ingredient blends tailored to each skin concern</b><span>We analyze the properties and role of each ingredient and develop formulas whose complementary blends deliver what the skin needs</span></div>
             </div>
             <div class="why-point">
-              <i class="fas fa-shield-halved"></i>
-              <div><b>A weakened skin barrier</b><span>With less ability to block external irritants, skin becomes sensitive easily</span></div>
+              <i class="fas fa-leaf"></i>
+              <div><b>Harmony between nature and modern science</b><span>By combining naturally derived ingredients with modern skin science, we offer skincare that nurtures the skin’s healthy balance and helps restore its natural radiance</span></div>
             </div>
           </div>
         </div>
         <div class="why-visual reveal d1">
-          <img src="images/model-cica.jpg" alt="LaEzer CICA Spicule Ampoule" />
-          <div class="why-temp"><i class="fas fa-snowflake"></i> Seasonal daily swing 10°C+</div>
+          <img src="images/model-cica.jpg" alt="LaEzer CICA Capsule Spicule Ampoule" />
+          <div class="why-temp">Timeless Radiance and Beauty</div>
         </div>
+      </div>
+    </section>
+
+    <!-- ===== 2-1. History ===== -->
+    <section class="history" id="history">
+      <div class="container history-wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow center">History</span>
+          <h2 class="section-title">From Daejeon in 2024 <span class="title-accent">to today</span></h2>
+          <p class="section-sub">The path from our founding to overseas supply contracts</p>
+        </div>
+        <ol class="history-list reveal d1">
+          <li><time>2024.09</time><div><b>Ezer Co., Ltd. founded</b><span>Daejeon, Korea</span></div></li>
+          <li><time>2025</time><div><b>Three products launched in Korea</b><span>Own online store · Naver Smart Store · Coupang</span></div></li>
+          <li><time>2025</time><div><b>Own patent application filed</b><span>No. 10-2025-0184979</span></div></li>
+          <li><time>2026.02</time><div><b>Two trademarks registered</b><span>LaEzer · Dr. LaEzer</span></div></li>
+          <li><time>2026.04</time><div><b>First supply contract, Mongolia</b></div></li>
+          <li><time>2026.06</time><div><b>Pop-up sales event in Ulaanbaatar</b><span>with Daejeon Center for Creative Economy &amp; Innovation</span></div></li>
+          <li><time>2026.08</time><div><b>Second supply contract, Mongolia</b></div></li>
+          <li><time>2026.09</time><div><b>Product supply contract with a Mongolian brand</b></div></li>
+          <li><time>2026.11</time><div><b>Launch at Don Quijote · LOFT, Japan (planned)</b></div></li>
+        </ol>
       </div>
     </section>
 
@@ -279,9 +304,9 @@
             and keep to a <strong>slow-aging</strong> philosophy, with small, steady care every day.
           </p>
           <div class="brand-pillars">
-            <div class="brand-pillar"><i class="fas fa-certificate"></i><b>Patented</b><span>Derma-Clera™ · KR 10-1768870</span></div>
+            <div class="brand-pillar"><i class="fas fa-certificate"></i><b>Patented</b><span>Derma-Clera™ · KR 10-1768870 · 1 own application filed</span></div>
             <div class="brand-pillar"><i class="fas fa-leaf"></i><b>Vegan</b><span>Callus Repair Ampoule & Cream certified</span></div>
-            <div class="brand-pillar"><i class="fas fa-vial-circle-check"></i><b>Verified</b><span>Human skin clinical trial</span></div>
+            <div class="brand-pillar"><i class="fas fa-vial-circle-check"></i><b>Verified</b><span>Human application test · Human Skin Clinical Trial Center, Korea</span></div>
           </div>
           <div class="ceo-sign">
             <div>
@@ -312,8 +337,8 @@
             <span class="tech-num">01</span>
             <div class="tech-icon"><i class="fas fa-award"></i></div>
             <h3>Derma-Clera™ Patent</h3>
-            <p>A patented ingredient derived from Cynanchum atratum. Its high
-              antioxidant activity helps strengthen the skin barrier and soothe the skin.</p>
+            <p>A patented ingredient derived from Cynanchum atratum (Baekmi flower extract).
+              It helps calm the skin and keep it comfortable.</p>
             <span class="tech-meta"><i class="fas fa-shield-halved"></i> Patent KR 10-1768870</span>
           </div>
           <div class="tech-card reveal d1">
@@ -340,9 +365,9 @@
     <section class="solution bg-mist" id="solution">
       <div class="container">
         <div class="section-head reveal">
-          <span class="eyebrow center">3-Step Solution</span>
-          <h2 class="section-title">Three applications, <span class="title-accent">and you are done</span></h2>
-          <p class="section-sub">In this order, what you put on next absorbs more readily</p>
+          <span class="eyebrow center">AWAKE · REPAIR · SHIELD</span>
+          <h2 class="section-title">3-step <span class="title-accent">slow-aging routine</span></h2>
+          <p class="section-sub">Edelweiss plant stem cells and patented Derma-Clera™ awaken the skin’s natural ability to recover</p>
         </div>
         <figure class="solution-media reveal">
           <img src="images/products-3set-cutout.png"
@@ -352,23 +377,23 @@
         <div class="steps-flow">
           <div class="step-flow-card reveal">
             <div class="step-flow-num">1</div>
-            <span class="step-verb">Prep</span>
-            <h3>Ready to absorb</h3>
-            <p>The CICA Spicule Ampoule refines skin texture, so the next ingredients absorb more readily.</p>
+            <span class="step-verb">AWAKE</span>
+            <h3>CICA Capsule Spicule Ampoule</h3>
+            <p>Natural sponge spicules open micro-channels to help active ingredients absorb. The slight tingle on first application wakes up the skin and boosts the next steps.</p>
             <i class="fas fa-chevron-right step-arrow"></i>
           </div>
           <div class="step-flow-card reveal d1">
             <div class="step-flow-num">2</div>
-            <span class="step-verb">Fill</span>
-            <h3>Hydration & firmness</h3>
-            <p>The Callus Repair Ampoule fills the skin with moisture using edelweiss callus extract and hyaluronic acid.</p>
+            <span class="step-verb">REPAIR</span>
+            <h3>Callus Repair Ampoule</h3>
+            <p>Ingredients derived from the plant stem cells of edelweiss grown at 3,000 m revitalize the skin, while 9 peptides support firmness and a healthy skin condition.</p>
             <i class="fas fa-chevron-right step-arrow"></i>
           </div>
           <div class="step-flow-card reveal d2">
             <div class="step-flow-num">3</div>
-            <span class="step-verb">Lock</span>
-            <h3>A stronger barrier</h3>
-            <p>The Callus Repair Cream seals in moisture and layers over the skin barrier to keep it strong.</p>
+            <span class="step-verb">SHIELD</span>
+            <h3>Callus Repair Cream</h3>
+            <p>Patented Derma-Clera™ gently shields the skin from external irritants while supplying rich moisture and nourishment. From week two, skin feels firmer and smoother.</p>
           </div>
         </div>
       </div>
@@ -380,7 +405,7 @@
         <div class="section-head reveal">
           <span class="eyebrow center">Products</span>
           <h2 class="section-title">Two 30 ml bottles and <span class="title-accent">one 50 ml jar</span></h2>
-          <p class="section-sub">Callus Repair Ampoule and Cream are vegan certified · all products are made in a cGMP · ISO 22716 certified facility</p>
+          <p class="section-sub">The three products on sale. All three are reported to the MFDS as dual functional: brightening · anti-wrinkle</p>
         </div>
         <figure class="products-lead reveal">
           <img src="images/detail-duo.jpg"
@@ -391,20 +416,20 @@
           <!-- STEP 01 — CICA Spicule Ampoule -->
           <div class="product-card reveal">
             <div class="product-media">
-              <span class="product-step-tag">Step 1 · Prep</span>
+              <span class="product-step-tag">Step 1 · Ampoule</span>
               <img src="images/products/LZ-001_cica-ampoule.png" alt="LaEzer CICA Capsule Spicule Ampoule" loading="lazy" />
             </div>
             <div class="product-body">
-              <span class="product-role">The first step, for better absorption</span>
+              <span class="product-role">The first step in smooth skin-texture care</span>
               <h3 class="product-name">CICA Capsule Spicule Ampoule</h3>
               <span class="product-name-en">30mL</span>
-              <p class="product-desc">Natural spicules at 5,000 ppm refine skin texture and help absorption (into the stratum corneum).
-                CICA also soothes skin that has become sensitive.</p>
+              <p class="product-desc">Sponge-derived spicules at 5,000 ppm and cica refine skin texture and add hydration and soothing
+                to prep the skin for what follows. Recommended every other day.</p>
               <div class="product-ingredients">
-                <span>Spicules 5,000 ppm</span><span>CICA · TECA</span><span>Derma-Clera™</span>
+                <span>Spicules 5,000 ppm</span><span>5 Centella extracts</span><span>Derma-Clera™</span><span>11 hyaluronic acids</span>
               </div>
               <div class="product-foot">
-                <a href="#contact" class="btn btn-primary" style="padding:11px 18px;font-size:.9rem;width:100%">Shop now</a>
+                <a href="#buyer" class="btn btn-primary" style="padding:11px 18px;font-size:.9rem;width:100%">Request samples</a>
               </div>
             </div>
           </div>
@@ -412,20 +437,20 @@
           <!-- STEP 02 — Callus Repair Ampoule -->
           <div class="product-card reveal d1">
             <div class="product-media">
-              <span class="product-step-tag">Step 2 · Fill</span>
+              <span class="product-step-tag">Step 2 · Ampoule</span>
               <img src="images/products/LZ-002_peptide-ampoule.png" alt="LaEzer Callus Repair Ampoule" loading="lazy" />
             </div>
             <div class="product-body">
-              <span class="product-role">Fill with dense hydration</span>
+              <span class="product-role">An intensive ampoule for hydration and firmness</span>
               <h3 class="product-name">Callus Repair Ampoule</h3>
               <span class="product-name-en">30mL</span>
-              <p class="product-desc">Edelweiss callus (plant stem cell) extract, 9 peptides and 11 types of hyaluronic acid
-                fill the skin with moisture and help it feel firmer.</p>
+              <p class="product-desc">With edelweiss callus culture extract and 9 peptides, it provides intensive care
+                for dry skin lacking firmness. Vegan certified.</p>
               <div class="product-ingredients">
-                <span>Edelweiss callus extract</span><span>9 peptides</span><span>11 hyaluronic acids</span>
+                <span>Edelweiss callus</span><span>9 peptides</span><span>11 hyaluronic acids</span><span>Vegan certified</span>
               </div>
               <div class="product-foot">
-                <a href="#contact" class="btn btn-primary" style="padding:11px 18px;font-size:.9rem;width:100%">Shop now</a>
+                <a href="#buyer" class="btn btn-primary" style="padding:11px 18px;font-size:.9rem;width:100%">Request samples</a>
               </div>
             </div>
           </div>
@@ -433,20 +458,20 @@
           <!-- STEP 03 — Callus Repair Cream -->
           <div class="product-card reveal d2">
             <div class="product-media">
-              <span class="product-step-tag">Step 3 · Lock</span>
+              <span class="product-step-tag">Step 3 · Cream</span>
               <img src="images/products/LZ-003_callus-cream.png" alt="LaEzer Callus Repair Cream" loading="lazy" />
             </div>
             <div class="product-body">
-              <span class="product-role">Lock in, and strengthen</span>
+              <span class="product-role">A barrier cream that locks in moisture</span>
               <h3 class="product-name">Callus Repair Cream</h3>
               <span class="product-name-en">50mL</span>
-              <p class="product-desc">Niacinamide and ceramides layer over the skin barrier to lock in moisture.
-                The finishing step after the ampoules. It completes your overnight care.</p>
+              <p class="product-desc">With edelweiss callus and Derma-Clera™, it completes your hydrating, soothing and firming care.
+                Apply after the Callus Repair Ampoule. Vegan certified.</p>
               <div class="product-ingredients">
-                <span>Niacinamide</span><span>Ceramides</span><span>Edelweiss callus extract</span>
+                <span>Edelweiss callus</span><span>Derma-Clera™</span><span>9 peptides</span><span>Vegan certified</span>
               </div>
               <div class="product-foot">
-                <a href="#contact" class="btn btn-primary" style="padding:11px 18px;font-size:.9rem;width:100%">Shop now</a>
+                <a href="#buyer" class="btn btn-primary" style="padding:11px 18px;font-size:.9rem;width:100%">Request samples</a>
               </div>
             </div>
           </div>
@@ -454,41 +479,91 @@
       </div>
     </section>
 
+    <!-- ===== 6-1. Upcoming lineup ===== -->
+    <section class="lineup bg-mist" id="lineup">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow center">Coming Soon</span>
+          <h2 class="section-title">Five products <span class="title-accent">on the way</span></h2>
+          <p class="section-sub">Expanding the LaEzer routine from cleansing and intensive care to final UV protection</p>
+        </div>
+        <div class="lineup-grid">
+          <article class="lineup-card reveal">
+            <span class="lineup-tag">Mask · 25 mL × 10 sheets</span>
+            <h3>PDRN Semi-Gel Mask</h3>
+            <p>A semi-gel sheet mask with rose water and PDRN that clings closely for lasting hydration.</p>
+            <span class="lineup-meta">Rose water 5% · PDRN · Niacinamide 5% · Adenosine</span>
+          </article>
+          <article class="lineup-card reveal">
+            <span class="lineup-tag">Cleanser · 50 mL</span>
+            <h3>Ginseng Vitamin Powder Cleanser</h3>
+            <p>A daily powder cleanser that lathers into a rich foam with water.</p>
+            <span class="lineup-meta">Ginseng · Vitamins · Zero chemical surfactants · 100% naturally derived enzymes</span>
+          </article>
+          <article class="lineup-card reveal">
+            <span class="lineup-tag">Ampoule · 4 mL × 6 vials</span>
+            <h3>PDRN Core Ampoule</h3>
+            <p>Core hydration and firmness care for dryness, dullness and rough texture.</p>
+            <span class="lineup-meta">Panthenol 10% · PDRN 2% · 9 peptides</span>
+          </article>
+          <article class="lineup-card reveal">
+            <span class="lineup-tag">Ampoule · 4 mL × 6 vials</span>
+            <h3>Mela Bright Ampoule</h3>
+            <p>A brightening ampoule that targets dull skin tone and dark spots.</p>
+            <span class="lineup-meta">Niacinamide 10% · Tranexamic acid 3% · Panthenol 10% · PDRN 0.3% · 9 peptides</span>
+          </article>
+          <article class="lineup-card reveal">
+            <span class="lineup-tag">Sun Cream · SPF 50</span>
+            <h3>Sun Cream</h3>
+            <p>A daily sun cream with a light, fresh texture that also works well as a base before makeup.</p>
+            <span class="lineup-meta">SPF 50 UV protection</span>
+          </article>
+        </div>
+        <p class="results-note">※ Ingredients, volume and packaging of upcoming products may change during development. Ingredient percentages are based on development formulas.</p>
+      </div>
+    </section>
+
     <!-- ===== 7. Clinical Results ===== -->
     <section class="results bg-ivory" id="results">
       <div class="container">
         <div class="section-head reveal">
-          <span class="eyebrow center">Human Clinical Trial</span>
+          <span class="eyebrow center">Human Application Test</span>
           <h2 class="section-title">Measured on <span class="title-accent">human skin</span></h2>
-          <p class="section-sub">Results of a human skin clinical trial conducted by a third-party institution, HUMAN Skin Clinical Trial Center (Korea)</p>
+          <p class="section-sub">Measured after one use of the 3-step set at the Human Skin Clinical Trial Center, Korea</p>
         </div>
-        <div class="results-grid">
+        <div class="results-grid results-grid--4">
           <div class="result-card reveal">
             <div class="result-icon"><i class="fas fa-tint"></i></div>
-            <div class="result-number"><span class="sign">+</span><span class="counter" data-target="138">0</span>%</div>
-            <h3 class="result-title">Hydration index increase</h3>
-            <p class="result-desc">After a single application</p>
+            <div class="result-number">138.10%</div>
+            <h3 class="result-title">Moisture improvement</h3>
+            <p class="result-desc">After one use of the 3-step set</p>
           </div>
           <div class="result-card reveal d1">
-            <div class="result-icon"><i class="fas fa-gem"></i></div>
-            <div class="result-number"><span class="sign">+</span><span class="counter" data-target="7.4">0</span>%</div>
-            <h3 class="result-title">Skin texture improvement</h3>
-            <p class="result-desc">Smoother, more even texture</p>
+            <div class="result-icon"><i class="fas fa-compress"></i></div>
+            <div class="result-number">20.01%</div>
+            <h3 class="result-title">Pore improvement</h3>
+            <p class="result-desc">After one use of the 3-step set</p>
           </div>
           <div class="result-card reveal d2">
-            <div class="result-icon"><i class="fas fa-compress"></i></div>
-            <div class="result-number"><span class="sign">−</span><span class="counter" data-target="20">0</span>%</div>
-            <h3 class="result-title">Pore area reduction</h3>
-            <p class="result-desc">After a single application</p>
+            <div class="result-icon"><i class="fas fa-leaf"></i></div>
+            <div class="result-number">8.26%</div>
+            <h3 class="result-title">Soothing improvement</h3>
+            <p class="result-desc">After one use of the 3-step set</p>
+          </div>
+          <div class="result-card reveal d3">
+            <div class="result-icon"><i class="fas fa-gem"></i></div>
+            <div class="result-number">7.40%</div>
+            <h3 class="result-title">Skin texture improvement</h3>
+            <p class="result-desc">After one use of the 3-step set</p>
           </div>
         </div>
         <figure class="proof-figure reveal">
           <img src="images/005.png"
-               alt="LaEzer 3-step routine: before and after skin measurement"
+               alt="Skin measurements before and after one use of the 3-step routine: pores 20.01%, skin texture 7.40%, moisture 138.10%, soothing 8.26% improvement"
                loading="lazy" decoding="async" />
         </figure>
 
-        <p class="results-note">* Human skin clinical trial of the LaEzer 3-product set, HUMAN Skin Clinical Trial Center (Korea): hydration +138.10%, skin texture +7.40%, pore area −20.01%. Measured after a single application; results do not guarantee efficacy; individual results may vary.</p>
+        <p class="results-note">* Human Skin Clinical Trial Center, Korea · after one use of the 3-step set · 100% user satisfaction across 8 items · rated “non-irritating” in a primary skin irritation test · original reports available at meetings · results may vary</p>
       </div>
     </section>
 
@@ -516,12 +591,12 @@
             <div class="ing-icon"><img src="images/ing_hyaluronic.png" alt="Hyaluronic acid" /></div>
             <h3>11 Types of Hyaluronic Acid</h3>
             <p>Different molecular sizes settle at different depths of the skin's outer layers for lasting, multi-layer hydration.</p>
-            <span class="ing-tag">+138% hydration index</span>
+            <span class="ing-tag">Moisture improvement 138.10%</span>
           </div>
           <div class="ing-card reveal d2">
             <div class="ing-icon"><img src="images/ing_dermaclera.png" alt="Derma-Clera" /></div>
             <h3>Derma-Clera™ (Patented)</h3>
-            <p>A patented ingredient derived from Cynanchum atratum. Helps strengthen the skin barrier and soothe the skin.</p>
+            <p>A patented ingredient derived from Cynanchum atratum (Baekmi flower extract). It helps calm the skin and keep it comfortable.</p>
             <span class="ing-tag">Patent KR 10-1768870</span>
           </div>
           <div class="ing-card reveal d3">
@@ -550,9 +625,9 @@
             </div>
             <div class="routine-steps">
               <div class="routine-step"><span class="n">1</span><div><b>Cleanse & Tone</b><p>Wash your face and prep the skin with toner.</p></div></div>
-              <div class="routine-step"><span class="n">2</span><div><b>CICA Spicule Ampoule</b><p>Opens the way for absorption and calms the skin.</p></div></div>
-              <div class="routine-step"><span class="n">3</span><div><b>Callus Repair Ampoule</b><p>Fills with moisture. Absorbs quickly and leaves a soft glow.</p></div></div>
-              <div class="routine-step"><span class="n">4</span><div><b>Cream (thin layer)</b><p>Locks in moisture. Finish with sunscreen.</p></div></div>
+              <div class="routine-step"><span class="n">2</span><div><b>Callus Repair Ampoule</b><p>Fills with moisture. Absorbs quickly and leaves a soft glow.</p></div></div>
+              <div class="routine-step"><span class="n">3</span><div><b>Cream (thin layer)</b><p>Spread a thin layer to lock in moisture.</p></div></div>
+              <div class="routine-step"><span class="n">4</span><div><b>Sunscreen</b><p>Apply once the cream has absorbed.</p></div></div>
             </div>
             <div class="routine-tip"><i class="fas fa-lightbulb"></i><span>In the morning, spread a thin layer and apply sunscreen once it has absorbed.</span></div>
           </div>
@@ -564,7 +639,7 @@
             </div>
             <div class="routine-steps">
               <div class="routine-step"><span class="n">1</span><div><b>Cleanse & Tone</b><p>Wash away the day and prep the skin.</p></div></div>
-              <div class="routine-step"><span class="n">2</span><div><b>CICA Spicule Ampoule</b><p>Refines skin texture so it is ready to receive the next step.</p></div></div>
+              <div class="routine-step"><span class="n">2</span><div><b>CICA Spicule Ampoule (every other day)</b><p>Refines skin texture. It may tingle, so avoid the eye and lip area.</p></div></div>
               <div class="routine-step"><span class="n">3</span><div><b>Callus Repair Ampoule (generous)</b><p>Apply generously to focus on hydration and firmness.</p></div></div>
               <div class="routine-step"><span class="n">4</span><div><b>Cream (generous)</b><p>Seals in moisture overnight and protects the skin barrier.</p></div></div>
             </div>
@@ -580,54 +655,27 @@
         <div class="section-head reveal">
           <span class="eyebrow center">Certifications & Verification</span>
           <h2 class="section-title">You can check <span class="title-accent">the documents</span></h2>
-          <p class="section-sub">The certifications and test results we hold</p>
+          <p class="section-sub">Original certificates and test reports are available at meetings</p>
         </div>
         <div class="cert-grid">
           <div class="cert-card reveal">
             <div class="cert-visual"><img src="images/001.png" alt="Vegan certificate" /></div>
-            <div class="cert-body"><h4>Vegan Certified</h4><p>Callus Repair Ampoule and Cream are certified by the Korea Vegan Certification Institute. No animal-derived ingredients and no animal testing</p></div>
+            <div class="cert-body"><h4>Vegan Certification</h4><p>Made only with plant-based ingredients and officially vegan certified (Callus Repair Ampoule · Cream)</p></div>
           </div>
           <div class="cert-card reveal d1">
             <div class="cert-visual"><img src="images/002.png" alt="Sensitive skin test report" /></div>
-            <div class="cert-body"><h4>Sensitive Skin Test</h4><p>A gentle formula, non-irritating in a sensitive-skin primary irritation test</p></div>
+            <div class="cert-body"><h4>Sensitive Skin Test</h4><p>Tested on sensitive skin and confirmed non-irritating</p></div>
           </div>
           <div class="cert-card reveal d2">
             <div class="cert-visual"><img src="images/003.png" alt="Patent certificate" /></div>
-            <div class="cert-body"><h4>Patented Ingredient</h4><p>Contains the patented soothing ingredient Derma-Clera™ · Patent KR 10-1768870</p></div>
+            <div class="cert-body"><h4>Patented Ingredient</h4><p>Derma-Clera™, a plant-derived patented ingredient from Baekmi flower · Patent KR 10-1768870</p></div>
           </div>
           <div class="cert-card reveal d3">
-            <div class="cert-visual"><img src="images/004.png" alt="cGMP and ISO 22716 certificates" /></div>
-            <div class="cert-body"><h4>cGMP · ISO 22716</h4><p>Produced in a facility certified to international GMP standards</p></div>
+            <div class="cert-visual"><img src="images/004.png" alt="Report for functional cosmetics exempt from review" /></div>
+            <div class="cert-body"><h4>Brightening &amp; Anti-wrinkle</h4><p>A dual functional product for brightening and wrinkle care (reported to the MFDS)</p></div>
           </div>
         </div>
         <p class="results-note" style="margin-top:24px">※ The sensitive-skin test confirms suitability for use; it does not mean that no one will ever experience irritation.</p>
-      </div>
-    </section>
-
-    <!-- ===== 11. CTA (purchase) ===== -->
-    <section class="cta" id="contact">
-      <div class="container">
-        <div class="cta-inner reveal">
-          <span class="eyebrow center">Shop</span>
-          <h2>LaEzer,<br />start today</h2>
-          <p>Find <strong>genuine LaEzer</strong> at the official online store
-            and on Naver Smart Store.</p>
-          <div class="cta-channels">
-            <a href="https://laezer.co.kr" target="_blank" rel="noopener" class="cta-channel primary">
-              <span class="ch-label"><i class="fas fa-shopping-bag"></i> Official Online Store</span>
-              <span class="ch-sub">Ezer Co., Ltd official store</span>
-              <span class="ch-val">laezer.co.kr</span>
-            </a>
-            <a href="https://smartstore.naver.com/laezer" target="_blank" rel="noopener" class="cta-channel">
-              <span class="ch-label"><i class="fas fa-store"></i> Naver Smart Store</span>
-              <span class="ch-sub">Easy checkout with Naver Pay</span>
-              <span class="ch-val">smartstore.naver.com/laezer</span>
-            </a>
-          </div>
-          <p class="cta-note">
-            Available in Korea and Mongolia; distribution inquiries: <a href="mailto:laezer.biz@gmail.com" style="color:var(--green-crystal);text-decoration:underline">laezer.biz@gmail.com</a>. Product questions: <a href="mailto:help@laezer.co.kr" style="color:var(--green-crystal);text-decoration:underline">help@laezer.co.kr</a>.
-          </p>
-        </div>
       </div>
     </section>
 
@@ -635,10 +683,11 @@
     <section class="buyer" id="buyer">
       <div class="container container--narrow">
         <div class="section-head reveal">
+          <span class="eyebrow center">Samples and contact</span>
           <h2 class="section-title">Buyer Inquiries</h2>
           <p class="section-sub">
-            If you are considering distribution, import or exclusive rights,
-            leave your details and our team will reply within one business day.
+            If you are considering distribution, import or exclusive rights, leave your details.
+            We will prepare samples and our company profile and reply within one business day.
           </p>
         </div>
 
@@ -652,8 +701,8 @@
           </ul>
           <ul class="buyer-fit__trust" aria-label="Certifications">
             <li>Vegan certified</li>
-            <li>cGMP · ISO 22716</li>
-            <li>IRB clinical trial</li>
+            <li>Dual functional: brightening · anti-wrinkle</li>
+            <li>Human application test</li>
             <li>Patent 10-1768870</li>
           </ul>
         </div>
@@ -664,7 +713,7 @@
           method="POST"
           data-netlify="true"
           netlify-honeypot="bot-field"
-          action="/thanks-buyer.html">
+          action="/thanks-buyer-en.html">
           <input type="hidden" name="form-name" value="buyer-inquiry" />
           <p class="buyer-form__hp">
             <label>Leave this field empty <input name="bot-field" tabindex="-1" autocomplete="off" /></label>
@@ -700,6 +749,7 @@
                 <option>CICA Capsule Spicule Ampoule</option>
                 <option>Callus Repair Ampoule</option>
                 <option>Callus Repair Cream</option>
+                <option>Upcoming products</option>
                 <option>OEM / ODM</option>
                 <option>Not decided yet</option>
               </select>
@@ -722,9 +772,36 @@
           <button type="submit" class="btn btn-primary btn-lg btn-block">Send inquiry</button>
 
           <p class="buyer-form__note">
-            You can also email us directly at <a href="mailto:help@laezer.co.kr">help@laezer.co.kr</a>.
+            You can also email us directly at <a href="mailto:laezer@naver.com">laezer@naver.com</a> (contact: Hyeon-jeong Jeong, CEO).
           </p>
         </form>
+      </div>
+    </section>
+
+    <!-- ===== 11. CTA (purchase) ===== -->
+    <section class="cta" id="contact">
+      <div class="container">
+        <div class="cta-inner reveal">
+          <span class="eyebrow center">Retail in Korea</span>
+          <h2>How we sell<br />in Korea</h2>
+          <p>The three products on sale are sold <strong>directly to consumers</strong> through our own online store,
+            Naver Smart Store and Coupang.</p>
+          <div class="cta-channels">
+            <a href="https://laezer.co.kr" target="_blank" rel="noopener" class="cta-channel primary">
+              <span class="ch-label"><i class="fas fa-shopping-bag"></i> Official Online Store</span>
+              <span class="ch-sub">Ezer Co., Ltd official store</span>
+              <span class="ch-val">laezer.co.kr</span>
+            </a>
+            <a href="https://smartstore.naver.com/laezer" target="_blank" rel="noopener" class="cta-channel">
+              <span class="ch-label"><i class="fas fa-store"></i> Naver Smart Store</span>
+              <span class="ch-sub">Easy checkout with Naver Pay</span>
+              <span class="ch-val">smartstore.naver.com/laezer</span>
+            </a>
+          </div>
+          <p class="cta-note">
+            Consumer questions: <a href="mailto:laezer@naver.com" style="color:var(--green-crystal);text-decoration:underline">laezer@naver.com</a>.
+          </p>
+        </div>
       </div>
     </section>
 
@@ -734,7 +811,7 @@
         <div class="footer-top">
           <div class="footer-brand">
             <div class="footer-logo">LaEzer</div>
-            <p class="footer-tagline">K-Beauty proven by science. Protecting the skin barrier.</p>
+            <p class="footer-tagline">Timeless Radiance and Beauty<br />Radiant beauty that transcends time</p>
             <div class="footer-social">
               <a href="https://www.instagram.com/zia.laezer" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
               <a href="https://m.me/soulalpaca" target="_blank" rel="noopener" aria-label="Messenger"><i class="fab fa-facebook-messenger"></i></a>
@@ -747,23 +824,25 @@
               <li><a href="#products">CICA Capsule Spicule Ampoule</a></li>
               <li><a href="#products">Callus Repair Ampoule</a></li>
               <li><a href="#products">Callus Repair Cream</a></li>
+              <li><a href="#lineup">5 products coming soon</a></li>
             </ul>
           </div>
           <div class="footer-col">
             <h4>Information</h4>
             <ul>
-              <li><a href="#why">Why LaEzer</a></li>
-              <li><a href="#results">Clinical Trial</a></li>
-              <li><a href="#ingredients">Ingredients</a></li>
-              <li><a href="#howto">How to Use</a></li>
+              <li><a href="#company">Company</a></li>
+              <li><a href="#history">History</a></li>
+              <li><a href="#results">Human Application Test</a></li>
+              <li><a href="#certs">Certificates</a></li>
             </ul>
           </div>
           <div class="footer-col">
-            <h4>Shop & Contact</h4>
+            <h4>Inquiry &amp; Retail</h4>
             <ul>
+              <li><a href="#buyer">Buyer Inquiries</a></li>
               <li><a href="https://laezer.co.kr" target="_blank" rel="noopener">Official Online Store</a></li>
               <li><a href="https://smartstore.naver.com/laezer" target="_blank" rel="noopener">Naver Smart Store</a></li>
-              <li><a href="mailto:help@laezer.co.kr">help@laezer.co.kr</a></li>
+              <li><a href="mailto:laezer@naver.com">laezer@naver.com</a></li>
             </ul>
           </div>
         </div>

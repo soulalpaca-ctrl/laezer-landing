@@ -809,3 +809,106 @@ i[class*="fa-"] { display: none; }
 @media (max-width: 900px) {
   .products-lead { max-width: none; }
 }
+
+/* ── 25. 바이어용 개편 (2026-11-13) ───────────────────────
+   회사소개서 최종본(2026-11-11)에 맞춰 연혁·출시 예정 라인업을 넣고
+   인체적용시험 수치를 네 칸으로 늘렸다. 6개 언어판이 같이 쓴다. */
+.lang-flag--uz { background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2 2'><rect width='2' height='2' fill='%23ffffff'/><rect width='2' height='.62' fill='%230099b5'/><rect y='.62' width='2' height='.05' fill='%23ce1126'/><rect y='1.33' width='2' height='.05' fill='%23ce1126'/><rect y='1.38' width='2' height='.62' fill='%231eb53a'/></svg>"); }
+
+.history { background: var(--white); }
+.history-wrap {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: clamp(28px, 5vw, 80px);
+  align-items: start;
+}
+.history-wrap .section-head { margin-bottom: 0; }
+.history-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+.history-list li {
+  display: grid;
+  grid-template-columns: 7.2ch minmax(0, 1fr);
+  gap: clamp(16px, 2.4vw, 32px);
+  align-items: baseline;
+  padding: 15px 0;
+  border-bottom: 1px solid var(--line);
+}
+.history-list time {
+  font-family: var(--font-head);
+  font-weight: 700;
+  color: var(--green-sage);
+  font-variant-numeric: tabular-nums;
+}
+.history-list b { color: var(--ink); font-weight: 600; }
+.history-list span { color: var(--ink-faint); font-size: .94rem; margin-left: 10px; }
+
+.lineup-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 20px;
+}
+.lineup-card {
+  grid-column: span 2;
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--r-sm);
+  padding: clamp(22px, 2.4vw, 30px);
+}
+.lineup-card:nth-child(n+4) { grid-column: span 3; }
+.lineup-tag {
+  font-size: var(--fs-min);
+  font-weight: 600;
+  color: var(--green-sage);
+  margin-bottom: 10px;
+}
+.lineup-card h3 { font-size: 1.22rem; margin-bottom: 10px; color: var(--ink); }
+.lineup-card p { color: var(--ink-soft); line-height: 1.65; margin-bottom: 18px; }
+.lineup-meta {
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+  font-size: var(--fs-min);
+  color: var(--ink-faint);
+  line-height: 1.6;
+}
+.lineup .results-note { margin-top: 24px; }
+
+.results-grid.results-grid--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.results-grid--4 .result-number { font-size: clamp(2.1rem, 3.9vw, 3.2rem); }
+
+@media (max-width: 1000px) {
+  .results-grid.results-grid--4 { grid-template-columns: 1fr 1fr; }
+  .results-grid--4 > .result-card:nth-child(odd) { border-left: 0; padding-left: 0; }
+  .lineup-card, .lineup-card:nth-child(n+4) { grid-column: span 3; }
+  .lineup-card:last-child { grid-column: span 6; }
+}
+@media (max-width: 760px) {
+  .history-wrap { grid-template-columns: 1fr; }
+  .results-grid.results-grid--4 { grid-template-columns: 1fr; }
+  .lineup-card, .lineup-card:nth-child(n+4), .lineup-card:last-child { grid-column: span 6; }
+  .history-list span { display: block; margin: 2px 0 0; }
+}
+
+/* 언어 버튼이 6개가 되면서 681~1200px 에서 메뉴가 로고와 겹치거나 두 줄로 깨졌다
+   (kr 1024, mn·jp 1024~1160 실측). 이 구간은 햄버거 드로어로 바꾼다.
+   style.css 의 680px 이하 규칙과 같은 내용이다. en(1240)·ru(1340)는 라벨이 더 길어
+   각 페이지 인라인 style 에서 전환 폭을 더 올려 두었다. */
+.nav-menu > li > a:not(.lang-btn) { white-space: nowrap; }
+@media (max-width: 1200px) and (min-width: 681px) {
+  .nav-menu {
+    position: fixed; top: var(--header-h); left: 0; right: 0;
+    flex-direction: column; align-items: stretch; gap: 0;
+    background: #fff; padding: 14px var(--gutter) 24px;
+    box-shadow: var(--shadow-md); border-top: 1px solid var(--line);
+    transform: translateY(-130%); transition: transform .35s ease; z-index: 999;
+  }
+  .nav-menu.open { transform: translateY(0); }
+  .nav-menu > li { width: 100%; }
+  .nav-menu > li > a:not(.btn-nav) { display: block; padding: 14px 4px; border-bottom: 1px solid var(--line); font-size: .96rem; }
+  .btn-nav { width: 100%; justify-content: center; margin: 10px 0; padding: 14px; }
+  .lang-switcher-container { border-left: none; padding-left: 0; margin-left: 0; justify-content: center; gap: 8px; padding-top: 6px; }
+  .lang-flag { width: 18px; height: 18px; flex-basis: 18px; }
+  .hamburger { display: flex; }
+}
+

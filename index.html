@@ -1,30 +1,20 @@
 <!doctype html>
+<!-- 이 파일은 build/build.py 가 build/template.html + build/i18n/*.json 으로 만든다. 직접 고치지 말고 그쪽을 고친 뒤 다시 빌드한다. -->
 <html lang="mn">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="LaEzer — Ezer Co., Ltd.-ийн дермакосметик брэнд. Baekmi цэцгээс гаралтай патентлагдсан Derma-Clera™, эдельвейсийн каллусын өсгөврийн ханд, спикул 5,000ppm, 11 төрлийн гиалуроны хүчил. Импортлогч, дистрибьютерт дээж, зөвлөгөө өгнө."
-    />
-    <meta
-      name="keywords"
-      content="LaEzer,라에젤, Korean skincare, K-beauty, Mongolia, Derma-Clera, callus repair, plant stem cell, spicule, vegan"
-    />
-    <title>LaEzer — Шинжлэх ухаанаар батлагдсан K-Beauty | Монгол</title>
+    <meta name="description" content="Ezer Co., Ltd.-ийн арьс арчилгааны брэнд LaEzer-ийн компанийн танилцуулга. Борлуулж буй 3 бүтээгдэхүүн, удахгүй гарах 5 бүтээгдэхүүн, хүний биед хийсэн туршилтын үр дүн, гэрчилгээ, дээж захиалга, холбоо барих мэдээлэл." />
+    <title>LaEzer | Ezer Co., Ltd. компанийн танилцуулга</title>
     <link rel="icon" type="image/png" href="images/logo-transparent.png" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/laezer-2026.css?v=redesign4" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Noto+Sans:wght@400;500;600;700&family=Cormorant+Garamond:wght@500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css"
-    />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/buyer.css?v=20261114" />
+    <style>:root { --sans: "Noto Sans", "Pretendard Variable", sans-serif; } body { overflow-wrap: break-word; }</style>
     <link rel="alternate" hreflang="mn" href="https://laezer-landing.netlify.app/" />
     <link rel="alternate" hreflang="ko" href="https://laezer-landing.netlify.app/index_kr" />
     <link rel="alternate" hreflang="ja" href="https://laezer-landing.netlify.app/index_jp" />
@@ -34,17 +24,18 @@
     <link rel="alternate" hreflang="x-default" href="https://laezer-landing.netlify.app/" />
     <link rel="canonical" href="https://laezer-landing.netlify.app/" />
     <meta property="og:locale" content="mn_MN" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://laezer-landing.netlify.app/" />
-    <meta property="og:title" content="LaEzer — Шинжлэх ухаанаар батлагдсан K-Beauty | Монгол" />
-    <meta property="og:description" content="LaEzer — Ezer Co., Ltd.-ийн дермакосметик брэнд. Baekmi цэцгээс гаралтай патентлагдсан Derma-Clera™, эдельвейсийн каллусын өсгөврийн ханд, спикул 5,000ppm, 11 төрлийн гиалуроны хүчил. Импортлогч, дистрибьютерт дээж, зөвлөгөө өгнө." />
-    <meta property="og:image" content="https://laezer-landing.netlify.app/images/model-portrait.jpg" />
-    <meta name="twitter:card" content="summary_large_image" />
     <meta property="og:locale:alternate" content="ko_KR" />
     <meta property="og:locale:alternate" content="ja_JP" />
     <meta property="og:locale:alternate" content="ru_RU" />
+    <meta property="og:locale:alternate" content="en_US" />
     <meta property="og:locale:alternate" content="uz_UZ" />
-  <script type="application/ld+json">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://laezer-landing.netlify.app/" />
+    <meta property="og:title" content="LaEzer | Ezer Co., Ltd. компанийн танилцуулга" />
+    <meta property="og:description" content="Ezer Co., Ltd.-ийн арьс арчилгааны брэнд LaEzer-ийн компанийн танилцуулга. Борлуулж буй 3 бүтээгдэхүүн, удахгүй гарах 5 бүтээгдэхүүн, хүний биед хийсэн туршилтын үр дүн, гэрчилгээ, дээж захиалга, холбоо барих мэдээлэл." />
+    <meta property="og:image" content="https://laezer-landing.netlify.app/images/model-portrait.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
@@ -75,818 +66,689 @@
       }
     },
     {
-      "@type": "WebSite",
-      "@id": "https://laezer-landing.netlify.app/#website",
-      "url": "https://laezer-landing.netlify.app/",
-      "name": "LaEzer",
-      "inLanguage": "mn",
-      "publisher": {
-        "@id": "https://laezer-landing.netlify.app/#organization"
-      }
-    },
-    {
       "@type": "WebPage",
       "@id": "https://laezer-landing.netlify.app/#webpage",
       "url": "https://laezer-landing.netlify.app/",
-      "name": "LaEzer — Шинжлэх ухаанаар батлагдсан K-Beauty | Монгол",
-      "description": "LaEzer — Ezer Co., Ltd.-ийн дермакосметик брэнд. Baekmi цэцгээс гаралтай патентлагдсан Derma-Clera™, эдельвейсийн каллусын өсгөврийн ханд, спикул 5,000ppm, 11 төрлийн гиалуроны хүчил. Импортлогч, дистрибьютерт дээж, зөвлөгөө өгнө.",
+      "name": "LaEzer | Ezer Co., Ltd. компанийн танилцуулга",
+      "description": "Ezer Co., Ltd.-ийн арьс арчилгааны брэнд LaEzer-ийн компанийн танилцуулга. Борлуулж буй 3 бүтээгдэхүүн, удахгүй гарах 5 бүтээгдэхүүн, хүний биед хийсэн туршилтын үр дүн, гэрчилгээ, дээж захиалга, холбоо барих мэдээлэл.",
       "inLanguage": "mn",
-      "isPartOf": {
-        "@id": "https://laezer-landing.netlify.app/#website"
-      },
       "about": {
         "@id": "https://laezer-landing.netlify.app/#organization"
       }
     }
   ]
 }
-  </script>
+    </script>
   </head>
   <body>
-    <!-- ===== Header ===== -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="wm" viewBox="0 0 3136 864"><g transform="translate(0.000000,864.000000) scale(0.100000,-0.100000)"
+fill="currentColor" stroke="none">
+<path d="M121 8352 c-11 -22 -2 -110 13 -120 6 -3 34 -8 63 -9 69 -3 118 -25
+143 -65 20 -33 20 -39 20 -3883 0 -3060 -3 -3855 -13 -3875 -24 -47 -73 -70
+-148 -70 -37 0 -70 -4 -73 -9 -12 -20 -14 -110 -3 -125 11 -15 244 -16 2627
+-16 2575 0 2615 0 2631 19 11 14 18 51 22 133 4 62 11 138 17 168 5 30 14 120
+20 200 6 80 15 170 20 200 5 30 14 123 20 205 6 83 15 177 21 210 5 33 14 121
+19 195 5 74 16 189 25 255 8 66 19 172 24 235 14 153 28 297 52 514 15 135 17
+182 8 192 -15 18 -123 19 -137 2 -5 -7 -13 -71 -16 -143 -4 -71 -11 -164 -17
+-206 -5 -41 -14 -113 -19 -160 -15 -136 -55 -309 -116 -503 -56 -180 -144
+-370 -230 -497 -28 -42 -53 -80 -55 -86 -16 -41 -271 -301 -354 -359 -27 -19
+-68 -49 -90 -65 -46 -34 -294 -158 -375 -187 -111 -41 -232 -71 -385 -97 -44
+-7 -111 -21 -150 -30 -64 -16 -168 -18 -1181 -22 -1026 -4 -1112 -3 -1127 12
+-16 15 -17 290 -15 3893 l3 3877 24 32 c25 34 105 63 173 63 23 0 38 5 42 16
+10 27 7 99 -6 112 -9 9 -187 12 -740 12 -683 0 -728 -1 -737 -18z"/>
+<path d="M12066 8354 c-23 -23 -21 -89 4 -114 15 -15 33 -20 79 -20 71 0 112
+-16 143 -55 l23 -30 3 -3848 2 -3849 -20 -37 c-29 -51 -69 -71 -144 -71 -80 0
+-106 -17 -106 -69 0 -22 8 -48 18 -60 l17 -21 2664 0 c1759 0 2668 4 2676 10
+7 6 15 55 19 120 4 61 11 136 16 166 5 31 14 122 20 203 6 80 15 169 20 196 5
+28 14 120 20 205 6 85 17 196 25 245 7 50 16 139 20 199 4 60 11 134 16 165 5
+31 13 117 19 191 5 74 16 187 25 250 13 105 31 299 56 610 5 63 13 133 19 156
+5 22 14 83 20 135 5 52 16 128 24 169 8 41 24 131 36 200 12 69 30 163 40 210
+10 47 28 130 40 185 12 55 28 127 37 160 8 33 21 87 29 120 17 76 47 198 73
+295 11 41 25 95 32 120 6 25 18 65 26 90 8 25 18 65 23 90 4 25 15 61 23 80 8
+19 25 60 37 90 12 30 30 72 41 92 10 20 19 43 19 50 0 7 18 40 40 73 22 33 40
+65 40 71 0 6 7 17 15 24 8 6 31 37 52 68 46 71 201 224 279 277 32 21 75 51
+94 66 35 27 150 87 245 129 28 12 73 32 100 45 93 43 154 65 176 65 12 0 50 9
+83 19 63 20 125 33 236 52 36 6 84 18 107 26 92 32 510 62 871 62 225 1 253
+-1 259 -15 3 -9 1 -25 -5 -35 -7 -10 -49 -89 -93 -176 -45 -87 -110 -212 -145
+-278 -34 -66 -96 -187 -138 -270 -42 -82 -80 -157 -86 -165 -5 -8 -15 -28 -23
+-45 -12 -27 -107 -209 -134 -260 -6 -11 -24 -45 -39 -75 -16 -30 -49 -95 -75
+-145 -25 -49 -81 -157 -123 -240 -42 -82 -80 -157 -85 -165 -10 -19 -31 -59
+-98 -190 -30 -58 -91 -177 -137 -265 -45 -88 -134 -259 -196 -380 -99 -192
+-141 -274 -207 -400 -9 -16 -22 -43 -31 -60 -17 -35 -193 -379 -212 -415 -7
+-14 -18 -34 -23 -45 -6 -11 -33 -63 -60 -115 -77 -148 -214 -412 -284 -550
+-84 -164 -207 -402 -323 -625 -136 -262 -293 -568 -339 -660 -23 -44 -53 -101
+-67 -127 -15 -26 -24 -54 -21 -62 6 -14 196 -16 1961 -16 l1956 0 14 23 c8 12
+17 62 21 110 4 49 11 103 16 120 5 17 13 78 19 136 6 58 17 142 25 186 8 44
+17 114 20 155 4 41 11 91 16 111 5 19 13 80 19 135 5 54 17 142 25 194 8 52
+19 131 25 175 6 44 14 103 19 130 5 28 10 88 12 135 l4 85 -58 3 c-32 2 -64
+-2 -71 -7 -14 -12 -30 -78 -45 -191 -21 -148 -45 -243 -105 -405 -26 -70 -94
+-193 -150 -268 -66 -89 -192 -224 -226 -242 -14 -8 -39 -26 -56 -42 -29 -27
+-86 -66 -129 -89 -11 -6 -29 -16 -40 -22 -11 -5 -47 -23 -80 -39 -33 -16 -69
+-34 -80 -40 -46 -24 -164 -62 -265 -84 -25 -6 -67 -16 -95 -24 -27 -7 -82 -18
+-122 -24 -39 -6 -84 -16 -100 -22 -60 -23 -428 -39 -919 -39 -553 0 -526 -4
+-480 74 13 22 72 136 131 251 60 116 135 262 168 325 32 63 66 129 74 145 8
+17 18 37 23 46 5 9 30 56 56 105 26 49 100 193 164 319 64 127 142 277 172
+335 61 116 187 358 210 405 9 17 28 55 44 85 16 30 58 112 94 183 94 183 215
+419 264 512 43 83 60 115 142 275 27 52 69 136 95 185 25 50 81 158 123 240
+43 83 96 186 120 230 23 44 63 123 90 175 52 104 53 107 133 260 30 58 91 175
+135 260 44 85 133 259 199 385 65 127 137 266 159 310 22 44 44 87 49 95 5 8
+22 40 37 70 15 30 48 95 73 143 142 274 173 338 167 352 -5 13 -203 15 -1710
+15 l-1705 0 -19 -28 c-11 -15 -25 -47 -32 -72 -7 -24 -18 -53 -26 -64 -8 -11
+-14 -27 -14 -36 -1 -8 -9 -33 -20 -55 -11 -22 -19 -44 -20 -48 0 -5 -7 -23
+-15 -40 -13 -30 -22 -54 -59 -157 -9 -25 -23 -58 -30 -75 -45 -100 -56 -127
+-56 -137 0 -6 -8 -29 -19 -52 -10 -23 -28 -68 -41 -101 -12 -33 -30 -81 -41
+-107 -31 -78 -55 -139 -79 -203 -13 -33 -29 -73 -36 -90 -20 -47 -45 -116 -56
+-160 -6 -22 -17 -60 -25 -85 -8 -25 -19 -69 -24 -99 -5 -29 -16 -65 -23 -80
+-7 -14 -16 -46 -20 -71 -4 -25 -13 -65 -21 -90 -7 -25 -24 -90 -36 -145 -12
+-55 -28 -123 -36 -152 -13 -49 -20 -88 -63 -313 -10 -52 -23 -120 -29 -150
+-23 -123 -50 -288 -56 -345 -4 -33 -10 -76 -16 -96 -5 -19 -13 -80 -19 -135
+-5 -54 -16 -146 -24 -204 -17 -114 -53 -486 -60 -617 -7 -118 -73 -454 -102
+-521 -8 -18 -14 -40 -14 -50 -1 -9 -9 -35 -20 -57 -11 -22 -19 -46 -20 -53 0
+-7 -9 -30 -20 -50 -10 -20 -33 -66 -50 -102 -37 -79 -94 -174 -135 -226 -17
+-22 -38 -50 -47 -64 -25 -40 -168 -181 -249 -246 -80 -65 -151 -109 -269 -167
+-41 -21 -82 -42 -90 -47 -24 -14 -118 -46 -200 -68 -122 -33 -161 -42 -245
+-57 -44 -8 -111 -22 -150 -31 -63 -15 -188 -17 -1298 -21 -948 -4 -1231 -2
+-1242 7 -13 11 -15 270 -15 1959 0 1568 2 1951 13 1965 12 16 68 17 1007 13
+1005 -4 1168 -10 1261 -42 23 -8 50 -15 61 -15 21 0 84 -27 216 -93 97 -49
+223 -161 277 -248 114 -182 186 -401 204 -619 l6 -75 75 0 c74 0 75 0 74 25
+-2 38 -46 357 -74 545 -6 39 -17 117 -24 175 -7 58 -20 152 -29 210 -25 161
+-37 250 -116 815 -11 77 -25 174 -31 215 -6 41 -16 113 -22 160 -16 136 -36
+233 -50 242 -21 13 -104 9 -116 -5 -8 -10 -8 -71 0 -220 14 -266 4 -377 -45
+-494 -39 -92 -73 -140 -149 -208 -69 -62 -197 -119 -322 -144 -22 -5 -68 -17
+-101 -26 -55 -16 -143 -18 -1073 -22 -789 -4 -1016 -2 -1027 7 -13 11 -15 244
+-15 1860 0 1676 1 1848 16 1854 23 9 1879 6 1944 -3 30 -5 96 -14 145 -20 303
+-41 591 -107 685 -156 14 -7 54 -25 90 -40 236 -98 406 -216 600 -419 91 -95
+180 -214 231 -311 17 -33 38 -67 45 -76 8 -8 14 -21 14 -28 0 -7 9 -29 20 -49
+32 -61 60 -127 60 -143 1 -8 9 -32 20 -54 11 -22 19 -50 20 -62 0 -12 9 -45
+20 -73 11 -28 20 -60 20 -71 0 -31 42 -163 54 -171 6 -4 36 -8 67 -8 73 0 90
+17 66 63 -9 18 -21 56 -27 86 -6 30 -14 59 -20 66 -5 6 -12 31 -16 55 -4 25
+-15 67 -25 93 -11 26 -19 58 -19 71 0 13 -9 43 -20 67 -11 24 -20 55 -20 69 0
+14 -9 52 -19 85 -11 33 -29 92 -40 130 -52 183 -61 215 -81 285 -11 41 -30
+109 -41 150 -19 68 -34 124 -74 265 -39 140 -67 237 -88 300 l-22 70 -2417 3
+c-2187 2 -2418 1 -2432 -14z"/>
+<path d="M8000 6201 c-47 -4 -121 -15 -165 -24 -44 -8 -109 -20 -145 -26 -128
+-21 -186 -33 -255 -52 -150 -42 -161 -46 -307 -113 -31 -14 -61 -26 -67 -26
+-13 0 -80 -38 -106 -60 -11 -9 -27 -20 -35 -24 -16 -8 -68 -39 -117 -71 -56
+-37 -225 -199 -260 -250 -19 -27 -47 -68 -63 -90 -37 -52 -111 -200 -120 -242
+-9 -39 3 -58 45 -68 17 -3 38 -13 47 -22 36 -32 60 -13 111 87 27 52 52 97 56
+100 5 3 27 32 49 66 48 70 208 222 282 268 28 17 72 45 98 63 68 46 227 123
+253 123 8 0 27 7 42 15 15 8 45 17 65 21 20 4 53 15 72 25 19 11 46 19 60 19
+14 0 50 7 80 16 69 21 534 32 620 15 127 -24 196 -41 225 -54 16 -8 57 -25 90
+-37 101 -37 197 -86 257 -132 31 -24 73 -54 92 -68 58 -41 207 -212 267 -307
+49 -77 89 -154 134 -258 7 -16 22 -51 34 -76 12 -25 21 -54 21 -63 0 -10 5
+-27 12 -39 11 -21 36 -112 59 -217 6 -25 17 -71 25 -103 8 -31 19 -99 24 -150
+6 -50 15 -119 20 -152 16 -97 25 -572 11 -588 -8 -11 -59 -16 -209 -21 -108
+-4 -228 -12 -267 -17 -38 -5 -117 -14 -175 -19 -178 -19 -361 -47 -470 -74
+-125 -31 -249 -56 -274 -56 -13 0 -37 -5 -53 -11 -15 -6 -64 -19 -108 -29
+-118 -28 -176 -44 -215 -62 -54 -24 -163 -58 -185 -58 -11 0 -29 -6 -40 -14
+-11 -7 -31 -17 -45 -20 -14 -4 -43 -16 -65 -26 -22 -10 -62 -27 -90 -38 -123
+-49 -252 -107 -270 -122 -11 -9 -63 -37 -115 -63 -52 -26 -113 -61 -135 -77
+-22 -16 -76 -53 -120 -83 -44 -30 -93 -67 -109 -82 -15 -14 -56 -49 -90 -77
+-85 -72 -316 -345 -316 -376 0 -5 -8 -20 -19 -33 -39 -50 -141 -274 -141 -309
+0 -10 -9 -42 -19 -72 -22 -60 -40 -188 -48 -331 -7 -112 18 -327 48 -420 11
+-31 19 -63 19 -70 0 -22 90 -217 129 -280 60 -98 152 -209 244 -297 48 -46 96
+-88 106 -94 10 -6 38 -22 61 -36 23 -14 51 -30 61 -36 11 -6 27 -18 36 -27 10
+-8 29 -20 43 -26 14 -6 32 -15 40 -20 40 -24 248 -91 281 -91 13 0 34 -7 46
+-15 29 -20 230 -45 366 -45 138 0 285 16 362 39 33 10 80 24 105 30 200 53
+251 73 425 171 39 22 81 45 95 52 14 7 84 56 157 110 134 100 319 283 431 428
+73 94 200 282 212 316 6 16 15 31 19 34 11 8 61 97 61 110 0 7 8 24 18 38 10
+15 28 52 41 82 13 30 31 73 41 95 31 68 79 201 95 261 8 31 17 59 19 62 24 23
+26 -56 26 -883 0 -860 0 -874 20 -885 27 -15 1109 -13 1127 2 16 13 17 110 1
+126 -7 7 -31 12 -55 12 -73 0 -117 24 -142 78 l-21 47 -3 1930 -2 1930 -23
+140 c-13 77 -32 174 -43 216 -10 42 -19 88 -19 102 0 13 -9 44 -20 68 -11 24
+-20 52 -20 62 0 11 -6 33 -14 50 -7 18 -28 70 -46 117 -18 47 -39 94 -46 105
+-8 11 -14 26 -14 35 0 8 -18 42 -40 75 -22 33 -40 65 -40 70 -1 6 -17 30 -35
+55 -19 25 -50 68 -69 95 -47 69 -228 243 -301 291 -33 21 -78 52 -100 69 -23
+17 -68 43 -100 58 -33 16 -67 32 -75 38 -40 24 -140 67 -173 73 -20 4 -49 13
+-64 21 -15 8 -40 15 -54 15 -15 0 -55 9 -89 20 -34 11 -77 20 -94 20 -17 0
+-63 9 -101 21 -65 20 -98 21 -425 24 -195 2 -393 0 -440 -4z m1515 -3036 c-1
+-300 -3 -359 -18 -411 -9 -34 -17 -76 -17 -93 0 -35 -42 -236 -65 -316 -8 -27
+-19 -68 -25 -90 -17 -74 -46 -170 -58 -192 -7 -12 -12 -30 -12 -40 0 -10 -9
+-35 -20 -56 -11 -20 -20 -43 -20 -50 0 -12 -63 -162 -108 -257 -35 -73 -137
+-248 -190 -325 -124 -180 -295 -358 -432 -451 -160 -109 -185 -124 -197 -124
+-7 0 -30 -9 -50 -20 -21 -11 -45 -20 -53 -20 -9 0 -26 -7 -38 -16 -37 -26
+-197 -54 -307 -54 -113 0 -260 27 -333 60 -26 12 -63 29 -82 37 -127 55 -278
+175 -366 289 -109 142 -157 243 -217 454 -19 66 -21 102 -22 295 0 234 4 266
+62 445 37 113 154 339 194 373 8 6 28 32 44 55 40 60 186 196 279 260 42 29
+86 61 96 70 24 20 86 56 195 111 44 22 87 45 95 50 44 26 100 51 114 51 9 0
+27 6 39 14 12 8 40 19 62 25 61 15 156 51 179 67 11 8 31 14 44 14 12 0 39 7
+59 15 20 8 59 19 87 25 61 11 158 34 246 59 94 27 231 49 475 76 77 8 154 17
+170 19 17 2 66 3 110 2 l80 -1 0 -350z"/>
+<path d="M24525 6200 c-44 -5 -102 -16 -129 -24 -27 -9 -62 -16 -77 -16 -70 0
+-396 -89 -499 -137 -70 -32 -100 -45 -180 -79 -36 -15 -74 -35 -85 -44 -11 -9
+-31 -22 -45 -28 -25 -12 -39 -19 -75 -41 -11 -6 -31 -17 -45 -24 -29 -14 -81
+-49 -160 -108 -30 -22 -67 -48 -81 -57 -80 -53 -345 -310 -441 -427 -86 -106
+-268 -369 -268 -387 0 -5 -8 -21 -18 -36 -43 -65 -142 -262 -142 -283 0 -8 -9
+-29 -20 -47 -11 -18 -20 -38 -20 -44 0 -6 -8 -29 -19 -52 -10 -23 -29 -75 -41
+-116 -13 -41 -31 -100 -41 -130 -10 -30 -21 -75 -25 -99 -3 -24 -12 -58 -19
+-75 -7 -17 -16 -60 -19 -94 -4 -35 -11 -75 -16 -88 -13 -33 -41 -342 -47 -512
+-8 -225 32 -622 83 -822 7 -30 20 -82 29 -115 32 -127 67 -236 96 -300 10 -22
+29 -69 43 -105 39 -102 152 -316 210 -398 18 -27 40 -62 49 -78 8 -16 27 -42
+42 -58 14 -16 41 -50 60 -77 42 -61 101 -125 242 -264 98 -96 174 -160 378
+-314 57 -42 139 -92 235 -140 36 -18 83 -43 105 -57 37 -22 117 -54 255 -105
+30 -11 73 -28 95 -38 72 -34 252 -84 380 -106 44 -7 96 -18 115 -24 19 -6 50
+-11 69 -11 18 0 70 -9 115 -19 98 -23 352 -41 576 -41 184 1 481 22 521 38 14
+6 52 13 85 16 70 8 270 42 334 58 25 6 77 16 115 23 81 15 215 52 260 70 16 7
+66 23 110 35 44 12 94 26 110 32 17 5 57 17 90 25 33 8 64 19 69 24 6 5 17 9
+25 9 9 0 38 11 66 24 27 13 77 34 110 46 94 35 159 63 173 75 7 7 16 60 22
+140 5 72 16 193 24 270 34 316 48 457 57 580 5 72 13 157 19 190 5 33 14 128
+20 210 6 83 15 174 20 204 13 69 13 67 -6 85 -23 23 -119 22 -129 -1 -7 -18
+-26 -145 -45 -298 -14 -116 -71 -342 -106 -423 -8 -18 -14 -38 -14 -44 0 -6
+-10 -32 -21 -57 -12 -25 -33 -71 -47 -101 -14 -30 -31 -62 -38 -70 -6 -8 -15
+-25 -19 -38 -11 -39 -128 -205 -205 -293 -232 -265 -523 -458 -825 -547 -89
+-26 -144 -40 -225 -57 -36 -7 -79 -19 -95 -25 -39 -15 -321 -40 -455 -39 -142
+0 -374 22 -435 42 -73 23 -163 47 -217 57 -27 5 -58 16 -70 24 -12 9 -30 16
+-39 16 -18 0 -124 48 -179 82 -19 11 -64 36 -100 56 -149 80 -453 362 -546
+507 -10 16 -43 63 -71 104 -29 40 -53 78 -53 84 0 6 -7 18 -15 27 -15 17 -145
+273 -145 286 0 9 -47 132 -59 154 -4 8 -19 53 -33 100 -104 344 -148 591 -179
+1010 -14 182 -4 657 16 800 8 58 15 133 15 168 0 35 5 72 10 83 11 19 44 19
+2069 19 1798 0 2060 2 2071 15 21 25 -12 388 -52 565 -22 98 -97 335 -122 386
+-92 189 -120 239 -179 330 -26 38 -67 96 -92 129 -117 151 -367 370 -530 464
+-108 62 -122 71 -157 94 -14 9 -32 17 -38 17 -7 0 -49 18 -94 39 -92 45 -149
+67 -222 85 -27 7 -56 16 -62 20 -6 4 -44 13 -84 21 -137 25 -193 37 -278 57
+-74 18 -124 21 -400 23 -173 2 -351 0 -395 -5z m470 -156 c55 -3 116 -13 135
+-21 19 -8 55 -21 80 -28 98 -29 215 -79 226 -97 3 -5 16 -13 27 -18 24 -10 71
+-39 133 -82 64 -44 195 -176 282 -286 45 -57 82 -107 82 -113 0 -5 15 -31 33
+-57 18 -26 55 -94 81 -152 27 -58 53 -114 58 -124 27 -52 80 -223 118 -376 32
+-135 45 -219 62 -394 11 -122 11 -129 -7 -142 -28 -21 -3132 -20 -3160 0 -19
+13 -19 16 -2 68 9 30 17 64 17 76 0 12 9 52 21 89 11 38 32 106 46 153 14 47
+29 94 34 105 5 11 16 40 25 65 33 94 46 126 78 194 18 39 38 82 45 96 13 29
+82 154 130 237 65 109 217 299 311 389 75 71 215 180 261 203 24 12 64 35 89
+51 64 41 112 62 215 94 50 15 106 35 125 43 35 16 283 43 330 37 14 -2 70 -6
+125 -10z"/>
+<path d="M30850 6135 c-167 -35 -334 -89 -371 -121 -8 -8 -21 -14 -27 -14 -13
+0 -181 -87 -202 -105 -8 -7 -40 -27 -70 -44 -86 -50 -90 -53 -165 -112 -38
+-30 -95 -74 -125 -96 -74 -54 -330 -309 -409 -407 -138 -171 -240 -313 -295
+-410 -15 -28 -34 -58 -41 -66 -11 -13 -78 -136 -128 -235 -33 -65 -95 -202
+-107 -235 -7 -19 -19 -55 -28 -80 -16 -45 -61 -120 -63 -104 0 5 0 453 1 995
+1 898 0 988 -15 1003 -15 14 -73 16 -579 16 -639 0 -593 7 -583 -83 8 -64 24
+-77 95 -77 64 0 84 -9 111 -54 l21 -34 0 -2721 c1 -2459 -1 -2724 -15 -2751
+-23 -44 -71 -70 -128 -70 -74 0 -87 -11 -87 -74 0 -32 5 -58 13 -64 14 -12
+1357 -19 1376 -7 6 3 11 33 11 65 0 69 -11 80 -85 80 -56 0 -101 28 -121 75
+-10 26 -13 309 -14 1531 -2 1462 -1 1501 18 1589 24 109 85 297 106 327 9 12
+16 29 16 38 0 19 118 235 162 295 119 163 252 312 357 398 41 33 85 71 99 84
+14 13 53 40 86 60 34 20 88 55 122 78 56 38 121 72 234 123 25 11 84 39 131
+61 48 22 99 43 115 46 16 4 56 15 89 25 138 43 201 60 217 60 10 0 40 9 68 20
+28 11 67 20 86 20 19 0 66 7 105 16 38 9 145 19 237 22 l167 7 3 70 c2 38 -2
+121 -8 185 -5 63 -15 187 -20 275 -21 323 -28 396 -40 410 -19 23 -182 18
+-320 -10z"/>
+</g></symbol></svg>
     <header class="header" id="header">
-      <nav class="nav container">
-        <div class="nav-brand">
-          <img src="images/logo-transparent.png" alt="LaEzer" class="brand-logo-img" />
-        </div>
+      <nav class="nav wrap" aria-label="Үндсэн цэс">
+        <a class="wordmark" href="#top" aria-label="LaEzer"><svg class="wm" viewBox="0 0 3136 864" aria-hidden="true" focusable="false"><use href="#wm"></use></svg></a>
         <ul class="nav-menu" id="navMenu">
           <li><a href="#company">Компани</a></li>
+          <li><a href="#lineup">Цуврал</a></li>
           <li><a href="#products">Бүтээгдэхүүн</a></li>
-          <li><a href="#lineup">Удахгүй</a></li>
+          <li><a href="#upcoming">Удахгүй</a></li>
           <li><a href="#results">Туршилт</a></li>
-          <li><a href="#buyer" class="btn-nav">Дээж авах</a></li>
-          <li class="lang-switcher-container">
-            <a href="#" class="lang-btn active" data-lang-pick="mn"><span class="lang-flag lang-flag--mn" aria-hidden="true"></span>MGL</a>
-            <a href="index_kr.html" class="lang-btn" data-lang-pick="ko"><span class="lang-flag lang-flag--ko" aria-hidden="true"></span>KOR</a>
-            <a href="index_jp.html" class="lang-btn" data-lang-pick="ja"><span class="lang-flag lang-flag--ja" aria-hidden="true"></span>JPN</a>
-            <a href="index_ru.html" class="lang-btn" data-lang-pick="ru"><span class="lang-flag lang-flag--ru" aria-hidden="true"></span>RUS</a>
-            <a href="index_en.html" class="lang-btn" data-lang-pick="en"><span class="lang-flag lang-flag--en" style="background-image:url(&quot;data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2 2'><rect width='2' height='2' fill='%23012169'/><path d='M0 0L2 2M2 0L0 2' stroke='%23fff' stroke-width='.4'/><path d='M0 0L2 2M2 0L0 2' stroke='%23c8102e' stroke-width='.14'/><path d='M1 0V2M0 1H2' stroke='%23fff' stroke-width='.56'/><path d='M1 0V2M0 1H2' stroke='%23c8102e' stroke-width='.32'/></svg>&quot;)" aria-hidden="true"></span>ENG</a>
-            <a href="index_uz.html" class="lang-btn" data-lang-pick="uz"><span class="lang-flag lang-flag--uz" aria-hidden="true"></span>UZB</a>
+          <li><a href="#certs">Гэрчилгээ</a></li>
+          <li><a href="#contact" class="btn-nav">Дээж авах</a></li>
+          <li class="lang">
+            <a href="index.html" lang="mn" data-lang-pick="mn" class="active" aria-current="page">MGL</a>
+            <a href="index_kr.html" lang="ko" data-lang-pick="ko">KOR</a>
+            <a href="index_jp.html" lang="ja" data-lang-pick="ja">JPN</a>
+            <a href="index_ru.html" lang="ru" data-lang-pick="ru">RUS</a>
+            <a href="index_en.html" lang="en" data-lang-pick="en">ENG</a>
+            <a href="index_uz.html" lang="uz" data-lang-pick="uz">UZB</a>
           </li>
         </ul>
-        <div class="hamburger" id="hamburger">
+        <button class="hamburger" id="hamburger" type="button" aria-label="Цэс нээх" aria-controls="navMenu">
           <span></span><span></span><span></span>
-        </div>
+        </button>
       </nav>
     </header>
 
-    <!-- ===== 1. Hero ===== -->
-    <section class="hero">
-      <img src="images/hero_leaf.png" alt="" class="hero-leaf-deco" aria-hidden="true" />
-      <div class="container hero-grid">
-        <div class="hero-text reveal">
-          <span class="hero-badge"><i class="fas fa-flask"></i> Шинжлэх ухаанаар батлагдсан K-Beauty</span>
-          <h1>
-            Монгол хүний арьсыг<br />
-            <span class="highlight">шинжлэх ухаанаар</span> хамгаална
-          </h1>
-          <p class="hero-sub">
-            Baekmi цэцгээс гаралтай патентлагдсан Derma-Clera™, эдельвейсийн каллусын өсгөврийн ханд, хөвөн амьтны гаралтай спикул 5,000ppm.
-            Борлуулж буй 3 бүтээгдэхүүний хүний биед хийсэн туршилтын тоо, гэрчилгээг энэ хуудсанд цуглуулав.
-          </p>
-          <div class="hero-usp">
-            <span class="badge gold"><i class="fas fa-certificate"></i> Патентлагдсан найрлага</span>
-            <span class="badge"><i class="fas fa-leaf"></i> Веган гэрчилгээ</span>
-            <span class="badge"><i class="fas fa-microscope"></i> Хүний биед хийсэн туршилт</span>
-          </div>
-          <div class="hero-cta">
-            <a href="#buyer" class="btn btn-primary btn-lg">Дээж · зөвлөгөө авах</a>
-            <a href="#products" class="btn btn-ghost btn-lg"><i class="fas fa-box-open"></i> Бүтээгдэхүүн үзэх</a>
-          </div>
-          <div class="hero-stats">
-            <div class="stat-item"><span class="stat-number">+138%</span><span class="stat-label">Чийгшлийн сайжрал ※</span></div>
-            <div class="stat-item"><span class="stat-number">5,000<small style="font-size:.6em">ppm</small></span><span class="stat-label">Байгалийн спикул</span></div>
-            <div class="stat-item"><span class="stat-number">11</span><span class="stat-label">Гиалурон хүчил</span></div>
+    <main id="top">
+      <!-- 1쪽 표지 -->
+      <section class="cover">
+        <div class="wrap">
+          <h1 aria-label="LaEzer"><svg class="wm" viewBox="0 0 3136 864" aria-hidden="true" focusable="false"><use href="#wm"></use></svg></h1>
+          <div class="cover-rule"></div>
+          <p class="cover-slogan">Timeless Radiance and Beauty</p>
+          <p class="cover-meta">Ezer Co., Ltd. · Компанийн танилцуулга · 2026.11</p>
+          <div class="cover-cta">
+            <a href="#contact" class="btn btn--light">Дээж авах</a>
+            <a href="#lineup" class="btn btn--line-light">Цуврал үзэх</a>
           </div>
         </div>
-        <div class="hero-visual reveal d1">
-          <img src="images/model-portrait.jpg" alt="LaEzer арьс арчилгааны бүтээгдэхүүн ба загвар" loading="eager" />
-          <div class="hero-float-badge">
-            <span class="ico"><i class="fas fa-seedling"></i></span>
-            <span>Цайруулах · үрчлээний эсрэг давхар үйлчилгээ<small>Патентлагдсан Derma-Clera™ найрлага</small></span>
-          </div>
-        </div>
-      </div>
-      <div class="scroll-cue"><span>Доош гүйлгэх</span><div class="line"></div></div>
-    </section>
+      </section>
 
-    <!-- ===== Video (Hero 직후 — 원본 위치) ===== -->
-    <section class="video bg-mist" id="video">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow center">Алдартны сэтгэгдэл</span>
-          <h2 class="section-title">Солонгосын телевизээр <span class="title-accent">гарсан</span></h2>
-        </div>
-        <div class="video-wrap reveal d1">
-          <div class="video-frame">
-            <iframe
-              src="https://www.youtube.com/embed/kkYFzxSf-iE?rel=0&cc_load_policy=1&cc_lang_pref=mn"
-              title="LaEzer Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-          </div>
-          <div class="video-quote">
-            <p>"Нэг удаа л хэрэглэсэн ч шууд мэдрэгдсэн. Дотроос нь чийглэх мэдрэмж гайхалтай!"</p>
-            <span class="author">ACTRESS PARK HA-SUN</span> · <span class="role">Жүжигчин Пак Ха Сон</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== 2. Company ===== -->
-    <section class="why" id="company">
-      <div class="container why-grid">
-        <div class="why-content reveal">
-          <span class="eyebrow">Компанийн танилцуулга</span>
-          <h2>Ezer —<br /><em>туслагч</em></h2>
-          <p>
-            Ezer (Эзер) нь еврей хэлээр «туслагч» гэсэн утгатай. Хүн бүр өөрийн өвөрмөц гоо үзэсгэлэнг
-            нээхэд нь туслах — LaEzer-ийн философи энэ нэрнээс эхтэй. Бид хэрэглэгчдэдээ ч,
-            хамтран ажилладаг түншүүддээ ч найдвартай түшиг болох компани байхыг зорьдог.
-          </p>
-          <p>
-            2024 онд Тэжон хотод үүсгэн байгуулагдсан бөгөөд анхны гадаад зах зээл болох Монголын дараа
-            <strong style="color:#fff">ОХУ, Төв Ази, Япон, Вьетнамын</strong> зах зээлд гарахаар бэлтгэж байна.
-          </p>
-          <div class="why-points">
-            <div class="why-point">
-              <i class="fas fa-flask"></i>
-              <div><b>Нотолгоонд суурилсан системтэй судалгаа, хөгжүүлэлт</b><span>Арьсны шинжлэх ухааны судалгаа, найрлага тус бүрийн үр нөлөөний мэдээлэлд тулгуурлан нарийн жор боловсруулж, хүний биед хийсэн туршилт, арьсны цочролын туршилтаар бүтээгдэхүүний үр нөлөө, арьс цочроох түвшнийг бодитойгоор үнэлдэг.</span></div>
-            </div>
-            <div class="why-point">
-              <i class="fas fa-vials"></i>
-              <div><b>Арьсны асуудал бүрд тохирсон найрлагын хослол</b><span>Арьсны асуудлаас хамаарч шаардлагатай найрлага өөр байдаг. Найрлага тус бүрийн шинж чанар, үүргийг шинжлэх ухааны үүднээс судалж, бие биеэ нөхөх хослолоор арьсанд хэрэгтэй үр дүнг өгөх жорыг боловсруулдаг.</span></div>
-            </div>
-            <div class="why-point">
-              <i class="fas fa-leaf"></i>
-              <div><b>Байгалийн зарчим ба орчин үеийн шинжлэх ухааны зохицол</b><span>Байгалийн гаралтай түүхий эдийн үнэ цэнийг орчин үеийн арьсны шинжлэх ухаантай хослуулж, арьсны эрүүл тэнцвэрийг арчлан, байгалийн гэрэлтэлтээ эргүүлэн олоход туслах арьс арчилгааг санал болгодог.</span></div>
+      <!-- 2쪽 회사 -->
+      <section id="company">
+        <div class="wrap spread">
+          <figure class="spread-photo reveal"><img src="images/model-portrait.jpg" alt="LaEzer Каллус рэпэйр ампул барьсан загвар өмсөгч" width="1643" height="2200" /></figure>
+          <div class="spread-body reveal">
+            <span class="label">Ezer Co., Ltd.</span>
+            <h2 class="h2">Ezer (Эзер), туслагч</h2>
+            <p>Ezer (Эзер) нь еврей хэлээр «туслагч» гэсэн утгатай. Хүн бүр өөрийн өвөрмөц гоо үзэсгэлэнг нээхэд нь туслах, LaEzer-ийн философи энэ нэрнээс эхтэй. Бид хэрэглэгчдэдээ ч, хамтран ажилладаг түншүүддээ ч найдвартай түшиг болох компани байхыг зорьдог.</p>
+            <p>2024 онд Тэжон хотод үүсгэн байгуулагдсан бөгөөд анхны гадаад зах зээл болох Монголын дараа ОХУ, Төв Ази, Япон, Вьетнамын зах зээлд гарахаар бэлтгэж байна.</p>
+            <div class="slogan">
+              <span class="label">Брэндийн уриа</span>
+              <p class="slogan-en">Timeless Radiance and Beauty</p>
+              <p class="slogan-ko">Цаг хугацааг үл харгалзах гэрэлт гоо сайхан</p>
+              <p>Байгалийн зарчмыг орчин үеийн шинжлэх ухаантай хослуулж, арьсны угийн гэрэлтэлтийг сэргээх арьс арчилгааг санал болгодог.</p>
             </div>
           </div>
         </div>
-        <div class="why-visual reveal d1">
-          <img src="images/model-cica.jpg" alt="LaEzer CICA капсул спикул ампул" />
-          <div class="why-temp">Timeless Radiance and Beauty</div>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ===== 2-1. History ===== -->
-    <section class="history" id="history">
-      <div class="container history-wrap">
-        <div class="section-head reveal">
-          <span class="eyebrow center">Түүхэн замнал</span>
-          <h2 class="section-title">2024 онд Тэжонд эхэлснээс <span class="title-accent">өнөөг хүртэл</span></h2>
-          <p class="section-sub">Үүсгэн байгуулагдсанаас гадаад нийлүүлэлтийн гэрээ хүртэлх зам</p>
-        </div>
-        <ol class="history-list reveal d1">
-          <li><time>2024.09</time><div><b>Ezer Co., Ltd. байгуулагдсан</b><span>Тэжон, Солонгос</span></div></li>
-          <li><time>2025</time><div><b>3 бүтээгдэхүүнийг Солонгост худалдаанд гаргасан</b><span>Өөрийн дэлгүүр · Naver Smart Store · Coupang</span></div></li>
-          <li><time>2025</time><div><b>Өөрийн патентын өргөдөл гаргасан</b><span>№ 10-2025-0184979</span></div></li>
-          <li><time>2026.02</time><div><b>2 барааны тэмдэг бүртгүүлсэн</b><span>LaEzer · Dr. LaEzer</span></div></li>
-          <li><time>2026.04</time><div><b>Монголтой 1-р нийлүүлэлтийн гэрээ</b></div></li>
-          <li><time>2026.06</time><div><b>Улаанбаатарт поп-ап худалдаа</b><span>Тэжоны Бүтээлч эдийн засаг, инновацын төвтэй хамтран</span></div></li>
-          <li><time>2026.08</time><div><b>Монголтой 2-р нийлүүлэлтийн гэрээ</b></div></li>
-          <li><time>2026.09</time><div><b>Монголын брэндтэй бүтээгдэхүүн нийлүүлэх гэрээ</b></div></li>
-          <li><time>2026.11</time><div><b>Японы Don Quijote · LOFT-д худалдаанд гарах (төлөвлөсөн)</b></div></li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- ===== 3. Brand Story ===== -->
-    <section class="brand bg-cream" id="brand">
-      <div class="container brand-grid">
-        <div class="brand-visual reveal">
-          <img src="images/zia-cutout.png" alt="LaEzer 3 шатлалт арьсны хамгаалалтын давхаргыг сэргээх шийдэл" />
-        </div>
-        <div class="brand-text reveal d1">
-          <span class="eyebrow">Брэндийн түүх</span>
-          <p class="brand-quote">
-            Арьсны угийн <span class="hl">гоо сайханд бид итгэдэг</span>
-          </p>
-          <p>
-            LaEzer нь эрдэм шинжилгээний өгүүлэл, найрлагын үр нөлөөний шинжилгээ зэрэг шинжлэх ухааны нотолгоонд
-            тулгуурлан хүн бүрийн арьсанд тохирсон арчилгааны дэглэмийг санал болгодог.
-          </p>
-          <p>
-            Байгалийн зарчмыг орчин үеийн шинжлэх ухаантай хослуулж, арьсны угийн гэрэлтэлтийг сэргээх арьс арчилгааг санал болгодог.
-          </p>
-          <div class="brand-pillars">
-            <div class="brand-pillar"><i class="fas fa-certificate"></i><b>Патент</b><span>Патентлагдсан Derma-Clera™ найрлага · өөрийн 1 өргөдөл</span></div>
-            <div class="brand-pillar"><i class="fas fa-leaf"></i><b>Веган</b><span>Каллус рэпэйр ампул · крем</span></div>
-            <div class="brand-pillar"><i class="fas fa-vial-circle-check"></i><b>Туршилт</b><span>Human Skin Clinical Trial Center-т хийсэн</span></div>
+      <!-- 3쪽 브랜드 이야기 -->
+      <section id="brand" class="rule-top">
+        <div class="wrap spread">
+          <figure class="spread-photo reveal"><img src="images/buyer/lab.jpg" alt="Лабораторийн хэрэгсэл, ногоон навч бүхий жишээ зураг" width="1024" height="1024" loading="lazy" /></figure>
+          <div class="spread-body reveal">
+            <span class="label">Брэндийн түүх</span>
+            <h2 class="h2">Арьсны угийн гоо сайханд<br>бид итгэдэг</h2>
+            <p>LaEzer нь эрдэм шинжилгээний өгүүлэл, найрлагын үр нөлөөний шинжилгээ зэрэг шинжлэх ухааны нотолгоонд тулгуурлан хүн бүрийн арьсанд тохирсон арчилгааны дэглэмийг санал болгодог.</p>
+            <ol class="principles">
+              <li><div><span class="p-no">01 / RESEARCH</span><span class="p-en">Development &amp; Research</span></div><div><b>Нотолгоонд суурилсан системтэй судалгаа, хөгжүүлэлт</b><p>Арьсны шинжлэх ухааны судалгаа, найрлага тус бүрийн үр нөлөөний мэдээлэлд тулгуурлан нарийн жор боловсруулж, хүний биед хийсэн туршилт, арьсны цочролын туршилтаар бүтээгдэхүүний үр нөлөө, арьс цочроох түвшнийг бодитойгоор үнэлдэг.</p></div></li>
+              <li><div><span class="p-no">02 / FORMULATION</span><span class="p-en">Advanced Ingredient Synergy</span></div><div><b>Арьсны асуудал бүрд тохирсон найрлагын хослол</b><p>Арьсны асуудлаас хамаарч шаардлагатай найрлага өөр байдаг. Найрлага тус бүрийн шинж чанар, үүргийг шинжлэх ухааны үүднээс судалж, бие биеэ нөхөх хослолоор арьсанд хэрэгтэй үр дүнг өгөх жорыг боловсруулдаг.</p></div></li>
+              <li><div><span class="p-no">03 / PHILOSOPHY</span><span class="p-en">Balance</span></div><div><b>Байгалийн зарчим ба орчин үеийн шинжлэх ухааны зохицол</b><p>Байгалийн гаралтай түүхий эдийн үнэ цэнийг орчин үеийн арьсны шинжлэх ухаантай хослуулж, арьсны эрүүл тэнцвэрийг арчлан, байгалийн гэрэлтэлтээ эргүүлэн олоход туслах арьс арчилгааг санал болгодог.</p></div></li>
+            </ol>
           </div>
-          <div class="ceo-sign">
+        </div>
+      </section>
+
+      <!-- 4쪽 연혁 -->
+      <section id="history" class="rule-top">
+        <div class="wrap spread">
+          <figure class="spread-photo spread-photo--tall reveal"><img src="images/buyer/history-cream.jpg" alt="Каллус рэпэйр крем" width="900" height="1350" loading="lazy" /></figure>
+          <div class="spread-body reveal">
+            <span class="label">Түүхэн замнал</span>
+            <ol class="history-list">
+              <li><time class="num">2024.09</time><div><b>Ezer Co., Ltd. байгуулагдсан</b><span>Тэжон, Солонгос</span></div></li>
+              <li><time class="num">2025</time><div><b>3 бүтээгдэхүүнийг Солонгост худалдаанд гаргасан</b><span>Өөрийн дэлгүүр · Naver Smart Store · Coupang</span></div></li>
+              <li><time class="num">2025</time><div><b>Өөрийн патентын өргөдөл гаргасан</b><span>№ 10-2025-0184979</span></div></li>
+              <li><time class="num">2026.02</time><div><b>2 барааны тэмдэг бүртгүүлсэн</b><span>LaEzer · Dr. LaEzer</span></div></li>
+              <li><time class="num">2026.04</time><div><b>Монголтой 1-р нийлүүлэлтийн гэрээ</b></div></li>
+              <li><time class="num">2026.06</time><div><b>Улаанбаатарт поп-ап худалдаа</b><span>Тэжоны Бүтээлч эдийн засаг, инновацын төвтэй хамтран</span></div></li>
+              <li><time class="num">2026.08</time><div><b>Монголтой 2-р нийлүүлэлтийн гэрээ</b></div></li>
+              <li><time class="num">2026.09</time><div><b>Монголын брэндтэй бүтээгдэхүүн нийлүүлэх гэрээ</b></div></li>
+              <li><time class="num">2026.11</time><div><b>Японы Don Quijote · LOFT-д худалдаанд гарах (төлөвлөсөн)</b></div></li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5쪽 루틴 -->
+      <section id="routine" class="rule-top">
+        <div class="wrap">
+          <span class="label">Хөгшрөлтийг удаашруулах 3 алхамт арчилгаа</span>
+          <h2 class="routine-title">AWAKE • REPAIR • SHIELD</h2>
+          <p class="lead">Эдельвейсийн үүдэл эс болон патентлагдсан Derma-Clera™ найрлага нь арьсны өөрөө сэргэх хүчийг сэрээнэ.</p>
+          <div class="routine-grid">
+            <article class="reveal">
+              <img src="images/buyer/soil-spicule.jpg" alt="CICA капсул спикул ампул" width="900" height="558" loading="lazy" />
+              <h3 class="step-head"><span class="step-tag">STEP 1</span>AWAKE</h3>
+              <p class="step-name">CICA капсул спикул ампул</p>
+              <p class="step-first">Байгалийн бичил зүү арьсыг сэрээнэ.</p>
+              <p class="step-text">Зүү биш, байгалийн бүтээсэн зам: далайн хөвөн амьтны байгалийн спикул арьсанд бичил суваг нээж, идэвхтэй найрлага шингэхэд тусална. Анх түрхэхэд мэдрэгдэх хөнгөн хорсолт арьсыг сэрээж, дараагийн алхмын үр нөлөөг нэмэгдүүлнэ.</p>
+            </article>
+            <article class="reveal">
+              <img src="images/buyer/soil-ampoule.jpg" alt="Каллус рэпэйр ампул" width="900" height="558" loading="lazy" />
+              <h3 class="step-head"><span class="step-tag">STEP 2</span>REPAIR</h3>
+              <p class="step-name">Каллус рэпэйр ампул</p>
+              <p class="step-first">Альпийн ургамлын үүдэл эсээр эрчимтэй арчилна.</p>
+              <p class="step-text">Далайн түвшнээс дээш 3,000 м-т ургадаг эдельвейсийн ургамлын үүдэл эсээс гаралтай найрлага арьсанд эрч хүч нэмж, 9 төрлийн пептид уян хатан, эрүүл арьсыг арчилна.</p>
+            </article>
+            <article class="reveal">
+              <img src="images/buyer/soil-cream.jpg" alt="Каллус рэпэйр крем" width="900" height="558" loading="lazy" />
+              <h3 class="step-head"><span class="step-tag">STEP 3</span>SHIELD</h3>
+              <p class="step-name">Каллус рэпэйр крем</p>
+              <p class="step-first">Удаан хадгалагдах чийгээр арьсыг хамгаална.</p>
+              <p class="step-text">Патентлагдсан Derma-Clera™ найрлага арьсыг гадны цочролоос зөөлөн хамгаалж, элбэг чийг, тэжээлээр хангана. 2 дахь долоо хоногоос арьсны чийрэг, гөлгөр байдал өөрчлөгдөнө.</p>
+            </article>
+          </div>
+          <p class="note">Хэрэглэх дараалал, давтамжийг албан ёсны бүтээгдэхүүний хуудсанд үндэслэв · спикулын онцлогоос бага зэрэг хорсож болно</p>
+        </div>
+      </section>
+
+      <!-- 6쪽 라인업 -->
+      <section id="lineup" class="rule-top">
+        <div class="wrap">
+          <div class="lineup-head">
             <div>
-              <div class="ceo-name">Жон Хён Жон (정현정)</div>
-              <div class="ceo-role">EZER Co., Ltd., Гүйцэтгэх захирал · Үүсгэн байгуулагч</div>
+              <span class="label">Бүтээгдэхүүний цуврал</span>
+              <h2 class="h2">Цэвэрлэгч · Ампул · Крем · Нарны тос · Маск</h2>
+              <p class="lead">Борлуулж буй 3 · удахгүй гарах 5</p>
+            </div>
+            <div class="legend"><span class="tag tag--on">Зарж буй</span><span class="tag">Удахгүй</span></div>
+          </div>
+          <div class="lineup-grid">
+            <article class="lineup-cell"><div class="lineup-top"><span>01 Маск</span><span class="tag">Удахгүй</span></div><img src="images/buyer/line-mask.jpg" alt="PDRN Semi-Gel маск" width="524" height="280" loading="lazy" /><h3>PDRN Semi-Gel маск</h3><p class="lineup-spec"><span>Цайруулах · чийг · уян хатан</span><span>25mL × 10</span></p></article>
+            <article class="lineup-cell"><div class="lineup-top"><span>02 Цэвэрлэгч</span><span class="tag">Удахгүй</span></div><img src="images/buyer/line-cleanser.jpg" alt="Ginseng Vitamin нунтаг цэвэрлэгч" width="524" height="280" loading="lazy" /><h3>Ginseng Vitamin нунтаг цэвэрлэгч</h3><p class="lineup-spec"><span>Цочроолгүй, хамгаалалт бэхжүүлнэ</span><span>50mL</span></p></article>
+            <article class="lineup-cell"><div class="lineup-top"><span>03 Ампул</span><span class="tag tag--on">Зарж буй</span></div><img src="images/buyer/line-box-ampoule.jpg" alt="Каллус рэпэйр ампул" width="524" height="280" loading="lazy" /><h3>Каллус рэпэйр ампул</h3><p class="lineup-spec"><span>Чийг ба уян хатан байдал</span><span>30mL</span></p></article>
+            <article class="lineup-cell"><div class="lineup-top"><span>03 Ампул</span><span class="tag tag--on">Зарж буй</span></div><img src="images/buyer/line-box-spicule.jpg" alt="CICA капсул спикул ампул" width="524" height="280" loading="lazy" /><h3>CICA капсул спикул ампул</h3><p class="lineup-spec"><span>Гөлгөр арьсны гадаргуу</span><span>30mL</span></p></article>
+            <article class="lineup-cell"><div class="lineup-top"><span>03 Ампул</span><span class="tag">Удахгүй</span></div><img src="images/buyer/line-pdrn-core.jpg" alt="PDRN Core ампул" width="524" height="280" loading="lazy" /><h3>PDRN Core ампул</h3><p class="lineup-spec"><span>Эрчимт чийг, уян хатан</span><span>4mL × 6</span></p></article>
+            <article class="lineup-cell"><div class="lineup-top"><span>03 Ампул</span><span class="tag">Удахгүй</span></div><img src="images/buyer/line-mela-bright.jpg" alt="Mela Bright ампул" width="524" height="280" loading="lazy" /><h3>Mela Bright ампул</h3><p class="lineup-spec"><span>Цайруулах үйлчилгээтэй · чийг</span><span>4mL × 6</span></p></article>
+            <article class="lineup-cell"><div class="lineup-top"><span>04 Крем</span><span class="tag tag--on">Зарж буй</span></div><img src="images/buyer/line-box-cream.jpg" alt="Каллус рэпэйр крем" width="524" height="280" loading="lazy" /><h3>Каллус рэпэйр крем</h3><p class="lineup-spec"><span>Төгсгөлийн чийгшил</span><span>50mL</span></p></article>
+            <article class="lineup-cell"><div class="lineup-top"><span>05 Нарны тос</span><span class="tag">Удахгүй</span></div><img src="images/buyer/line-sun.jpg" alt="Нарны тос" width="524" height="280" loading="lazy" /><h3>Нарны тос</h3><p class="lineup-spec"><span>Нарнаас хүчтэй хамгаална</span><span>SPF 50</span></p></article>
+          </div>
+          <p class="note">Хайрцаг нь шинэчилсэн дизайны төсөл (борлуулж буй 3 бүтээгдэхүүний одоогийн савлагаа өөр) · удахгүй гарах бүтээгдэхүүний хэмжээ, жор, савлагаа өөрчлөгдөж болно</p>
+        </div>
+      </section>
+
+      <!-- 7~9쪽 판매 중 3종 -->
+      <div id="products" class="rule-top">
+        <section class="product">
+          <div class="wrap spread">
+            <figure class="spread-photo spread-photo--tall reveal"><img src="images/buyer/p-spicule.jpg" alt="CICA капсул спикул ампул" width="900" height="1350" loading="lazy" /></figure>
+            <div class="reveal">
+              <p class="product-kicker"><span class="tag tag--on">Зарж буй</span>1-р алхам · Ампул</p>
+              <h2>CICA капсул спикул ампул<small>30mL</small></h2>
+              <p class="product-tagline">Спикул ба сикагаар эхлэх гөлгөр арьсны арчилгаа</p>
+              <p class="product-desc">Арьсны гадаргууг жигдэлж, чийг нэмж, тайвшруулан дараагийн арчилгаанд бэлтгэх эхний алхам.</p>
+              <dl class="spec">
+                <div><dt>Хөвөн амьтны гаралтай спикул 5,000ppm</dt><dd>Хөвөн амьтны гаралтай нарийн спикул арьсны гадаргууг арчлахад тусалж, чийгшүүлэгч найрлага чийглэг мэдрэмж нэмнэ.</dd></div>
+                <div><dt>Ногоон капсул</dt><dd>Чийгшүүлэх, тайвшруулах найрлага агуулсан, арьсанд чийг нэмэх капсул</dd></div>
+                <div><dt>Derma-Clera™<small>(Baekmi цэцгийн хандтай)</small></dt><dd>Baekmi цэцгийн хандтай патентлагдсан түүхий эд, арьсыг тайвшруулахад тусална<br />Солонгосын патент № 10-1768870</dd></div>
+                <div><dt>Сентелла азиатикийн 5 төрлийн ханд</dt><dd>Сикагаас гаралтай найрлага мэдрэмтгий болсон арьсыг тайвшруулна</dd></div>
+                <div><dt>Пантенол · Бетаин · Аллантоин</dt><dd>Чийгээр хангаж, арьсыг тайвшруулан тав тухтай байлгана</dd></div>
+                <div><dt>11 төрлийн гиалуроны хүчил</dt><dd>Олон төрлийн гиалуроны хүчлээр чийгшүүлэн арчилна</dd></div>
+              </dl>
+              <div class="badges"><span class="tag">Цайруулах · үрчлээний эсрэг давхар үйлчилгээ (MFDS)</span></div>
+              <div class="fit"><b>Ийм хүнд тохиромжтой</b><p>Барзгар арьсны гадаргуу, хуурайшилтад санаа зовдог эсвэл гөлгөр арьстай болохыг хүсдэг хүнд тохиромжтой.</p></div>
+              <div class="product-foot"><p class="note">2 өдөрт 1 удаа хэрэглэхийг зөвлөнө · хэрэглэх үед бага зэрэг хорсож болно · нүд, уруулын орчмоос зайлсхийнэ үү</p><a href="#contact" class="btn btn--ghost">Дээж авах</a></div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="showcase" aria-label="LaEzer Callus Repair Ampoule">
-      <img class="showcase__img"
-           src="images/18961f80ca9765f05828022c689c21c4.png"
-           alt="LaEzer Callus Repair Ampoule texture" loading="lazy" decoding="async" />
-    </section>
-
-    <!-- ===== 4. Technology (3 USP) ===== -->
-    <section class="tech" id="tech">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow center">Гол технологи</span>
-          <h2 class="section-title">Юуг оруулсныг <span class="title-accent">эхлээд хэлье</span></h2>
-          <p class="section-sub">Патент дугаар болон агууламжийг хэвээр нь бичсэн</p>
-        </div>
-        <div class="tech-grid">
-          <div class="tech-card gold reveal">
-            <span class="tech-num">01</span>
-            <div class="tech-icon"><i class="fas fa-award"></i></div>
-            <h3>Derma-Clera™ патент</h3>
-            <p>Baekmi цэцгийн хандтай патентлагдсан түүхий эд, арьсыг тайвшруулахад тусална.</p>
-            <span class="tech-meta"><i class="fas fa-shield-halved"></i> Солонгосын патент № 10-1768870</span>
-          </div>
-          <div class="tech-card reveal d1">
-            <span class="tech-num">02</span>
-            <div class="tech-icon"><i class="fas fa-bahai"></i></div>
-            <h3>Байгалийн спикул 5,000ppm</h3>
-            <p>Далайн хөвөн амьтны гаралтай байгалийн бичил зүүн найрлага арьсанд хүрэх мөчөөс хуучирсан эвэрлэгийг
-              зөөлөн жигдэлж, идэвхтэй найрлагыг гүнд хүргэнэ.</p>
-            <span class="tech-meta"><i class="fas fa-arrow-down-long"></i> 5,000ppm өндөр агууламжтай спикул</span>
-          </div>
-          <div class="tech-card reveal d2">
-            <span class="tech-num">03</span>
-            <div class="tech-icon"><i class="fas fa-droplet"></i></div>
-            <h3>11 төрлийн гиалуроны хүчил</h3>
-            <p>Өндөр молекултайгаас бага молекултай хүртэл янз бүрийн молекулын хэмжээтэй 11 төрлийн гиалуроны хүчил арьсны
-              гадаргаас гүн хүртэл чийгийг тэнцвэртэй дүүргэж, хуурайшилтгүй чийглэг арьсны байдлыг хадгална.</p>
-            <span class="tech-meta"><i class="fas fa-layer-group"></i> Гиалуроны хүчлийн 11 давхар чийгшлийн шийдэл</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== 5. 3-Step Solution ===== -->
-    <section class="solution bg-mist" id="solution">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow center">AWAKE · REPAIR · SHIELD</span>
-          <h2 class="section-title">Хөгшрөлтийг удаашруулах <span class="title-accent">3 алхамт арчилгаа</span></h2>
-          <p class="section-sub">Эдельвейсийн үүдэл эс болон патентлагдсан Derma-Clera™ найрлага нь арьсны өөрөө сэргэх хүчийг сэрээнэ</p>
-        </div>
-        <figure class="solution-media reveal">
-          <img src="images/products-3set-cutout.png"
-               alt="LaEzer 3-step set" loading="lazy" decoding="async" />
-        </figure>
-
-        <div class="steps-flow">
-          <div class="step-flow-card reveal">
-            <div class="step-flow-num">1</div>
-            <span class="step-verb">AWAKE</span>
-            <h3>CICA капсул спикул ампул</h3>
-            <p>Байгалийн бичил зүү арьсыг сэрээнэ. Зүү биш, байгалийн бүтээсэн зам — далайн хөвөн амьтны байгалийн спикул арьсанд бичил суваг нээж, идэвхтэй найрлага шингэхэд тусална. Анх түрхэхэд мэдрэгдэх хөнгөн хорсолт арьсыг сэрээж, дараагийн алхмын үр нөлөөг нэмэгдүүлнэ.</p>
-            <i class="fas fa-chevron-right step-arrow"></i>
-          </div>
-          <div class="step-flow-card reveal d1">
-            <div class="step-flow-num">2</div>
-            <span class="step-verb">REPAIR</span>
-            <h3>Каллус рэпэйр ампул</h3>
-            <p>Альпийн ургамлын үүдэл эсээр эрчимтэй арчилна. Далайн түвшнээс дээш 3,000 м-т ургадаг эдельвейсийн ургамлын үүдэл эсээс гаралтай найрлага арьсанд эрч хүч нэмж, 9 төрлийн пептид уян хатан, эрүүл арьсыг арчилна.</p>
-            <i class="fas fa-chevron-right step-arrow"></i>
-          </div>
-          <div class="step-flow-card reveal d2">
-            <div class="step-flow-num">3</div>
-            <span class="step-verb">SHIELD</span>
-            <h3>Каллус рэпэйр крем</h3>
-            <p>Удаан хадгалагдах чийгээр арьсыг хамгаална. Патентлагдсан Derma-Clera™ найрлага арьсыг гадны цочролоос зөөлөн хамгаалж, элбэг чийг, тэжээлээр хангана. 2 дахь долоо хоногоос арьсны чийрэг, гөлгөр байдал өөрчлөгдөнө.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== 6. Products ===== -->
-    <section class="products" id="products">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow center">Бүтээгдэхүүн</span>
-          <h2 class="section-title">30 мл хоёр, <span class="title-accent">50 мл нэг</span></h2>
-          <p class="section-sub">Борлуулж буй 3 бүтээгдэхүүн. Гурвуулаа цайруулах · үрчлээний эсрэг давхар үйлчилгээтэй (MFDS-д мэдүүлсэн)</p>
-        </div>
-        <figure class="products-lead reveal">
-          <img src="images/detail-duo.jpg"
-               alt="LaEzer Callus Repair Cream and Ampoule" loading="lazy" decoding="async" />
-        </figure>
-
-        <div class="products-grid">
-          <!-- STEP 01 — CICA Spicule Ampoule -->
-          <div class="product-card reveal">
-            <div class="product-media">
-              <span class="product-step-tag">1-р алхам · Ампул</span>
-              <img src="images/products/LZ-001_cica-ampoule.png" alt="LaEzer CICA Capsule Spicule Ampoule" loading="lazy" />
+        </section>
+        <section class="product">
+          <div class="wrap spread">
+            <figure class="spread-photo spread-photo--tall reveal"><img src="images/buyer/p-ampoule.jpg" alt="Каллус рэпэйр ампул" width="900" height="1350" loading="lazy" /></figure>
+            <div class="reveal">
+              <p class="product-kicker"><span class="tag tag--on">Зарж буй</span>2-р алхам · Ампул</p>
+              <h2>Каллус рэпэйр ампул<small>30mL</small></h2>
+              <p class="product-tagline">Чийгээр гүн дүүргэж, уян хатан байдал, эрч хүч нэмэх эрчимт ампул</p>
+              <p class="product-desc">Эдельвейсийн каллус, 9 төрлийн пептидээр хуурай, уян хатан чанараа алдсан арьсыг эрчимтэй арчилна.</p>
+              <dl class="spec">
+                <div><dt>Эдельвейсийн каллусын өсгөврийн ханд</dt><dd>Эдельвейсийн каллусын өсгөврийн ханд арьсанд эрч хүч, чийг нэмнэ</dd></div>
+                <div><dt>9 төрлийн пептид</dt><dd>Олон төрлийн пептид арьсыг уян хатан, гөлгөр болгоно</dd></div>
+                <div><dt>Сентелла азиатикийн 5 төрлийн ханд</dt><dd>Сикагаас гаралтай найрлага мэдрэмтгий болсон арьсыг тайвшруулна</dd></div>
+                <div><dt>11 төрлийн гиалуроны хүчил</dt><dd>Олон төрлийн гиалуроны хүчил арьсанд элбэг чийг өгнө</dd></div>
+                <div><dt>Пантенол · Бетаин</dt><dd>Чийг хадгалж, арьсны байдлыг сайжруулах чийгшүүлэгч найрлага</dd></div>
+                <div><dt>Ниацинамид · Аденозин</dt><dd>Цайруулах, үрчлээ багасгах найрлага арьсны өнгө, үрчлээг хамт арчилна</dd></div>
+              </dl>
+              <div class="badges"><span class="tag">Цайруулах · үрчлээний эсрэг давхар үйлчилгээ (MFDS)</span><span class="tag">Веган гэрчилгээ</span></div>
+              <div class="fit"><b>Ийм хүнд тохиромжтой</b><p>Хуурайшилт, уян хатан чанар буурах хоёрт зэрэг санаа зовдог эсвэл чийглэг веган ампул хайж буй хүнд тохиромжтой.</p></div>
+              <div class="product-foot"><p class="note">Спикул ампулын дараа нүүр бүхэлд нь зөөлөн түрхэнэ</p><a href="#contact" class="btn btn--ghost">Дээж авах</a></div>
             </div>
-            <div class="product-body">
-              <span class="product-role">Спикул ба сикагаар эхлэх гөлгөр арьсны арчилгаа</span>
-              <h3 class="product-name">CICA капсул спикул ампул</h3>
-              <span class="product-name-en">CICA Capsule Spicule Ampoule · 30ml</span>
-              <p class="product-desc">Арьсны гадаргууг жигдэлж, чийг нэмж, тайвшруулан дараагийн арчилгаанд бэлтгэх эхний алхам.
-                2 өдөрт 1 удаа хэрэглэхийг зөвлөнө · хэрэглэх үед бага зэрэг хорсож болно · нүд, уруулын орчмоос зайлсхийнэ үү.</p>
-              <div class="product-ingredients">
-                <span>Спикул 5,000ppm</span><span>Сентелла азиатикийн 5 төрлийн ханд</span><span>Derma-Clera™</span><span>11 төрлийн гиалуроны хүчил</span>
+          </div>
+        </section>
+        <section class="product">
+          <div class="wrap spread">
+            <figure class="spread-photo spread-photo--tall reveal"><img src="images/buyer/p-cream.jpg" alt="Каллус рэпэйр крем" width="900" height="1350" loading="lazy" /></figure>
+            <div class="reveal">
+              <p class="product-kicker"><span class="tag tag--on">Зарж буй</span>3-р алхам · Крем</p>
+              <h2>Каллус рэпэйр крем<small>50mL</small></h2>
+              <p class="product-tagline">Чийгийг битүүмжилж, арьсыг тайван байлгах хамгаалалт бэхжүүлэгч крем</p>
+              <p class="product-desc">Эдельвейсийн каллус, Derma-Clera™-аар чийгшүүлэх, тайвшруулах, чангалах арчилгааг төгсгөнө.</p>
+              <dl class="spec">
+                <div><dt>Эдельвейсийн каллусын өсгөврийн ханд</dt><dd>Эдельвейсийн каллусын өсгөврийн ханд арьсанд эрч хүч, чийг нэмнэ</dd></div>
+                <div><dt>Derma-Clera™<small>(Baekmi цэцгийн хандтай)</small></dt><dd>Baekmi цэцгийн хандтай патентлагдсан түүхий эд, арьсыг тайвшруулахад тусална<br />Солонгосын патент № 10-1768870</dd></div>
+                <div><dt>9 төрлийн пептид</dt><dd>Пептид арьсыг уян хатан, гөлгөр болгож арчилна</dd></div>
+                <div><dt>Сентелла азиатикийн 5 төрлийн ханд</dt><dd>Сикагаас гаралтай найрлага мэдрэмтгий болсон арьсыг тайвшруулна</dd></div>
+                <div><dt>11 төрлийн гиалуроны хүчил · Пантенол</dt><dd>Гиалуроны хүчил, пантенол чийглэг мэдрэмж нэмнэ</dd></div>
+                <div><dt>Бетаин · Аллантоин</dt><dd>Чийг хадгалж, арьсыг тав тухтай байлгахад тусална</dd></div>
+                <div><dt>Ниацинамид · Аденозин</dt><dd>Цайруулах, үрчлээ багасгах найрлага арьсны өнгө, үрчлээг хамт арчилна</dd></div>
+              </dl>
+              <div class="badges"><span class="tag">Цайруулах · үрчлээний эсрэг давхар үйлчилгээ (MFDS)</span><span class="tag">Веган гэрчилгээ</span></div>
+              <div class="fit"><b>Ийм хүнд тохиромжтой</b><p>Хуурай, мэдрэмтгий арьсандаа чийгийн бүрхүүл нэмж, чийглэг төгсгөл хүсдэг хүнд тохиромжтой.</p></div>
+              <div class="product-foot"><p class="note">Каллус рэпэйр ампулын дараа түрхэнэ</p><a href="#contact" class="btn btn--ghost">Дээж авах</a></div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- 10쪽 출시 예정 앰플 -->
+      <section id="upcoming" class="rule-top">
+        <div class="wrap">
+          <span class="label">Удахгүй</span>
+          <h2 class="h2">PDRN Core ампул · Mela Bright ампул</h2>
+          <p class="lead">Арьсны асуудлаасаа хамааран сонгох 4 мл-ийн 6 шилтэй багц · салоны арчилгаа, бэлгийн багцад тохиромжтой</p>
+          <div class="compare">
+            <div class="compare-imgs">
+              <img src="images/buyer/line-pdrn-core.jpg" alt="PDRN Core ампул" width="524" height="280" loading="lazy" />
+              <img src="images/buyer/line-mela-bright.jpg" alt="Mela Bright ампул" width="524" height="280" loading="lazy" />
+            </div>
+            <table class="ctable">
+              <thead><tr><th scope="col"></th><th scope="col">PDRN Core ампул</th><th scope="col">Mela Bright ампул</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">Концепц</th><td>Арьсны суурийг дүүргэх чийгшил, уян хатан арьсанд зориулсан үндсэн арчилгаа</td><td>Бүдэг өнгө, толбыг арчилж, тунгалаг, жигд өнгөтэй арьс бүтээх цайруулах ампул</td></tr>
+                <tr><th scope="row">Ямар асуудалд</th><td>Хуурайшилт, гандалт, барзгар гадаргуу, уян хатан байдал</td><td>Тод харагдах толбо · бүдэг өнгө · жигд бус арьсны өнгө</td></tr>
+                <tr><th scope="row">Арчилгааны чиглэл</th><td><strong>Чийгшил ба уян хатан байдал</strong></td><td><strong>Эрчимт цайруулалт · өнгө жигдрүүлэх · чийгшил</strong></td></tr>
+                <tr><th scope="row">Гол найрлага</th><td>Пантенол 10% · PDRN 2%<br>9 төрлийн пептид</td><td>Ниацинамид 10% · Транексамын хүчил 3%<br>Пантенол 10% · PDRN 0.3% · 9 төрлийн пептид</td></tr>
+                <tr><th scope="row">Бүрдэл</th><td>4 мл × 6 шил</td><td>4 мл × 6 шил</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="note">Найрлагын хувь хэмжээ нь боловсруулалтын жорын дагуу бөгөөд худалдаанд гарахад өөрчлөгдөж болно · бүтээгдэхүүний зураг нь дизайны төсөл</p>
+        </div>
+      </section>
+
+      <!-- 11쪽 출시 예정 3종 -->
+      <section class="rule-top">
+        <div class="wrap">
+          <span class="label">Удахгүй</span>
+          <h2 class="h2">Маск · Цэвэрлэгч · Нарны тос</h2>
+          <p class="lead">Нүүр угаахаас эрчимт арчилгаа, эцсийн нарны хамгаалалт хүртэл LaEzer-ийн арчилгааг өргөжүүлж байна</p>
+          <div class="upcoming">
+            <article class="up-row reveal">
+              <img src="images/buyer/line-mask.jpg" alt="PDRN Semi-Gel маск" width="524" height="280" loading="lazy" />
+              <div>
+                <div class="up-head"><h3>PDRN Semi-Gel маск</h3><span>25 мл × 10 ширхэг</span></div>
+                <p class="up-tag">Сарнайн ус, PDRN агуулсан, арьсанд чийглэг наалдах хагас гель маск</p>
+                <div class="up-cols">
+                  <div><b>Сарнайн ус 5% · PDRN</b><p>Хуурай, ядарсан арьсыг чийгээр дүүргэж чийглэг, тав тухтай болгоно</p></div>
+                  <div><b>Ниацинамид 5% · Аденозин</b><p>Цайруулах, үрчлээ багасгах давхар үйлчилгээгээр тунгалаг, гөлгөр арьсанд тусална</p></div>
+                  <div><b>Наалддаг хагас гель маск</b><p>10–20 минутын турш нүүрэнд зөөлөн наалдаж, эрч хүчтэй, уян хатан арьс болгоно</p></div>
+                </div>
               </div>
-              <div class="product-foot">
-                <a href="#buyer" class="btn btn-primary" style="padding:11px 18px;font-size:.9rem;width:100%">Дээж авах</a>
+            </article>
+            <article class="up-row reveal">
+              <img src="images/buyer/line-cleanser.jpg" alt="Ginseng Vitamin нунтаг цэвэрлэгч" width="524" height="280" loading="lazy" />
+              <div>
+                <div class="up-head"><h3>Ginseng Vitamin нунтаг цэвэрлэгч</h3><span>50mL</span></div>
+                <p class="up-tag">Тамир тэнхээ сэлбэх тан шиг нүүр угаалт, хүн орхоодой-витамин терапи бүхий өдөр тутмын нунтаг цэвэрлэгч</p>
+                <div class="up-cols">
+                  <div><b>Хүн орхоодой · Витамин</b><p>Бүдгэрсэн арьсанд эрч хүч нэмж, тунгалаг, сэргэг болгоно</p></div>
+                  <div><b>Гүн цэвэрлэх нарийн нунтаг</b><p>Алган дээр устай холилдон өтгөн хөөс болж, хуучирсан эвэрлэг, бохирдлыг зөөлөн угаана</p></div>
+                  <div><b>Химийн гадаргуугийн идэвхт бодисгүй · зөөлөн</b><p>100% байгалийн гаралтай ферментээр нүүр угаасны дараах чангаралтыг багасгаж, арьсны хамгаалалтыг хадгална</p></div>
+                </div>
+              </div>
+            </article>
+            <article class="up-row reveal">
+              <img src="images/buyer/line-sun.jpg" alt="Нарны тос" width="524" height="280" loading="lazy" />
+              <div>
+                <div class="up-head"><h3>Нарны тос</h3><span>SPF 50</span></div>
+                <p class="up-tag">Хэт ягаан туяанаас хүчтэй хамгаалж, LaEzer-ийн арчилгааг төгсгөх өдөр тутмын нарны тос</p>
+                <div class="up-cols">
+                  <div><b>SPF 50 хэт ягаан туяаны хамгаалалт</b><p>Өдөр тутмын болон гадаа орчны хүчтэй хэт ягаан туяанаас арьсыг найдвартай хамгаална</p></div>
+                  <div><b>Хөнгөн, сэргэг мэдрэмж</b><p>Зөөлөн түрхэгдэж, наалдамхай бус тул өдөр бүр хэрэглэхэд эвтэйхэн</p></div>
+                  <div><b>Чийгшил · Нүүр будалтын суурь</b><p>Чийглэг төгсдөг тул нүүр будахын өмнөх суурь болгон хэрэглэхэд тохиромжтой</p></div>
+                </div>
+              </div>
+            </article>
+          </div>
+          <p class="note">Удахгүй гарах бүтээгдэхүүний найрлага, хэмжээ, савлагаа боловсруулалтын явцад өөрчлөгдөж болно · бүтээгдэхүүний зураг нь дизайны төсөл</p>
+        </div>
+      </section>
+
+      <!-- 12쪽 인체적용시험 -->
+      <section id="results" class="results">
+        <div class="results-grid">
+          <div class="results-body">
+            <span class="label">Хүний биед хийсэн туршилт</span>
+            <h2 class="h2">Хүний биед хийсэн туршилтын үр дүн</h2>
+            <p class="lead">3 бүтээгдэхүүнийг 1 удаа хэрэглэсний дараах туршилт · Human Skin Clinical Trial Center</p>
+            <p class="big"><span class="num">138.10<small>%</small></span><span>Чийгшлийн сайжрал</span></p>
+            <div class="trio">
+              <div><span class="num">20.01%</span><span>Нүх сүвний сайжрал</span></div>
+              <div><span class="num">7.40%</span><span>Арьсны гадаргуугийн сайжрал</span></div>
+              <div><span class="num">8.26%</span><span>Тайвшралын сайжрал</span></div>
+            </div>
+            <p class="results-line">Хэрэглэгчийн сэтгэл ханамж 8 үзүүлэлтээр 100% · арьсны анхдагч цочролын туршилтаар «цочроодоггүй» гэсэн дүгнэлт</p>
+            <p class="note">Туршилтын байгууллага: Human Skin Clinical Trial Center · 3 бүтээгдэхүүнийг 1 удаа хэрэглэсний дараа хэмжсэн · туршилтын тайлангийн эх хувийг уулзалтын үеэр үзүүлнэ · үр дүн хүн бүрд харилцан адилгүй байж болно</p>
+          </div>
+          <figure class="results-photo"><img src="images/buyer/results-spicule.jpg" alt="CICA капсул спикул ампул" width="900" height="1350" loading="lazy" /></figure>
+        </div>
+      </section>
+      <section class="proof">
+        <div class="wrap">
+          <figure>
+            <img src="images/005.png" alt="3 бүтээгдэхүүнийг 1 удаа хэрэглэхийн өмнөх ба дараах арьсны хэмжилтийн зураг. Чийрэг нүх сүв 20.01%, зөөлөн арьсны гадаргуу 7.40%, чийглэг чийгшил 138.10%, арьс тайвшруулах үр нөлөө 8.26%" width="1408" height="1094" loading="lazy" />
+            <figcaption>Хэрэглэхийн өмнө · 1 удаа хэрэглэсний дараа · Туршилтын байгууллага: Human Skin Clinical Trial Center</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- 성분 (공식 상세페이지) -->
+      <section id="ingredients" class="rule-top">
+        <div class="wrap">
+          <span class="label">Найрлага</span>
+          <h2 class="h2">LaEzer Каллус рэпэйр цувралын найрлага</h2>
+          <dl class="ing">
+            <div><dt>Эдельвейс</dt><dd>Витамин С-ээс 2 дахин хүчтэй антиоксидант. Эдельвейсийн ургамлын үүдэл эсийн ханд хуурайшиж, мэдрэмтгий болсон арьсанд тав тухтай чийглэг мэдрэмж өгнө.</dd><dd class="ing-meta">Арьсны цаг хугацааг өөрчлөх эдельвейс</dd></div>
+            <div><dt>9 төрлийн пептид</dt><dd>Пептидийн дэмжлэгээр арьсны дотоод уян хатан чанарыг чийрэг бүрхэнэ. Бага зэргийн цочролд ч амархан алдагддаг арьсны тэнцвэрийг бат хамгаалж, арьсны байдлыг тогтвортой хадгалах арчилгаанд тусална.</dd><dd class="ing-meta">Хөгшрөлтийг удаашруулах гол найрлага</dd></div>
+            <div><dt>Derma-Clera™</dt><dd>Baekmi цэцгээс гаргаж авсан ургамлын гаралтай патентлагдсан найрлага цочролоос болж мэдрэмтгий болсон арьсыг тав тухтай тайвшруулж, алдагдсан арьсны тэнцвэрийг зөөлөн арчилна.</dd><dd class="ing-meta">Солонгосын патент № 10-1768870</dd></div>
+            <div><dt>11 төрлийн гиалуроны хүчил</dt><dd>Өндөр молекултайгаас бага молекултай хүртэл янз бүрийн молекулын хэмжээтэй 11 төрлийн гиалуроны хүчил арьсны гадаргаас гүн хүртэл чийгийг тэнцвэртэй дүүргэж, хуурайшилтгүй чийглэг арьсны байдлыг хадгална.</dd><dd class="ing-meta">Гиалуроны хүчлийн 11 давхар чийгшлийн шийдэл</dd></div>
+            <div><dt>Спикул 5,000ppm</dt><dd>Далайн хөвөн амьтны гаралтай байгалийн бичил зүүн найрлага арьсанд хүрэх мөчөөс хуучирсан эвэрлэгийг зөөлөн жигдэлж, идэвхтэй найрлагыг гүнд хүргэнэ.</dd><dd class="ing-meta">5,000ppm өндөр агууламжтай спикул</dd></div>
+          </dl>
+          <p class="note">* Дээрх мэдээлэл зөвхөн түүхий эдийн шинж чанарт хамаарна.</p>
+        </div>
+      </section>
+
+      <!-- 영상 -->
+      <section id="video" class="rule-top">
+        <div class="wrap video-grid">
+          <div class="video-frame">
+            <iframe src="https://www.youtube.com/embed/kkYFzxSf-iE?rel=0" title="LaEzer-ийн танилцуулга видео" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <div>
+            <span class="label">Солонгосын телевизийн нэвтрүүлэгт танилцуулсан</span>
+            <p class="quote">«Нэг удаа л хэрэглэсэн ч шууд мэдрэгдсэн. Дотроос нь дүүрэн чийглэх мэдрэмж үнэхээр гайхалтай!»</p>
+            <p class="quote-by">Жүжигчин Пак Ха Сон</p>
+            <p class="note">※ Хувь хүний хэрэглээний сэтгэгдэл болно.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 13쪽 인증서 -->
+      <section id="certs" class="rule-top">
+        <div class="wrap">
+          <span class="label">Гэрчилгээ · баримт бичиг</span>
+          <h2 class="h2">Гэрчилгээ</h2>
+          <p class="lead">Албан ёсны гэрчилгээ, туршилтаар баталгаажсан LaEzer-ийн чанар, аюулгүй байдал</p>
+          <div class="certs-grid">
+            <figure class="cert"><img src="images/001.png" alt="Веган гэрчилгээ" loading="lazy" /><h3>Веган гэрчилгээ</h3><p>Зөвхөн ургамлын гаралтай түүхий эд ашиглаж, албан ёсны веган гэрчилгээ авсан</p></figure>
+            <figure class="cert"><img src="images/003.png" alt="Патентлагдсан найрлага" loading="lazy" /><h3>Патентлагдсан найрлага</h3><p>Baekmi цэцгээс гаргаж авсан ургамлын гаралтай патентлагдсан найрлага Derma-Clera™</p></figure>
+            <figure class="cert"><img src="images/004.png" alt="Цайруулах · үрчлээний эсрэг" loading="lazy" /><h3>Цайруулах · үрчлээний эсрэг</h3><p>Цайруулах, үрчлээ багасгах давхар үйлчилгээтэй бүтээгдэхүүн</p></figure>
+            <figure class="cert"><img src="images/002.png" alt="Мэдрэмтгий арьсны туршилт" loading="lazy" /><h3>Мэдрэмтгий арьсны туршилт</h3><p>Мэдрэмтгий арьстай хүмүүст туршсан, мэдрэмтгий арьсыг цочроодоггүй бүтээгдэхүүн</p></figure>
+          </div>
+          <p class="note">Гэрчилгээ, туршилтын тайлангийн эх хувийг уулзалтын үеэр үзүүлнэ</p>
+        </div>
+      </section>
+
+      <!-- 사용법 (공식 상세페이지) -->
+      <section id="howto" class="rule-top">
+        <div class="wrap">
+          <span class="label">How to use</span>
+          <h2 class="h2">Арьсны угийн хүчийг нөхөх LaEzer-ийн 3 алхамт сэргээх арчилгаа</h2>
+          <div class="howto-grid">
+            <div><h3>STEP 01 · CICA капсул спикул ампул</h3><ol><li>Нүүрээ угаасны дараа тонероор арьсны гадаргууг жигдэлж, «CICA капсул спикул ампул»-аас тохирох хэмжээгээр түрхэнэ үү.</li><li>Нүд, уруулын орчмоос бусад нүүрний бүх хэсэгт зөөлөн эргэлдүүлэн түрхэнэ үү.</li><li>Арьсны гадаргуугийн чиглэлийн дагуу зөөлөн түрхээд, хуруугаараа сайтар дарж дуусгана уу.</li></ol><p class="note">* CICA капсул спикул ампулыг 2 өдөрт 1 удаа хэрэглэхийг зөвлөнө. (Гэхдээ арьсны төрлөөс хамааран хэрэглэх хоорондын зайг уртасгаж болно.)</p></div>
+            <div><h3>STEP 02 · Каллус рэпэйр ампул</h3><ol><li>Нүүрээ угаасны дараа тонероор арьсны гадаргууг жигдэлж, Каллус рэпэйр ампулаас тохирох хэмжээгээр түрхэнэ үү.</li><li>Нүүрний бүх хэсэгт зөөлөн эргэлдүүлэн түрхэнэ үү.</li></ol></div>
+            <div><h3>STEP 03 · Каллус рэпэйр крем</h3><ol><li>Нүүрээ угаасны дараа суурь арчилгааны сүүлийн шатанд тохирох хэмжээгээр авч нимгэн түрхээд, хөнгөн товшин шингээнэ үү.</li><li>1 дэх удаагаа шингээсний дараа 2 дахь удаагаа түрхэж шингээвэл арьсны дотоод хуурайшилтад санаа зовохгүйгээр илүү чийглэг хэвээр байна.</li></ol></div>
+          </div>
+        </div>
+      </section>
+      <section class="extra rule-top" id="reviews">
+        <div class="wrap">
+          <span class="label">Хэрэглэгчийн сэтгэгдэл</span>
+          <h2 class="h2">Жинхэнэ хэрэглэгчдийн туршлага</h2>
+          <div class="extra-grid">
+            <div><b>park_hasun · Instagram</b>"Нэг удаа л хэрэглэсэн ч шууд мэдрэгдсэн. Дотроос нь дүүрэн чийглэх мэдрэмж гайхалтай! Мэдрэмтгий арьстай надад бүр тохирлоо."</div>
+            <div><b>k_beauty_lover · Naver Blog</b>"Зөвхөн ампул хэрэглэсэн ч гэрэлтэл өгч байна! Дотор чийглэж, гадна гэрэлтдэг. Кремтэй хослуулбал өглөө хүртэл чийглэнэ."</div>
+            <div><b>skincare_daily · Instagram</b>"Өвлийн улиралд арьс маш хуурай болдог байсан. Хэрэглэснээс хойш сүв багасч, бүтэц нь гөлгөр болсон."</div>
+            <div><b>vegan_life · Instagram</b>"Веган гэдэгт нь итгэлтэй байна. Ургамлын гаралтай найрлагад анхаардаг хүмүүст зөвлөж байна."</div>
+          </div>
+          <div class="extra-grid">
+            <div><b>Монгол дахь албан ёсны импортлогч</b>Отхан хөгжил LLC (Otkhan Khugjil LLC)</div>
+            <div><b>Улсын бүртгэлийн дугаар</b>6385044</div>
+            <div><b>Хаяг</b>Улаанбаатар, Баянгол, 1-р хороо, 2 хороолол, Сеул 20а, 35 тоот</div>
+            <div><b>Утас</b><a href="tel:+97690518888">+976 9051 8888</a> · <a href="tel:+97688959598">+976 8895 9598</a></div>
+            <div><b>Facebook хуудас</b><a href="https://www.facebook.com/profile.php?id=61590470606549" target="_blank" rel="noopener">LaEzer Mongolia</a></div>
+            <div><b>Messenger лавлагаа</b><a href="https://m.me/61590470606549" target="_blank" rel="noopener">LaEzer Mongolia</a></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 14쪽 연락처 -->
+      <section id="contact" class="rule-top">
+        <div class="wrap contact-grid">
+          <div>
+            <span class="label">Холбоо барих</span>
+            <h2 class="h2">Дээж захиалах, холбоо барих</h2>
+            <dl class="contact-table">
+              <div><dt>Компани</dt><dd>Ezer Co., Ltd.</dd></div>
+              <div><dt>Хариуцагч</dt><dd>Jeong Hyeon-jeong (Жон Хёнжон), гүйцэтгэх захирал</dd></div>
+              <div><dt>И-мэйл</dt><dd><a href="mailto:laezer@naver.com">laezer@naver.com</a></dd></div>
+              <div><dt>Хаяг</dt><dd>1018, 66 Daehwa-ro 106beon-gil, Daedeok-gu, Daejeon, БНСУ</dd></div>
+            </dl>
+            <p class="contact-slogan">TIMELESS RADIANCE AND BEAUTY</p>
+          </div>
+          <form class="buyer-form" name="buyer-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks-buyer-mn.html">
+            <input type="hidden" name="form-name" value="buyer-inquiry" />
+            <p class="buyer-form__hp"><label>Энэ талбарыг хоосон орхино уу <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
+            <p class="buyer-form__intro">Дээж эсвэл худалдааны нөхцөл хэрэгтэй бол доор мэдээллээ үлдээнэ үү. Ажлын 1 өдрийн дотор и-мэйлээр хариу илгээнэ.</p>
+            <div class="buyer-form__grid">
+              <div class="field"><label for="bf-company">Компанийн нэр<span class="req">Шаардлагатай</span></label><input id="bf-company" name="회사명" type="text" required autocomplete="organization" /></div>
+              <div class="field"><label for="bf-name">Холбоо барих хүний нэр<span class="req">Шаардлагатай</span></label><input id="bf-name" name="담당자명" type="text" required autocomplete="name" /></div>
+              <div class="field"><label for="bf-email">И-мэйл<span class="req">Шаардлагатай</span></label><input id="bf-email" name="이메일" type="email" required inputmode="email" autocomplete="email" spellcheck="false" /></div>
+              <div class="field"><label for="bf-phone">Утас<span class="opt">Сонголтоор</span></label><input id="bf-phone" name="전화번호" type="tel" inputmode="tel" autocomplete="tel" placeholder="Улсын кодыг хамт бичнэ үү" /></div>
+              <div class="field"><label for="bf-country">Улс · бүс нутаг<span class="req">Шаардлагатай</span></label><input id="bf-country" name="국가" type="text" required autocomplete="country-name" placeholder="Жишээ нь: Монгол, Япон, Узбекистан" /></div>
+              <div class="field"><label for="bf-interest">Сонирхож байгаа бүтээгдэхүүн<span class="opt">Сонголтоор</span></label>
+                <select id="bf-interest" name="관심품목">
+                  <option value="">Сонгоно уу</option>
+                  <option value="3단계 세트 전체">Борлуулж буй 3 бүтээгдэхүүн бүгд</option>
+                  <option value="시카 캡슐 스피큘 앰플">CICA капсул спикул ампул</option>
+                  <option value="캘러스 리페어 앰플">Каллус рэпэйр ампул</option>
+                  <option value="캘러스 리페어 크림">Каллус рэпэйр крем</option>
+                  <option value="출시 예정 제품">Удахгүй гарах бүтээгдэхүүн</option>
+                  <option value="OEM · ODM 문의">OEM · ODM лавлагаа</option>
+                  <option value="아직 정하지 않음">Хараахан шийдээгүй</option>
+                </select>
               </div>
             </div>
-          </div>
-
-          <!-- STEP 02 — Callus Repair Ampoule -->
-          <div class="product-card reveal d1">
-            <div class="product-media">
-              <span class="product-step-tag">2-р алхам · Ампул</span>
-              <img src="images/products/LZ-002_peptide-ampoule.png" alt="LaEzer Callus Repair Ampoule" loading="lazy" />
-            </div>
-            <div class="product-body">
-              <span class="product-role">Чийгээр гүн дүүргэж, уян хатан байдал, эрч хүч нэмэх эрчимт ампул</span>
-              <h3 class="product-name">Каллус рэпэйр ампул</h3>
-              <span class="product-name-en">Callus Repair Ampoule · 30ml</span>
-              <p class="product-desc">Эдельвейсийн каллус, 9 төрлийн пептидээр хуурай, уян хатан чанараа алдсан арьсыг эрчимтэй арчилна.
-                Спикул ампулын дараа нүүр бүхэлд нь зөөлөн түрхэнэ.</p>
-              <div class="product-ingredients">
-                <span>Эдельвейсийн каллус</span><span>9 төрлийн пептид</span><span>11 төрлийн гиалуроны хүчил</span><span>Веган гэрчилгээ</span>
-              </div>
-              <div class="product-foot">
-                <a href="#buyer" class="btn btn-primary" style="padding:11px 18px;font-size:.9rem;width:100%">Дээж авах</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- STEP 03 — Callus Repair Cream -->
-          <div class="product-card reveal d2">
-            <div class="product-media">
-              <span class="product-step-tag">3-р алхам · Крем</span>
-              <img src="images/products/LZ-003_callus-cream.png" alt="LaEzer Callus Repair Cream" loading="lazy" />
-            </div>
-            <div class="product-body">
-              <span class="product-role">Чийгийг битүүмжилж, арьсыг тайван байлгах хамгаалалт бэхжүүлэгч крем</span>
-              <h3 class="product-name">Каллус рэпэйр крем</h3>
-              <span class="product-name-en">Callus Repair Cream · 50ml</span>
-              <p class="product-desc">Эдельвейсийн каллус, Derma-Clera™-аар чийгшүүлэх, тайвшруулах, чангалах арчилгааг төгсгөнө.
-                Каллус рэпэйр ампулын дараа түрхэнэ.</p>
-              <div class="product-ingredients">
-                <span>Эдельвейсийн каллус</span><span>Derma-Clera™</span><span>9 төрлийн пептид</span><span>Веган гэрчилгээ</span>
-              </div>
-              <div class="product-foot">
-                <a href="#buyer" class="btn btn-primary" style="padding:11px 18px;font-size:.9rem;width:100%">Дээж авах</a>
-              </div>
-            </div>
-          </div>
+            <div class="field field--full"><label for="bf-message">Хүсэлтийн утга<span class="opt">Сонголтоор</span></label><textarea id="bf-message" name="문의내용" rows="3" placeholder="Борлуулалтын суваг, төсөөлж буй хэмжээ, хугацаа"></textarea></div>
+            <label class="buyer-form__consent"><input type="checkbox" name="개인정보동의" value="동의" required /><span>Зөвлөгөөний хариу илгээхийн тулд компанийн нэр, холбоо барих хүний нэр, холбоо барих мэдээллийг цуглуулж, хүсэлт хаагдсанаас хойш 3 жил хадгалсны дараа устгана. Та зөвшөөрөхгүй байж болно, гэхдээ энэ тохиолдолд хариу өгөхөд хүндрэлтэй.</span></label>
+            <button type="submit" class="btn">Дээж захиалах хүсэлт илгээх</button>
+          </form>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ===== 6-1. Upcoming lineup ===== -->
-    <section class="lineup bg-mist" id="lineup">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow center">Удахгүй гарах</span>
-          <h2 class="section-title">Удахгүй гарах <span class="title-accent">5 бүтээгдэхүүн</span></h2>
-          <p class="section-sub">Нүүр угаахаас эрчимт арчилгаа, эцсийн нарны хамгаалалт хүртэл LaEzer-ийн арчилгааг өргөжүүлж байна</p>
+      <section class="retail">
+        <div class="wrap">
+          <span>Солонгос дахь борлуулалт: Өөрийн дэлгүүр · Naver Smart Store · Coupang</span>
+          <span><a href="https://laezer.co.kr" target="_blank" rel="noopener">laezer.co.kr</a><a href="https://smartstore.naver.com/laezer" target="_blank" rel="noopener">smartstore.naver.com/laezer</a></span>
         </div>
-        <div class="lineup-grid">
-          <article class="lineup-card reveal">
-            <span class="lineup-tag">Маск · 25 мл × 10 ширхэг</span>
-            <h3>PDRN Semi-Gel маск</h3>
-            <p>Сарнайн ус, PDRN агуулсан, арьсанд чийглэг наалдах хагас гель маск</p>
-            <span class="lineup-meta">Сарнайн ус 5% · PDRN · Ниацинамид 5% · Аденозин</span>
-          </article>
-          <article class="lineup-card reveal">
-            <span class="lineup-tag">Цэвэрлэгч · 50 мл</span>
-            <h3>Ginseng Vitamin нунтаг цэвэрлэгч</h3>
-            <p>Тамир тэнхээ сэлбэх тан шиг нүүр угаалт — хүн орхоодой-витамин терапи бүхий өдөр тутмын нунтаг цэвэрлэгч</p>
-            <span class="lineup-meta">Хүн орхоодой · Витамин · Химийн гадаргуугийн идэвхт бодисгүй · 100% байгалийн гаралтай фермент</span>
-          </article>
-          <article class="lineup-card reveal">
-            <span class="lineup-tag">Ампул · 4 мл × 6 шил</span>
-            <h3>PDRN Core ампул</h3>
-            <p>Арьсны суурийг дүүргэх чийгшил, уян хатан арьсанд зориулсан үндсэн арчилгаа</p>
-            <span class="lineup-meta">Пантенол 10% · PDRN 2% · 9 төрлийн пептид</span>
-          </article>
-          <article class="lineup-card reveal">
-            <span class="lineup-tag">Ампул · 4 мл × 6 шил</span>
-            <h3>Mela Bright ампул</h3>
-            <p>Бүдэг өнгө, толбыг арчилж, тунгалаг, жигд өнгөтэй арьс бүтээх цайруулах ампул</p>
-            <span class="lineup-meta">Ниацинамид 10% · Транексамын хүчил 3% · Пантенол 10% · PDRN 0.3% · 9 төрлийн пептид</span>
-          </article>
-          <article class="lineup-card reveal">
-            <span class="lineup-tag">Нарны тос · SPF 50</span>
-            <h3>Нарны тос</h3>
-            <p>Хэт ягаан туяанаас хүчтэй хамгаалж, LaEzer-ийн арчилгааг төгсгөх өдөр тутмын нарны тос</p>
-            <span class="lineup-meta">SPF 50 хэт ягаан туяаны хамгаалалт</span>
-          </article>
-        </div>
-        <p class="results-note">※ Удахгүй гарах бүтээгдэхүүний найрлага, хэмжээ, савлагаа боловсруулалтын явцад өөрчлөгдөж болно. Найрлагын хувь хэмжээ нь боловсруулалтын жорын дагуу.</p>
-      </div>
-    </section>
+      </section>
+    </main>
 
-    <!-- ===== 7. Clinical Results ===== -->
-    <section class="results bg-ivory" id="results">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow center">Хүний биед хийсэн туршилт</span>
-          <h2 class="section-title">Хүний арьсан дээр <span class="title-accent">хэмжсэн үр дүн</span></h2>
-          <p class="section-sub">Human Skin Clinical Trial Center-т 3 бүтээгдэхүүнийг 1 удаа хэрэглэсний дараа хэмжсэн үр дүн</p>
-        </div>
-        <div class="results-grid results-grid--4">
-          <div class="result-card reveal">
-            <div class="result-icon"><i class="fas fa-tint"></i></div>
-            <div class="result-number">138.10%</div>
-            <h3 class="result-title">Чийгшлийн сайжрал</h3>
-            <p class="result-desc">3 бүтээгдэхүүнийг 1 удаа хэрэглэсний дараа</p>
-          </div>
-          <div class="result-card reveal d1">
-            <div class="result-icon"><i class="fas fa-compress"></i></div>
-            <div class="result-number">20.01%</div>
-            <h3 class="result-title">Нүх сүвний сайжрал</h3>
-            <p class="result-desc">3 бүтээгдэхүүнийг 1 удаа хэрэглэсний дараа</p>
-          </div>
-          <div class="result-card reveal d2">
-            <div class="result-icon"><i class="fas fa-leaf"></i></div>
-            <div class="result-number">8.26%</div>
-            <h3 class="result-title">Тайвшралын сайжрал</h3>
-            <p class="result-desc">3 бүтээгдэхүүнийг 1 удаа хэрэглэсний дараа</p>
-          </div>
-          <div class="result-card reveal d3">
-            <div class="result-icon"><i class="fas fa-gem"></i></div>
-            <div class="result-number">7.40%</div>
-            <h3 class="result-title">Арьсны гадаргуугийн сайжрал</h3>
-            <p class="result-desc">3 бүтээгдэхүүнийг 1 удаа хэрэглэсний дараа</p>
-          </div>
-        </div>
-        <figure class="proof-figure reveal">
-          <img src="images/005.png"
-               alt="3 алхамт арчилгааг 1 удаа хэрэглэхийн өмнөх ба дараах хэмжилт: нүх сүв 20.01%, гадаргуу 7.40%, чийгшил 138.10%, тайвшрал 8.26%"
-               loading="lazy" decoding="async" />
-        </figure>
-
-        <p class="results-note">* Туршилтын байгууллага: Human Skin Clinical Trial Center · 3 бүтээгдэхүүнийг 1 удаа хэрэглэсний дараа хэмжсэн · хэрэглэгчийн сэтгэл ханамж 8 үзүүлэлтээр 100% · арьсны анхдагч цочролын туршилтаар «цочроодоггүй» гэсэн дүгнэлт · туршилтын тайлангийн эх хувийг уулзалтын үеэр үзүүлнэ · үр дүн хүн бүрд харилцан адилгүй байж болно</p>
-      </div>
-    </section>
-
-    <!-- ===== 8. Ingredients ===== -->
-    <section class="ingredients" id="ingredients">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow center">Найрлага</span>
-          <h2 class="section-title">Зөвхөн <span class="title-accent">найдвартай найрлага</span></h2>
-          <p class="section-sub">Доорх мэдээлэл зөвхөн түүхий эдийн шинж чанарт хамаарна</p>
-        </div>
-
-        <figure class="ing-lead reveal">
-          <img src="images/f1b7e4ceee5b4d438129fa5c83a7d80d.jpg" alt="LaEzer Callus Repair Ampoule"
-               loading="lazy" decoding="async" />
-        </figure>
-        <div class="ing-grid">
-          <div class="ing-card reveal">
-            <div class="ing-icon"><img src="images/ing_edelweiss.png" alt="Эдельвейс" /></div>
-            <h3>Ургамлын үүдэл эс</h3>
-            <p>Витамин С-ээс 2 дахин хүчтэй антиоксидант. Эдельвейсийн ургамлын үүдэл эсийн ханд хуурайшиж, мэдрэмтгий болсон арьсанд тав тухтай чийглэг мэдрэмж өгнө.</p>
-            <span class="ing-tag">9 төрлийн пептид</span>
-          </div>
-          <div class="ing-card reveal d1">
-            <div class="ing-icon"><img src="images/ing_hyaluronic.png" alt="Гиалурон" /></div>
-            <h3>11 төрлийн гиалуроны хүчил</h3>
-            <p>Олон төрлийн гиалуроны хүчлээр чийгшүүлэн арчилна. Өндөр молекултайгаас бага молекултай хүртэл 11 төрлийн гиалуроны хүчил арьсны гадаргаас гүн хүртэл чийгийг тэнцвэртэй дүүргэнэ.</p>
-            <span class="ing-tag">Чийгшлийн сайжрал 138.10%</span>
-          </div>
-          <div class="ing-card reveal d2">
-            <div class="ing-icon"><img src="images/ing_dermaclera.png" alt="Derma-Clera" /></div>
-            <h3>Derma-Clera™ (патент)</h3>
-            <p>Baekmi цэцгээс гаргаж авсан ургамлын гаралтай патентлагдсан найрлага цочролоос болж мэдрэмтгий болсон арьсыг тав тухтай тайвшруулж, алдагдсан арьсны тэнцвэрийг зөөлөн арчилна.</p>
-            <span class="ing-tag">Патент № 10-1768870</span>
-          </div>
-          <div class="ing-card reveal d3">
-            <div class="ing-icon"><img src="images/ing_cica.png" alt="CICA" /></div>
-            <h3>Тайвшруулах найрлага</h3>
-            <p>Сентелла азиатикийн 5 төрлийн ханд — сикагаас гаралтай найрлага мэдрэмтгий болсон арьсыг тайвшруулна. Пантенол · Бетаин · Аллантоин — чийгээр хангаж, арьсыг тайвшруулан тав тухтай байлгана.</p>
-            <span class="ing-tag">Мэдрэмтгий арьсны туршилт</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== 9. How to Use (AM/PM routine) ===== -->
-    <section class="howto bg-cream" id="howto">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow center">Хэрэглэх арга</span>
-          <h2 class="section-title">Өглөө · оройн <span class="title-accent">арчилгааны хэмнэл</span></h2>
-          <p class="section-sub">Ампул + крем хослуулан хэрэглэснээр хамгийн сайн үр дүнд хүрнэ</p>
-        </div>
-        <div class="howto-grid">
-          <div class="routine-card routine-am reveal">
-            <div class="routine-head">
-              <span class="ico"><i class="fas fa-sun"></i></span>
-              <div><h3>Өглөөний арчилгаа</h3><small>Хөнгөн, хурдан шингэдэг</small></div>
-            </div>
-            <div class="routine-steps">
-              <div class="routine-step"><span class="n">1</span><div><b>Цэвэрлэж, тонер</b><p>Нүүрээ цэвэрлэж, тонероор арьсыг бэлтгэнэ.</p></div></div>
-              <div class="routine-step"><span class="n">2</span><div><b>Каллус рэпэйр ампул</b><p>Чийг өгнө. Хурдан шингэж, гэрэлтэл өгнө.</p></div></div>
-              <div class="routine-step"><span class="n">3</span><div><b>Крем (нимгэн)</b><p>Нимгэн түрхэж чийгийг түгжинэ.</p></div></div>
-              <div class="routine-step"><span class="n">4</span><div><b>Нарны тос</b><p>Крем шингэсний дараа түрхэнэ.</p></div></div>
-            </div>
-            <div class="routine-tip"><i class="fas fa-lightbulb"></i><span>Өглөө: бага хэмжээгээр түрхэж, шингэсний дараа нарнаас хамгаалах бүтээгдэхүүн хэрэглэнэ.</span></div>
-          </div>
-
-          <div class="routine-card routine-pm reveal d1">
-            <div class="routine-head">
-              <span class="ico"><i class="fas fa-moon"></i></span>
-              <div><h3>Оройн арчилгаа</h3><small>Эрчимтэй, гүн сэргээлт</small></div>
-            </div>
-            <div class="routine-steps">
-              <div class="routine-step"><span class="n">1</span><div><b>Цэвэрлэж, тонер</b><p>Өдрийн бохирдлыг арилгаж, арьсыг бэлтгэнэ.</p></div></div>
-              <div class="routine-step"><span class="n">2</span><div><b>CICA капсул спикул ампул (2 өдөрт 1 удаа)</b><p>Арьсны гадаргууг жигдэлнэ. Бага зэрэг хорсож болох тул нүд, уруулын орчмоос зайлсхийнэ үү.</p></div></div>
-              <div class="routine-step"><span class="n">3</span><div><b>Каллус рэпэйр ампул</b><p>Хангалттай хэмжээгээр түрхэж, чийг, уян хатан байдлыг арчилна.</p></div></div>
-              <div class="routine-step"><span class="n">4</span><div><b>Крем (хангалттай хэмжээгээр)</b><p>Шөнийн турш чийгийг түгжиж, хамгаалалтын давхаргыг бэхжүүлнэ.</p></div></div>
-            </div>
-            <div class="routine-tip"><i class="fas fa-lightbulb"></i><span>Унтахын өмнө хангалттай хэмжээгээр хэрэглэвэл өглөө хүртэл чийгшил хадгалагдана.</span></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== Reviews ===== -->
-    <section class="reviews" id="reviews">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow center">Хэрэглэгчийн сэтгэгдэл</span>
-          <h2 class="section-title">Жинхэнэ хэрэглэгчдийн <span class="title-accent">туршлага</span></h2>
-        </div>
-      </div>
-      <div class="reviews-viewport reveal d1">
-        <div class="reviews-track" id="reviewsTrack">
-          <div class="review-card">
-            <div class="review-top">
-              <div class="review-avatar"><img src="images/logo-transparent.png" alt="" /></div>
-              <div><div class="review-user">park_hasun <i class="fas fa-circle-check verified"></i></div><div class="review-platform">Instagram</div></div>
-            </div>
-            <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-            <p class="review-body">"Нэг удаа л хэрэглэсэн ч шууд мэдрэгдсэн. Дотроос нь дүүрэн чийглэх мэдрэмж гайхалтай! Мэдрэмтгий арьстай надад бүр тохирлоо."</p>
-          </div>
-          <div class="review-card">
-            <div class="review-top">
-              <div class="review-avatar"><img src="images/logo-transparent.png" alt="" /></div>
-              <div><div class="review-user">k_beauty_lover</div><div class="review-platform">Naver Blog</div></div>
-            </div>
-            <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-            <p class="review-body">"Зөвхөн ампул хэрэглэсэн ч гэрэлтэл өгч байна! Дотор чийглэж, гадна гэрэлтдэг. Кремтэй хослуулбал өглөө хүртэл чийглэнэ."</p>
-          </div>
-          <div class="review-card">
-            <div class="review-top">
-              <div class="review-avatar"><img src="images/logo-transparent.png" alt="" /></div>
-              <div><div class="review-user">skincare_daily</div><div class="review-platform">Instagram</div></div>
-            </div>
-            <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-            <p class="review-body">"Өвлийн улиралд арьс маш хуурай болдог байсан. Хэрэглэснээс хойш сүв багасч, бүтэц нь гөлгөр болсон."</p>
-          </div>
-          <div class="review-card">
-            <div class="review-top">
-              <div class="review-avatar"><img src="images/logo-transparent.png" alt="" /></div>
-              <div><div class="review-user">vegan_life <i class="fas fa-circle-check verified"></i></div><div class="review-platform">Instagram</div></div>
-            </div>
-            <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-            <p class="review-body">"Веган гэдэгт нь итгэлтэй байна. Ургамлын гаралтай найрлагад анхаардаг хүмүүст зөвлөж байна."</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== 11. Certifications ===== -->
-    <section class="certs" id="certs">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow center">Баталгаажуулалт</span>
-          <h2 class="section-title">Гэрчилгээ, <span class="title-accent">баримт бичиг</span></h2>
-          <p class="section-sub">Гэрчилгээ, туршилтын тайлангийн эх хувийг уулзалтын үеэр үзүүлнэ</p>
-        </div>
-        <div class="cert-grid">
-          <div class="cert-card reveal">
-            <div class="cert-visual"><img src="images/001.png" alt="Веган" /></div>
-            <div class="cert-body"><h4>Веган гэрчилгээ</h4><p>Зөвхөн ургамлын гаралтай түүхий эд ашиглаж, албан ёсны веган гэрчилгээ авсан</p></div>
-          </div>
-          <div class="cert-card reveal d1">
-            <div class="cert-visual"><img src="images/002.png" alt="Мэдрэмтгий арьс" /></div>
-            <div class="cert-body"><h4>Мэдрэмтгий арьсны туршилт</h4><p>Мэдрэмтгий арьстай хүмүүст туршсан, мэдрэмтгий арьсыг цочроодоггүй бүтээгдэхүүн</p></div>
-          </div>
-          <div class="cert-card reveal d2">
-            <div class="cert-visual"><img src="images/003.png" alt="Патент" /></div>
-            <div class="cert-body"><h4>Патентлагдсан найрлага</h4><p>Derma-Clera™ — Baekmi цэцгээс гаргаж авсан ургамлын гаралтай патентлагдсан найрлага · Патент № 10-1768870</p></div>
-          </div>
-          <div class="cert-card reveal d3">
-            <div class="cert-visual"><img src="images/004.png" alt="Үйлчилгээт гоо сайхны бүтээгдэхүүний мэдүүлэг" /></div>
-            <div class="cert-body"><h4>Цайруулах · үрчлээний эсрэг</h4><p>Цайруулах, үрчлээ багасгах давхар үйлчилгээтэй бүтээгдэхүүн (MFDS-д мэдүүлсэн)</p></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== 12. Buyer inquiry ===== -->
-    <section class="buyer" id="buyer">
-      <div class="container container--narrow">
-        <div class="section-head reveal">
-          <span class="eyebrow center">Дээж захиалах, холбоо барих</span>
-          <h2 class="section-title">Импортлогч, дистрибьютеруудад</h2>
-          <p class="section-sub">
-            Борлуулалт, импорт, онцгой эрхийн талаар судалж байгаа бол холбогдох мэдээллээ үлдээгээрэй.
-            Дээж, компанийн танилцуулгыг бэлтгэн нэг ажлын өдрийн дотор хариу хүргэнэ.
-          </p>
-        </div>
-
-
-        <div class="buyer-fit reveal">
-          <p class="buyer-fit__title">Бид хэнтэй хамтрахыг хүсэж байна</p>
-          <ul class="buyer-fit__list">
-            <li>Өөрийн зах зээлд косметикийн борлуулалтын сүлжээ бүхий импортлогчид</li>
-            <li>Дермо-косметик, арьс арчилгааны чиглэлийн дистрибьютер, тусгай дэлгүүрүүд</li>
-            <li>OEM / ODM-ээр өөрийн брэнд бэлтгэж байгаа компаниуд</li>
-          </ul>
-          <ul class="buyer-fit__trust" aria-label="Гэрчилгээ">
-            <li>Веган гэрчилгээ</li>
-            <li>Цайруулах · үрчлээний эсрэг давхар үйлчилгээ</li>
-            <li>Хүний биед хийсэн туршилт</li>
-            <li>Патент № 10-1768870</li>
-          </ul>
-        </div>
-
-        <form
-          class="buyer-form reveal"
-          name="buyer-inquiry"
-          method="POST"
-          data-netlify="true"
-          netlify-honeypot="bot-field"
-          action="/thanks-buyer-mn.html">
-          <input type="hidden" name="form-name" value="buyer-inquiry" />
-          <p class="buyer-form__hp">
-            <label>Энэ талбарыг хоосон орхино уу <input name="bot-field" tabindex="-1" autocomplete="off" /></label>
-          </p>
-
-          <div class="buyer-form__grid">
-            <div class="field">
-              <label for="bf-company">Компанийн нэр <span class="req">Шаардлагатай</span></label>
-              <input id="bf-company" name="회사명" type="text" required autocomplete="organization" />
-            </div>
-            <div class="field">
-              <label for="bf-name">Холбоо барих хүний нэр <span class="req">Шаардлагатай</span></label>
-              <input id="bf-name" name="담당자명" type="text" required autocomplete="name" />
-            </div>
-            <div class="field">
-              <label for="bf-email">И-мэйл <span class="req">Шаардлагатай</span></label>
-              <input id="bf-email" name="이메일" type="email" required inputmode="email" autocomplete="email" />
-              <span class="field__help">Энэ хаягаар хариу хүргэнэ</span>
-            </div>
-            <div class="field">
-              <label for="bf-phone">Утас <span class="opt">Сонголтоор</span></label>
-              <input id="bf-phone" name="전화번호" type="tel" inputmode="tel" autocomplete="tel" placeholder="Улсын кодыг хамт бичнэ үү" />
-            </div>
-            <div class="field">
-              <label for="bf-country">Улс, бүс нутаг <span class="req">Шаардлагатай</span></label>
-              <input id="bf-country" name="국가" type="text" required autocomplete="country-name" placeholder="жишээ нь: Монгол, Япон, Корея" />
-            </div>
-            <div class="field">
-              <label for="bf-interest">Сонирхож байгаа бүтээгдэхүүн <span class="opt">Сонголтоор</span></label>
-              <select id="bf-interest" name="관심품목">
-                <option value="">Сонгоно уу</option>
-                <option>3 шатлалт иж бүрдэл</option>
-                <option>CICA капсул спикул ампул</option>
-                <option>Каллус рэпэйр ампул</option>
-                <option>Каллус рэпэйр крем</option>
-                <option>Удахгүй гарах бүтээгдэхүүн</option>
-                <option>OEM / ODM</option>
-                <option>Хараахан шийдээгүй</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="field field--full">
-            <label for="bf-message">Хүсэлтийн утга <span class="opt">Сонголтоор</span></label>
-            <textarea id="bf-message" name="문의내용" rows="3" placeholder="Борлуулалтын сүлжээ, төсөөлж байгаа хэмжээ, хугацаа"></textarea>
-          </div>
-
-          <label class="buyer-form__consent">
-            <input type="checkbox" name="개인정보동의" value="동의" required />
-            <span>
-              Энэ хүсэлтэд хариу хүргэхийн тулд компанийн нэр, холбоо барих хүний нэр, холбоо барих мэдээллийг авч, хүсэлт хаагдсанаас хойш гурван жил хадгална.
-            </span>
-          </label>
-
-          <button type="submit" class="btn btn-primary btn-lg btn-block">Хүсэлт илгээх</button>
-
-          <p class="buyer-form__note">
-            Мөн шууд и-мэйл бичиж болно: <a href="mailto:laezer@naver.com">laezer@naver.com</a> (хариуцагч: гүйцэтгэх захирал Жон Хёнжон).
-          </p>
-        </form>
-      </div>
-    </section>
-
-    <!-- ===== 12. CTA (purchase / contact) ===== -->
-    <section class="cta" id="contact">
-      <div class="container">
-        <div class="cta-inner reveal">
-          <span class="eyebrow center">Монгол дахь худалдаа</span>
-          <h2>LaEzer-тэй Монголдоо<br />танилцаарай</h2>
-          <p>Монгол дахь албан ёсны импортлогч <strong>Отхан хөгжил LLC</strong> танд бүтээгдэхүүн,
-            үнэ, хүргэлтийн талаар хариулна.</p>
-          <div class="cta-channels">
-            <a href="tel:+97690518888" class="cta-channel primary">
-              <span class="ch-label"><i class="fas fa-phone"></i> Монгол дахь захиалга</span>
-              <span class="ch-sub">Отхан хөгжил LLC · албан ёсны импортлогч</span>
-              <span class="ch-val">+976 9051 8888</span>
-            </a>
-            <a href="https://www.facebook.com/profile.php?id=61590470606549" target="_blank" rel="noopener" class="cta-channel">
-              <span class="ch-label"><i class="fab fa-facebook"></i> Facebook хуудас</span>
-              <span class="ch-sub">Мэдээ, урамшуулал, шинэ бүтээгдэхүүн</span>
-              <span class="ch-val">LaEzer Mongolia</span>
-            </a>
-            <a href="https://m.me/61590470606549" target="_blank" rel="noopener" class="cta-channel">
-              <span class="ch-label"><i class="fab fa-facebook-messenger"></i> Messenger лавлагаа</span>
-              <span class="ch-sub">Бүтээгдэхүүний дэлгэрэнгүй асуулт</span>
-              <span class="ch-val">LaEzer Mongolia</span>
-            </a>
-          </div>
-          <p class="cta-note">
-            Солонгосын албан ёсны онлайн дэлгүүр:
-            <a href="https://laezer.co.kr" target="_blank" rel="noopener" style="color:var(--green-crystal);text-decoration:underline">laezer.co.kr</a>
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== Footer ===== -->
     <footer class="footer">
-      <div class="container">
-        <div class="footer-top">
-          <div class="footer-brand">
-            <div class="footer-logo">LaEzer</div>
-            <p class="footer-tagline">Timeless Radiance and Beauty<br />Цаг хугацааг үл харгалзах гэрэлт гоо сайхан</p>
-            <div class="footer-social">
-              <a href="https://www.facebook.com/profile.php?id=61590470606549" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-              <a href="https://m.me/61590470606549" target="_blank" rel="noopener" aria-label="Messenger"><i class="fab fa-facebook-messenger"></i></a>
-              <a href="https://www.youtube.com/watch?v=FHtmHfhk6FY" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-            </div>
-          </div>
-          <div class="footer-col">
-            <h4>Бүтээгдэхүүн</h4>
-            <ul>
-              <li><a href="#products">CICA капсул спикул ампул</a></li>
-              <li><a href="#products">Каллус рэпэйр ампул</a></li>
-              <li><a href="#products">Каллус рэпэйр крем</a></li>
-              <li><a href="#lineup">Удахгүй гарах 5 бүтээгдэхүүн</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h4>Мэдээлэл</h4>
-            <ul>
-              <li><a href="#company">Компанийн танилцуулга</a></li>
-              <li><a href="#history">Түүхэн замнал</a></li>
-              <li><a href="#results">Хүний биед хийсэн туршилт</a></li>
-              <li><a href="#certs">Гэрчилгээ</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h4>Холбоо барих</h4>
-            <ul>
-              <li><a href="#buyer">Импортлогч, дистрибьютерт</a></li>
-              <li><a href="mailto:laezer@naver.com">laezer@naver.com</a></li>
-              <li><a href="tel:+97690518888">+976 9051 8888</a></li>
-              <li><a href="tel:+97688959598">+976 8895 9598</a></li>
-              <li><a href="https://www.facebook.com/profile.php?id=61590470606549" target="_blank" rel="noopener">Facebook хуудас</a></li>
-              <li><a href="https://m.me/61590470606549" target="_blank" rel="noopener">Messenger лавлагаа</a></li>
-              <li><a href="https://laezer.co.kr" target="_blank" rel="noopener">Албан ёсны сайт</a></li>
-            </ul>
-          </div>
+      <div class="wrap">
+        <div>
+          <span class="wordmark" role="img" aria-label="LaEzer"><svg class="wm" viewBox="0 0 3136 864" aria-hidden="true" focusable="false"><use href="#wm"></use></svg></span>
+          <p>Timeless Radiance and Beauty</p>
+          <p class="footer-extra">Монгол дахь албан ёсны импортлогч: Отхан хөгжил LLC · Улаанбаатар, Баянгол, 1-р хороо, 2 хороолол, Сеул 20а, 35 тоот · <a href="tel:+97690518888">+976 9051 8888</a> · <a href="tel:+97688959598">+976 8895 9598</a></p>
         </div>
-        <div class="footer-legal">
-          <div class="legal-block">
-            <h5>Монгол дахь албан ёсны импортлогч</h5>
-            <p><strong>Отхан хөгжил LLC</strong> (Otkhan Khugjil LLC)</p>
-            <p>Улсын бүртгэлийн дугаар: 6385044</p>
-            <p>Хаяг: Улаанбаатар, Баянгол, 1-р хороо, 2 хороолол, Сеул 20а, 35 тоот</p>
-            <p>Утас: <a href="tel:+97690518888">+976 9051 8888</a> · <a href="tel:+97688959598">+976 8895 9598</a></p>
-          </div>
-          <div class="legal-block">
-            <h5>Үйлдвэрлэгч</h5>
-            <p><strong>EZER Co., Ltd.</strong> (주식회사 에젤), БНСУ</p>
-            <p>Хаяг: 1018, 66, Daehwa-ro 106beon-gil, Daedeok-gu, Daejeon, Republic of Korea</p>
-            <p>Гарал үүсэл: Солонгост үйлдвэрлэв (Made in Korea)</p>
-            <p>Албан ёсны сайт: <a href="https://laezer.co.kr" target="_blank" rel="noopener">laezer.co.kr</a></p>
-          </div>
-        </div>
-        <div class="footer-bottom">
-          <p>&copy; 2026 LaEzer · EZER Co., Ltd. Бүх эрх хуулиар хамгаалагдсан.</p>
-          <p>Монгол дахь албан ёсны импортлогч: Отхан хөгжил LLC</p>
+        <div>
+          <p>&copy; 2026 LaEzer · Ezer Co., Ltd. · Гүйцэтгэх захирал Jeong Hyeon-jeong</p>
+          <p>1018, 66 Daehwa-ro 106beon-gil, Daedeok-gu, Daejeon, БНСУ</p>
         </div>
       </div>
     </footer>
 
-    <button id="scrollTop" class="scroll-top" aria-label="Дээш гарах"><i class="fas fa-arrow-up"></i></button>
+    <button id="scrollTop" class="scroll-top" type="button" aria-label="Дээш гарах">↑</button>
     <script src="js/script.js"></script>
     <script src="js/lang-pref.js"></script>
   </body>

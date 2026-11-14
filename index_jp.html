@@ -1,37 +1,20 @@
 <!doctype html>
+<!-- 이 파일은 build/build.py 가 build/template.html + build/i18n/*.json 으로 만든다. 직접 고치지 말고 그쪽을 고친 뒤 다시 빌드한다. -->
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="ラエゼル LaEzer — (株)エゼルのダーマコスメティックブランド。Cynanchum atratum 由来の特許成分 Derma-Clera™、エーデルワイスカルス培養エキス、海綿由来スピキュール5,000ppm、11種のヒアルロン酸。輸入・流通バイヤー様のご相談とサンプルのご依頼を承ります。"
-    />
-    <meta
-      name="keywords"
-      content="ラエゼル,LaEzer, 韓国スキンケア, K-beauty, エーデルワイス幹細胞, スピキュール, ヴィーガンコスメ, ダーマコスメ"
-    />
-    <title>ラエゼル LaEzer — 科学で語る K-Beauty | うるおいバリアケア</title>
+    <meta name="description" content="株式会社エゼルのスキンケアブランド、ラエゼル(LaEzer)の会社案内です。販売中の3品と発売予定の5品、ヒト試験の結果、認証書、サンプルのご依頼とご連絡先をご覧いただけます。" />
+    <title>ラエゼル LaEzer | 株式会社エゼル 会社案内</title>
     <link rel="icon" type="image/png" href="images/logo-transparent.png" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/laezer-2026.css?v=redesign4" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css"
-    />
-    <style>
-      :root {
-        --font-body: "Noto Sans JP", "Noto Sans", -apple-system, sans-serif;
-        --font-head: "Manrope", "Noto Sans JP", sans-serif;
-      }
-      .product-name { word-break: keep-all; }
-    </style>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/buyer.css?v=20261114" />
+    <style>:root { --sans: "Noto Sans JP", "Pretendard Variable", sans-serif; } body { line-break: strict; }</style>
     <link rel="alternate" hreflang="mn" href="https://laezer-landing.netlify.app/" />
     <link rel="alternate" hreflang="ko" href="https://laezer-landing.netlify.app/index_kr" />
     <link rel="alternate" hreflang="ja" href="https://laezer-landing.netlify.app/index_jp" />
@@ -41,17 +24,18 @@
     <link rel="alternate" hreflang="x-default" href="https://laezer-landing.netlify.app/" />
     <link rel="canonical" href="https://laezer-landing.netlify.app/index_jp" />
     <meta property="og:locale" content="ja_JP" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://laezer-landing.netlify.app/index_jp" />
-    <meta property="og:title" content="ラエゼル LaEzer — 科学で語る K-Beauty | うるおいバリアケア" />
-    <meta property="og:description" content="ラエゼル LaEzer — (株)エゼルのダーマコスメティックブランド。Cynanchum atratum 由来の特許成分 Derma-Clera™、エーデルワイスカルス培養エキス、海綿由来スピキュール5,000ppm、11種のヒアルロン酸。輸入・流通バイヤー様のご相談とサンプルのご依頼を承ります。" />
-    <meta property="og:image" content="https://laezer-landing.netlify.app/images/model-portrait.jpg" />
-    <meta name="twitter:card" content="summary_large_image" />
     <meta property="og:locale:alternate" content="mn_MN" />
     <meta property="og:locale:alternate" content="ko_KR" />
     <meta property="og:locale:alternate" content="ru_RU" />
+    <meta property="og:locale:alternate" content="en_US" />
     <meta property="og:locale:alternate" content="uz_UZ" />
-  <script type="application/ld+json">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://laezer-landing.netlify.app/index_jp" />
+    <meta property="og:title" content="ラエゼル LaEzer | 株式会社エゼル 会社案内" />
+    <meta property="og:description" content="株式会社エゼルのスキンケアブランド、ラエゼル(LaEzer)の会社案内です。販売中の3品と発売予定の5品、ヒト試験の結果、認証書、サンプルのご依頼とご連絡先をご覧いただけます。" />
+    <meta property="og:image" content="https://laezer-landing.netlify.app/images/model-portrait.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
@@ -82,749 +66,668 @@
       }
     },
     {
-      "@type": "WebSite",
-      "@id": "https://laezer-landing.netlify.app/#website",
-      "url": "https://laezer-landing.netlify.app/",
-      "name": "LaEzer",
-      "inLanguage": "ja",
-      "publisher": {
-        "@id": "https://laezer-landing.netlify.app/#organization"
-      }
-    },
-    {
       "@type": "WebPage",
       "@id": "https://laezer-landing.netlify.app/index_jp#webpage",
       "url": "https://laezer-landing.netlify.app/index_jp",
-      "name": "ラエゼル LaEzer — 科学で語る K-Beauty | うるおいバリアケア",
-      "description": "ラエゼル LaEzer — (株)エゼルのダーマコスメティックブランド。Cynanchum atratum 由来の特許成分 Derma-Clera™、エーデルワイスカルス培養エキス、海綿由来スピキュール5,000ppm、11種のヒアルロン酸。輸入・流通バイヤー様のご相談とサンプルのご依頼を承ります。",
+      "name": "ラエゼル LaEzer | 株式会社エゼル 会社案内",
+      "description": "株式会社エゼルのスキンケアブランド、ラエゼル(LaEzer)の会社案内です。販売中の3品と発売予定の5品、ヒト試験の結果、認証書、サンプルのご依頼とご連絡先をご覧いただけます。",
       "inLanguage": "ja",
-      "isPartOf": {
-        "@id": "https://laezer-landing.netlify.app/#website"
-      },
       "about": {
         "@id": "https://laezer-landing.netlify.app/#organization"
       }
     }
   ]
 }
-  </script>
+    </script>
   </head>
   <body>
-    <!-- ===== Header ===== -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="wm" viewBox="0 0 3136 864"><g transform="translate(0.000000,864.000000) scale(0.100000,-0.100000)"
+fill="currentColor" stroke="none">
+<path d="M121 8352 c-11 -22 -2 -110 13 -120 6 -3 34 -8 63 -9 69 -3 118 -25
+143 -65 20 -33 20 -39 20 -3883 0 -3060 -3 -3855 -13 -3875 -24 -47 -73 -70
+-148 -70 -37 0 -70 -4 -73 -9 -12 -20 -14 -110 -3 -125 11 -15 244 -16 2627
+-16 2575 0 2615 0 2631 19 11 14 18 51 22 133 4 62 11 138 17 168 5 30 14 120
+20 200 6 80 15 170 20 200 5 30 14 123 20 205 6 83 15 177 21 210 5 33 14 121
+19 195 5 74 16 189 25 255 8 66 19 172 24 235 14 153 28 297 52 514 15 135 17
+182 8 192 -15 18 -123 19 -137 2 -5 -7 -13 -71 -16 -143 -4 -71 -11 -164 -17
+-206 -5 -41 -14 -113 -19 -160 -15 -136 -55 -309 -116 -503 -56 -180 -144
+-370 -230 -497 -28 -42 -53 -80 -55 -86 -16 -41 -271 -301 -354 -359 -27 -19
+-68 -49 -90 -65 -46 -34 -294 -158 -375 -187 -111 -41 -232 -71 -385 -97 -44
+-7 -111 -21 -150 -30 -64 -16 -168 -18 -1181 -22 -1026 -4 -1112 -3 -1127 12
+-16 15 -17 290 -15 3893 l3 3877 24 32 c25 34 105 63 173 63 23 0 38 5 42 16
+10 27 7 99 -6 112 -9 9 -187 12 -740 12 -683 0 -728 -1 -737 -18z"/>
+<path d="M12066 8354 c-23 -23 -21 -89 4 -114 15 -15 33 -20 79 -20 71 0 112
+-16 143 -55 l23 -30 3 -3848 2 -3849 -20 -37 c-29 -51 -69 -71 -144 -71 -80 0
+-106 -17 -106 -69 0 -22 8 -48 18 -60 l17 -21 2664 0 c1759 0 2668 4 2676 10
+7 6 15 55 19 120 4 61 11 136 16 166 5 31 14 122 20 203 6 80 15 169 20 196 5
+28 14 120 20 205 6 85 17 196 25 245 7 50 16 139 20 199 4 60 11 134 16 165 5
+31 13 117 19 191 5 74 16 187 25 250 13 105 31 299 56 610 5 63 13 133 19 156
+5 22 14 83 20 135 5 52 16 128 24 169 8 41 24 131 36 200 12 69 30 163 40 210
+10 47 28 130 40 185 12 55 28 127 37 160 8 33 21 87 29 120 17 76 47 198 73
+295 11 41 25 95 32 120 6 25 18 65 26 90 8 25 18 65 23 90 4 25 15 61 23 80 8
+19 25 60 37 90 12 30 30 72 41 92 10 20 19 43 19 50 0 7 18 40 40 73 22 33 40
+65 40 71 0 6 7 17 15 24 8 6 31 37 52 68 46 71 201 224 279 277 32 21 75 51
+94 66 35 27 150 87 245 129 28 12 73 32 100 45 93 43 154 65 176 65 12 0 50 9
+83 19 63 20 125 33 236 52 36 6 84 18 107 26 92 32 510 62 871 62 225 1 253
+-1 259 -15 3 -9 1 -25 -5 -35 -7 -10 -49 -89 -93 -176 -45 -87 -110 -212 -145
+-278 -34 -66 -96 -187 -138 -270 -42 -82 -80 -157 -86 -165 -5 -8 -15 -28 -23
+-45 -12 -27 -107 -209 -134 -260 -6 -11 -24 -45 -39 -75 -16 -30 -49 -95 -75
+-145 -25 -49 -81 -157 -123 -240 -42 -82 -80 -157 -85 -165 -10 -19 -31 -59
+-98 -190 -30 -58 -91 -177 -137 -265 -45 -88 -134 -259 -196 -380 -99 -192
+-141 -274 -207 -400 -9 -16 -22 -43 -31 -60 -17 -35 -193 -379 -212 -415 -7
+-14 -18 -34 -23 -45 -6 -11 -33 -63 -60 -115 -77 -148 -214 -412 -284 -550
+-84 -164 -207 -402 -323 -625 -136 -262 -293 -568 -339 -660 -23 -44 -53 -101
+-67 -127 -15 -26 -24 -54 -21 -62 6 -14 196 -16 1961 -16 l1956 0 14 23 c8 12
+17 62 21 110 4 49 11 103 16 120 5 17 13 78 19 136 6 58 17 142 25 186 8 44
+17 114 20 155 4 41 11 91 16 111 5 19 13 80 19 135 5 54 17 142 25 194 8 52
+19 131 25 175 6 44 14 103 19 130 5 28 10 88 12 135 l4 85 -58 3 c-32 2 -64
+-2 -71 -7 -14 -12 -30 -78 -45 -191 -21 -148 -45 -243 -105 -405 -26 -70 -94
+-193 -150 -268 -66 -89 -192 -224 -226 -242 -14 -8 -39 -26 -56 -42 -29 -27
+-86 -66 -129 -89 -11 -6 -29 -16 -40 -22 -11 -5 -47 -23 -80 -39 -33 -16 -69
+-34 -80 -40 -46 -24 -164 -62 -265 -84 -25 -6 -67 -16 -95 -24 -27 -7 -82 -18
+-122 -24 -39 -6 -84 -16 -100 -22 -60 -23 -428 -39 -919 -39 -553 0 -526 -4
+-480 74 13 22 72 136 131 251 60 116 135 262 168 325 32 63 66 129 74 145 8
+17 18 37 23 46 5 9 30 56 56 105 26 49 100 193 164 319 64 127 142 277 172
+335 61 116 187 358 210 405 9 17 28 55 44 85 16 30 58 112 94 183 94 183 215
+419 264 512 43 83 60 115 142 275 27 52 69 136 95 185 25 50 81 158 123 240
+43 83 96 186 120 230 23 44 63 123 90 175 52 104 53 107 133 260 30 58 91 175
+135 260 44 85 133 259 199 385 65 127 137 266 159 310 22 44 44 87 49 95 5 8
+22 40 37 70 15 30 48 95 73 143 142 274 173 338 167 352 -5 13 -203 15 -1710
+15 l-1705 0 -19 -28 c-11 -15 -25 -47 -32 -72 -7 -24 -18 -53 -26 -64 -8 -11
+-14 -27 -14 -36 -1 -8 -9 -33 -20 -55 -11 -22 -19 -44 -20 -48 0 -5 -7 -23
+-15 -40 -13 -30 -22 -54 -59 -157 -9 -25 -23 -58 -30 -75 -45 -100 -56 -127
+-56 -137 0 -6 -8 -29 -19 -52 -10 -23 -28 -68 -41 -101 -12 -33 -30 -81 -41
+-107 -31 -78 -55 -139 -79 -203 -13 -33 -29 -73 -36 -90 -20 -47 -45 -116 -56
+-160 -6 -22 -17 -60 -25 -85 -8 -25 -19 -69 -24 -99 -5 -29 -16 -65 -23 -80
+-7 -14 -16 -46 -20 -71 -4 -25 -13 -65 -21 -90 -7 -25 -24 -90 -36 -145 -12
+-55 -28 -123 -36 -152 -13 -49 -20 -88 -63 -313 -10 -52 -23 -120 -29 -150
+-23 -123 -50 -288 -56 -345 -4 -33 -10 -76 -16 -96 -5 -19 -13 -80 -19 -135
+-5 -54 -16 -146 -24 -204 -17 -114 -53 -486 -60 -617 -7 -118 -73 -454 -102
+-521 -8 -18 -14 -40 -14 -50 -1 -9 -9 -35 -20 -57 -11 -22 -19 -46 -20 -53 0
+-7 -9 -30 -20 -50 -10 -20 -33 -66 -50 -102 -37 -79 -94 -174 -135 -226 -17
+-22 -38 -50 -47 -64 -25 -40 -168 -181 -249 -246 -80 -65 -151 -109 -269 -167
+-41 -21 -82 -42 -90 -47 -24 -14 -118 -46 -200 -68 -122 -33 -161 -42 -245
+-57 -44 -8 -111 -22 -150 -31 -63 -15 -188 -17 -1298 -21 -948 -4 -1231 -2
+-1242 7 -13 11 -15 270 -15 1959 0 1568 2 1951 13 1965 12 16 68 17 1007 13
+1005 -4 1168 -10 1261 -42 23 -8 50 -15 61 -15 21 0 84 -27 216 -93 97 -49
+223 -161 277 -248 114 -182 186 -401 204 -619 l6 -75 75 0 c74 0 75 0 74 25
+-2 38 -46 357 -74 545 -6 39 -17 117 -24 175 -7 58 -20 152 -29 210 -25 161
+-37 250 -116 815 -11 77 -25 174 -31 215 -6 41 -16 113 -22 160 -16 136 -36
+233 -50 242 -21 13 -104 9 -116 -5 -8 -10 -8 -71 0 -220 14 -266 4 -377 -45
+-494 -39 -92 -73 -140 -149 -208 -69 -62 -197 -119 -322 -144 -22 -5 -68 -17
+-101 -26 -55 -16 -143 -18 -1073 -22 -789 -4 -1016 -2 -1027 7 -13 11 -15 244
+-15 1860 0 1676 1 1848 16 1854 23 9 1879 6 1944 -3 30 -5 96 -14 145 -20 303
+-41 591 -107 685 -156 14 -7 54 -25 90 -40 236 -98 406 -216 600 -419 91 -95
+180 -214 231 -311 17 -33 38 -67 45 -76 8 -8 14 -21 14 -28 0 -7 9 -29 20 -49
+32 -61 60 -127 60 -143 1 -8 9 -32 20 -54 11 -22 19 -50 20 -62 0 -12 9 -45
+20 -73 11 -28 20 -60 20 -71 0 -31 42 -163 54 -171 6 -4 36 -8 67 -8 73 0 90
+17 66 63 -9 18 -21 56 -27 86 -6 30 -14 59 -20 66 -5 6 -12 31 -16 55 -4 25
+-15 67 -25 93 -11 26 -19 58 -19 71 0 13 -9 43 -20 67 -11 24 -20 55 -20 69 0
+14 -9 52 -19 85 -11 33 -29 92 -40 130 -52 183 -61 215 -81 285 -11 41 -30
+109 -41 150 -19 68 -34 124 -74 265 -39 140 -67 237 -88 300 l-22 70 -2417 3
+c-2187 2 -2418 1 -2432 -14z"/>
+<path d="M8000 6201 c-47 -4 -121 -15 -165 -24 -44 -8 -109 -20 -145 -26 -128
+-21 -186 -33 -255 -52 -150 -42 -161 -46 -307 -113 -31 -14 -61 -26 -67 -26
+-13 0 -80 -38 -106 -60 -11 -9 -27 -20 -35 -24 -16 -8 -68 -39 -117 -71 -56
+-37 -225 -199 -260 -250 -19 -27 -47 -68 -63 -90 -37 -52 -111 -200 -120 -242
+-9 -39 3 -58 45 -68 17 -3 38 -13 47 -22 36 -32 60 -13 111 87 27 52 52 97 56
+100 5 3 27 32 49 66 48 70 208 222 282 268 28 17 72 45 98 63 68 46 227 123
+253 123 8 0 27 7 42 15 15 8 45 17 65 21 20 4 53 15 72 25 19 11 46 19 60 19
+14 0 50 7 80 16 69 21 534 32 620 15 127 -24 196 -41 225 -54 16 -8 57 -25 90
+-37 101 -37 197 -86 257 -132 31 -24 73 -54 92 -68 58 -41 207 -212 267 -307
+49 -77 89 -154 134 -258 7 -16 22 -51 34 -76 12 -25 21 -54 21 -63 0 -10 5
+-27 12 -39 11 -21 36 -112 59 -217 6 -25 17 -71 25 -103 8 -31 19 -99 24 -150
+6 -50 15 -119 20 -152 16 -97 25 -572 11 -588 -8 -11 -59 -16 -209 -21 -108
+-4 -228 -12 -267 -17 -38 -5 -117 -14 -175 -19 -178 -19 -361 -47 -470 -74
+-125 -31 -249 -56 -274 -56 -13 0 -37 -5 -53 -11 -15 -6 -64 -19 -108 -29
+-118 -28 -176 -44 -215 -62 -54 -24 -163 -58 -185 -58 -11 0 -29 -6 -40 -14
+-11 -7 -31 -17 -45 -20 -14 -4 -43 -16 -65 -26 -22 -10 -62 -27 -90 -38 -123
+-49 -252 -107 -270 -122 -11 -9 -63 -37 -115 -63 -52 -26 -113 -61 -135 -77
+-22 -16 -76 -53 -120 -83 -44 -30 -93 -67 -109 -82 -15 -14 -56 -49 -90 -77
+-85 -72 -316 -345 -316 -376 0 -5 -8 -20 -19 -33 -39 -50 -141 -274 -141 -309
+0 -10 -9 -42 -19 -72 -22 -60 -40 -188 -48 -331 -7 -112 18 -327 48 -420 11
+-31 19 -63 19 -70 0 -22 90 -217 129 -280 60 -98 152 -209 244 -297 48 -46 96
+-88 106 -94 10 -6 38 -22 61 -36 23 -14 51 -30 61 -36 11 -6 27 -18 36 -27 10
+-8 29 -20 43 -26 14 -6 32 -15 40 -20 40 -24 248 -91 281 -91 13 0 34 -7 46
+-15 29 -20 230 -45 366 -45 138 0 285 16 362 39 33 10 80 24 105 30 200 53
+251 73 425 171 39 22 81 45 95 52 14 7 84 56 157 110 134 100 319 283 431 428
+73 94 200 282 212 316 6 16 15 31 19 34 11 8 61 97 61 110 0 7 8 24 18 38 10
+15 28 52 41 82 13 30 31 73 41 95 31 68 79 201 95 261 8 31 17 59 19 62 24 23
+26 -56 26 -883 0 -860 0 -874 20 -885 27 -15 1109 -13 1127 2 16 13 17 110 1
+126 -7 7 -31 12 -55 12 -73 0 -117 24 -142 78 l-21 47 -3 1930 -2 1930 -23
+140 c-13 77 -32 174 -43 216 -10 42 -19 88 -19 102 0 13 -9 44 -20 68 -11 24
+-20 52 -20 62 0 11 -6 33 -14 50 -7 18 -28 70 -46 117 -18 47 -39 94 -46 105
+-8 11 -14 26 -14 35 0 8 -18 42 -40 75 -22 33 -40 65 -40 70 -1 6 -17 30 -35
+55 -19 25 -50 68 -69 95 -47 69 -228 243 -301 291 -33 21 -78 52 -100 69 -23
+17 -68 43 -100 58 -33 16 -67 32 -75 38 -40 24 -140 67 -173 73 -20 4 -49 13
+-64 21 -15 8 -40 15 -54 15 -15 0 -55 9 -89 20 -34 11 -77 20 -94 20 -17 0
+-63 9 -101 21 -65 20 -98 21 -425 24 -195 2 -393 0 -440 -4z m1515 -3036 c-1
+-300 -3 -359 -18 -411 -9 -34 -17 -76 -17 -93 0 -35 -42 -236 -65 -316 -8 -27
+-19 -68 -25 -90 -17 -74 -46 -170 -58 -192 -7 -12 -12 -30 -12 -40 0 -10 -9
+-35 -20 -56 -11 -20 -20 -43 -20 -50 0 -12 -63 -162 -108 -257 -35 -73 -137
+-248 -190 -325 -124 -180 -295 -358 -432 -451 -160 -109 -185 -124 -197 -124
+-7 0 -30 -9 -50 -20 -21 -11 -45 -20 -53 -20 -9 0 -26 -7 -38 -16 -37 -26
+-197 -54 -307 -54 -113 0 -260 27 -333 60 -26 12 -63 29 -82 37 -127 55 -278
+175 -366 289 -109 142 -157 243 -217 454 -19 66 -21 102 -22 295 0 234 4 266
+62 445 37 113 154 339 194 373 8 6 28 32 44 55 40 60 186 196 279 260 42 29
+86 61 96 70 24 20 86 56 195 111 44 22 87 45 95 50 44 26 100 51 114 51 9 0
+27 6 39 14 12 8 40 19 62 25 61 15 156 51 179 67 11 8 31 14 44 14 12 0 39 7
+59 15 20 8 59 19 87 25 61 11 158 34 246 59 94 27 231 49 475 76 77 8 154 17
+170 19 17 2 66 3 110 2 l80 -1 0 -350z"/>
+<path d="M24525 6200 c-44 -5 -102 -16 -129 -24 -27 -9 -62 -16 -77 -16 -70 0
+-396 -89 -499 -137 -70 -32 -100 -45 -180 -79 -36 -15 -74 -35 -85 -44 -11 -9
+-31 -22 -45 -28 -25 -12 -39 -19 -75 -41 -11 -6 -31 -17 -45 -24 -29 -14 -81
+-49 -160 -108 -30 -22 -67 -48 -81 -57 -80 -53 -345 -310 -441 -427 -86 -106
+-268 -369 -268 -387 0 -5 -8 -21 -18 -36 -43 -65 -142 -262 -142 -283 0 -8 -9
+-29 -20 -47 -11 -18 -20 -38 -20 -44 0 -6 -8 -29 -19 -52 -10 -23 -29 -75 -41
+-116 -13 -41 -31 -100 -41 -130 -10 -30 -21 -75 -25 -99 -3 -24 -12 -58 -19
+-75 -7 -17 -16 -60 -19 -94 -4 -35 -11 -75 -16 -88 -13 -33 -41 -342 -47 -512
+-8 -225 32 -622 83 -822 7 -30 20 -82 29 -115 32 -127 67 -236 96 -300 10 -22
+29 -69 43 -105 39 -102 152 -316 210 -398 18 -27 40 -62 49 -78 8 -16 27 -42
+42 -58 14 -16 41 -50 60 -77 42 -61 101 -125 242 -264 98 -96 174 -160 378
+-314 57 -42 139 -92 235 -140 36 -18 83 -43 105 -57 37 -22 117 -54 255 -105
+30 -11 73 -28 95 -38 72 -34 252 -84 380 -106 44 -7 96 -18 115 -24 19 -6 50
+-11 69 -11 18 0 70 -9 115 -19 98 -23 352 -41 576 -41 184 1 481 22 521 38 14
+6 52 13 85 16 70 8 270 42 334 58 25 6 77 16 115 23 81 15 215 52 260 70 16 7
+66 23 110 35 44 12 94 26 110 32 17 5 57 17 90 25 33 8 64 19 69 24 6 5 17 9
+25 9 9 0 38 11 66 24 27 13 77 34 110 46 94 35 159 63 173 75 7 7 16 60 22
+140 5 72 16 193 24 270 34 316 48 457 57 580 5 72 13 157 19 190 5 33 14 128
+20 210 6 83 15 174 20 204 13 69 13 67 -6 85 -23 23 -119 22 -129 -1 -7 -18
+-26 -145 -45 -298 -14 -116 -71 -342 -106 -423 -8 -18 -14 -38 -14 -44 0 -6
+-10 -32 -21 -57 -12 -25 -33 -71 -47 -101 -14 -30 -31 -62 -38 -70 -6 -8 -15
+-25 -19 -38 -11 -39 -128 -205 -205 -293 -232 -265 -523 -458 -825 -547 -89
+-26 -144 -40 -225 -57 -36 -7 -79 -19 -95 -25 -39 -15 -321 -40 -455 -39 -142
+0 -374 22 -435 42 -73 23 -163 47 -217 57 -27 5 -58 16 -70 24 -12 9 -30 16
+-39 16 -18 0 -124 48 -179 82 -19 11 -64 36 -100 56 -149 80 -453 362 -546
+507 -10 16 -43 63 -71 104 -29 40 -53 78 -53 84 0 6 -7 18 -15 27 -15 17 -145
+273 -145 286 0 9 -47 132 -59 154 -4 8 -19 53 -33 100 -104 344 -148 591 -179
+1010 -14 182 -4 657 16 800 8 58 15 133 15 168 0 35 5 72 10 83 11 19 44 19
+2069 19 1798 0 2060 2 2071 15 21 25 -12 388 -52 565 -22 98 -97 335 -122 386
+-92 189 -120 239 -179 330 -26 38 -67 96 -92 129 -117 151 -367 370 -530 464
+-108 62 -122 71 -157 94 -14 9 -32 17 -38 17 -7 0 -49 18 -94 39 -92 45 -149
+67 -222 85 -27 7 -56 16 -62 20 -6 4 -44 13 -84 21 -137 25 -193 37 -278 57
+-74 18 -124 21 -400 23 -173 2 -351 0 -395 -5z m470 -156 c55 -3 116 -13 135
+-21 19 -8 55 -21 80 -28 98 -29 215 -79 226 -97 3 -5 16 -13 27 -18 24 -10 71
+-39 133 -82 64 -44 195 -176 282 -286 45 -57 82 -107 82 -113 0 -5 15 -31 33
+-57 18 -26 55 -94 81 -152 27 -58 53 -114 58 -124 27 -52 80 -223 118 -376 32
+-135 45 -219 62 -394 11 -122 11 -129 -7 -142 -28 -21 -3132 -20 -3160 0 -19
+13 -19 16 -2 68 9 30 17 64 17 76 0 12 9 52 21 89 11 38 32 106 46 153 14 47
+29 94 34 105 5 11 16 40 25 65 33 94 46 126 78 194 18 39 38 82 45 96 13 29
+82 154 130 237 65 109 217 299 311 389 75 71 215 180 261 203 24 12 64 35 89
+51 64 41 112 62 215 94 50 15 106 35 125 43 35 16 283 43 330 37 14 -2 70 -6
+125 -10z"/>
+<path d="M30850 6135 c-167 -35 -334 -89 -371 -121 -8 -8 -21 -14 -27 -14 -13
+0 -181 -87 -202 -105 -8 -7 -40 -27 -70 -44 -86 -50 -90 -53 -165 -112 -38
+-30 -95 -74 -125 -96 -74 -54 -330 -309 -409 -407 -138 -171 -240 -313 -295
+-410 -15 -28 -34 -58 -41 -66 -11 -13 -78 -136 -128 -235 -33 -65 -95 -202
+-107 -235 -7 -19 -19 -55 -28 -80 -16 -45 -61 -120 -63 -104 0 5 0 453 1 995
+1 898 0 988 -15 1003 -15 14 -73 16 -579 16 -639 0 -593 7 -583 -83 8 -64 24
+-77 95 -77 64 0 84 -9 111 -54 l21 -34 0 -2721 c1 -2459 -1 -2724 -15 -2751
+-23 -44 -71 -70 -128 -70 -74 0 -87 -11 -87 -74 0 -32 5 -58 13 -64 14 -12
+1357 -19 1376 -7 6 3 11 33 11 65 0 69 -11 80 -85 80 -56 0 -101 28 -121 75
+-10 26 -13 309 -14 1531 -2 1462 -1 1501 18 1589 24 109 85 297 106 327 9 12
+16 29 16 38 0 19 118 235 162 295 119 163 252 312 357 398 41 33 85 71 99 84
+14 13 53 40 86 60 34 20 88 55 122 78 56 38 121 72 234 123 25 11 84 39 131
+61 48 22 99 43 115 46 16 4 56 15 89 25 138 43 201 60 217 60 10 0 40 9 68 20
+28 11 67 20 86 20 19 0 66 7 105 16 38 9 145 19 237 22 l167 7 3 70 c2 38 -2
+121 -8 185 -5 63 -15 187 -20 275 -21 323 -28 396 -40 410 -19 23 -182 18
+-320 -10z"/>
+</g></symbol></svg>
     <header class="header" id="header">
-      <nav class="nav container">
-        <div class="nav-brand">
-          <img src="images/logo-transparent.png" alt="LaEzer" class="brand-logo-img" />
-        </div>
+      <nav class="nav wrap" aria-label="メインメニュー">
+        <a class="wordmark" href="#top" aria-label="LaEzer"><svg class="wm" viewBox="0 0 3136 864" aria-hidden="true" focusable="false"><use href="#wm"></use></svg></a>
         <ul class="nav-menu" id="navMenu">
-          <li><a href="#company">会社紹介</a></li>
+          <li><a href="#company">会社</a></li>
+          <li><a href="#lineup">ラインナップ</a></li>
           <li><a href="#products">製品</a></li>
-          <li><a href="#lineup">発売予定</a></li>
-          <li><a href="#results">試験 · 認証</a></li>
-          <li><a href="#buyer" class="btn-nav">サンプル · ご相談</a></li>
-          <li class="lang-switcher-container">
-            <a href="index.html" class="lang-btn" data-lang-pick="mn"><span class="lang-flag lang-flag--mn" aria-hidden="true"></span>MGL</a>
-            <a href="index_kr.html" class="lang-btn" data-lang-pick="ko"><span class="lang-flag lang-flag--ko" aria-hidden="true"></span>KOR</a>
-            <a href="#" class="lang-btn active" data-lang-pick="ja"><span class="lang-flag lang-flag--ja" aria-hidden="true"></span>JPN</a>
-            <a href="index_ru.html" class="lang-btn" data-lang-pick="ru"><span class="lang-flag lang-flag--ru" aria-hidden="true"></span>RUS</a>
-            <a href="index_en.html" class="lang-btn" data-lang-pick="en"><span class="lang-flag lang-flag--en" style="background-image:url(&quot;data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2 2'><rect width='2' height='2' fill='%23012169'/><path d='M0 0L2 2M2 0L0 2' stroke='%23fff' stroke-width='.4'/><path d='M0 0L2 2M2 0L0 2' stroke='%23c8102e' stroke-width='.14'/><path d='M1 0V2M0 1H2' stroke='%23fff' stroke-width='.56'/><path d='M1 0V2M0 1H2' stroke='%23c8102e' stroke-width='.32'/></svg>&quot;)" aria-hidden="true"></span>ENG</a>
-            <a href="index_uz.html" class="lang-btn" data-lang-pick="uz"><span class="lang-flag lang-flag--uz" aria-hidden="true"></span>UZB</a>
+          <li><a href="#upcoming">発売予定</a></li>
+          <li><a href="#results">ヒト試験</a></li>
+          <li><a href="#certs">認証書</a></li>
+          <li><a href="#contact" class="btn-nav">サンプル依頼</a></li>
+          <li class="lang">
+            <a href="index.html" lang="mn" data-lang-pick="mn">MGL</a>
+            <a href="index_kr.html" lang="ko" data-lang-pick="ko">KOR</a>
+            <a href="index_jp.html" lang="ja" data-lang-pick="ja" class="active" aria-current="page">JPN</a>
+            <a href="index_ru.html" lang="ru" data-lang-pick="ru">RUS</a>
+            <a href="index_en.html" lang="en" data-lang-pick="en">ENG</a>
+            <a href="index_uz.html" lang="uz" data-lang-pick="uz">UZB</a>
           </li>
         </ul>
-        <div class="hamburger" id="hamburger">
+        <button class="hamburger" id="hamburger" type="button" aria-label="メニューを開く" aria-controls="navMenu">
           <span></span><span></span><span></span>
-        </div>
+        </button>
       </nav>
     </header>
 
-    <!-- ===== 1. Hero ===== -->
-    <section class="hero">
-      <img src="images/hero_leaf.png" alt="" class="hero-leaf-deco" aria-hidden="true" />
-      <div class="container hero-grid">
-        <div class="hero-text reveal">
-          <span class="hero-badge"><i class="fas fa-flask"></i> 科学で語る K-Beauty</span>
-          <h1>
-            ゆらぎがちな肌に、<br />
-            <span class="highlight">科学の答え</span>を。
-          </h1>
-          <p class="hero-sub">
-            Cynanchum atratum 由来の特許成分 Derma-Clera™、エーデルワイスカルス培養エキス、海綿由来スピキュール5,000ppm。
-            販売中の3品のヒト試験データと認証書類を、このページにまとめました。
-          </p>
-          <div class="hero-usp">
-            <span class="badge gold"><i class="fas fa-certificate"></i> 特許成分配合</span>
-            <span class="badge"><i class="fas fa-leaf"></i> ヴィーガン認証</span>
-            <span class="badge"><i class="fas fa-microscope"></i> ヒト試験実施</span>
-          </div>
-          <div class="hero-cta">
-            <a href="#buyer" class="btn btn-primary btn-lg">サンプル · ご相談</a>
-            <a href="#products" class="btn btn-ghost btn-lg"><i class="fas fa-box-open"></i> 製品を見る</a>
-          </div>
-          <div class="hero-stats">
-            <div class="stat-item"><span class="stat-number">+138%</span><span class="stat-label">保湿改善率<small style="font-size:var(--fs-min)">※1</small></span></div>
-            <div class="stat-item"><span class="stat-number">5,000<small style="font-size:.6em">ppm</small></span><span class="stat-label">天然スピキュール</span></div>
-            <div class="stat-item"><span class="stat-number">11</span><span class="stat-label">種のヒアルロン酸</span></div>
+    <main id="top">
+      <!-- 1쪽 표지 -->
+      <section class="cover">
+        <div class="wrap">
+          <h1 aria-label="LaEzer ラエゼル"><svg class="wm" viewBox="0 0 3136 864" aria-hidden="true" focusable="false"><use href="#wm"></use></svg></h1>
+          <div class="cover-rule"></div>
+          <p class="cover-slogan">Timeless Radiance and Beauty</p>
+          <p class="cover-meta">株式会社エゼル · 会社案内 · 2026.11</p>
+          <div class="cover-cta">
+            <a href="#contact" class="btn btn--light">サンプル依頼</a>
+            <a href="#lineup" class="btn btn--line-light">ラインナップを見る</a>
           </div>
         </div>
-        <div class="hero-visual reveal d1">
-          <img src="images/model-portrait.jpg" alt="LaEzer スキンケア製品とモデル" loading="eager" />
-          <div class="hero-float-badge">
-            <span class="ico"><i class="fas fa-seedling"></i></span>
-            <span>美白 · シワ改善 二重機能性(韓国)<small>Derma-Clera™ 特許成分</small></span>
-          </div>
-        </div>
-      </div>
-      <div class="scroll-cue"><span>スクロール</span><div class="line"></div></div>
-    </section>
+      </section>
 
-    <!-- ===== Video ===== -->
-    <section class="video bg-mist" id="video">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow center">女優も注目</span>
-          <h2 class="section-title">韓国のTV番組で<span class="title-accent">紹介されました</span></h2>
-        </div>
-        <div class="video-wrap reveal d1">
-          <div class="video-frame">
-            <iframe
-              src="https://www.youtube.com/embed/kkYFzxSf-iE?rel=0"
-              title="LaEzer Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-          </div>
-          <div class="video-quote">
-            <p>「一度使っただけで、すぐに実感。内側から満ちてくるようなうるおい感に本当に驚きました!」</p>
-            <p style="font-size:var(--fs-min);opacity:.65;margin-top:6px">※個人の感想です。</p>
-            <span class="author">ACTRESS PARK HA-SUN</span> · <span class="role">女優 パク・ハソン</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== 2. Company ===== -->
-    <section class="why" id="company">
-      <div class="container why-grid">
-        <div class="why-content reveal">
-          <span class="eyebrow">会社紹介</span>
-          <h2>エゼル(Ezer)、<br /><em>助ける者</em></h2>
-          <p>
-            エゼル(Ezer)は、ヘブライ語で「助ける者」という意味です。一人ひとりが持つ
-            固有の美しさに気づけるよう手助けをすること。ラエゼルの哲学は、この名前から始まります。
-            お客様にも、ともに働くパートナーにも、頼れる存在でありたいと考えています。
-          </p>
-          <p>
-            2024年に韓国・大田(テジョン)で創業し、最初の海外市場であるモンゴルに続いて、
-            <strong style="color:#fff">ロシアと中央アジア、日本、ベトナム</strong>への進出を準備しています。
-          </p>
-          <div class="why-points">
-            <div class="why-point">
-              <i class="fas fa-flask"></i>
-              <div><b>科学的根拠に基づく体系的な研究開発</b><span>皮膚科学の研究と成分ごとの効能資料をもとに精緻な処方を設計し、ヒト試験と皮膚刺激性試験を通じて、製品の効能と肌への刺激の程度を客観的に評価します。</span></div>
-            </div>
-            <div class="why-point">
-              <i class="fas fa-vials"></i>
-              <div><b>肌悩みに合わせた精緻な成分配合とシナジー</b><span>肌悩みによって、必要な成分も変わります。各成分の特性と役割を科学的に分析し、互いに補い合う配合によって、肌に必要な効果を実現するフォーミュラを開発します。</span></div>
-            </div>
-            <div class="why-point">
-              <i class="fas fa-leaf"></i>
-              <div><b>自然の原理と現代科学の調和</b><span>自然由来原料の価値を現代の皮膚科学と結びつけ、肌本来のすこやかなバランスを育み、自然なツヤを取り戻せるよう助けるスキンケアをお届けします。</span></div>
+      <!-- 2쪽 회사 -->
+      <section id="company">
+        <div class="wrap spread">
+          <figure class="spread-photo reveal"><img src="images/model-portrait.jpg" alt="ラエゼル カルス リペア アンプルを手にしたモデル" width="1643" height="2200" /></figure>
+          <div class="spread-body reveal">
+            <span class="label">株式会社エゼル</span>
+            <h2 class="h2">エゼル (Ezer)、助ける者</h2>
+            <p>エゼル (Ezer)は、ヘブライ語で「助ける者」という意味です。一人ひとりが持つ固有の美しさに気づけるよう手助けをすること。ラエゼルの哲学は、この名前から始まります。お客様にも、ともに働くパートナーにも、頼れる存在でありたいと考えています。</p>
+            <p>2024年に大田(テジョン)で創業し、最初の海外市場であるモンゴルに続いて、ロシアと中央アジア、日本、ベトナムへの進出を準備しています。</p>
+            <div class="slogan">
+              <span class="label">ブランドスローガン</span>
+              <p class="slogan-en">Timeless Radiance and Beauty</p>
+              <p class="slogan-ko">時を超えて輝く美しさ</p>
+              <p>自然の原理と現代科学を組み合わせ、肌本来のツヤを取り戻すスキンケアをお届けします。</p>
             </div>
           </div>
         </div>
-        <div class="why-visual reveal d1">
-          <img src="images/model-cica.jpg" alt="LaEzer シカ カプセル スピキュール アンプル" />
-          <div class="why-temp">Timeless Radiance and Beauty</div>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ===== 2-1. History ===== -->
-    <section class="history" id="history">
-      <div class="container history-wrap">
-        <div class="section-head reveal">
-          <span class="eyebrow center">沿革</span>
-          <h2 class="section-title">2024年、大田から<span class="title-accent" style="display:inline-block">現在まで</span></h2>
-          <p class="section-sub">設立から海外供給契約までの歩みです</p>
-        </div>
-        <ol class="history-list reveal d1">
-          <li><time>2024.09</time><div><b>株式会社エゼル設立</b><span>韓国・大田</span></div></li>
-          <li><time>2025</time><div><b>3品を韓国国内で発売</b><span>自社EC · NAVERスマートストア · Coupang</span></div></li>
-          <li><time>2025</time><div><b>自社特許を出願</b><span>第10-2025-0184979号(韓国)</span></div></li>
-          <li><time>2026.02</time><div><b>商標登録2件</b><span>ラエゼル · ドクターラエゼル</span></div></li>
-          <li><time>2026.04</time><div><b>モンゴル第1次供給契約</b></div></li>
-          <li><time>2026.06</time><div><b>ウランバートルでポップアップ販売イベント</b><span>大田創造経済革新センターと協力</span></div></li>
-          <li><time>2026.08</time><div><b>モンゴル第2次供給契約</b></div></li>
-          <li><time>2026.09</time><div><b>モンゴルのブランド企業と製品供給契約</b></div></li>
-          <li><time>2026.11</time><div><b>日本のドン・キホーテ · ロフト入店予定</b></div></li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- ===== 3. Brand Story ===== -->
-    <section class="brand bg-cream" id="brand">
-      <div class="container brand-grid">
-        <div class="brand-visual reveal">
-          <img src="images/zia-cutout.png" alt="LaEzer 3ステップ うるおいバリアケアセット" />
-        </div>
-        <div class="brand-text reveal d1">
-          <span class="eyebrow">ブランドストーリー</span>
-          <p class="brand-quote">
-            肌が持つ本来の<span class="hl">美しさを信じています</span>
-          </p>
-          <p>
-            ラエゼルは、論文や成分の効能分析資料などの科学的根拠をもとに、
-            お一人おひとりの肌に合ったスキンケアルーティンをご提案します。
-          </p>
-          <p>
-            自然の原理と現代科学を組み合わせ、肌本来のツヤを取り戻すスキンケアをお届けします。
-          </p>
-          <div class="brand-pillars">
-            <div class="brand-pillar"><i class="fas fa-certificate"></i><b>特許</b><span>Derma-Clera™ 特許成分 · 自社出願1件</span></div>
-            <div class="brand-pillar"><i class="fas fa-leaf"></i><b>ヴィーガン</b><span>カルス アンプル · クリーム認証</span></div>
-            <div class="brand-pillar"><i class="fas fa-vial-circle-check"></i><b>検証</b><span>㈱ヒューマン皮膚臨床試験センター ヒト試験</span></div>
+      <!-- 3쪽 브랜드 이야기 -->
+      <section id="brand" class="rule-top">
+        <div class="wrap spread">
+          <figure class="spread-photo reveal"><img src="images/buyer/lab.jpg" alt="実験器具と緑の葉を使ったイメージ写真" width="1024" height="1024" loading="lazy" /></figure>
+          <div class="spread-body reveal">
+            <span class="label">ブランドストーリー</span>
+            <h2 class="h2">肌が持つ本来の<br>美しさを信じています</h2>
+            <p>ラエゼルは、論文や成分の効能分析資料などの科学的根拠をもとに、お一人おひとりの肌に合ったスキンケアルーティンをご提案します。</p>
+            <ol class="principles">
+              <li><div><span class="p-no">01 / RESEARCH</span><span class="p-en">Development &amp; Research</span></div><div><b>科学的根拠に基づく体系的な研究開発</b><p>皮膚科学の研究と成分ごとの効能資料をもとに精緻な処方を設計し、ヒト試験と皮膚刺激性試験を通じて、製品の効能と肌への刺激の程度を客観的に評価します。</p></div></li>
+              <li><div><span class="p-no">02 / FORMULATION</span><span class="p-en">Advanced Ingredient Synergy</span></div><div><b>肌悩みに合わせた精緻な成分配合とシナジー</b><p>肌悩みによって、必要な成分も変わります。各成分の特性と役割を科学的に分析し、互いに補い合う配合によって、肌に必要な効果を実現するフォーミュラを開発します。</p></div></li>
+              <li><div><span class="p-no">03 / PHILOSOPHY</span><span class="p-en">Balance</span></div><div><b>自然の原理と現代科学の調和</b><p>自然由来原料の価値を現代の皮膚科学と結びつけ、肌本来のすこやかなバランスを育み、自然なツヤを取り戻せるよう助けるスキンケアをお届けします。</p></div></li>
+            </ol>
           </div>
-          <div class="ceo-sign">
+        </div>
+      </section>
+
+      <!-- 4쪽 연혁 -->
+      <section id="history" class="rule-top">
+        <div class="wrap spread">
+          <figure class="spread-photo spread-photo--tall reveal"><img src="images/buyer/history-cream.jpg" alt="カルス リペア クリーム" width="900" height="1350" loading="lazy" /></figure>
+          <div class="spread-body reveal">
+            <span class="label">沿革</span>
+            <ol class="history-list">
+              <li><time class="num">2024.09</time><div><b>株式会社エゼル設立</b><span>大田</span></div></li>
+              <li><time class="num">2025</time><div><b>3品を韓国国内で発売</b><span>自社EC · NAVERスマートストア · Coupang</span></div></li>
+              <li><time class="num">2025</time><div><b>自社特許を出願</b><span>第 10-2025-0184979号</span></div></li>
+              <li><time class="num">2026.02</time><div><b>商標登録2件</b><span>ラエゼル · ドクターラエゼル</span></div></li>
+              <li><time class="num">2026.04</time><div><b>モンゴル第1次供給契約</b></div></li>
+              <li><time class="num">2026.06</time><div><b>ウランバートルでポップアップ販売イベント</b><span>大田創造経済革新センターと協力</span></div></li>
+              <li><time class="num">2026.08</time><div><b>モンゴル第2次供給契約</b></div></li>
+              <li><time class="num">2026.09</time><div><b>モンゴルのブランド企業と製品供給契約</b></div></li>
+              <li><time class="num">2026.11</time><div><b>日本のドン・キホーテ · ロフト入店予定</b></div></li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5쪽 루틴 -->
+      <section id="routine" class="rule-top">
+        <div class="wrap">
+          <span class="label">3 ステップ スローエイジング ルーティン</span>
+          <h2 class="routine-title">AWAKE • REPAIR • SHIELD</h2>
+          <p class="lead">エーデルワイス幹細胞と Derma-Clera™ 特許成分が、肌が自ら回復する力を目覚めさせます。</p>
+          <div class="routine-grid">
+            <article class="reveal">
+              <img src="images/buyer/soil-spicule.jpg" alt="シカ カプセル スピキュール アンプル" width="900" height="558" loading="lazy" />
+              <h3 class="step-head"><span class="step-tag">STEP 1</span>AWAKE</h3>
+              <p class="step-name">シカ カプセル スピキュール アンプル</p>
+              <p class="step-first">天然のマイクロニードルが肌を目覚めさせます。</p>
+              <p class="step-text">針ではなく、自然がつくった道。天然の海綿スピキュールが肌にマイクロチャネルを開き、有効成分の吸収を助けます。最初に塗ったときに感じるかすかな刺激感が肌を目覚めさせ、次のステップのケア効果を高めます。</p>
+            </article>
+            <article class="reveal">
+              <img src="images/buyer/soil-ampoule.jpg" alt="カルス リペア アンプル" width="900" height="558" loading="lazy" />
+              <h3 class="step-head"><span class="step-tag">STEP 2</span>REPAIR</h3>
+              <p class="step-name">カルス リペア アンプル</p>
+              <p class="step-first">アルプスから届いた植物幹細胞が、肌を集中ケアします。</p>
+              <p class="step-text">標高3,000mのエーデルワイス植物幹細胞由来成分が肌に活力を与え、9種のペプチドがハリとすこやかな肌コンディションを育みます。</p>
+            </article>
+            <article class="reveal">
+              <img src="images/buyer/soil-cream.jpg" alt="カルス リペア クリーム" width="900" height="558" loading="lazy" />
+              <h3 class="step-head"><span class="step-tag">STEP 3</span>SHIELD</h3>
+              <p class="step-name">カルス リペア クリーム</p>
+              <p class="step-first">長く続くうるおいで肌を守ります。</p>
+              <p class="step-text">Derma-Clera™ 特許成分が外部刺激から肌を心地よく守り、豊かなうるおいと栄養を与えます。2週目から、肌のハリとなめらかさが変わります。</p>
+            </article>
+          </div>
+          <p class="note">使用順序と頻度は公式の商品詳細ページに基づきます · スピキュールの特性上、チクチクすることがあります</p>
+        </div>
+      </section>
+
+      <!-- 6쪽 라인업 -->
+      <section id="lineup" class="rule-top">
+        <div class="wrap">
+          <div class="lineup-head">
             <div>
-              <div class="ceo-name">チョン・ヒョンジョン</div>
-              <div class="ceo-role">(株)エゼル 代表取締役 · 創業者</div>
+              <span class="label">ラインナップ</span>
+              <h2 class="h2">洗顔料 · アンプル · クリーム · 日焼け止め · マスク</h2>
+              <p class="lead">販売中 3品 · 発売予定 5品</p>
+            </div>
+            <div class="legend"><span class="tag tag--on">販売中</span><span class="tag">発売予定</span></div>
+          </div>
+          <div class="lineup-grid">
+            <article class="lineup-cell"><div class="lineup-top"><span>01 マスク</span><span class="tag">発売予定</span></div><img src="images/buyer/line-mask.jpg" alt="PDRN セミゲル マスク" width="524" height="280" loading="lazy" /><h3>PDRN セミゲル マスク</h3><p class="lineup-spec"><span>美白と保湿、ハリ強化</span><span>25mL × 10</span></p></article>
+            <article class="lineup-cell"><div class="lineup-top"><span>02 洗顔料</span><span class="tag">発売予定</span></div><img src="images/buyer/line-cleanser.jpg" alt="高麗人参ビタミン パウダークレンザー" width="524" height="280" loading="lazy" /><h3>高麗人参ビタミン パウダークレンザー</h3><p class="lineup-spec"><span>刺激なくバリアを強化する洗顔</span><span>50mL</span></p></article>
+            <article class="lineup-cell"><div class="lineup-top"><span>03 アンプル</span><span class="tag tag--on">販売中</span></div><img src="images/buyer/line-box-ampoule.jpg" alt="カルス リペア アンプル" width="524" height="280" loading="lazy" /><h3>カルス リペア アンプル</h3><p class="lineup-spec"><span>うるおいとハリ</span><span>30mL</span></p></article>
+            <article class="lineup-cell"><div class="lineup-top"><span>03 アンプル</span><span class="tag tag--on">販売中</span></div><img src="images/buyer/line-box-spicule.jpg" alt="シカ カプセル スピキュール アンプル" width="524" height="280" loading="lazy" /><h3>シカ カプセル スピキュール アンプル</h3><p class="lineup-spec"><span>なめらかなキメ</span><span>30mL</span></p></article>
+            <article class="lineup-cell"><div class="lineup-top"><span>03 アンプル</span><span class="tag">発売予定</span></div><img src="images/buyer/line-pdrn-core.jpg" alt="PDRN コア アンプル" width="524" height="280" loading="lazy" /><h3>PDRN コア アンプル</h3><p class="lineup-spec"><span>保湿とハリに集中</span><span>4mL × 6</span></p></article>
+            <article class="lineup-cell"><div class="lineup-top"><span>03 アンプル</span><span class="tag">発売予定</span></div><img src="images/buyer/line-mela-bright.jpg" alt="メラ ブライト アンプル" width="524" height="280" loading="lazy" /><h3>メラ ブライト アンプル</h3><p class="lineup-spec"><span>美白機能性 · 保湿</span><span>4mL × 6</span></p></article>
+            <article class="lineup-cell"><div class="lineup-top"><span>04 クリーム</span><span class="tag tag--on">販売中</span></div><img src="images/buyer/line-box-cream.jpg" alt="カルス リペア クリーム" width="524" height="280" loading="lazy" /><h3>カルス リペア クリーム</h3><p class="lineup-spec"><span>仕上げの保湿</span><span>50mL</span></p></article>
+            <article class="lineup-cell"><div class="lineup-top"><span>05 日焼け止め</span><span class="tag">発売予定</span></div><img src="images/buyer/line-sun.jpg" alt="日焼け止めクリーム" width="524" height="280" loading="lazy" /><h3>日焼け止めクリーム</h3><p class="lineup-spec"><span>強力な紫外線カット</span><span>SPF 50</span></p></article>
+          </div>
+          <p class="note">化粧箱はリニューアルデザイン案です (販売中の3品は現在のパッケージと異なります) · 発売予定製品の容量 · 処方 · パッケージは変更になる場合があります</p>
+        </div>
+      </section>
+
+      <!-- 7~9쪽 판매 중 3종 -->
+      <div id="products" class="rule-top">
+        <section class="product">
+          <div class="wrap spread">
+            <figure class="spread-photo spread-photo--tall reveal"><img src="images/buyer/p-spicule.jpg" alt="シカ カプセル スピキュール アンプル" width="900" height="1350" loading="lazy" /></figure>
+            <div class="reveal">
+              <p class="product-kicker"><span class="tag tag--on">販売中</span>ステップ1 · アンプル</p>
+              <h2>シカ カプセル スピキュール アンプル<small>30mL</small></h2>
+              <p class="product-tagline">スピキュールとシカ成分で始める、なめらかなキメケア</p>
+              <p class="product-desc">キメを整え、うるおいと鎮静を与えて、次のスキンケアの準備をする最初のステップです。</p>
+              <dl class="spec">
+                <div><dt>海綿由来スピキュール 5,000ppm</dt><dd>海綿由来の微細なスピキュールがキメのお手入れを助け、保湿成分も一緒に配合して、しっとりとした使用感をプラスします。</dd></div>
+                <div><dt>グリーンカプセル</dt><dd>保湿 · 鎮静成分を閉じ込め、肌にうるおいを与えるカプセル</dd></div>
+                <div><dt>Derma-Clera™<small>(Cynanchum atratum エキス配合)</small></dt><dd>Cynanchum atratum エキスを含む特許原料で、肌を心地よく整えるお手入れを助けます<br />特許 第 10-1768870号</dd></div>
+                <div><dt>ツボクサエキス5種</dt><dd>シカ由来の成分で、敏感になった肌を心地よくケア</dd></div>
+                <div><dt>パンテノール · ベタイン · アラントイン</dt><dd>水分補給と肌の鎮静で、心地よい肌コンディションをキープ</dd></div>
+                <div><dt>ヒアルロン酸11種</dt><dd>多彩なヒアルロン酸成分で、しっとりうるおう保湿ケア</dd></div>
+              </dl>
+              <div class="badges"><span class="tag">美白 · シワ改善 二重機能性 (韓国食品医薬品安全処に報告)</span></div>
+              <div class="fit"><b>こんな方におすすめです</b><p>ごわついたキメや乾燥が気になる方、なめらかな肌に仕上げたい方におすすめです。</p></div>
+              <div class="product-foot"><p class="note">2日に1回のご使用がおすすめ · ご使用時にチクチクすることがあります · 目元と口元は避けてください</p><a href="#contact" class="btn btn--ghost">サンプル依頼</a></div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="showcase" aria-label="LaEzer Callus Repair Ampoule">
-      <img class="showcase__img"
-           src="images/18961f80ca9765f05828022c689c21c4.png"
-           alt="LaEzer Callus Repair Ampoule texture" loading="lazy" decoding="async" />
-    </section>
-
-    <!-- ===== 4. Technology (3 USP) ===== -->
-    <section class="tech" id="tech">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow center">コア技術</span>
-          <h2 class="section-title">何を入れたか、<span class="title-accent">まずお伝えします</span></h2>
-          <p class="section-sub">特許番号と配合量をそのまま記しました</p>
-        </div>
-        <div class="tech-grid">
-          <div class="tech-card gold reveal">
-            <span class="tech-num">01</span>
-            <div class="tech-icon"><i class="fas fa-award"></i></div>
-            <h3>Derma-Clera™ 特許</h3>
-            <p>Cynanchum atratum エキスを含む特許原料で、肌をすこやかに整えるお手入れを助けます。</p>
-            <span class="tech-meta"><i class="fas fa-shield-halved"></i> 特許 第10-1768870号(韓国)</span>
-          </div>
-          <div class="tech-card reveal d1">
-            <span class="tech-num">02</span>
-            <div class="tech-icon"><i class="fas fa-bahai"></i></div>
-            <h3>天然スピキュール 5,000ppm</h3>
-            <p>天然の海綿由来の微細な針状成分が、肌に触れた瞬間に角質をやさしく
-              整え、有効成分を奥深くまで届けます。</p>
-            <span class="tech-meta"><i class="fas fa-arrow-down-long"></i> 5,000ppm 高含有スピキュール</span>
-          </div>
-          <div class="tech-card reveal d2">
-            <span class="tech-num">03</span>
-            <div class="tech-icon"><i class="fas fa-droplet"></i></div>
-            <h3>11種のヒアルロン酸</h3>
-            <p>高分子から低分子まで、さまざまな分子サイズのヒアルロン酸11種が、肌の表面から内側まで
-              うるおいをバランスよく満たし、乾燥を感じさせないしっとりとした肌コンディションを保ちます。</p>
-            <span class="tech-meta"><i class="fas fa-layer-group"></i> ヒアルロン酸11層のうるおい設計</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== 5. 3-Step Solution ===== -->
-    <section class="solution bg-mist" id="solution">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow center">AWAKE · REPAIR · SHIELD</span>
-          <h2 class="section-title">3ステップ <span class="title-accent"><span style="display:inline-block">スローエイジング</span> <span style="display:inline-block">ルーティン</span></span></h2>
-          <p class="section-sub">エーデルワイス幹細胞と Derma-Clera™ 特許成分が、肌が自らすこやかさを取り戻す力を目覚めさせます</p>
-        </div>
-        <figure class="solution-media reveal">
-          <img src="images/products-3set-cutout.png"
-               alt="LaEzer 3-step set" loading="lazy" decoding="async" />
-        </figure>
-
-        <div class="steps-flow">
-          <div class="step-flow-card reveal">
-            <div class="step-flow-num">1</div>
-            <span class="step-verb">AWAKE</span>
-            <h3>シカ カプセル スピキュール アンプル</h3>
-            <p>天然のマイクロニードルが肌を目覚めさせます。針ではなく、自然がつくった道。天然の海綿スピキュールが肌にマイクロチャネルを開き、有効成分の吸収を助けます。最初に塗ったときに感じるかすかな刺激感が肌を目覚めさせ、次のステップのケア効果を高めます。</p>
-            <i class="fas fa-chevron-right step-arrow"></i>
-          </div>
-          <div class="step-flow-card reveal d1">
-            <div class="step-flow-num">2</div>
-            <span class="step-verb">REPAIR</span>
-            <h3>カルス リペア アンプル</h3>
-            <p>アルプスから届いた植物幹細胞が、肌を集中ケアします。標高3,000mのエーデルワイス植物幹細胞由来成分が肌に活力を与え、9種のペプチドがハリとすこやかな肌コンディションを育みます。</p>
-            <i class="fas fa-chevron-right step-arrow"></i>
-          </div>
-          <div class="step-flow-card reveal d2">
-            <div class="step-flow-num">3</div>
-            <span class="step-verb">SHIELD</span>
-            <h3>カルス リペア クリーム</h3>
-            <p>長く続くうるおいで肌を守ります。Derma-Clera™ 特許成分が外部刺激から肌を心地よく守り、豊かなうるおいと栄養を与えます。2週目から、肌のハリとなめらかさが変わります。</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== 6. Products ===== -->
-    <section class="products" id="products">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow center">製品ラインナップ</span>
-          <h2 class="section-title">うるおいバリアを育てる<br /><span class="title-accent" style="display:inline-block">3ステップセット</span></h2>
-          <p class="section-sub">販売中の3品です。3品とも、美白 · シワ改善の二重機能性化粧品として韓国食品医薬品安全処に報告済みです</p>
-        </div>
-        <figure class="products-lead reveal">
-          <img src="images/detail-duo.jpg"
-               alt="LaEzer Callus Repair Cream and Ampoule" loading="lazy" decoding="async" />
-        </figure>
-
-        <div class="products-grid">
-          <!-- STEP 01 — CICA Spicule Ampoule -->
-          <div class="product-card reveal">
-            <div class="product-media">
-              <span class="product-step-tag">STEP 01 · アンプル</span>
-              <img src="images/products/LZ-001_cica-ampoule.png" alt="LaEzer シカ カプセル スピキュール アンプル" loading="lazy" />
+        </section>
+        <section class="product">
+          <div class="wrap spread">
+            <figure class="spread-photo spread-photo--tall reveal"><img src="images/buyer/p-ampoule.jpg" alt="カルス リペア アンプル" width="900" height="1350" loading="lazy" /></figure>
+            <div class="reveal">
+              <p class="product-kicker"><span class="tag tag--on">販売中</span>ステップ2 · アンプル</p>
+              <h2>カルス リペア アンプル<small>30mL</small></h2>
+              <p class="product-tagline">うるおいを深く満たし、ハリと生気をプラスする集中アンプル</p>
+              <p class="product-desc">エーデルワイスカルスと9種のペプチドを配合し、乾燥やハリ不足が気になる肌を集中ケアします。</p>
+              <dl class="spec">
+                <div><dt>エーデルワイスカルス培養エキス</dt><dd>エーデルワイス由来のカルス培養エキスが、肌に生気とうるおい感を与えます</dd></div>
+                <div><dt>ペプチド9種</dt><dd>多彩なペプチド成分で、ハリのあるキメを育みます</dd></div>
+                <div><dt>ツボクサエキス5種</dt><dd>シカ由来の成分で、敏感に傾いた肌を心地よくケア</dd></div>
+                <div><dt>ヒアルロン酸11種</dt><dd>多彩なヒアルロン酸成分が、肌に豊かなうるおい感を与えます</dd></div>
+                <div><dt>パンテノール · ベタイン</dt><dd>水分保持と肌のコンディショニングを助ける保湿成分</dd></div>
+                <div><dt>ナイアシンアミド · アデノシン</dt><dd>美白 · シワ改善の機能性成分で、肌トーンとシワを同時にケア</dd></div>
+              </dl>
+              <div class="badges"><span class="tag">美白 · シワ改善 二重機能性 (韓国食品医薬品安全処に報告)</span><span class="tag">ヴィーガン認証</span></div>
+              <div class="fit"><b>こんな方におすすめです</b><p>乾燥とハリ不足の両方が気になる方、しっとりとしたヴィーガンアンプルをお探しの方におすすめです。</p></div>
+              <div class="product-foot"><p class="note">スピキュール アンプルの次のステップで、顔全体にやさしくのばします</p><a href="#contact" class="btn btn--ghost">サンプル依頼</a></div>
             </div>
-            <div class="product-body">
-              <span class="product-role">スピキュールとシカ成分で始める、なめらかなキメケア</span>
-              <h3 class="product-name">シカ カプセル スピキュール アンプル</h3>
-              <span class="product-name-en">CICA Capsule Spicule Ampoule · 30ml</span>
-              <p class="product-desc">キメを整え、うるおいと鎮静を与えて、次のスキンケアの準備をする最初のステップです。
-                2日に1回のご使用がおすすめ · ご使用時にチクチクすることがあります · 目元と口元は避けてください。</p>
-              <div class="product-ingredients">
-                <span>スピキュール 5,000ppm</span><span>ツボクサ5種</span><span>Derma-Clera™</span><span>ヒアルロン酸11種</span>
+          </div>
+        </section>
+        <section class="product">
+          <div class="wrap spread">
+            <figure class="spread-photo spread-photo--tall reveal"><img src="images/buyer/p-cream.jpg" alt="カルス リペア クリーム" width="900" height="1350" loading="lazy" /></figure>
+            <div class="reveal">
+              <p class="product-kicker"><span class="tag tag--on">販売中</span>ステップ3 · クリーム</p>
+              <h2>カルス リペア クリーム<small>50mL</small></h2>
+              <p class="product-tagline">うるおいを包み込み、肌を心地よく守るバリア強化クリーム</p>
+              <p class="product-desc">エーデルワイスカルスと Derma-Clera™ を配合し、保湿 · 鎮静 · ハリのケアを仕上げます。</p>
+              <dl class="spec">
+                <div><dt>エーデルワイスカルス培養エキス</dt><dd>エーデルワイス由来のカルス培養エキスが、肌に生気とうるおい感を与えます</dd></div>
+                <div><dt>Derma-Clera™<small>(Cynanchum atratum エキス配合)</small></dt><dd>Cynanchum atratum エキスを含む特許原料で、肌を心地よく整えるお手入れを助けます<br />特許 第 10-1768870号</dd></div>
+                <div><dt>ペプチド9種</dt><dd>ペプチド成分でハリのあるキメを育むケア</dd></div>
+                <div><dt>ツボクサエキス5種</dt><dd>シカ由来の成分で、敏感に傾いた肌を心地よくケア</dd></div>
+                <div><dt>ヒアルロン酸11種 · パンテノール</dt><dd>ヒアルロン酸とパンテノールが、しっとりとしたうるおい感を与えます</dd></div>
+                <div><dt>ベタイン · アラントイン</dt><dd>水分保持と心地よい肌のコンディショニングを助けます</dd></div>
+                <div><dt>ナイアシンアミド · アデノシン</dt><dd>美白 · シワ改善の機能性成分で、肌トーンとシワを同時にケア</dd></div>
+              </dl>
+              <div class="badges"><span class="tag">美白 · シワ改善 二重機能性 (韓国食品医薬品安全処に報告)</span><span class="tag">ヴィーガン認証</span></div>
+              <div class="fit"><b>こんな方におすすめです</b><p>乾燥して敏感な肌にうるおいの膜を重ね、しっとりとした仕上がりを求める方におすすめです。</p></div>
+              <div class="product-foot"><p class="note">カルス リペア アンプルの後にお使いください</p><a href="#contact" class="btn btn--ghost">サンプル依頼</a></div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- 10쪽 출시 예정 앰플 -->
+      <section id="upcoming" class="rule-top">
+        <div class="wrap">
+          <span class="label">発売予定</span>
+          <h2 class="h2">PDRN コア アンプル · メラ ブライト アンプル</h2>
+          <p class="lead">お悩みに合わせて選べる4mLバイアル6本キット · サロンケアやギフトセットによく合います</p>
+          <div class="compare">
+            <div class="compare-imgs">
+              <img src="images/buyer/line-pdrn-core.jpg" alt="PDRN コア アンプル" width="524" height="280" loading="lazy" />
+              <img src="images/buyer/line-mela-bright.jpg" alt="メラ ブライト アンプル" width="524" height="280" loading="lazy" />
+            </div>
+            <table class="ctable">
+              <thead><tr><th scope="col"></th><th scope="col">PDRN コア アンプル</th><th scope="col">メラ ブライト アンプル</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">コンセプト</th><td>肌の基本を満たす保湿、ハリのある肌のためのコアケア</td><td>くすみがちな肌トーンやシミの悩みをケアし、澄んだ均一な肌色を育むブライトニングアンプル</td></tr>
+                <tr><th scope="row">こんなお悩みに</th><td>乾燥、かさつき、ごわついたキメ、ハリ</td><td>目立つシミ · くすみ · 不均一な肌トーン</td></tr>
+                <tr><th scope="row">ケアの方向</th><td><strong>保湿とハリ</strong></td><td><strong>美白集中ケア · 肌トーンの均一化 · 水分保湿</strong></td></tr>
+                <tr><th scope="row">主な成分</th><td>パンテノール 10% · PDRN 2%<br>ペプチド9種</td><td>ナイアシンアミド 10% · トラネキサム酸 3%<br>パンテノール 10% · PDRN 0.3% · ペプチド9種</td></tr>
+                <tr><th scope="row">内容</th><td>4mL × 6本</td><td>4mL × 6本</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="note">成分の配合量は開発処方に基づくもので、発売時に変更になる場合があります · 製品画像はデザイン案です</p>
+        </div>
+      </section>
+
+      <!-- 11쪽 출시 예정 3종 -->
+      <section class="rule-top">
+        <div class="wrap">
+          <span class="label">発売予定</span>
+          <h2 class="h2">マスク · 洗顔料 · 日焼け止め</h2>
+          <p class="lead">洗顔から集中ケア、仕上げの紫外線対策まで、ラエゼルのルーティンを広げていきます</p>
+          <div class="upcoming">
+            <article class="up-row reveal">
+              <img src="images/buyer/line-mask.jpg" alt="PDRN セミゲル マスク" width="524" height="280" loading="lazy" />
+              <div>
+                <div class="up-head"><h3>PDRN セミゲル マスク</h3><span>25mL × 10枚</span></div>
+                <p class="up-tag">ローズウォーターとPDRNを配合し、肌にしっとり密着するセミゲルタイプのシートマスク</p>
+                <div class="up-cols">
+                  <div><b>ローズウォーター 5% · PDRN</b><p>乾燥して疲れた肌にうるおいを満たし、しっとり心地よく整えます</p></div>
+                  <div><b>ナイアシンアミド 5% · アデノシン</b><p>美白 · シワ改善 二重機能性で、澄んだなめらかなキメを助けます</p></div>
+                  <div><b>密着セミゲルシート</b><p>10~20分間、顔にやさしく密着し、生き生きとしたハリのある肌に整えます</p></div>
+                </div>
               </div>
-              <div class="product-foot">
-                <a href="#buyer" class="btn btn-primary" style="padding:11px 18px;font-size:.9rem;width:100%">サンプルを依頼</a>
+            </article>
+            <article class="up-row reveal">
+              <img src="images/buyer/line-cleanser.jpg" alt="高麗人参ビタミン パウダークレンザー" width="524" height="280" loading="lazy" />
+              <div>
+                <div class="up-head"><h3>高麗人参ビタミン パウダークレンザー</h3><span>50mL</span></div>
+                <p class="up-tag">滋養薬のような洗顔、高麗人参ビタミン セラピーのデイリーパウダークレンザー</p>
+                <div class="up-cols">
+                  <div><b>高麗人参 · ビタミン</b><p>くすんだ肌に生気を与え、澄んだすっきりとした肌に整えます</p></div>
+                  <div><b>ディープクレンジング微細パウダー</b><p>手のひらで水と混ざってもっちりとした泡になり、古い角質と老廃物をやさしく洗い流します</p></div>
+                  <div><b>化学成分の界面活性剤 Zero · 低刺激</b><p>100% 自然由来の酵素で洗顔後のつっぱりを抑え、肌のバリアを守るので、毎日負担なくお使いいただけます</p></div>
+                </div>
+              </div>
+            </article>
+            <article class="up-row reveal">
+              <img src="images/buyer/line-sun.jpg" alt="日焼け止めクリーム" width="524" height="280" loading="lazy" />
+              <div>
+                <div class="up-head"><h3>日焼け止めクリーム</h3><span>SPF 50</span></div>
+                <p class="up-tag">強力な紫外線カットでラエゼルのルーティンを仕上げるデイリー日焼け止め</p>
+                <div class="up-cols">
+                  <div><b>SPF 50 紫外線カット</b><p>日常や屋外の強い紫外線から肌をしっかり守ります</p></div>
+                  <div><b>軽くてさっぱりとした使用感</b><p>なめらかにのび、べたつきが少ないので、毎日心地よくお使いいただけます</p></div>
+                  <div><b>保湿 · メイクアップベース</b><p>しっとりと仕上がり、メイク前のベースとしてもお使いいただけます</p></div>
+                </div>
+              </div>
+            </article>
+          </div>
+          <p class="note">発売予定製品の成分 · 容量 · パッケージは、開発の過程で変更になる場合があります · 製品画像はデザイン案です</p>
+        </div>
+      </section>
+
+      <!-- 12쪽 인체적용시험 -->
+      <section id="results" class="results">
+        <div class="results-grid">
+          <div class="results-body">
+            <span class="label">ヒト試験</span>
+            <h2 class="h2">ヒト試験の結果</h2>
+            <p class="lead">3品を1回使用した後のヒト試験 · ㈱ヒューマン皮膚臨床試験センター</p>
+            <p class="big"><span class="num">138.10<small>%</small></span><span>保湿改善率</span></p>
+            <div class="trio">
+              <div><span class="num">20.01%</span><span>毛穴改善率</span></div>
+              <div><span class="num">7.40%</span><span>キメ改善率</span></div>
+              <div><span class="num">8.26%</span><span>肌鎮静改善率</span></div>
+            </div>
+            <p class="results-line">使用者満足度 8項目 100% · ヒト一次刺激性試験「非刺激」判定</p>
+            <p class="note">試験機関 ㈱ヒューマン皮膚臨床試験センター · 3品を1回使用後に測定 · 試験成績書の原本は商談の際にご覧いただけます · 結果には個人差があります</p>
+          </div>
+          <figure class="results-photo"><img src="images/buyer/results-spicule.jpg" alt="シカ カプセル スピキュール アンプル" width="900" height="1350" loading="lazy" /></figure>
+        </div>
+      </section>
+      <section class="proof">
+        <div class="wrap">
+          <figure>
+            <img src="images/005.png" alt="3品を1回使用する前後の肌測定写真。引き締まった毛穴 20.01%、なめらかなキメ 7.40%、しっとり保湿 138.10%、肌鎮静効果 8.26%" width="1408" height="1094" loading="lazy" />
+            <figcaption>使用前 · 1回使用後 · 試験機関 ㈱ヒューマン皮膚臨床試験センター</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- 성분 (공식 상세페이지) -->
+      <section id="ingredients" class="rule-top">
+        <div class="wrap">
+          <span class="label">成分</span>
+          <h2 class="h2">ラエゼル カルス リペア ラインの成分</h2>
+          <dl class="ing">
+            <div><dt>エーデルワイス</dt><dd>ビタミンCより2倍強い抗酸化。エーデルワイス植物幹細胞エキスが、乾燥して敏感になった肌に心地よいうるおいを届けます。</dd><dd class="ing-meta">肌の時間を変えるエーデルワイス</dd></div>
+            <div><dt>9種のペプチド</dt><dd>ペプチドブースティングで、引き締まった内側のハリをラッピング。わずかな刺激でも乱れやすい肌バランスをしっかり守り抜き、崩れないコンディションケアを助けます。</dd><dd class="ing-meta">スローエイジングの核心成分</dd></div>
+            <div><dt>Derma-Clera™</dt><dd>Cynanchum atratum から得た植物由来の特許成分が、刺激で敏感になった肌を心地よく鎮静し、崩れた肌バランスをやさしくケアします。</dd><dd class="ing-meta">特許 第 10-1768870号</dd></div>
+            <div><dt>ヒアルロン酸11種</dt><dd>高分子から低分子まで、さまざまな分子サイズのヒアルロン酸11種が、肌の表面から内側までうるおいをバランスよく満たし、乾燥を感じさせないしっとりとした肌コンディションを保ちます。</dd><dd class="ing-meta">ヒアルロン酸11層のうるおい設計</dd></div>
+            <div><dt>スピキュール 5,000ppm</dt><dd>天然の海綿由来の微細な針状成分が、肌に触れた瞬間に角質をやさしく整え、有効成分を奥深くまで届けます。</dd><dd class="ing-meta">5,000ppm 高含有スピキュール</dd></div>
+          </dl>
+          <p class="note">* 上記の内容は、原料の特性に限ったものです。</p>
+        </div>
+      </section>
+
+      <!-- 영상 -->
+      <section id="video" class="rule-top">
+        <div class="wrap video-grid">
+          <div class="video-frame">
+            <iframe src="https://www.youtube.com/embed/kkYFzxSf-iE?rel=0" title="ラエゼル紹介映像" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <div>
+            <span class="label">韓国のTV番組で紹介</span>
+            <p class="quote">「一度使っただけで、すぐに実感できます。内側から満ちてくるうるおい感に本当に驚きました!」</p>
+            <p class="quote-by">女優 パク・ハソン</p>
+            <p class="note">※ 個人の使用感です。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 13쪽 인증서 -->
+      <section id="certs" class="rule-top">
+        <div class="wrap">
+          <span class="label">認証 · 書類</span>
+          <h2 class="h2">認証書</h2>
+          <p class="lead">公式の認証と試験で確認した、ラエゼルの品質と安全性です</p>
+          <div class="certs-grid">
+            <figure class="cert"><img src="images/001.png" alt="ヴィーガン認証" loading="lazy" /><h3>ヴィーガン認証</h3><p>植物性原料のみを使用し、公式のヴィーガン認証を取得しました</p></figure>
+            <figure class="cert"><img src="images/003.png" alt="特許成分" loading="lazy" /><h3>特許成分</h3><p>Cynanchum atratum から得た植物由来の特許成分 Derma-Clera™</p></figure>
+            <figure class="cert"><img src="images/004.png" alt="美白 · シワ改善 二重機能性" loading="lazy" /><h3>美白 · シワ改善 二重機能性</h3><p>美白とシワ改善の二重機能性を備えた製品です</p></figure>
+            <figure class="cert"><img src="images/002.png" alt="敏感肌適合性テスト" loading="lazy" /><h3>敏感肌適合性テスト</h3><p>敏感肌を対象としたテストを終えた、敏感肌に無刺激の製品です</p></figure>
+          </div>
+          <p class="note">認証書 · 試験成績書の原本は商談の際にご覧いただけます</p>
+        </div>
+      </section>
+
+      <!-- 사용법 (공식 상세페이지) -->
+      <section id="howto" class="rule-top">
+        <div class="wrap">
+          <span class="label">How to use</span>
+          <h2 class="h2">肌本来の力を満たす、ラエゼルの3ステップ リペアルーティン</h2>
+          <div class="howto-grid">
+            <div><h3>STEP 01 · シカ カプセル スピキュール アンプル</h3><ol><li>洗顔後、化粧水でキメを整えてから、「シカ カプセル スピキュール アンプル」を適量塗ってください。</li><li>目元と口元を除いた顔全体に、やさしくローリングするようにのばしてください。</li><li>キメの流れに沿ってやさしく塗った後、指でぐっと押さえるようにして仕上げてください。</li></ol><p class="note">* シカ カプセル スピキュール アンプルは、2日に1回のご使用をおすすめします。(ただし、肌タイプに合わせて使用間隔をあけてお使いいただけます。)</p></div>
+            <div><h3>STEP 02 · カルス リペア アンプル</h3><ol><li>洗顔後、化粧水でキメを整えてから、カルス リペア アンプルを適量塗ってください。</li><li>顔全体に、やさしくローリングするようにのばしてください。</li></ol></div>
+            <div><h3>STEP 03 · カルス リペア クリーム</h3><ol><li>洗顔後、基礎ケアの最後のステップで適量を取り、薄くのばしてから、軽くたたくようにしてなじませてください。</li><li>1度目がなじんだ後、2度目を重ねてなじませると、インナードライの心配なく、よりしっとりとした状態が続きます。</li></ol></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 14쪽 연락처 -->
+      <section id="contact" class="rule-top">
+        <div class="wrap contact-grid">
+          <div>
+            <span class="label">ご連絡先</span>
+            <h2 class="h2">サンプルのご依頼とご連絡先</h2>
+            <dl class="contact-table">
+              <div><dt>会社</dt><dd>株式会社エゼル (Ezer Co., Ltd)</dd></div>
+              <div><dt>担当</dt><dd>代表 チョン・ヒョンジョン</dd></div>
+              <div><dt>メール</dt><dd><a href="mailto:laezer@naver.com">laezer@naver.com</a></dd></div>
+              <div><dt>住所</dt><dd>大田広域市 大徳区 大話路106番ギル 66, 1018号</dd></div>
+            </dl>
+            <p class="contact-slogan">TIMELESS RADIANCE AND BEAUTY</p>
+          </div>
+          <form class="buyer-form" name="buyer-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks-buyer-jp.html">
+            <input type="hidden" name="form-name" value="buyer-inquiry" />
+            <p class="buyer-form__hp"><label>この欄は空のままにしてください <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
+            <p class="buyer-form__intro">サンプルやお取引条件が必要でしたら、下記にご記入ください。1営業日以内にメールでご返信します。</p>
+            <div class="buyer-form__grid">
+              <div class="field"><label for="bf-company">会社名<span class="req">必須</span></label><input id="bf-company" name="회사명" type="text" required autocomplete="organization" /></div>
+              <div class="field"><label for="bf-name">ご担当者名<span class="req">必須</span></label><input id="bf-name" name="담당자명" type="text" required autocomplete="name" /></div>
+              <div class="field"><label for="bf-email">メールアドレス<span class="req">必須</span></label><input id="bf-email" name="이메일" type="email" required inputmode="email" autocomplete="email" spellcheck="false" /></div>
+              <div class="field"><label for="bf-phone">電話番号<span class="opt">任意</span></label><input id="bf-phone" name="전화번호" type="tel" inputmode="tel" autocomplete="tel" placeholder="国番号を含む" /></div>
+              <div class="field"><label for="bf-country">国 · 地域<span class="req">必須</span></label><input id="bf-country" name="국가" type="text" required autocomplete="country-name" placeholder="例: モンゴル、日本、ウズベキスタン" /></div>
+              <div class="field"><label for="bf-interest">ご関心のある製品<span class="opt">任意</span></label>
+                <select id="bf-interest" name="관심품목">
+                  <option value="">お選びください</option>
+                  <option value="3단계 세트 전체">販売中の3品すべて</option>
+                  <option value="시카 캡슐 스피큘 앰플">シカ カプセル スピキュール アンプル</option>
+                  <option value="캘러스 리페어 앰플">カルス リペア アンプル</option>
+                  <option value="캘러스 리페어 크림">カルス リペア クリーム</option>
+                  <option value="출시 예정 제품">発売予定の製品</option>
+                  <option value="OEM · ODM 문의">OEM · ODM のお問い合わせ</option>
+                  <option value="아직 정하지 않음">まだ決めていません</option>
+                </select>
               </div>
             </div>
-          </div>
-
-          <!-- STEP 02 — Callus Repair Ampoule -->
-          <div class="product-card reveal d1">
-            <div class="product-media">
-              <span class="product-step-tag">STEP 02 · アンプル</span>
-              <img src="images/products/LZ-002_peptide-ampoule.png" alt="LaEzer カルス リペア アンプル" loading="lazy" />
-            </div>
-            <div class="product-body">
-              <span class="product-role">うるおいを深く満たし、ハリと生気をプラスする集中アンプル</span>
-              <h3 class="product-name">カルス リペア アンプル</h3>
-              <span class="product-name-en">Callus Repair Ampoule · 30ml</span>
-              <p class="product-desc">エーデルワイスカルスと9種のペプチドを配合し、乾燥やハリ不足が気になる肌を集中ケアします。
-                スピキュール アンプルの次のステップで、顔全体にやさしくのばします。</p>
-              <div class="product-ingredients">
-                <span>エーデルワイスカルス</span><span>ペプチド9種</span><span>ヒアルロン酸11種</span><span>ヴィーガン認証</span>
-              </div>
-              <div class="product-foot">
-                <a href="#buyer" class="btn btn-primary" style="padding:11px 18px;font-size:.9rem;width:100%">サンプルを依頼</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- STEP 03 — Callus Repair Cream -->
-          <div class="product-card reveal d2">
-            <div class="product-media">
-              <span class="product-step-tag">STEP 03 · クリーム</span>
-              <img src="images/products/LZ-003_callus-cream.png" alt="LaEzer カルス リペア クリーム" loading="lazy" />
-            </div>
-            <div class="product-body">
-              <span class="product-role">うるおいを包み込み、肌を心地よく守るバリア強化クリーム</span>
-              <h3 class="product-name">カルス リペア クリーム</h3>
-              <span class="product-name-en">Callus Repair Cream · 50ml</span>
-              <p class="product-desc">エーデルワイスカルスと Derma-Clera™ を配合し、保湿 · 鎮静 · ハリのケアを仕上げます。
-                カルス リペア アンプルの後にお使いください。</p>
-              <div class="product-ingredients">
-                <span>エーデルワイスカルス</span><span>Derma-Clera™</span><span>ペプチド9種</span><span>ヴィーガン認証</span>
-              </div>
-              <div class="product-foot">
-                <a href="#buyer" class="btn btn-primary" style="padding:11px 18px;font-size:.9rem;width:100%">サンプルを依頼</a>
-              </div>
-            </div>
-          </div>
+            <div class="field field--full"><label for="bf-message">お問い合わせ内容<span class="opt">任意</span></label><textarea id="bf-message" name="문의내용" rows="3" placeholder="流通チャネル、想定数量、スケジュール"></textarea></div>
+            <label class="buyer-form__consent"><input type="checkbox" name="개인정보동의" value="동의" required /><span>お問い合わせへのご返信のため、会社名・ご担当者名・ご連絡先をお預かりし、お問い合わせ終了後3年間保管したのち破棄します。ご同意いただかなくても構いませんが、その場合はご返信が難しくなります。</span></label>
+            <button type="submit" class="btn">サンプル依頼を送信</button>
+          </form>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ===== 6-1. Upcoming lineup ===== -->
-    <section class="lineup bg-mist" id="lineup">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow center">発売予定</span>
-          <h2 class="section-title">これから登場する<span class="title-accent">5品</span></h2>
-          <p class="section-sub">洗顔から集中ケア、仕上げの紫外線対策まで、ラエゼルのルーティンを広げていきます</p>
+      <section class="retail">
+        <div class="wrap">
+          <span>韓国国内での販売: 自社EC · NAVERスマートストア · Coupang</span>
+          <span><a href="https://laezer.co.kr" target="_blank" rel="noopener">laezer.co.kr</a><a href="https://smartstore.naver.com/laezer" target="_blank" rel="noopener">smartstore.naver.com/laezer</a></span>
         </div>
-        <div class="lineup-grid">
-          <article class="lineup-card reveal">
-            <span class="lineup-tag">マスク · 25mL × 10枚</span>
-            <h3>PDRN セミゲル マスク</h3>
-            <p>ローズウォーターとPDRNを配合し、肌にしっとり密着するセミゲルタイプのシートマスク</p>
-            <span class="lineup-meta">ローズウォーター 5% · PDRN · ナイアシンアミド 5% · アデノシン</span>
-          </article>
-          <article class="lineup-card reveal">
-            <span class="lineup-tag">洗顔料 · 50mL</span>
-            <h3>高麗人参ビタミン パウダークレンザー</h3>
-            <p>滋養薬のような洗顔、高麗人参ビタミン セラピーのデイリーパウダー洗顔料</p>
-            <span class="lineup-meta">高麗人参 · ビタミン · 化学成分の界面活性剤 Zero · 100% 自然由来酵素</span>
-          </article>
-          <article class="lineup-card reveal">
-            <span class="lineup-tag">アンプル · 4mL × 6本</span>
-            <h3>PDRN コア アンプル</h3>
-            <p>肌の基本を満たす保湿、ハリのある肌のためのコアケア</p>
-            <span class="lineup-meta">パンテノール 10% · PDRN 2% · ペプチド9種</span>
-          </article>
-          <article class="lineup-card reveal">
-            <span class="lineup-tag">アンプル · 4mL × 6本</span>
-            <h3>メラ ブライト アンプル</h3>
-            <p>くすみがちな肌トーンやシミの悩みをケアし、澄んだ均一な肌色を育むブライトニングアンプル</p>
-            <span class="lineup-meta">ナイアシンアミド 10% · トラネキサム酸 3% · パンテノール 10% · PDRN 0.3% · ペプチド9種</span>
-          </article>
-          <article class="lineup-card reveal">
-            <span class="lineup-tag">日焼け止め · SPF 50</span>
-            <h3>日焼け止めクリーム</h3>
-            <p>強力な紫外線カットでラエゼルのルーティンを仕上げるデイリー日焼け止め</p>
-            <span class="lineup-meta">SPF 50 紫外線カット</span>
-          </article>
-        </div>
-        <p class="results-note">※ 発売予定製品の成分 · 容量 · パッケージは、開発の過程で変更になる場合があります。成分の配合量は開発処方に基づくものです。</p>
-      </div>
-    </section>
+      </section>
+    </main>
 
-    <!-- ===== 7. Clinical Results ===== -->
-    <section class="results bg-ivory" id="results">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow center">ヒト試験</span>
-          <h2 class="section-title">ヒトの肌で<span class="title-accent">確認した結果</span></h2>
-          <p class="section-sub">㈱ヒューマン皮膚臨床試験センターにて、3品を1回使用した後に測定した結果です</p>
-        </div>
-        <div class="results-grid results-grid--4">
-          <div class="result-card reveal">
-            <div class="result-icon"><i class="fas fa-tint"></i></div>
-            <div class="result-number">138.10%</div>
-            <h3 class="result-title">保湿改善率</h3>
-            <p class="result-desc">3品を1回使用後に測定</p>
-          </div>
-          <div class="result-card reveal d1">
-            <div class="result-icon"><i class="fas fa-compress"></i></div>
-            <div class="result-number">20.01%</div>
-            <h3 class="result-title">毛穴改善率</h3>
-            <p class="result-desc">3品を1回使用後に測定</p>
-          </div>
-          <div class="result-card reveal d2">
-            <div class="result-icon"><i class="fas fa-leaf"></i></div>
-            <div class="result-number">8.26%</div>
-            <h3 class="result-title">肌鎮静改善率</h3>
-            <p class="result-desc">3品を1回使用後に測定</p>
-          </div>
-          <div class="result-card reveal d3">
-            <div class="result-icon"><i class="fas fa-gem"></i></div>
-            <div class="result-number">7.40%</div>
-            <h3 class="result-title">キメ改善率</h3>
-            <p class="result-desc">3品を1回使用後に測定</p>
-          </div>
-        </div>
-        <figure class="proof-figure reveal">
-          <img src="images/005.png"
-               alt="LaEzer 3-step routine: before and after skin measurement"
-               loading="lazy" decoding="async" />
-        </figure>
-
-        <p class="results-note">※1 試験機関 ㈱ヒューマン皮膚臨床試験センター · 3品を1回使用後に測定 · 使用者満足度 8項目 100% · ヒト一次刺激性試験「非刺激」判定 · 試験成績書の原本は商談の際にご覧いただけます · 結果には個人差があります</p>
-      </div>
-    </section>
-
-    <!-- ===== 8. Ingredients ===== -->
-    <section class="ingredients" id="ingredients">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow center">成分</span>
-          <h2 class="section-title">信頼できる<span class="title-accent">成分だけを</span></h2>
-          <p class="section-sub">以下の内容は、原料の特性に限ったものです</p>
-        </div>
-
-        <figure class="ing-lead reveal">
-          <img src="images/f1b7e4ceee5b4d438129fa5c83a7d80d.jpg" alt="LaEzer Callus Repair Ampoule"
-               loading="lazy" decoding="async" />
-        </figure>
-        <div class="ing-grid">
-          <div class="ing-card reveal">
-            <div class="ing-icon"><img src="images/ing_edelweiss.png" alt="エーデルワイス" /></div>
-            <h3>植物幹細胞</h3>
-            <p>ビタミンCより2倍強い抗酸化。エーデルワイス植物幹細胞エキスが、乾燥して敏感になった肌に心地よいうるおいを届けます。</p>
-            <span class="ing-tag">9種のペプチドと共に</span>
-          </div>
-          <div class="ing-card reveal d1">
-            <div class="ing-icon"><img src="images/ing_hyaluronic.png" alt="ヒアルロン酸" /></div>
-            <h3>11種のヒアルロン酸</h3>
-            <p>多彩なヒアルロン酸成分で、しっとりうるおう保湿ケア。高分子から低分子までヒアルロン酸11種が、肌の表面から内側までうるおいをバランスよく満たします。</p>
-            <span class="ing-tag">保湿改善率 138.10% ※1</span>
-          </div>
-          <div class="ing-card reveal d2">
-            <div class="ing-icon"><img src="images/ing_dermaclera.png" alt="Derma-Clera" /></div>
-            <h3>Derma-Clera™ (特許)</h3>
-            <p>Cynanchum atratum から得た植物由来の特許成分が、刺激で敏感になった肌を心地よく鎮静し、崩れた肌バランスをやさしくケアします。</p>
-            <span class="ing-tag">特許 第10-1768870号(韓国)</span>
-          </div>
-          <div class="ing-card reveal d3">
-            <div class="ing-icon"><img src="images/ing_cica.png" alt="CICA" /></div>
-            <h3>整肌成分</h3>
-            <p>ツボクサエキス5種はシカ由来の成分で、敏感になった肌を心地よくケアします。パンテノール · ベタイン · アラントインは、水分補給と肌の鎮静によって、心地よい肌コンディションを保ちます。</p>
-            <span class="ing-tag">敏感肌パッチテスト済み ※2</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== 9. How to Use ===== -->
-    <section class="howto bg-cream" id="howto">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow center">使い方</span>
-          <h2 class="section-title">朝 · 夜の<span class="title-accent">お手入れルーティン</span></h2>
-          <p class="section-sub">アンプルとクリームを一緒に使うことで、より心地よい仕上がりに</p>
-        </div>
-        <div class="howto-grid">
-          <div class="routine-card routine-am reveal">
-            <div class="routine-head">
-              <span class="ico"><i class="fas fa-sun"></i></span>
-              <div><h3>朝のお手入れ</h3><small>軽やかに、すっとなじむ</small></div>
-            </div>
-            <div class="routine-steps">
-              <div class="routine-step"><span class="n">1</span><div><b>洗顔と化粧水</b><p>顔を洗い、化粧水で肌を整えます。</p></div></div>
-              <div class="routine-step"><span class="n">2</span><div><b>カルス アンプル</b><p>うるおいを与えます。すっとなじんでツヤを残します。</p></div></div>
-              <div class="routine-step"><span class="n">3</span><div><b>クリーム (薄く)</b><p>薄くのばして、うるおいを閉じ込めます。</p></div></div>
-              <div class="routine-step"><span class="n">4</span><div><b>日焼け止め</b><p>クリームがなじんだ後に重ねます。</p></div></div>
-            </div>
-            <div class="routine-tip"><i class="fas fa-lightbulb"></i><span>朝は薄くのばし、なじんだ後に日焼け止めを重ねてください。</span></div>
-          </div>
-
-          <div class="routine-card routine-pm reveal d1">
-            <div class="routine-head">
-              <span class="ico"><i class="fas fa-moon"></i></span>
-              <div><h3>夜のお手入れ</h3><small>じっくり集中ケア</small></div>
-            </div>
-            <div class="routine-steps">
-              <div class="routine-step"><span class="n">1</span><div><b>洗顔と化粧水</b><p>一日の汚れを落とし、肌を整えます。</p></div></div>
-              <div class="routine-step"><span class="n">2</span><div><b>シカ スピキュール アンプル (2日に1回)</b><p>キメを整えます。チクチク感じることがあるため、目元と口元は避けてください。</p></div></div>
-              <div class="routine-step"><span class="n">3</span><div><b>カルス アンプル (たっぷり)</b><p>たっぷりなじませ、うるおいとハリのケアに集中します。</p></div></div>
-              <div class="routine-step"><span class="n">4</span><div><b>クリーム (たっぷり)</b><p>夜の間うるおいを閉じ込め、乾燥から肌を守ります。</p></div></div>
-            </div>
-            <div class="routine-tip"><i class="fas fa-lightbulb"></i><span>寝る前にたっぷり塗ると、朝までしっとり感が続きます。</span></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== 10. Certifications ===== -->
-    <section class="certs" id="certs">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow center">認証と検証</span>
-          <h2 class="section-title">書類で<span class="title-accent">ご確認いただけます</span></h2>
-          <p class="section-sub">認証書と試験成績書の原本は、商談の際にご覧いただけます</p>
-        </div>
-        <div class="cert-grid">
-          <div class="cert-card reveal">
-            <div class="cert-visual"><img src="images/001.png" alt="ヴィーガン認証" /></div>
-            <div class="cert-body"><h4>ヴィーガン認証</h4><p>植物性原料のみを使用し、公式のヴィーガン認証を取得しました</p></div>
-          </div>
-          <div class="cert-card reveal d1">
-            <div class="cert-visual"><img src="images/002.png" alt="敏感肌テスト成績書" /></div>
-            <div class="cert-body"><h4>敏感肌適合性テスト</h4><p>敏感肌を対象としたテストを終えた、敏感肌に無刺激の製品です ※2</p></div>
-          </div>
-          <div class="cert-card reveal d2">
-            <div class="cert-visual"><img src="images/003.png" alt="特許証" /></div>
-            <div class="cert-body"><h4>特許成分</h4><p>Cynanchum atratum から得た植物由来の特許成分 Derma-Clera™ · 特許 第10-1768870号(韓国)</p></div>
-          </div>
-          <div class="cert-card reveal d3">
-            <div class="cert-visual"><img src="images/004.png" alt="機能性化粧品 審査除外品目報告書" /></div>
-            <div class="cert-body"><h4>美白 · シワ改善 二重機能性</h4><p>美白とシワ改善の二重機能性を備えた製品です(韓国食品医薬品安全処に報告)</p></div>
-          </div>
-        </div>
-        <p class="results-note" style="margin-top:24px">※2 すべての方に肌トラブルが起こらないというわけではありません。</p>
-      </div>
-    </section>
-
-    <!-- ===== 12. Buyer inquiry ===== -->
-    <section class="buyer" id="buyer">
-      <div class="container container--narrow">
-        <div class="section-head reveal">
-          <span class="eyebrow center">サンプルのご依頼とご連絡先</span>
-          <h2 class="section-title">バイヤー様のお問い合わせ</h2>
-          <p class="section-sub">
-            販売・輸入・独占販売をご検討中でしたら、ご連絡先をお送りください。<br />サンプルと会社案内をご用意し、1営業日以内にご返信します。
-          </p>
-        </div>
-
-
-        <div class="buyer-fit reveal">
-          <p class="buyer-fit__title">こうした企業様を探しています</p>
-          <ul class="buyer-fit__list">
-            <li>各市場で化粧品の流通網をお持ちの輸入企業</li>
-            <li>ダーマコスメ・スキンケアを扱う販売代理店、専門小売店</li>
-            <li>OEM / ODM で自社ブランドを準備されている企業</li>
-          </ul>
-          <ul class="buyer-fit__trust" aria-label="認証">
-            <li>ヴィーガン認証</li>
-            <li>美白 · シワ改善 二重機能性(韓国)</li>
-            <li>ヒト試験</li>
-            <li>特許 10-1768870</li>
-          </ul>
-        </div>
-
-        <form
-          class="buyer-form reveal"
-          name="buyer-inquiry"
-          method="POST"
-          data-netlify="true"
-          netlify-honeypot="bot-field"
-          action="/thanks-buyer-jp.html">
-          <input type="hidden" name="form-name" value="buyer-inquiry" />
-          <p class="buyer-form__hp">
-            <label>この欄は空のままにしてください <input name="bot-field" tabindex="-1" autocomplete="off" /></label>
-          </p>
-
-          <div class="buyer-form__grid">
-            <div class="field">
-              <label for="bf-company">会社名 <span class="req">必須</span></label>
-              <input id="bf-company" name="회사명" type="text" required autocomplete="organization" />
-            </div>
-            <div class="field">
-              <label for="bf-name">ご担当者名 <span class="req">必須</span></label>
-              <input id="bf-name" name="담당자명" type="text" required autocomplete="name" />
-            </div>
-            <div class="field">
-              <label for="bf-email">メールアドレス <span class="req">必須</span></label>
-              <input id="bf-email" name="이메일" type="email" required inputmode="email" autocomplete="email" />
-              <span class="field__help">このアドレスにご返信します</span>
-            </div>
-            <div class="field">
-              <label for="bf-phone">電話番号 <span class="opt">任意</span></label>
-              <input id="bf-phone" name="전화번호" type="tel" inputmode="tel" autocomplete="tel" placeholder="国番号を含めてご記入ください" />
-            </div>
-            <div class="field">
-              <label for="bf-country">国・地域 <span class="req">必須</span></label>
-              <input id="bf-country" name="국가" type="text" required autocomplete="country-name" placeholder="例：モンゴル、日本、韓国" />
-            </div>
-            <div class="field">
-              <label for="bf-interest">ご関心のある製品 <span class="opt">任意</span></label>
-              <select id="bf-interest" name="관심품목">
-                <option value="">お選びください</option>
-                <option>3ステップセット</option>
-                <option>シカカプセル スピキュールアンプル</option>
-                <option>カルスリペア アンプル</option>
-                <option>カルスリペア クリーム</option>
-                <option>発売予定の製品</option>
-                <option>OEM / ODM</option>
-                <option>まだ決めていません</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="field field--full">
-            <label for="bf-message">お問い合わせ内容 <span class="opt">任意</span></label>
-            <textarea id="bf-message" name="문의내용" rows="3" placeholder="販売チャネル、想定数量、ご希望の時期"></textarea>
-          </div>
-
-          <label class="buyer-form__consent">
-            <input type="checkbox" name="개인정보동의" value="동의" required />
-            <span>
-              お問い合わせへのご返信のため、会社名・ご担当者名・ご連絡先をお預かりし、お問い合わせ終了後3年間保管します。
-            </span>
-          </label>
-
-          <button type="submit" class="btn btn-primary btn-lg btn-block">お問い合わせを送信</button>
-
-          <p class="buyer-form__note">
-            メールでも承ります。<a href="mailto:laezer@naver.com">laezer@naver.com</a>(担当:代表 チョン・ヒョンジョン)
-          </p>
-        </form>
-      </div>
-    </section>
-
-    <!-- ===== 11. CTA (purchase / contact) ===== -->
-    <section class="cta" id="contact">
-      <div class="container">
-        <div class="cta-inner reveal">
-          <span class="eyebrow center">韓国での販売先</span>
-          <h2>韓国では<br />このように販売しています</h2>
-          <p>販売中の3品は、公式オンラインショップ、NAVERスマートストア、Coupangで
-            <strong>消費者に直接</strong>販売しています。</p>
-          <div class="cta-channels">
-            <a href="https://laezer.co.kr" target="_blank" rel="noopener" class="cta-channel primary">
-              <span class="ch-label"><i class="fas fa-shopping-bag"></i> 公式オンラインショップ</span>
-              <span class="ch-sub">(株)エゼル 公式ストア</span>
-              <span class="ch-val">laezer.co.kr</span>
-            </a>
-            <a href="https://smartstore.naver.com/laezer" target="_blank" rel="noopener" class="cta-channel">
-              <span class="ch-label"><i class="fas fa-store"></i> NAVERスマートストア</span>
-              <span class="ch-sub">韓国のオンラインモール</span>
-              <span class="ch-val">smartstore.naver.com/laezer</span>
-            </a>
-          </div>
-          <p class="cta-note">
-            一般のお客様のお問い合わせ:
-            <a href="mailto:laezer@naver.com" style="color:var(--green-crystal);text-decoration:underline">laezer@naver.com</a>
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== Footer ===== -->
     <footer class="footer">
-      <div class="container">
-        <div class="footer-top">
-          <div class="footer-brand">
-            <div class="footer-logo">LaEzer</div>
-            <p class="footer-tagline">Timeless Radiance and Beauty<br />時を超えて輝く美しさ</p>
-            <div class="footer-social">
-              <a href="https://www.instagram.com/zia.laezer" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-              <a href="https://m.me/soulalpaca" target="_blank" rel="noopener" aria-label="Messenger"><i class="fab fa-facebook-messenger"></i></a>
-              <a href="https://www.youtube.com/watch?v=FHtmHfhk6FY" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-            </div>
-          </div>
-          <div class="footer-col">
-            <h4>製品</h4>
-            <ul>
-              <li><a href="#products">シカ カプセル スピキュール アンプル</a></li>
-              <li><a href="#products">カルス リペア アンプル</a></li>
-              <li><a href="#products">カルス リペア クリーム</a></li>
-              <li><a href="#lineup">発売予定の5品</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h4>インフォメーション</h4>
-            <ul>
-              <li><a href="#company">会社紹介</a></li>
-              <li><a href="#history">沿革</a></li>
-              <li><a href="#results">ヒト試験</a></li>
-              <li><a href="#certs">認証</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h4>ご相談 · 販売先</h4>
-            <ul>
-              <li><a href="#buyer">バイヤー様のお問い合わせ</a></li>
-              <li><a href="https://m.me/soulalpaca" target="_blank" rel="noopener">Messenger</a></li>
-              <li><a href="mailto:laezer@naver.com">laezer@naver.com</a></li>
-              <li><a href="https://laezer.co.kr" target="_blank" rel="noopener">公式サイト(韓国)</a></li>
-            </ul>
-          </div>
+      <div class="wrap">
+        <div>
+          <span class="wordmark" role="img" aria-label="LaEzer"><svg class="wm" viewBox="0 0 3136 864" aria-hidden="true" focusable="false"><use href="#wm"></use></svg></span>
+          <p>Timeless Radiance and Beauty</p>
         </div>
-        <div class="footer-bottom">
-          <p>&copy; 2026 LaEzer · (株)エゼル. All rights reserved.</p>
-          <p>Ezer Co., Ltd. · #1018, 66, Daehwa-ro 106beon-gil, Daedeok-gu, Daejeon, Korea</p>
+        <div>
+          <p>&copy; 2026 LaEzer · 株式会社エゼル · 代表 チョン・ヒョンジョン</p>
+          <p>大田広域市 大徳区 大話路106番ギル 66, 1018号</p>
         </div>
       </div>
     </footer>
 
-    <button id="scrollTop" class="scroll-top" aria-label="トップへ戻る"><i class="fas fa-arrow-up"></i></button>
+    <button id="scrollTop" class="scroll-top" type="button" aria-label="ページの先頭へ">↑</button>
     <script src="js/script.js"></script>
     <script src="js/lang-pref.js"></script>
   </body>

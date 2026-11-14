@@ -1,21 +1,20 @@
 <!doctype html>
+<!-- 이 파일은 build/build.py 가 build/template.html + build/i18n/*.json 으로 만든다. 직접 고치지 말고 그쪽을 고친 뒤 다시 빌드한다. -->
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Лаэзел LaEzer — дермокосметика EZER Co., Ltd. Derma-Clera™ из Cynanchum atratum, каллус эдельвейса, спикулы 5 000 ppm. Образцы и условия для байеров."
-    />
-    <meta
-      name="keywords"
-      content="Лаэзел, LaEzer, барьер кожи, дермокосметика, стволовые клетки эдельвейса, ампула со спикулами, Callus Repair, веганская косметика"
-    />
-    <title>Лаэзел LaEzer — K-Beauty, подтверждённый наукой</title>
+    <meta name="description" content="Профиль компании Ezer Co., Ltd и её бренда ухода за кожей Лаэзел (LaEzer). 3 продукта в продаже и 5 готовятся к выпуску, результаты исследования на людях, сертификаты, запрос образцов и контакты." />
+    <title>Лаэзел LaEzer | Профиль компании Ezer Co., Ltd</title>
     <link rel="icon" type="image/png" href="images/logo-transparent.png" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/laezer-2026.css?v=redesign4" />
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/buyer.css?v=20261114" />
+    <style>:root { --sans: "Noto Sans", "Pretendard Variable", sans-serif; } body { overflow-wrap: break-word; }</style>
     <link rel="alternate" hreflang="mn" href="https://laezer-landing.netlify.app/" />
     <link rel="alternate" hreflang="ko" href="https://laezer-landing.netlify.app/index_kr" />
     <link rel="alternate" hreflang="ja" href="https://laezer-landing.netlify.app/index_jp" />
@@ -24,88 +23,19 @@
     <link rel="alternate" hreflang="uz" href="https://laezer-landing.netlify.app/index_uz" />
     <link rel="alternate" hreflang="x-default" href="https://laezer-landing.netlify.app/" />
     <link rel="canonical" href="https://laezer-landing.netlify.app/index_ru" />
-
-    <meta property="og:type" content="website" />
     <meta property="og:locale" content="ru_RU" />
     <meta property="og:locale:alternate" content="mn_MN" />
     <meta property="og:locale:alternate" content="ko_KR" />
     <meta property="og:locale:alternate" content="ja_JP" />
+    <meta property="og:locale:alternate" content="en_US" />
     <meta property="og:locale:alternate" content="uz_UZ" />
-    <meta property="og:site_name" content="LaEzer" />
+    <meta property="og:type" content="website" />
     <meta property="og:url" content="https://laezer-landing.netlify.app/index_ru" />
-    <meta property="og:title" content="Лаэзел LaEzer — K-Beauty, подтверждённый наукой" />
-    <meta
-      property="og:description"
-      content="Патентованный компонент Derma-Clera™, экстракт культуры каллуса эдельвейса, спикулы морской губки 5 000 ppm. Образцы и консультации для импортёров и дистрибьюторов."
-    />
+    <meta property="og:title" content="Лаэзел LaEzer | Профиль компании Ezer Co., Ltd" />
+    <meta property="og:description" content="Профиль компании Ezer Co., Ltd и её бренда ухода за кожей Лаэзел (LaEzer). 3 продукта в продаже и 5 готовятся к выпуску, результаты исследования на людях, сертификаты, запрос образцов и контакты." />
     <meta property="og:image" content="https://laezer-landing.netlify.app/images/model-portrait.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Noto+Sans:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css"
-    />
-    <style>
-      :root {
-        --font-body: "Noto Sans", "Manrope", -apple-system, "Segoe UI", Roboto, sans-serif;
-        --font-head: "Manrope", "Noto Sans", -apple-system, sans-serif;
-      }
-      /* RU: длинные слова — переносим, а не ломаем вёрстку */
-      body { word-break: normal; overflow-wrap: break-word; hyphens: auto; }
-      h1, h2, h3, h4 { overflow-wrap: break-word; hyphens: auto; }
-      .hero h1 { font-size: clamp(1.9rem, 4.6vw, 3.2rem); line-height: 1.18; }
-      .hero-badge, .badge, .product-ingredients span, .ing-tag, .tech-meta,
-      .product-step-tag, .step-verb, .eyebrow { white-space: normal; }
-      .hero-stats .stat-label { font-size: var(--fs-min); line-height: 1.3; }
-      .hero-stats .stat-number { font-size: clamp(1.4rem, 3vw, 2rem); }
-      .btn, .btn-nav, .cta-channel .ch-label { white-space: normal; text-align: center; }
-      .btn-lg { padding-left: 20px; padding-right: 20px; }
-      /* 러시아어 메뉴 라벨은 한국어보다 훨씬 길다 (제품 2자 ↔ Продукты 8자).
-         hyphens:auto 때문에 중간 폭에서 "Про-дукты"처럼 하이픈으로 쪼개져
-         메뉴가 2~3줄로 터졌음. 하이픈 금지 + 햄버거 전환 지점을
-         680px → 1150px 로 올려 해결. 러시아어판에만 적용된다.
-         2026-11-13: UZB 버튼이 늘어 1280px 에서 로고와 겹쳤다 → 1340px 로 올림. */
-      .nav-menu > li > a { font-size: .86rem; hyphens: none; }
-      .nav-menu > li > a:not(.lang-btn) { white-space: nowrap; }
-      @media (max-width: 1340px) and (min-width: 681px) {
-        .nav-menu {
-          position: fixed; top: var(--header-h); left: 0; right: 0;
-          flex-direction: column; align-items: stretch; gap: 0;
-          background: #fff; padding: 14px var(--gutter) 24px;
-          box-shadow: var(--shadow-md); border-top: 1px solid var(--line);
-          transform: translateY(-130%); transition: transform .35s ease; z-index: 999;
-        }
-        .nav-menu.open { transform: translateY(0); }
-        .nav-menu > li { width: 100%; }
-        .nav-menu > li > a:not(.btn-nav) { display: block; padding: 14px 4px; border-bottom: 1px solid var(--line); font-size: .96rem; }
-        .btn-nav { width: 100%; justify-content: center; margin: 10px 0; padding: 14px; }
-        .lang-switcher-container { border-left: none; padding-left: 0; margin-left: 0; justify-content: center; gap: 8px; padding-top: 6px; }
-        .lang-flag { width: 18px; height: 18px; flex-basis: 18px; }
-        .hamburger { display: flex; }
-      }
-      /* 2026-11-13: 언어 버튼 6개 + 러시아어 라벨이 1240px 컨테이너를 꽉 채워 로고와 붙었다. 간격만 줄인다. */
-      @media (min-width: 1341px) {
-        .nav-menu { gap: 20px; }
-        .lang-switcher-container { gap: 2px; padding-left: 14px; margin-left: 0; }
-        .lang-btn { padding-left: 6px; padding-right: 6px; }
-      }
-      .product-name { font-size: 1.12rem; line-height: 1.3; }
-      .product-name-en { font-size: var(--fs-min); }
-      .section-title { overflow-wrap: break-word; }
-      .cta-channel .ch-val { font-size: var(--fs-min); word-break: break-all; }
-      @media (max-width: 420px) {
-        /* .stat-label 을 여기서 더 줄이던 줄은 제거했다 — 기본값이 이미 13px 바닥이다. */
-        .nav-menu > li > a { font-size: var(--fs-min); }
-      }
-    </style>
-  <script type="application/ld+json">
+    <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
@@ -136,750 +66,668 @@
       }
     },
     {
-      "@type": "WebSite",
-      "@id": "https://laezer-landing.netlify.app/#website",
-      "url": "https://laezer-landing.netlify.app/",
-      "name": "LaEzer",
-      "inLanguage": "ru",
-      "publisher": {
-        "@id": "https://laezer-landing.netlify.app/#organization"
-      }
-    },
-    {
       "@type": "WebPage",
       "@id": "https://laezer-landing.netlify.app/index_ru#webpage",
       "url": "https://laezer-landing.netlify.app/index_ru",
-      "name": "Лаэзел LaEzer — K-Beauty, подтверждённый наукой | Уход за барьером кожи",
-      "description": "Лаэзел LaEzer — дермокосметический бренд EZER Co., Ltd. Патентованный компонент Derma-Clera™ из Cynanchum atratum, экстракт культуры каллуса эдельвейса, спикулы морской губки 5 000 ppm, 11 видов гиалуроновой кислоты. Образцы и консультации для импортёров и дистрибьюторов.",
+      "name": "Лаэзел LaEzer | Профиль компании Ezer Co., Ltd",
+      "description": "Профиль компании Ezer Co., Ltd и её бренда ухода за кожей Лаэзел (LaEzer). 3 продукта в продаже и 5 готовятся к выпуску, результаты исследования на людях, сертификаты, запрос образцов и контакты.",
       "inLanguage": "ru",
-      "isPartOf": {
-        "@id": "https://laezer-landing.netlify.app/#website"
-      },
       "about": {
         "@id": "https://laezer-landing.netlify.app/#organization"
       }
     }
   ]
 }
-  </script>
+    </script>
   </head>
   <body>
-    <!-- ===== Header ===== -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="wm" viewBox="0 0 3136 864"><g transform="translate(0.000000,864.000000) scale(0.100000,-0.100000)"
+fill="currentColor" stroke="none">
+<path d="M121 8352 c-11 -22 -2 -110 13 -120 6 -3 34 -8 63 -9 69 -3 118 -25
+143 -65 20 -33 20 -39 20 -3883 0 -3060 -3 -3855 -13 -3875 -24 -47 -73 -70
+-148 -70 -37 0 -70 -4 -73 -9 -12 -20 -14 -110 -3 -125 11 -15 244 -16 2627
+-16 2575 0 2615 0 2631 19 11 14 18 51 22 133 4 62 11 138 17 168 5 30 14 120
+20 200 6 80 15 170 20 200 5 30 14 123 20 205 6 83 15 177 21 210 5 33 14 121
+19 195 5 74 16 189 25 255 8 66 19 172 24 235 14 153 28 297 52 514 15 135 17
+182 8 192 -15 18 -123 19 -137 2 -5 -7 -13 -71 -16 -143 -4 -71 -11 -164 -17
+-206 -5 -41 -14 -113 -19 -160 -15 -136 -55 -309 -116 -503 -56 -180 -144
+-370 -230 -497 -28 -42 -53 -80 -55 -86 -16 -41 -271 -301 -354 -359 -27 -19
+-68 -49 -90 -65 -46 -34 -294 -158 -375 -187 -111 -41 -232 -71 -385 -97 -44
+-7 -111 -21 -150 -30 -64 -16 -168 -18 -1181 -22 -1026 -4 -1112 -3 -1127 12
+-16 15 -17 290 -15 3893 l3 3877 24 32 c25 34 105 63 173 63 23 0 38 5 42 16
+10 27 7 99 -6 112 -9 9 -187 12 -740 12 -683 0 -728 -1 -737 -18z"/>
+<path d="M12066 8354 c-23 -23 -21 -89 4 -114 15 -15 33 -20 79 -20 71 0 112
+-16 143 -55 l23 -30 3 -3848 2 -3849 -20 -37 c-29 -51 -69 -71 -144 -71 -80 0
+-106 -17 -106 -69 0 -22 8 -48 18 -60 l17 -21 2664 0 c1759 0 2668 4 2676 10
+7 6 15 55 19 120 4 61 11 136 16 166 5 31 14 122 20 203 6 80 15 169 20 196 5
+28 14 120 20 205 6 85 17 196 25 245 7 50 16 139 20 199 4 60 11 134 16 165 5
+31 13 117 19 191 5 74 16 187 25 250 13 105 31 299 56 610 5 63 13 133 19 156
+5 22 14 83 20 135 5 52 16 128 24 169 8 41 24 131 36 200 12 69 30 163 40 210
+10 47 28 130 40 185 12 55 28 127 37 160 8 33 21 87 29 120 17 76 47 198 73
+295 11 41 25 95 32 120 6 25 18 65 26 90 8 25 18 65 23 90 4 25 15 61 23 80 8
+19 25 60 37 90 12 30 30 72 41 92 10 20 19 43 19 50 0 7 18 40 40 73 22 33 40
+65 40 71 0 6 7 17 15 24 8 6 31 37 52 68 46 71 201 224 279 277 32 21 75 51
+94 66 35 27 150 87 245 129 28 12 73 32 100 45 93 43 154 65 176 65 12 0 50 9
+83 19 63 20 125 33 236 52 36 6 84 18 107 26 92 32 510 62 871 62 225 1 253
+-1 259 -15 3 -9 1 -25 -5 -35 -7 -10 -49 -89 -93 -176 -45 -87 -110 -212 -145
+-278 -34 -66 -96 -187 -138 -270 -42 -82 -80 -157 -86 -165 -5 -8 -15 -28 -23
+-45 -12 -27 -107 -209 -134 -260 -6 -11 -24 -45 -39 -75 -16 -30 -49 -95 -75
+-145 -25 -49 -81 -157 -123 -240 -42 -82 -80 -157 -85 -165 -10 -19 -31 -59
+-98 -190 -30 -58 -91 -177 -137 -265 -45 -88 -134 -259 -196 -380 -99 -192
+-141 -274 -207 -400 -9 -16 -22 -43 -31 -60 -17 -35 -193 -379 -212 -415 -7
+-14 -18 -34 -23 -45 -6 -11 -33 -63 -60 -115 -77 -148 -214 -412 -284 -550
+-84 -164 -207 -402 -323 -625 -136 -262 -293 -568 -339 -660 -23 -44 -53 -101
+-67 -127 -15 -26 -24 -54 -21 -62 6 -14 196 -16 1961 -16 l1956 0 14 23 c8 12
+17 62 21 110 4 49 11 103 16 120 5 17 13 78 19 136 6 58 17 142 25 186 8 44
+17 114 20 155 4 41 11 91 16 111 5 19 13 80 19 135 5 54 17 142 25 194 8 52
+19 131 25 175 6 44 14 103 19 130 5 28 10 88 12 135 l4 85 -58 3 c-32 2 -64
+-2 -71 -7 -14 -12 -30 -78 -45 -191 -21 -148 -45 -243 -105 -405 -26 -70 -94
+-193 -150 -268 -66 -89 -192 -224 -226 -242 -14 -8 -39 -26 -56 -42 -29 -27
+-86 -66 -129 -89 -11 -6 -29 -16 -40 -22 -11 -5 -47 -23 -80 -39 -33 -16 -69
+-34 -80 -40 -46 -24 -164 -62 -265 -84 -25 -6 -67 -16 -95 -24 -27 -7 -82 -18
+-122 -24 -39 -6 -84 -16 -100 -22 -60 -23 -428 -39 -919 -39 -553 0 -526 -4
+-480 74 13 22 72 136 131 251 60 116 135 262 168 325 32 63 66 129 74 145 8
+17 18 37 23 46 5 9 30 56 56 105 26 49 100 193 164 319 64 127 142 277 172
+335 61 116 187 358 210 405 9 17 28 55 44 85 16 30 58 112 94 183 94 183 215
+419 264 512 43 83 60 115 142 275 27 52 69 136 95 185 25 50 81 158 123 240
+43 83 96 186 120 230 23 44 63 123 90 175 52 104 53 107 133 260 30 58 91 175
+135 260 44 85 133 259 199 385 65 127 137 266 159 310 22 44 44 87 49 95 5 8
+22 40 37 70 15 30 48 95 73 143 142 274 173 338 167 352 -5 13 -203 15 -1710
+15 l-1705 0 -19 -28 c-11 -15 -25 -47 -32 -72 -7 -24 -18 -53 -26 -64 -8 -11
+-14 -27 -14 -36 -1 -8 -9 -33 -20 -55 -11 -22 -19 -44 -20 -48 0 -5 -7 -23
+-15 -40 -13 -30 -22 -54 -59 -157 -9 -25 -23 -58 -30 -75 -45 -100 -56 -127
+-56 -137 0 -6 -8 -29 -19 -52 -10 -23 -28 -68 -41 -101 -12 -33 -30 -81 -41
+-107 -31 -78 -55 -139 -79 -203 -13 -33 -29 -73 -36 -90 -20 -47 -45 -116 -56
+-160 -6 -22 -17 -60 -25 -85 -8 -25 -19 -69 -24 -99 -5 -29 -16 -65 -23 -80
+-7 -14 -16 -46 -20 -71 -4 -25 -13 -65 -21 -90 -7 -25 -24 -90 -36 -145 -12
+-55 -28 -123 -36 -152 -13 -49 -20 -88 -63 -313 -10 -52 -23 -120 -29 -150
+-23 -123 -50 -288 -56 -345 -4 -33 -10 -76 -16 -96 -5 -19 -13 -80 -19 -135
+-5 -54 -16 -146 -24 -204 -17 -114 -53 -486 -60 -617 -7 -118 -73 -454 -102
+-521 -8 -18 -14 -40 -14 -50 -1 -9 -9 -35 -20 -57 -11 -22 -19 -46 -20 -53 0
+-7 -9 -30 -20 -50 -10 -20 -33 -66 -50 -102 -37 -79 -94 -174 -135 -226 -17
+-22 -38 -50 -47 -64 -25 -40 -168 -181 -249 -246 -80 -65 -151 -109 -269 -167
+-41 -21 -82 -42 -90 -47 -24 -14 -118 -46 -200 -68 -122 -33 -161 -42 -245
+-57 -44 -8 -111 -22 -150 -31 -63 -15 -188 -17 -1298 -21 -948 -4 -1231 -2
+-1242 7 -13 11 -15 270 -15 1959 0 1568 2 1951 13 1965 12 16 68 17 1007 13
+1005 -4 1168 -10 1261 -42 23 -8 50 -15 61 -15 21 0 84 -27 216 -93 97 -49
+223 -161 277 -248 114 -182 186 -401 204 -619 l6 -75 75 0 c74 0 75 0 74 25
+-2 38 -46 357 -74 545 -6 39 -17 117 -24 175 -7 58 -20 152 -29 210 -25 161
+-37 250 -116 815 -11 77 -25 174 -31 215 -6 41 -16 113 -22 160 -16 136 -36
+233 -50 242 -21 13 -104 9 -116 -5 -8 -10 -8 -71 0 -220 14 -266 4 -377 -45
+-494 -39 -92 -73 -140 -149 -208 -69 -62 -197 -119 -322 -144 -22 -5 -68 -17
+-101 -26 -55 -16 -143 -18 -1073 -22 -789 -4 -1016 -2 -1027 7 -13 11 -15 244
+-15 1860 0 1676 1 1848 16 1854 23 9 1879 6 1944 -3 30 -5 96 -14 145 -20 303
+-41 591 -107 685 -156 14 -7 54 -25 90 -40 236 -98 406 -216 600 -419 91 -95
+180 -214 231 -311 17 -33 38 -67 45 -76 8 -8 14 -21 14 -28 0 -7 9 -29 20 -49
+32 -61 60 -127 60 -143 1 -8 9 -32 20 -54 11 -22 19 -50 20 -62 0 -12 9 -45
+20 -73 11 -28 20 -60 20 -71 0 -31 42 -163 54 -171 6 -4 36 -8 67 -8 73 0 90
+17 66 63 -9 18 -21 56 -27 86 -6 30 -14 59 -20 66 -5 6 -12 31 -16 55 -4 25
+-15 67 -25 93 -11 26 -19 58 -19 71 0 13 -9 43 -20 67 -11 24 -20 55 -20 69 0
+14 -9 52 -19 85 -11 33 -29 92 -40 130 -52 183 -61 215 -81 285 -11 41 -30
+109 -41 150 -19 68 -34 124 -74 265 -39 140 -67 237 -88 300 l-22 70 -2417 3
+c-2187 2 -2418 1 -2432 -14z"/>
+<path d="M8000 6201 c-47 -4 -121 -15 -165 -24 -44 -8 -109 -20 -145 -26 -128
+-21 -186 -33 -255 -52 -150 -42 -161 -46 -307 -113 -31 -14 -61 -26 -67 -26
+-13 0 -80 -38 -106 -60 -11 -9 -27 -20 -35 -24 -16 -8 -68 -39 -117 -71 -56
+-37 -225 -199 -260 -250 -19 -27 -47 -68 -63 -90 -37 -52 -111 -200 -120 -242
+-9 -39 3 -58 45 -68 17 -3 38 -13 47 -22 36 -32 60 -13 111 87 27 52 52 97 56
+100 5 3 27 32 49 66 48 70 208 222 282 268 28 17 72 45 98 63 68 46 227 123
+253 123 8 0 27 7 42 15 15 8 45 17 65 21 20 4 53 15 72 25 19 11 46 19 60 19
+14 0 50 7 80 16 69 21 534 32 620 15 127 -24 196 -41 225 -54 16 -8 57 -25 90
+-37 101 -37 197 -86 257 -132 31 -24 73 -54 92 -68 58 -41 207 -212 267 -307
+49 -77 89 -154 134 -258 7 -16 22 -51 34 -76 12 -25 21 -54 21 -63 0 -10 5
+-27 12 -39 11 -21 36 -112 59 -217 6 -25 17 -71 25 -103 8 -31 19 -99 24 -150
+6 -50 15 -119 20 -152 16 -97 25 -572 11 -588 -8 -11 -59 -16 -209 -21 -108
+-4 -228 -12 -267 -17 -38 -5 -117 -14 -175 -19 -178 -19 -361 -47 -470 -74
+-125 -31 -249 -56 -274 -56 -13 0 -37 -5 -53 -11 -15 -6 -64 -19 -108 -29
+-118 -28 -176 -44 -215 -62 -54 -24 -163 -58 -185 -58 -11 0 -29 -6 -40 -14
+-11 -7 -31 -17 -45 -20 -14 -4 -43 -16 -65 -26 -22 -10 -62 -27 -90 -38 -123
+-49 -252 -107 -270 -122 -11 -9 -63 -37 -115 -63 -52 -26 -113 -61 -135 -77
+-22 -16 -76 -53 -120 -83 -44 -30 -93 -67 -109 -82 -15 -14 -56 -49 -90 -77
+-85 -72 -316 -345 -316 -376 0 -5 -8 -20 -19 -33 -39 -50 -141 -274 -141 -309
+0 -10 -9 -42 -19 -72 -22 -60 -40 -188 -48 -331 -7 -112 18 -327 48 -420 11
+-31 19 -63 19 -70 0 -22 90 -217 129 -280 60 -98 152 -209 244 -297 48 -46 96
+-88 106 -94 10 -6 38 -22 61 -36 23 -14 51 -30 61 -36 11 -6 27 -18 36 -27 10
+-8 29 -20 43 -26 14 -6 32 -15 40 -20 40 -24 248 -91 281 -91 13 0 34 -7 46
+-15 29 -20 230 -45 366 -45 138 0 285 16 362 39 33 10 80 24 105 30 200 53
+251 73 425 171 39 22 81 45 95 52 14 7 84 56 157 110 134 100 319 283 431 428
+73 94 200 282 212 316 6 16 15 31 19 34 11 8 61 97 61 110 0 7 8 24 18 38 10
+15 28 52 41 82 13 30 31 73 41 95 31 68 79 201 95 261 8 31 17 59 19 62 24 23
+26 -56 26 -883 0 -860 0 -874 20 -885 27 -15 1109 -13 1127 2 16 13 17 110 1
+126 -7 7 -31 12 -55 12 -73 0 -117 24 -142 78 l-21 47 -3 1930 -2 1930 -23
+140 c-13 77 -32 174 -43 216 -10 42 -19 88 -19 102 0 13 -9 44 -20 68 -11 24
+-20 52 -20 62 0 11 -6 33 -14 50 -7 18 -28 70 -46 117 -18 47 -39 94 -46 105
+-8 11 -14 26 -14 35 0 8 -18 42 -40 75 -22 33 -40 65 -40 70 -1 6 -17 30 -35
+55 -19 25 -50 68 -69 95 -47 69 -228 243 -301 291 -33 21 -78 52 -100 69 -23
+17 -68 43 -100 58 -33 16 -67 32 -75 38 -40 24 -140 67 -173 73 -20 4 -49 13
+-64 21 -15 8 -40 15 -54 15 -15 0 -55 9 -89 20 -34 11 -77 20 -94 20 -17 0
+-63 9 -101 21 -65 20 -98 21 -425 24 -195 2 -393 0 -440 -4z m1515 -3036 c-1
+-300 -3 -359 -18 -411 -9 -34 -17 -76 -17 -93 0 -35 -42 -236 -65 -316 -8 -27
+-19 -68 -25 -90 -17 -74 -46 -170 -58 -192 -7 -12 -12 -30 -12 -40 0 -10 -9
+-35 -20 -56 -11 -20 -20 -43 -20 -50 0 -12 -63 -162 -108 -257 -35 -73 -137
+-248 -190 -325 -124 -180 -295 -358 -432 -451 -160 -109 -185 -124 -197 -124
+-7 0 -30 -9 -50 -20 -21 -11 -45 -20 -53 -20 -9 0 -26 -7 -38 -16 -37 -26
+-197 -54 -307 -54 -113 0 -260 27 -333 60 -26 12 -63 29 -82 37 -127 55 -278
+175 -366 289 -109 142 -157 243 -217 454 -19 66 -21 102 -22 295 0 234 4 266
+62 445 37 113 154 339 194 373 8 6 28 32 44 55 40 60 186 196 279 260 42 29
+86 61 96 70 24 20 86 56 195 111 44 22 87 45 95 50 44 26 100 51 114 51 9 0
+27 6 39 14 12 8 40 19 62 25 61 15 156 51 179 67 11 8 31 14 44 14 12 0 39 7
+59 15 20 8 59 19 87 25 61 11 158 34 246 59 94 27 231 49 475 76 77 8 154 17
+170 19 17 2 66 3 110 2 l80 -1 0 -350z"/>
+<path d="M24525 6200 c-44 -5 -102 -16 -129 -24 -27 -9 -62 -16 -77 -16 -70 0
+-396 -89 -499 -137 -70 -32 -100 -45 -180 -79 -36 -15 -74 -35 -85 -44 -11 -9
+-31 -22 -45 -28 -25 -12 -39 -19 -75 -41 -11 -6 -31 -17 -45 -24 -29 -14 -81
+-49 -160 -108 -30 -22 -67 -48 -81 -57 -80 -53 -345 -310 -441 -427 -86 -106
+-268 -369 -268 -387 0 -5 -8 -21 -18 -36 -43 -65 -142 -262 -142 -283 0 -8 -9
+-29 -20 -47 -11 -18 -20 -38 -20 -44 0 -6 -8 -29 -19 -52 -10 -23 -29 -75 -41
+-116 -13 -41 -31 -100 -41 -130 -10 -30 -21 -75 -25 -99 -3 -24 -12 -58 -19
+-75 -7 -17 -16 -60 -19 -94 -4 -35 -11 -75 -16 -88 -13 -33 -41 -342 -47 -512
+-8 -225 32 -622 83 -822 7 -30 20 -82 29 -115 32 -127 67 -236 96 -300 10 -22
+29 -69 43 -105 39 -102 152 -316 210 -398 18 -27 40 -62 49 -78 8 -16 27 -42
+42 -58 14 -16 41 -50 60 -77 42 -61 101 -125 242 -264 98 -96 174 -160 378
+-314 57 -42 139 -92 235 -140 36 -18 83 -43 105 -57 37 -22 117 -54 255 -105
+30 -11 73 -28 95 -38 72 -34 252 -84 380 -106 44 -7 96 -18 115 -24 19 -6 50
+-11 69 -11 18 0 70 -9 115 -19 98 -23 352 -41 576 -41 184 1 481 22 521 38 14
+6 52 13 85 16 70 8 270 42 334 58 25 6 77 16 115 23 81 15 215 52 260 70 16 7
+66 23 110 35 44 12 94 26 110 32 17 5 57 17 90 25 33 8 64 19 69 24 6 5 17 9
+25 9 9 0 38 11 66 24 27 13 77 34 110 46 94 35 159 63 173 75 7 7 16 60 22
+140 5 72 16 193 24 270 34 316 48 457 57 580 5 72 13 157 19 190 5 33 14 128
+20 210 6 83 15 174 20 204 13 69 13 67 -6 85 -23 23 -119 22 -129 -1 -7 -18
+-26 -145 -45 -298 -14 -116 -71 -342 -106 -423 -8 -18 -14 -38 -14 -44 0 -6
+-10 -32 -21 -57 -12 -25 -33 -71 -47 -101 -14 -30 -31 -62 -38 -70 -6 -8 -15
+-25 -19 -38 -11 -39 -128 -205 -205 -293 -232 -265 -523 -458 -825 -547 -89
+-26 -144 -40 -225 -57 -36 -7 -79 -19 -95 -25 -39 -15 -321 -40 -455 -39 -142
+0 -374 22 -435 42 -73 23 -163 47 -217 57 -27 5 -58 16 -70 24 -12 9 -30 16
+-39 16 -18 0 -124 48 -179 82 -19 11 -64 36 -100 56 -149 80 -453 362 -546
+507 -10 16 -43 63 -71 104 -29 40 -53 78 -53 84 0 6 -7 18 -15 27 -15 17 -145
+273 -145 286 0 9 -47 132 -59 154 -4 8 -19 53 -33 100 -104 344 -148 591 -179
+1010 -14 182 -4 657 16 800 8 58 15 133 15 168 0 35 5 72 10 83 11 19 44 19
+2069 19 1798 0 2060 2 2071 15 21 25 -12 388 -52 565 -22 98 -97 335 -122 386
+-92 189 -120 239 -179 330 -26 38 -67 96 -92 129 -117 151 -367 370 -530 464
+-108 62 -122 71 -157 94 -14 9 -32 17 -38 17 -7 0 -49 18 -94 39 -92 45 -149
+67 -222 85 -27 7 -56 16 -62 20 -6 4 -44 13 -84 21 -137 25 -193 37 -278 57
+-74 18 -124 21 -400 23 -173 2 -351 0 -395 -5z m470 -156 c55 -3 116 -13 135
+-21 19 -8 55 -21 80 -28 98 -29 215 -79 226 -97 3 -5 16 -13 27 -18 24 -10 71
+-39 133 -82 64 -44 195 -176 282 -286 45 -57 82 -107 82 -113 0 -5 15 -31 33
+-57 18 -26 55 -94 81 -152 27 -58 53 -114 58 -124 27 -52 80 -223 118 -376 32
+-135 45 -219 62 -394 11 -122 11 -129 -7 -142 -28 -21 -3132 -20 -3160 0 -19
+13 -19 16 -2 68 9 30 17 64 17 76 0 12 9 52 21 89 11 38 32 106 46 153 14 47
+29 94 34 105 5 11 16 40 25 65 33 94 46 126 78 194 18 39 38 82 45 96 13 29
+82 154 130 237 65 109 217 299 311 389 75 71 215 180 261 203 24 12 64 35 89
+51 64 41 112 62 215 94 50 15 106 35 125 43 35 16 283 43 330 37 14 -2 70 -6
+125 -10z"/>
+<path d="M30850 6135 c-167 -35 -334 -89 -371 -121 -8 -8 -21 -14 -27 -14 -13
+0 -181 -87 -202 -105 -8 -7 -40 -27 -70 -44 -86 -50 -90 -53 -165 -112 -38
+-30 -95 -74 -125 -96 -74 -54 -330 -309 -409 -407 -138 -171 -240 -313 -295
+-410 -15 -28 -34 -58 -41 -66 -11 -13 -78 -136 -128 -235 -33 -65 -95 -202
+-107 -235 -7 -19 -19 -55 -28 -80 -16 -45 -61 -120 -63 -104 0 5 0 453 1 995
+1 898 0 988 -15 1003 -15 14 -73 16 -579 16 -639 0 -593 7 -583 -83 8 -64 24
+-77 95 -77 64 0 84 -9 111 -54 l21 -34 0 -2721 c1 -2459 -1 -2724 -15 -2751
+-23 -44 -71 -70 -128 -70 -74 0 -87 -11 -87 -74 0 -32 5 -58 13 -64 14 -12
+1357 -19 1376 -7 6 3 11 33 11 65 0 69 -11 80 -85 80 -56 0 -101 28 -121 75
+-10 26 -13 309 -14 1531 -2 1462 -1 1501 18 1589 24 109 85 297 106 327 9 12
+16 29 16 38 0 19 118 235 162 295 119 163 252 312 357 398 41 33 85 71 99 84
+14 13 53 40 86 60 34 20 88 55 122 78 56 38 121 72 234 123 25 11 84 39 131
+61 48 22 99 43 115 46 16 4 56 15 89 25 138 43 201 60 217 60 10 0 40 9 68 20
+28 11 67 20 86 20 19 0 66 7 105 16 38 9 145 19 237 22 l167 7 3 70 c2 38 -2
+121 -8 185 -5 63 -15 187 -20 275 -21 323 -28 396 -40 410 -19 23 -182 18
+-320 -10z"/>
+</g></symbol></svg>
     <header class="header" id="header">
-      <nav class="nav container">
-        <div class="nav-brand">
-          <img src="images/logo-transparent.png" alt="LaEzer" class="brand-logo-img" />
-        </div>
+      <nav class="nav wrap" aria-label="Основное меню">
+        <a class="wordmark" href="#top" aria-label="LaEzer"><svg class="wm" viewBox="0 0 3136 864" aria-hidden="true" focusable="false"><use href="#wm"></use></svg></a>
         <ul class="nav-menu" id="navMenu">
-          <li><a href="#company">О компании</a></li>
+          <li><a href="#company">Компания</a></li>
+          <li><a href="#lineup">Линейка</a></li>
           <li><a href="#products">Продукты</a></li>
-          <li><a href="#lineup">Новинки</a></li>
+          <li><a href="#upcoming">Скоро</a></li>
           <li><a href="#results">Испытания</a></li>
-          <li><a href="#buyer" class="btn-nav">Запросить образцы</a></li>
-          <li class="lang-switcher-container">
-            <a href="index.html" class="lang-btn" data-lang-pick="mn"><span class="lang-flag lang-flag--mn" aria-hidden="true"></span>MGL</a>
-            <a href="index_kr.html" class="lang-btn" data-lang-pick="ko"><span class="lang-flag lang-flag--ko" aria-hidden="true"></span>KOR</a>
-            <a href="index_jp.html" class="lang-btn" data-lang-pick="ja"><span class="lang-flag lang-flag--ja" aria-hidden="true"></span>JPN</a>
-            <a href="#" class="lang-btn active" data-lang-pick="ru"><span class="lang-flag lang-flag--ru" aria-hidden="true"></span>RUS</a>
-            <a href="index_en.html" class="lang-btn" data-lang-pick="en"><span class="lang-flag lang-flag--en" style="background-image:url(&quot;data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2 2'><rect width='2' height='2' fill='%23012169'/><path d='M0 0L2 2M2 0L0 2' stroke='%23fff' stroke-width='.4'/><path d='M0 0L2 2M2 0L0 2' stroke='%23c8102e' stroke-width='.14'/><path d='M1 0V2M0 1H2' stroke='%23fff' stroke-width='.56'/><path d='M1 0V2M0 1H2' stroke='%23c8102e' stroke-width='.32'/></svg>&quot;)" aria-hidden="true"></span>ENG</a>
-            <a href="index_uz.html" class="lang-btn" data-lang-pick="uz"><span class="lang-flag lang-flag--uz" aria-hidden="true"></span>UZB</a>
+          <li><a href="#certs">Сертификаты</a></li>
+          <li><a href="#contact" class="btn-nav">Запросить образцы</a></li>
+          <li class="lang">
+            <a href="index.html" lang="mn" data-lang-pick="mn">MGL</a>
+            <a href="index_kr.html" lang="ko" data-lang-pick="ko">KOR</a>
+            <a href="index_jp.html" lang="ja" data-lang-pick="ja">JPN</a>
+            <a href="index_ru.html" lang="ru" data-lang-pick="ru" class="active" aria-current="page">RUS</a>
+            <a href="index_en.html" lang="en" data-lang-pick="en">ENG</a>
+            <a href="index_uz.html" lang="uz" data-lang-pick="uz">UZB</a>
           </li>
         </ul>
-        <div class="hamburger" id="hamburger">
+        <button class="hamburger" id="hamburger" type="button" aria-label="Открыть меню" aria-controls="navMenu">
           <span></span><span></span><span></span>
-        </div>
+        </button>
       </nav>
     </header>
 
-    <!-- ===== 1. Hero ===== -->
-    <section class="hero">
-      <img src="images/hero_leaf.png" alt="" class="hero-leaf-deco" aria-hidden="true" />
-      <div class="container hero-grid">
-        <div class="hero-text reveal">
-          <span class="hero-badge"><i class="fas fa-flask"></i> K-Beauty, подтверждённый наукой</span>
-          <h1>
-            Ослабленный барьер кожи<br />
-            защищаем <span class="highlight">наукой</span>
-          </h1>
-          <p class="hero-sub">
-            Патентованный компонент Derma-Clera™ из Cynanchum atratum, экстракт культуры каллуса эдельвейса,
-            спикулы морской губки 5 000 ppm. На этой странице собраны результаты исследования трёх продуктов
-            на людях и документы о сертификации.
-          </p>
-          <div class="hero-usp">
-            <span class="badge gold"><i class="fas fa-certificate"></i> Патентованный компонент</span>
-            <span class="badge"><i class="fas fa-leaf"></i> Веганский сертификат</span>
-            <span class="badge"><i class="fas fa-microscope"></i> Клиническое исследование на людях</span>
-          </div>
-          <div class="hero-cta">
-            <a href="#buyer" class="btn btn-primary btn-lg">Запросить образцы и консультацию</a>
-            <a href="#products" class="btn btn-ghost btn-lg"><i class="fas fa-box-open"></i> Посмотреть продукты</a>
-          </div>
-          <div class="hero-stats">
-            <div class="stat-item"><span class="stat-number">+138%</span><span class="stat-label">улучшение увлажнённости ※</span></div>
-            <div class="stat-item"><span class="stat-number">5 000<small style="font-size:.6em">ppm</small></span><span class="stat-label">натуральные спикулы</span></div>
-            <div class="stat-item"><span class="stat-number">11</span><span class="stat-label">видов гиалуроновой кислоты</span></div>
+    <main id="top">
+      <!-- 1쪽 표지 -->
+      <section class="cover">
+        <div class="wrap">
+          <h1 aria-label="LaEzer Лаэзел"><svg class="wm" viewBox="0 0 3136 864" aria-hidden="true" focusable="false"><use href="#wm"></use></svg></h1>
+          <div class="cover-rule"></div>
+          <p class="cover-slogan">Timeless Radiance and Beauty</p>
+          <p class="cover-meta">Ezer Co., Ltd · Профиль компании · 2026.11</p>
+          <div class="cover-cta">
+            <a href="#contact" class="btn btn--light">Запросить образцы</a>
+            <a href="#lineup" class="btn btn--line-light">Смотреть линейку</a>
           </div>
         </div>
-        <div class="hero-visual reveal d1">
-          <img src="images/model-portrait.jpg" alt="Средства Лаэзел и модель" loading="eager" />
-          <div class="hero-float-badge">
-            <span class="ico"><i class="fas fa-seedling"></i></span>
-            <span>Осветление · против морщин<small>Патентованный компонент Derma-Clera™</small></span>
-          </div>
-        </div>
-      </div>
-      <div class="scroll-cue"><span>Прокрутите вниз</span><div class="line"></div></div>
-    </section>
+      </section>
 
-    <!-- ===== Video ===== -->
-    <section class="video bg-mist" id="video">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow center">Лаэзел в глазах актрисы</span>
-          <h2 class="section-title">О бренде <span class="title-accent">рассказали на корейском ТВ</span></h2>
-        </div>
-        <div class="video-wrap reveal d1">
-          <div class="video-frame">
-            <iframe
-              src="https://www.youtube.com/embed/kkYFzxSf-iE?rel=0"
-              title="LaEzer Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-          </div>
-          <div class="video-quote">
-            <p>«Достаточно одного применения, чтобы почувствовать разницу. Удивительное ощущение увлажнённости, которое идёт изнутри!»</p>
-            <p style="font-size:var(--fs-min);opacity:.65;margin-top:6px">※ Личное впечатление от использования.</p>
-            <span class="author">Актриса Пак Ха Сон</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== 2. Company ===== -->
-    <section class="why" id="company">
-      <div class="container why-grid">
-        <div class="why-content reveal">
-          <span class="eyebrow">О компании</span>
-          <h2>Эзер (Ezer):<br /><em>«тот, кто помогает»</em></h2>
-          <p>
-            Ezer на иврите означает «тот, кто помогает». Помогать каждому человеку открыть собственную,
-            присущую только ему красоту: с этого имени начинается философия Лаэзел.
-            Мы хотим быть надёжной опорой и для покупателей, и для партнёров, с которыми работаем.
-          </p>
-          <p>
-            Компания основана в 2024 году в Тэджоне. После первого зарубежного рынка, Монголии,
-            мы готовим выход в <strong style="color:#fff">Россию и Центральную Азию, Японию и Вьетнам</strong>.
-          </p>
-          <div class="why-points">
-            <div class="why-point">
-              <i class="fas fa-flask"></i>
-              <div><b>Системная разработка на научной основе</b><span>На основе исследований кожи и данных об эффективности каждого компонента мы разрабатываем точно выверенные рецептуры, а эффективность продукта и степень раздражения кожи объективно оцениваем в исследованиях на людях и тестах на раздражение кожи.</span></div>
-            </div>
-            <div class="why-point">
-              <i class="fas fa-vials"></i>
-              <div><b>Точно подобранный состав под проблему кожи и синергия компонентов</b><span>Разным проблемам кожи нужны разные компоненты. Мы научно анализируем свойства и роль каждого компонента и разрабатываем формулы, в которых взаимодополняющее сочетание компонентов даёт нужный коже эффект.</span></div>
-            </div>
-            <div class="why-point">
-              <i class="fas fa-leaf"></i>
-              <div><b>Гармония природы и современной науки</b><span>Соединяя ценность сырья природного происхождения с современной наукой о коже, мы предлагаем уход, который поддерживает здоровый естественный баланс кожи и помогает вернуть ей естественное сияние.</span></div>
+      <!-- 2쪽 회사 -->
+      <section id="company">
+        <div class="wrap spread">
+          <figure class="spread-photo reveal"><img src="images/model-portrait.jpg" alt="Модель с ампулой Лаэзел Callus Repair в руке" width="1643" height="2200" /></figure>
+          <div class="spread-body reveal">
+            <span class="label">Ezer Co., Ltd</span>
+            <h2 class="h2">Эзер (Ezer), «тот, кто помогает»</h2>
+            <p>Эзер (Ezer) на иврите означает «тот, кто помогает». Помогать людям открывать собственную, присущую каждому красоту: с этого имени начинается философия Лаэзел. Мы стремимся быть компанией, которая служит надёжной опорой и для покупателей, и для партнёров, с которыми мы работаем.</p>
+            <p>Компания начала работу в 2024 году в Тэджоне и вслед за первым зарубежным рынком, Монголией, готовит выход в Россию и Центральную Азию, Японию и Вьетнам.</p>
+            <div class="slogan">
+              <span class="label">Слоган бренда</span>
+              <p class="slogan-en">Timeless Radiance and Beauty</p>
+              <p class="slogan-ko">Сияние и красота вне времени</p>
+              <p>Соединяя законы природы и современную науку, мы предлагаем уход, который возвращает коже её естественное сияние.</p>
             </div>
           </div>
         </div>
-        <div class="why-visual reveal d1">
-          <img src="images/model-cica.jpg" alt="Лаэзел CICA-ампула со спикулами в капсулах" />
-          <div class="why-temp">Timeless Radiance and Beauty</div>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ===== 2-1. History ===== -->
-    <section class="history" id="history">
-      <div class="container history-wrap">
-        <div class="section-head reveal">
-          <span class="eyebrow center">История</span>
-          <h2 class="section-title">С 2024 года в Тэджоне <span class="title-accent">до сегодня</span></h2>
-          <p class="section-sub">Путь от основания компании до зарубежных контрактов на поставку</p>
-        </div>
-        <ol class="history-list reveal d1">
-          <li><time>2024.09</time><div><b>Основание EZER Co., Ltd.</b><span>Тэджон</span></div></li>
-          <li><time>2025</time><div><b>Запуск 3 продуктов в Корее</b><span>собственный магазин · Naver SmartStore · Coupang</span></div></li>
-          <li><time>2025</time><div><b>Собственная патентная заявка</b><span>№ 10-2025-0184979</span></div></li>
-          <li><time>2026.02</time><div><b>Регистрация 2 товарных знаков</b><span>LaEzer · Dr. LaEzer</span></div></li>
-          <li><time>2026.04</time><div><b>Первый контракт на поставку в Монголию</b></div></li>
-          <li><time>2026.06</time><div><b>Поп-ап продажа в Улан-Баторе</b><span>совместно с Центром креативной экономики и инноваций Тэджона</span></div></li>
-          <li><time>2026.08</time><div><b>Второй контракт на поставку в Монголию</b></div></li>
-          <li><time>2026.09</time><div><b>Контракт на поставку продукции монгольской бренд-компании</b></div></li>
-          <li><time>2026.11</time><div><b>Планируется выход в сети Don Quijote и Loft, Япония</b></div></li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- ===== 3. Brand Story ===== -->
-    <section class="brand bg-cream" id="brand">
-      <div class="container brand-grid">
-        <div class="brand-visual reveal">
-          <img src="images/zia-cutout.png" alt="Трёхступенчатый набор Лаэзел для ухода за барьером кожи" />
-        </div>
-        <div class="brand-text reveal d1">
-          <span class="eyebrow">История бренда</span>
-          <p class="brand-quote">
-            Мы верим в <span class="hl">красоту, присущую коже от природы</span>
-          </p>
-          <p>
-            Опираясь на научные данные (научные статьи и материалы анализа эффективности компонентов),
-            Лаэзел предлагает программу ухода, подходящую коже каждого человека.
-          </p>
-          <p>
-            Соединяя законы природы и современную науку, мы предлагаем уход, который возвращает коже её естественное сияние.
-          </p>
-          <div class="brand-pillars">
-            <div class="brand-pillar"><i class="fas fa-certificate"></i><b>Патент</b><span>Патентованный компонент Derma-Clera™ · 1 собственная заявка</span></div>
-            <div class="brand-pillar"><i class="fas fa-leaf"></i><b>Веган</b><span>Сертификат: ампула и крем Callus Repair</span></div>
-            <div class="brand-pillar"><i class="fas fa-vial-circle-check"></i><b>Подтверждение</b><span>Исследование на людях, Human Skin Clinical Trials Center</span></div>
+      <!-- 3쪽 브랜드 이야기 -->
+      <section id="brand" class="rule-top">
+        <div class="wrap spread">
+          <figure class="spread-photo reveal"><img src="images/buyer/lab.jpg" alt="Лабораторная посуда и зелёные листья, постановочное изображение" width="1024" height="1024" loading="lazy" /></figure>
+          <div class="spread-body reveal">
+            <span class="label">История бренда</span>
+            <h2 class="h2">Мы верим в красоту,<br>присущую коже от природы</h2>
+            <p>Опираясь на научные данные, в том числе научные статьи и материалы анализа эффективности компонентов, Лаэзел предлагает программу ухода, подходящую коже каждого человека.</p>
+            <ol class="principles">
+              <li><div><span class="p-no">01 / RESEARCH</span><span class="p-en">Development &amp; Research</span></div><div><b>Системные исследования и разработки на научной основе</b><p>На основе исследований в области науки о коже и данных об эффективности каждого компонента мы разрабатываем точно выверенные рецептуры, а эффективность продукта и степень раздражения кожи объективно оцениваем в исследованиях на людях и тестах на раздражение кожи.</p></div></li>
+              <li><div><span class="p-no">02 / FORMULATION</span><span class="p-en">Advanced Ingredient Synergy</span></div><div><b>Точно подобранный состав под проблему кожи и синергия компонентов</b><p>Разным проблемам кожи нужны разные компоненты. Мы научно анализируем свойства и роль каждого компонента и разрабатываем формулы, в которых взаимодополняющее сочетание компонентов даёт нужный коже эффект.</p></div></li>
+              <li><div><span class="p-no">03 / PHILOSOPHY</span><span class="p-en">Balance</span></div><div><b>Гармония законов природы и современной науки</b><p>Соединяя ценность сырья природного происхождения с современной наукой о коже, мы предлагаем уход, который поддерживает здоровый естественный баланс кожи и помогает вернуть ей естественное сияние.</p></div></li>
+            </ol>
           </div>
-          <div class="ceo-sign">
+        </div>
+      </section>
+
+      <!-- 4쪽 연혁 -->
+      <section id="history" class="rule-top">
+        <div class="wrap spread">
+          <figure class="spread-photo spread-photo--tall reveal"><img src="images/buyer/history-cream.jpg" alt="Крем Callus Repair" width="900" height="1350" loading="lazy" /></figure>
+          <div class="spread-body reveal">
+            <span class="label">История</span>
+            <ol class="history-list">
+              <li><time class="num">2024.09</time><div><b>Основание Ezer Co., Ltd</b><span>Тэджон</span></div></li>
+              <li><time class="num">2025</time><div><b>Запуск 3 продуктов в Корее</b><span>собственный магазин · Naver SmartStore · Coupang</span></div></li>
+              <li><time class="num">2025</time><div><b>Собственная патентная заявка</b><span>№ 10-2025-0184979</span></div></li>
+              <li><time class="num">2026.02</time><div><b>Регистрация 2 товарных знаков</b><span>LaEzer · Dr. LaEzer</span></div></li>
+              <li><time class="num">2026.04</time><div><b>1-й контракт на поставку в Монголию</b></div></li>
+              <li><time class="num">2026.06</time><div><b>Поп-ап продажа в Улан-Баторе</b><span>совместно с Центром креативной экономики и инноваций Тэджона</span></div></li>
+              <li><time class="num">2026.08</time><div><b>2-й контракт на поставку в Монголию</b></div></li>
+              <li><time class="num">2026.09</time><div><b>Контракт на поставку продукции монгольской бренд-компании</b></div></li>
+              <li><time class="num">2026.11</time><div><b>Планируется выход в сети Don Quijote и Loft, Япония</b></div></li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5쪽 루틴 -->
+      <section id="routine" class="rule-top">
+        <div class="wrap">
+          <span class="label">Slow-aging уход в 3 шага</span>
+          <h2 class="routine-title">AWAKE • REPAIR • SHIELD</h2>
+          <p class="lead">Стволовые клетки эдельвейса и патентованный компонент Derma-Clera™ пробуждают способность кожи восстанавливаться самостоятельно.</p>
+          <div class="routine-grid">
+            <article class="reveal">
+              <img src="images/buyer/soil-spicule.jpg" alt="CICA-ампула со спикулами в капсулах" width="900" height="558" loading="lazy" />
+              <h3 class="step-head"><span class="step-tag">STEP 1</span>AWAKE</h3>
+              <p class="step-name">CICA-ампула со спикулами в капсулах</p>
+              <p class="step-first">Натуральные микроиглы пробуждают кожу.</p>
+              <p class="step-text">Это путь, созданный не иглой, а природой: натуральные иглы морской губки открывают в коже микроканалы и помогают впитыванию активных компонентов. Лёгкое покалывание при первом нанесении пробуждает кожу и повышает эффективность следующих шагов ухода.</p>
+            </article>
+            <article class="reveal">
+              <img src="images/buyer/soil-ampoule.jpg" alt="Ампула Callus Repair" width="900" height="558" loading="lazy" />
+              <h3 class="step-head"><span class="step-tag">STEP 2</span>REPAIR</h3>
+              <p class="step-name">Ампула Callus Repair</p>
+              <p class="step-first">Растительные стволовые клетки из Альп обеспечивают коже интенсивный уход.</p>
+              <p class="step-text">Компонент из растительных стволовых клеток эдельвейса, растущего на высоте 3,000m над уровнем моря, придаёт коже жизненную силу, а 9 видов пептидов поддерживают её упругость и здоровое состояние.</p>
+            </article>
+            <article class="reveal">
+              <img src="images/buyer/soil-cream.jpg" alt="Крем Callus Repair" width="900" height="558" loading="lazy" />
+              <h3 class="step-head"><span class="step-tag">STEP 3</span>SHIELD</h3>
+              <p class="step-name">Крем Callus Repair</p>
+              <p class="step-first">Длительное увлажнение защищает кожу.</p>
+              <p class="step-text">Патентованный компонент Derma-Clera™ бережно защищает кожу от внешних раздражителей и обильно насыщает её влагой и питанием. Со 2-й недели упругость и гладкость кожи становятся другими.</p>
+            </article>
+          </div>
+          <p class="note">Порядок и частота применения приведены по официальной странице продукта · из-за свойств спикул возможно покалывание</p>
+        </div>
+      </section>
+
+      <!-- 6쪽 라인업 -->
+      <section id="lineup" class="rule-top">
+        <div class="wrap">
+          <div class="lineup-head">
             <div>
-              <div class="ceo-name">Чон Хён Чон</div>
-              <div class="ceo-role">Генеральный директор и основатель EZER Co., Ltd.</div>
+              <span class="label">Линейка</span>
+              <h2 class="h2">Очищение · ампулы · крем · солнцезащитный крем · маска</h2>
+              <p class="lead">3 продукта в продаже · 5 готовятся к выпуску</p>
+            </div>
+            <div class="legend"><span class="tag tag--on">В продаже</span><span class="tag">Скоро</span></div>
+          </div>
+          <div class="lineup-grid">
+            <article class="lineup-cell"><div class="lineup-top"><span>01 Маска</span><span class="tag">Скоро</span></div><img src="images/buyer/line-mask.jpg" alt="Полугелевая маска с PDRN" width="524" height="280" loading="lazy" /><h3>Полугелевая маска с PDRN</h3><p class="lineup-spec"><span>Осветление, увлажнение и укрепление упругости</span><span>25mL × 10</span></p></article>
+            <article class="lineup-cell"><div class="lineup-top"><span>02 Очищение</span><span class="tag">Скоро</span></div><img src="images/buyer/line-cleanser.jpg" alt="Пудра для умывания с женьшенем и витаминами" width="524" height="280" loading="lazy" /><h3>Пудра для умывания с женьшенем и витаминами</h3><p class="lineup-spec"><span>Очищение без раздражения, укрепляющее барьер кожи</span><span>50mL</span></p></article>
+            <article class="lineup-cell"><div class="lineup-top"><span>03 Ампула</span><span class="tag tag--on">В продаже</span></div><img src="images/buyer/line-box-ampoule.jpg" alt="Ампула Callus Repair" width="524" height="280" loading="lazy" /><h3>Ампула Callus Repair</h3><p class="lineup-spec"><span>Увлажнение и упругость</span><span>30mL</span></p></article>
+            <article class="lineup-cell"><div class="lineup-top"><span>03 Ампула</span><span class="tag tag--on">В продаже</span></div><img src="images/buyer/line-box-spicule.jpg" alt="CICA-ампула со спикулами в капсулах" width="524" height="280" loading="lazy" /><h3>CICA-ампула со спикулами в капсулах</h3><p class="lineup-spec"><span>Гладкий рельеф кожи</span><span>30mL</span></p></article>
+            <article class="lineup-cell"><div class="lineup-top"><span>03 Ампула</span><span class="tag">Скоро</span></div><img src="images/buyer/line-pdrn-core.jpg" alt="Ампула PDRN Core" width="524" height="280" loading="lazy" /><h3>Ампула PDRN Core</h3><p class="lineup-spec"><span>Интенсивное увлажнение и упругость</span><span>4mL × 6</span></p></article>
+            <article class="lineup-cell"><div class="lineup-top"><span>03 Ампула</span><span class="tag">Скоро</span></div><img src="images/buyer/line-mela-bright.jpg" alt="Ампула Mela Bright" width="524" height="280" loading="lazy" /><h3>Ампула Mela Bright</h3><p class="lineup-spec"><span>Функциональное осветление · увлажнение</span><span>4mL × 6</span></p></article>
+            <article class="lineup-cell"><div class="lineup-top"><span>04 Крем</span><span class="tag tag--on">В продаже</span></div><img src="images/buyer/line-box-cream.jpg" alt="Крем Callus Repair" width="524" height="280" loading="lazy" /><h3>Крем Callus Repair</h3><p class="lineup-spec"><span>Завершающее увлажнение</span><span>50mL</span></p></article>
+            <article class="lineup-cell"><div class="lineup-top"><span>05 Солнцезащитный крем</span><span class="tag">Скоро</span></div><img src="images/buyer/line-sun.jpg" alt="Солнцезащитный крем" width="524" height="280" loading="lazy" /><h3>Солнцезащитный крем</h3><p class="lineup-spec"><span>Мощная защита от УФ-лучей</span><span>SPF 50</span></p></article>
+          </div>
+          <p class="note">Коробки показаны в проекте обновлённого дизайна (у 3 продуктов в продаже нынешняя упаковка отличается) · объём, рецептура и упаковка продуктов, готовящихся к выпуску, могут измениться</p>
+        </div>
+      </section>
+
+      <!-- 7~9쪽 판매 중 3종 -->
+      <div id="products" class="rule-top">
+        <section class="product">
+          <div class="wrap spread">
+            <figure class="spread-photo spread-photo--tall reveal"><img src="images/buyer/p-spicule.jpg" alt="CICA-ампула со спикулами в капсулах" width="900" height="1350" loading="lazy" /></figure>
+            <div class="reveal">
+              <p class="product-kicker"><span class="tag tag--on">В продаже</span>Шаг 1 · Ампула</p>
+              <h2>CICA-ампула со спикулами в капсулах<small>30mL</small></h2>
+              <p class="product-tagline">Уход за гладким рельефом кожи, который начинается со спикул и компонентов CICA</p>
+              <p class="product-desc">Первый шаг ухода: выравнивает рельеф кожи, добавляет увлажнение и успокоение и готовит кожу к следующим средствам.</p>
+              <dl class="spec">
+                <div><dt>Спикулы морской губки 5,000ppm</dt><dd>Микроспикулы морской губки помогают ухаживать за рельефом кожи, а увлажняющие компоненты в составе делают ощущения при использовании более мягкими и увлажняющими.</dd></div>
+                <div><dt>Зелёные капсулы</dt><dd>Капсулы с увлажняющими и успокаивающими компонентами, которые добавляют коже увлажнённость</dd></div>
+                <div><dt>Derma-Clera™<small>(с экстрактом Cynanchum atratum)</small></dt><dd>Патентованное сырьё с экстрактом Cynanchum atratum помогает поддерживать комфортное состояние кожи<br />Патент № 10-1768870</dd></div>
+                <div><dt>5 видов экстракта центеллы азиатской</dt><dd>Компоненты CICA бережно ухаживают за кожей, ставшей чувствительной</dd></div>
+                <div><dt>Пантенол · бетаин · аллантоин</dt><dd>Увлажняют и успокаивают кожу, поддерживая её комфортное состояние</dd></div>
+                <div><dt>11 видов гиалуроновой кислоты</dt><dd>Увлажняющий уход с разными видами гиалуроновой кислоты</dd></div>
+              </dl>
+              <div class="badges"><span class="tag">Осветление и коррекция морщин: 2 функции (MFDS)</span></div>
+              <div class="fit"><b>Кому рекомендуем</b><p>Рекомендуем тем, кого беспокоят неровный рельеф кожи и сухость, и тем, кто хочет, чтобы кожа выглядела гладкой.</p></div>
+              <div class="product-foot"><p class="note">Рекомендуется 1 раз в 2 дня · при использовании возможно покалывание · избегайте области вокруг глаз и губ</p><a href="#contact" class="btn btn--ghost">Образцы</a></div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="showcase" aria-label="LaEzer Callus Repair Ampoule">
-      <img class="showcase__img"
-           src="images/18961f80ca9765f05828022c689c21c4.png"
-           alt="LaEzer Callus Repair Ampoule texture" loading="lazy" decoding="async" />
-    </section>
-
-    <!-- ===== 4. Technology (3 USP) ===== -->
-    <section class="tech" id="tech">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow center">Ключевые технологии</span>
-          <h2 class="section-title">Сначала <span class="title-accent">о составе</span></h2>
-          <p class="section-sub">Указываем номер патента и концентрации как есть</p>
-        </div>
-        <div class="tech-grid">
-          <div class="tech-card gold reveal">
-            <span class="tech-num">01</span>
-            <div class="tech-icon"><i class="fas fa-award"></i></div>
-            <h3>Патент Derma-Clera™</h3>
-            <p>Патентованное сырьё с экстрактом Cynanchum atratum помогает поддерживать комфортное состояние кожи.</p>
-            <span class="tech-meta"><i class="fas fa-shield-halved"></i> Патент № 10-1768870</span>
-          </div>
-          <div class="tech-card reveal d1">
-            <span class="tech-num">02</span>
-            <div class="tech-icon"><i class="fas fa-bahai"></i></div>
-            <h3>Натуральные спикулы 5 000 ppm</h3>
-            <p>Компонент из микроигл натуральной морской губки: при контакте с кожей мягко выравнивает
-              роговой слой и доставляет активные компоненты вглубь.</p>
-            <span class="tech-meta"><i class="fas fa-arrow-down-long"></i> Спикулы в высокой концентрации 5 000 ppm</span>
-          </div>
-          <div class="tech-card reveal d2">
-            <span class="tech-num">03</span>
-            <div class="tech-icon"><i class="fas fa-droplet"></i></div>
-            <h3>11 видов гиалуроновой кислоты</h3>
-            <p>11 видов гиалуроновой кислоты с разным размером молекул, от высокомолекулярной до низкомолекулярной,
-              равномерно наполняют кожу влагой от поверхности до глубоких слоёв и поддерживают её увлажнённой, без ощущения сухости.</p>
-            <span class="tech-meta"><i class="fas fa-layer-group"></i> Увлажнение в 11 слоёв гиалуроновой кислоты</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== 5. 3-Step Solution ===== -->
-    <section class="solution bg-mist" id="solution">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow center">AWAKE · REPAIR · SHIELD</span>
-          <h2 class="section-title">Slow-aging уход <span class="title-accent">в 3 шага</span></h2>
-          <p class="section-sub">Стволовые клетки эдельвейса и патентованный компонент Derma-Clera™ пробуждают способность кожи восстанавливаться самостоятельно</p>
-        </div>
-        <figure class="solution-media reveal">
-          <img src="images/products-3set-cutout.png"
-               alt="LaEzer 3-step set" loading="lazy" decoding="async" />
-        </figure>
-
-        <div class="steps-flow">
-          <div class="step-flow-card reveal">
-            <div class="step-flow-num">1</div>
-            <span class="step-verb">AWAKE</span>
-            <h3>CICA-ампула со спикулами в капсулах</h3>
-            <p>Натуральные микроиглы пробуждают кожу. Это путь, созданный не иглой, а природой: натуральные иглы морской губки открывают в коже микроканалы и помогают впитыванию активных компонентов. Лёгкое покалывание при первом нанесении пробуждает кожу и повышает эффективность следующих шагов ухода.</p>
-            <i class="fas fa-chevron-right step-arrow"></i>
-          </div>
-          <div class="step-flow-card reveal d1">
-            <div class="step-flow-num">2</div>
-            <span class="step-verb">REPAIR</span>
-            <h3>Ампула Callus Repair</h3>
-            <p>Растительные стволовые клетки из Альп обеспечивают коже интенсивный уход. Компонент из растительных стволовых клеток эдельвейса, растущего на высоте 3 000 м, придаёт коже жизненную силу, а 9 видов пептидов поддерживают её упругость и здоровое состояние.</p>
-            <i class="fas fa-chevron-right step-arrow"></i>
-          </div>
-          <div class="step-flow-card reveal d2">
-            <div class="step-flow-num">3</div>
-            <span class="step-verb">SHIELD</span>
-            <h3>Крем Callus Repair</h3>
-            <p>Длительное увлажнение защищает кожу. Патентованный компонент Derma-Clera™ бережно защищает кожу от внешних раздражителей, насыщает её влагой и питанием. Со второй недели кожа становится заметно более упругой и гладкой.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== 6. Products ===== -->
-    <section class="products" id="products">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow center">Продукты</span>
-          <h2 class="section-title">Трёхступенчатый набор <span class="title-accent">для здорового барьера кожи</span></h2>
-          <p class="section-sub">Три продукта в продаже. По всем трём в MFDS (Корея) подано уведомление о функциональной косметике двойного действия: осветление и коррекция морщин</p>
-        </div>
-        <figure class="products-lead reveal">
-          <img src="images/detail-duo.jpg"
-               alt="LaEzer Callus Repair Cream and Ampoule" loading="lazy" decoding="async" />
-        </figure>
-
-        <div class="products-grid">
-          <!-- STEP 01 — CICA Spicule Ampoule -->
-          <div class="product-card reveal">
-            <div class="product-media">
-              <span class="product-step-tag">Шаг 1 · Ампула</span>
-              <img src="images/products/LZ-001_cica-ampoule.png" alt="Лаэзел CICA-ампула со спикулами в капсулах" loading="lazy" />
+        </section>
+        <section class="product">
+          <div class="wrap spread">
+            <figure class="spread-photo spread-photo--tall reveal"><img src="images/buyer/p-ampoule.jpg" alt="Ампула Callus Repair" width="900" height="1350" loading="lazy" /></figure>
+            <div class="reveal">
+              <p class="product-kicker"><span class="tag tag--on">В продаже</span>Шаг 2 · Ампула</p>
+              <h2>Ампула Callus Repair<small>30mL</small></h2>
+              <p class="product-tagline">Концентрированная ампула, которая глубоко наполняет кожу влагой и добавляет ей упругость и свежий вид</p>
+              <p class="product-desc">Каллус эдельвейса и 9 видов пептидов в составе обеспечивают интенсивный уход за сухой кожей, которой не хватает упругости.</p>
+              <dl class="spec">
+                <div><dt>Экстракт культуры каллуса эдельвейса</dt><dd>Экстракт культуры каллуса эдельвейса придаёт коже свежий вид и ощущение увлажнённости</dd></div>
+                <div><dt>9 видов пептидов</dt><dd>Разные пептидные компоненты помогают сделать рельеф кожи упругим</dd></div>
+                <div><dt>5 видов экстракта центеллы азиатской</dt><dd>Компоненты CICA бережно ухаживают за кожей, ставшей восприимчивой</dd></div>
+                <div><dt>11 видов гиалуроновой кислоты</dt><dd>Разные виды гиалуроновой кислоты дают коже ощущение обильной увлажнённости</dd></div>
+                <div><dt>Пантенол · бетаин</dt><dd>Увлажняющие компоненты, которые помогают удерживать влагу и кондиционируют кожу</dd></div>
+                <div><dt>Ниацинамид · аденозин</dt><dd>Функциональные компоненты для осветления и коррекции морщин ухаживают одновременно за тоном кожи и морщинами</dd></div>
+              </dl>
+              <div class="badges"><span class="tag">Осветление и коррекция морщин: 2 функции (MFDS)</span><span class="tag">Веганский сертификат</span></div>
+              <div class="fit"><b>Кому рекомендуем</b><p>Рекомендуем тем, кого одновременно беспокоят сухость и снижение упругости, и тем, кто ищет увлажняющую веганскую ампулу.</p></div>
+              <div class="product-foot"><p class="note">Наносится следующим шагом после ампулы со спикулами: мягко распределите по всему лицу</p><a href="#contact" class="btn btn--ghost">Образцы</a></div>
             </div>
-            <div class="product-body">
-              <span class="product-role">Уход за гладким рельефом кожи, который начинается со спикул и компонентов CICA</span>
-              <h3 class="product-name">CICA-ампула со спикулами в капсулах</h3>
-              <span class="product-name-en">CICA Capsule Spicule Ampoule · 30 мл</span>
-              <p class="product-desc">Первый шаг ухода: выравнивает рельеф кожи, увлажняет и успокаивает её, подготавливая к следующим средствам.
-                Рекомендуется 1 раз в 2 дня · возможно покалывание · избегайте области вокруг глаз и губ.</p>
-              <div class="product-ingredients">
-                <span>Спикулы 5 000 ppm</span><span>5 видов центеллы</span><span>Derma-Clera™</span><span>11 видов гиалуроновой кислоты</span>
+          </div>
+        </section>
+        <section class="product">
+          <div class="wrap spread">
+            <figure class="spread-photo spread-photo--tall reveal"><img src="images/buyer/p-cream.jpg" alt="Крем Callus Repair" width="900" height="1350" loading="lazy" /></figure>
+            <div class="reveal">
+              <p class="product-kicker"><span class="tag tag--on">В продаже</span>Шаг 3 · Крем</p>
+              <h2>Крем Callus Repair<small>50mL</small></h2>
+              <p class="product-tagline">Крем для укрепления барьера, который удерживает влагу и сохраняет коже комфорт</p>
+              <p class="product-desc">Каллус эдельвейса и Derma-Clera™ в составе завершают уход: увлажнение, успокоение, упругость.</p>
+              <dl class="spec">
+                <div><dt>Экстракт культуры каллуса эдельвейса</dt><dd>Экстракт культуры каллуса эдельвейса придаёт коже свежий вид и ощущение увлажнённости</dd></div>
+                <div><dt>Derma-Clera™<small>(с экстрактом Cynanchum atratum)</small></dt><dd>Патентованное сырьё с экстрактом Cynanchum atratum помогает поддерживать комфортное состояние кожи<br />Патент № 10-1768870</dd></div>
+                <div><dt>9 видов пептидов</dt><dd>Уход с пептидными компонентами, который помогает сделать рельеф кожи упругим</dd></div>
+                <div><dt>5 видов экстракта центеллы азиатской</dt><dd>Компоненты CICA бережно ухаживают за кожей, ставшей восприимчивой</dd></div>
+                <div><dt>11 видов гиалуроновой кислоты · пантенол</dt><dd>Гиалуроновая кислота и пантенол добавляют ощущение увлажнённости</dd></div>
+                <div><dt>Бетаин · аллантоин</dt><dd>Помогают удерживать влагу и бережно кондиционируют кожу</dd></div>
+                <div><dt>Ниацинамид · аденозин</dt><dd>Функциональные компоненты для осветления и коррекции морщин ухаживают одновременно за тоном кожи и морщинами</dd></div>
+              </dl>
+              <div class="badges"><span class="tag">Осветление и коррекция морщин: 2 функции (MFDS)</span><span class="tag">Веганский сертификат</span></div>
+              <div class="fit"><b>Кому рекомендуем</b><p>Рекомендуем тем, кто хочет добавить сухой и восприимчивой коже увлажняющую плёнку и завершить уход ощущением увлажнённости.</p></div>
+              <div class="product-foot"><p class="note">Наносится после ампулы Callus Repair</p><a href="#contact" class="btn btn--ghost">Образцы</a></div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- 10쪽 출시 예정 앰플 -->
+      <section id="upcoming" class="rule-top">
+        <div class="wrap">
+          <span class="label">Скоро</span>
+          <h2 class="h2">Ампула PDRN Core · Ампула Mela Bright</h2>
+          <p class="lead">Набор из 6 флаконов по 4 мл, который выбирают по проблеме кожи · хорошо подходит для салонного ухода и подарочных наборов</p>
+          <div class="compare">
+            <div class="compare-imgs">
+              <img src="images/buyer/line-pdrn-core.jpg" alt="Ампула PDRN Core" width="524" height="280" loading="lazy" />
+              <img src="images/buyer/line-mela-bright.jpg" alt="Ампула Mela Bright" width="524" height="280" loading="lazy" />
+            </div>
+            <table class="ctable">
+              <thead><tr><th scope="col"></th><th scope="col">Ампула PDRN Core</th><th scope="col">Ампула Mela Bright</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">Концепция</th><td>Увлажнение, восполняющее основу кожи, базовый (Core) уход для упругой кожи</td><td>Осветляющая ампула, которая ухаживает за тусклым тоном кожи и пигментными пятнами и делает цвет лица чистым и ровным</td></tr>
+                <tr><th scope="row">Проблемы кожи</th><td>Сухость, тусклость и шероховатость, неровный рельеф кожи, упругость</td><td>Заметные пигментные пятна · тусклость · неровный тон кожи</td></tr>
+                <tr><th scope="row">Фокус ухода</th><td><strong>Увлажнение и упругость</strong></td><td><strong>Интенсивное осветление · выравнивание тона кожи · увлажнение</strong></td></tr>
+                <tr><th scope="row">Главный состав</th><td>Пантенол 10% · PDRN 2%<br>9 видов пептидов</td><td>Ниацинамид 10% · транексамовая кислота 3%<br>пантенол 10% · PDRN 0.3% · 9 видов пептидов</td></tr>
+                <tr><th scope="row">Набор</th><td>4 мл × 6 флаконов</td><td>4 мл × 6 флаконов</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="note">Содержание компонентов указано по разрабатываемой рецептуре и к выпуску может измениться · изображения продуктов показаны в проекте дизайна</p>
+        </div>
+      </section>
+
+      <!-- 11쪽 출시 예정 3종 -->
+      <section class="rule-top">
+        <div class="wrap">
+          <span class="label">Скоро</span>
+          <h2 class="h2">Маска · очищение · солнцезащитный крем</h2>
+          <p class="lead">От умывания и интенсивного ухода до завершающей защиты от УФ-лучей: мы расширяем уход Лаэзел</p>
+          <div class="upcoming">
+            <article class="up-row reveal">
+              <img src="images/buyer/line-mask.jpg" alt="Полугелевая маска с PDRN" width="524" height="280" loading="lazy" />
+              <div>
+                <div class="up-head"><h3>Полугелевая маска с PDRN</h3><span>25 мл × 10 шт.</span></div>
+                <p class="up-tag">Полугелевая тканевая маска с розовой водой и PDRN, которая плотно прилегает к коже и увлажняет её</p>
+                <div class="up-cols">
+                  <div><b>Розовая вода 5% · PDRN</b><p>Наполняет влагой сухую и уставшую кожу, делая её увлажнённой и возвращая ей комфорт</p></div>
+                  <div><b>Ниацинамид 5% · аденозин</b><p>2 функции, осветление и коррекция морщин, помогают сделать рельеф кожи чистым и гладким</p></div>
+                  <div><b>Плотно прилегающая полугелевая основа</b><p>От 10 до 20 минут мягко и плотно прилегает к лицу и делает кожу свежей и упругой</p></div>
+                </div>
               </div>
-              <div class="product-foot">
-                <a href="#buyer" class="btn btn-primary" style="padding:11px 18px;font-size:.9rem;width:100%">Запросить образец</a>
+            </article>
+            <article class="up-row reveal">
+              <img src="images/buyer/line-cleanser.jpg" alt="Пудра для умывания с женьшенем и витаминами" width="524" height="280" loading="lazy" />
+              <div>
+                <div class="up-head"><h3>Пудра для умывания с женьшенем и витаминами</h3><span>50mL</span></div>
+                <p class="up-tag">Умывание, подобное укрепляющему травяному отвару: пудра для ежедневного умывания «Женьшень-витаминная терапия»</p>
+                <div class="up-cols">
+                  <div><b>Женьшень · витамины</b><p>Придаёт свежий вид потускневшей коже, делая её чистой и свежей</p></div>
+                  <div><b>Мелкая пудра для глубокого очищения</b><p>В ладони смешивается с водой, превращается в плотную упругую пену и мягко смывает старые ороговевшие клетки и загрязнения</p></div>
+                  <div><b>Химические ПАВ Zero · низкое раздражающее действие</b><p>Ферменты 100% природного происхождения уменьшают стянутость после умывания и берегут барьер кожи, поэтому средством удобно пользоваться каждый день</p></div>
+                </div>
+              </div>
+            </article>
+            <article class="up-row reveal">
+              <img src="images/buyer/line-sun.jpg" alt="Солнцезащитный крем" width="524" height="280" loading="lazy" />
+              <div>
+                <div class="up-head"><h3>Солнцезащитный крем</h3><span>SPF 50</span></div>
+                <p class="up-tag">Солнцезащитный крем на каждый день, который мощной защитой от УФ-лучей завершает уход Лаэзел</p>
+                <div class="up-cols">
+                  <div><b>Защита от УФ-лучей SPF 50</b><p>Надёжно защищает кожу от сильного ультрафиолета в повседневной жизни и на открытом воздухе</p></div>
+                  <div><b>Лёгкая и свежая текстура</b><p>Мягко распределяется и почти не липнет, поэтому его удобно наносить каждый день</p></div>
+                  <div><b>Увлажнение · база под макияж</b><p>Оставляет кожу увлажнённой и хорошо подходит как база перед макияжем</p></div>
+                </div>
+              </div>
+            </article>
+          </div>
+          <p class="note">Состав, объём и упаковка продуктов, готовящихся к выпуску, могут измениться в ходе разработки · изображения продуктов показаны в проекте дизайна</p>
+        </div>
+      </section>
+
+      <!-- 12쪽 인체적용시험 -->
+      <section id="results" class="results">
+        <div class="results-grid">
+          <div class="results-body">
+            <span class="label">Исследование на людях</span>
+            <h2 class="h2">Результаты исследования на людях</h2>
+            <p class="lead">Исследование на людях после 1 применения 3 продуктов · Human Skin Clinical Trial Center</p>
+            <p class="big"><span class="num">138.10<small>%</small></span><span>Улучшение увлажнённости</span></p>
+            <div class="trio">
+              <div><span class="num">20.01%</span><span>Улучшение состояния пор</span></div>
+              <div><span class="num">7.40%</span><span>Улучшение рельефа кожи</span></div>
+              <div><span class="num">8.26%</span><span>Улучшение по показателю успокоения кожи</span></div>
+            </div>
+            <p class="results-line">Удовлетворённость пользователей 100% по 8 пунктам · первичный тест на раздражение кожи человека: заключение «не раздражает»</p>
+            <p class="note">Испытательная лаборатория: Human Skin Clinical Trial Center · измерение после 1 применения 3 продуктов · оригиналы протоколов испытаний покажем на встрече · результаты могут различаться индивидуально</p>
+          </div>
+          <figure class="results-photo"><img src="images/buyer/results-spicule.jpg" alt="CICA-ампула со спикулами в капсулах" width="900" height="1350" loading="lazy" /></figure>
+        </div>
+      </section>
+      <section class="proof">
+        <div class="wrap">
+          <figure>
+            <img src="images/005.png" alt="Фотографии измерения кожи до и после 1 применения 3 продуктов. Упругие поры 20.01%, гладкий рельеф кожи 7.40%, увлажнённость 138.10%, эффект успокоения кожи 8.26%" width="1408" height="1094" loading="lazy" />
+            <figcaption>До применения · после 1 применения · испытательная лаборатория: Human Skin Clinical Trial Center</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- 성분 (공식 상세페이지) -->
+      <section id="ingredients" class="rule-top">
+        <div class="wrap">
+          <span class="label">Состав</span>
+          <h2 class="h2">Компоненты линии Лаэзел Callus Repair</h2>
+          <dl class="ing">
+            <div><dt>Эдельвейс</dt><dd>Антиоксидантное действие в 2 раза сильнее, чем у витамина C. Экстракт растительных стволовых клеток эдельвейса дарит сухой и чувствительной коже комфортное ощущение увлажнённости.</dd><dd class="ing-meta">Эдельвейс, меняющий время кожи</dd></div>
+            <div><dt>9 видов пептидов</dt><dd>Пептидный бустинг окутывает кожу плотной упругостью изнутри. Он надёжно удерживает баланс кожи, который легко нарушается даже от небольшого раздражения, и помогает поддерживать её устойчивое состояние.</dd><dd class="ing-meta">Ключевой компонент slow-aging ухода</dd></div>
+            <div><dt>Derma-Clera™</dt><dd>Патентованный растительный компонент, полученный из Cynanchum atratum, бережно успокаивает кожу, ставшую чувствительной из-за раздражения, и мягко заботится о её нарушенном балансе.</dd><dd class="ing-meta">Патент № 10-1768870</dd></div>
+            <div><dt>11 видов гиалуроновой кислоты</dt><dd>11 видов гиалуроновой кислоты с разным размером молекул, от высокомолекулярной до низкомолекулярной, равномерно наполняют кожу влагой от поверхности до глубоких слоёв и поддерживают её увлажнённой, без ощущения сухости.</dd><dd class="ing-meta">Увлажнение в 11 слоёв гиалуроновой кислоты</dd></div>
+            <div><dt>Спикулы 5,000ppm</dt><dd>Компонент из микроигл натуральной морской губки: при контакте с кожей мягко выравнивает роговой слой и доставляет активные компоненты вглубь.</dd><dd class="ing-meta">Спикулы в высокой концентрации 5,000ppm</dd></div>
+          </dl>
+          <p class="note">* Приведённые выше сведения относятся только к свойствам сырья.</p>
+        </div>
+      </section>
+
+      <!-- 영상 -->
+      <section id="video" class="rule-top">
+        <div class="wrap video-grid">
+          <div class="video-frame">
+            <iframe src="https://www.youtube.com/embed/kkYFzxSf-iE?rel=0" title="Видео о Лаэзел" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <div>
+            <span class="label">Рассказ в корейской телепрограмме</span>
+            <p class="quote">«Достаточно одного применения, чтобы сразу почувствовать разницу. Ощущение увлажнённости, которое наполняет кожу изнутри, по-настоящему удивляет!»</p>
+            <p class="quote-by">Актриса Пак Ха Сон</p>
+            <p class="note">※ Личное впечатление от использования.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 13쪽 인증서 -->
+      <section id="certs" class="rule-top">
+        <div class="wrap">
+          <span class="label">Сертификаты · документы</span>
+          <h2 class="h2">Сертификаты</h2>
+          <p class="lead">Качество и безопасность Лаэзел, подтверждённые официальными сертификатами и испытаниями</p>
+          <div class="certs-grid">
+            <figure class="cert"><img src="images/001.png" alt="Веганский сертификат" loading="lazy" /><h3>Веганский сертификат</h3><p>Используем только растительное сырьё: получен официальный веганский сертификат</p></figure>
+            <figure class="cert"><img src="images/003.png" alt="Патентованный компонент" loading="lazy" /><h3>Патентованный компонент</h3><p>Derma-Clera™, патентованный растительный компонент, полученный из Cynanchum atratum</p></figure>
+            <figure class="cert"><img src="images/004.png" alt="Осветление и коррекция морщин: 2 функции" loading="lazy" /><h3>Осветление и коррекция морщин: 2 функции</h3><p>Функциональный продукт с 2 функциями: осветление и коррекция морщин</p></figure>
+            <figure class="cert"><img src="images/002.png" alt="Тест на пригодность для чувствительной кожи" loading="lazy" /><h3>Тест на пригодность для чувствительной кожи</h3><p>Продукт прошёл тест с участием людей с чувствительной кожей и не раздражает чувствительную кожу</p></figure>
+          </div>
+          <p class="note">Оригиналы сертификатов и протоколов испытаний покажем на встрече</p>
+        </div>
+      </section>
+
+      <!-- 사용법 (공식 상세페이지) -->
+      <section id="howto" class="rule-top">
+        <div class="wrap">
+          <span class="label">How to use</span>
+          <h2 class="h2">Восстанавливающий уход Лаэзел в 3 шага, который наполняет кожу её собственной силой</h2>
+          <div class="howto-grid">
+            <div><h3>STEP 01 · CICA-ампула со спикулами в капсулах</h3><ol><li>После умывания выровняйте рельеф кожи тонером и нанесите необходимое количество средства «CICA-ампула со спикулами в капсулах».</li><li>Мягко, перекатывающими движениями распределите по всему лицу, кроме области вокруг глаз и губ.</li><li>Мягко нанесите по направлению рельефа кожи и в завершение плотно прижмите средство пальцами.</li></ol><p class="note">* CICA-ампулу со спикулами в капсулах рекомендуется использовать 1 раз в 2 дня. (При этом в зависимости от типа кожи интервал между применениями можно увеличить.)</p></div>
+            <div><h3>STEP 02 · Ампула Callus Repair</h3><ol><li>После умывания выровняйте рельеф кожи тонером и нанесите необходимое количество ампулы Callus Repair.</li><li>Мягко, перекатывающими движениями распределите по всему лицу.</li></ol></div>
+            <div><h3>STEP 03 · Крем Callus Repair</h3><ol><li>После умывания, на последнем этапе базового ухода, возьмите необходимое количество средства, распределите тонким слоем и лёгкими похлопываниями помогите ему впитаться.</li><li>Если после 1-го впитывания нанести 2-й слой и дать ему впитаться, кожа дольше остаётся увлажнённой, без сухости в глубоких слоях.</li></ol></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 14쪽 연락처 -->
+      <section id="contact" class="rule-top">
+        <div class="wrap contact-grid">
+          <div>
+            <span class="label">Контакты</span>
+            <h2 class="h2">Запрос образцов и контакты</h2>
+            <dl class="contact-table">
+              <div><dt>Компания</dt><dd>Ezer Co., Ltd</dd></div>
+              <div><dt>Контакт</dt><dd>Чон Хён Чон, генеральный директор</dd></div>
+              <div><dt>Email</dt><dd><a href="mailto:laezer@naver.com">laezer@naver.com</a></dd></div>
+              <div><dt>Адрес</dt><dd>Республика Корея, Тэджон, р-н Тэдок, Тэхва-ро 106-беон-гиль 66, оф. 1018</dd></div>
+            </dl>
+            <p class="contact-slogan">TIMELESS RADIANCE AND BEAUTY</p>
+          </div>
+          <form class="buyer-form" name="buyer-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks-buyer-ru.html">
+            <input type="hidden" name="form-name" value="buyer-inquiry" />
+            <p class="buyer-form__hp"><label>Оставьте это поле пустым <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
+            <p class="buyer-form__intro">Если Вам нужны образцы или условия сотрудничества, оставьте запрос ниже. Мы ответим по электронной почте в течение 1 рабочего дня.</p>
+            <div class="buyer-form__grid">
+              <div class="field"><label for="bf-company">Компания<span class="req">Обязательно</span></label><input id="bf-company" name="회사명" type="text" required autocomplete="organization" /></div>
+              <div class="field"><label for="bf-name">Контактное лицо<span class="req">Обязательно</span></label><input id="bf-name" name="담당자명" type="text" required autocomplete="name" /></div>
+              <div class="field"><label for="bf-email">Email<span class="req">Обязательно</span></label><input id="bf-email" name="이메일" type="email" required inputmode="email" autocomplete="email" spellcheck="false" /></div>
+              <div class="field"><label for="bf-phone">Телефон<span class="opt">Необязательно</span></label><input id="bf-phone" name="전화번호" type="tel" inputmode="tel" autocomplete="tel" placeholder="Укажите с кодом страны" /></div>
+              <div class="field"><label for="bf-country">Страна · регион<span class="req">Обязательно</span></label><input id="bf-country" name="국가" type="text" required autocomplete="country-name" placeholder="например: Монголия, Япония, Узбекистан" /></div>
+              <div class="field"><label for="bf-interest">Интересующие продукты<span class="opt">Необязательно</span></label>
+                <select id="bf-interest" name="관심품목">
+                  <option value="">Выберите</option>
+                  <option value="3단계 세트 전체">Все 3 продукта в продаже</option>
+                  <option value="시카 캡슐 스피큘 앰플">CICA-ампула со спикулами в капсулах</option>
+                  <option value="캘러스 리페어 앰플">Ампула Callus Repair</option>
+                  <option value="캘러스 리페어 크림">Крем Callus Repair</option>
+                  <option value="출시 예정 제품">Продукты, готовящиеся к выпуску</option>
+                  <option value="OEM · ODM 문의">Запрос по OEM · ODM</option>
+                  <option value="아직 정하지 않음">Пока не определились</option>
+                </select>
               </div>
             </div>
-          </div>
-
-          <!-- STEP 02 — Callus Repair Ampoule -->
-          <div class="product-card reveal d1">
-            <div class="product-media">
-              <span class="product-step-tag">Шаг 2 · Ампула</span>
-              <img src="images/products/LZ-002_peptide-ampoule.png" alt="Лаэзел ампула Callus Repair" loading="lazy" />
-            </div>
-            <div class="product-body">
-              <span class="product-role">Концентрированная ампула: глубоко наполняет влагой, придаёт упругость и свежий вид</span>
-              <h3 class="product-name">Ампула Callus Repair</h3>
-              <span class="product-name-en">Callus Repair Ampoule · 30 мл</span>
-              <p class="product-desc">Каллус эдельвейса и 9 видов пептидов: интенсивный уход за сухой кожей, теряющей упругость.
-                Наносится после ампулы со спикулами: мягко распределите по всему лицу.</p>
-              <div class="product-ingredients">
-                <span>Каллус эдельвейса</span><span>9 видов пептидов</span><span>11 видов гиалуроновой кислоты</span><span>Веганский сертификат</span>
-              </div>
-              <div class="product-foot">
-                <a href="#buyer" class="btn btn-primary" style="padding:11px 18px;font-size:.9rem;width:100%">Запросить образец</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- STEP 03 — Callus Repair Cream -->
-          <div class="product-card reveal d2">
-            <div class="product-media">
-              <span class="product-step-tag">Шаг 3 · Крем</span>
-              <img src="images/products/LZ-003_callus-cream.png" alt="Лаэзел крем Callus Repair" loading="lazy" />
-            </div>
-            <div class="product-body">
-              <span class="product-role">Крем для укрепления барьера: удерживает влагу и сохраняет коже комфорт</span>
-              <h3 class="product-name">Крем Callus Repair</h3>
-              <span class="product-name-en">Callus Repair Cream · 50 мл</span>
-              <p class="product-desc">Каллус эдельвейса и Derma-Clera™ завершают уход: увлажнение, успокоение, упругость.
-                Наносится после ампулы Callus Repair.</p>
-              <div class="product-ingredients">
-                <span>Каллус эдельвейса</span><span>Derma-Clera™</span><span>9 видов пептидов</span><span>Веганский сертификат</span>
-              </div>
-              <div class="product-foot">
-                <a href="#buyer" class="btn btn-primary" style="padding:11px 18px;font-size:.9rem;width:100%">Запросить образец</a>
-              </div>
-            </div>
-          </div>
+            <div class="field field--full"><label for="bf-message">Сообщение<span class="opt">Необязательно</span></label><textarea id="bf-message" name="문의내용" rows="3" placeholder="Канал продаж, ожидаемый объём, сроки"></textarea></div>
+            <label class="buyer-form__consent"><input type="checkbox" name="개인정보동의" value="동의" required /><span>Чтобы ответить на Ваш запрос, мы собираем название компании, имя контактного лица и контактные данные, храним их 3 года после закрытия запроса и затем уничтожаем. Вы вправе не давать согласие, но в этом случае нам будет трудно Вам ответить.</span></label>
+            <button type="submit" class="btn">Отправить запрос на образцы</button>
+          </form>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ===== 6-1. Upcoming lineup ===== -->
-    <section class="lineup bg-mist" id="lineup">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow center">Скоро в продаже</span>
-          <h2 class="section-title">Пять <span class="title-accent">новых продуктов</span></h2>
-          <p class="section-sub">От умывания и интенсивного ухода до защиты от солнца: линейка Лаэзел расширяется</p>
+      <section class="retail">
+        <div class="wrap">
+          <span>Продажи в Корее: собственный магазин · Naver SmartStore · Coupang</span>
+          <span><a href="https://laezer.co.kr" target="_blank" rel="noopener">laezer.co.kr</a><a href="https://smartstore.naver.com/laezer" target="_blank" rel="noopener">smartstore.naver.com/laezer</a></span>
         </div>
-        <div class="lineup-grid">
-          <article class="lineup-card reveal">
-            <span class="lineup-tag">Маска · 25 мл × 10 шт.</span>
-            <h3>Полугелевая маска с PDRN</h3>
-            <p>Полугелевая тканевая маска с розовой водой и PDRN, которая плотно прилегает к коже и увлажняет её</p>
-            <span class="lineup-meta">Розовая вода 5% · PDRN · ниацинамид 5% · аденозин</span>
-          </article>
-          <article class="lineup-card reveal">
-            <span class="lineup-tag">Очищение · 50 мл</span>
-            <h3>Пудра для умывания с женьшенем и витаминами</h3>
-            <p>Умывание, подобное укрепляющему травяному отвару: пудра для ежедневного умывания «Женьшень-витаминная терапия»</p>
-            <span class="lineup-meta">Женьшень · витамины · химические ПАВ Zero · 100% ферменты природного происхождения</span>
-          </article>
-          <article class="lineup-card reveal">
-            <span class="lineup-tag">Ампулы · 4 мл × 6 шт.</span>
-            <h3>Ампула PDRN Core</h3>
-            <p>Увлажнение, восполняющее основу кожи: базовый (Core) уход для упругой кожи</p>
-            <span class="lineup-meta">Пантенол 10% · PDRN 2% · 9 видов пептидов</span>
-          </article>
-          <article class="lineup-card reveal">
-            <span class="lineup-tag">Ампулы · 4 мл × 6 шт.</span>
-            <h3>Ампула Mela Bright</h3>
-            <p>Осветляющая ампула: уход за тусклым тоном кожи и пигментными пятнами для чистого и ровного цвета лица</p>
-            <span class="lineup-meta">Ниацинамид 10% · транексамовая кислота 3% · пантенол 10% · PDRN 0.3% · 9 видов пептидов</span>
-          </article>
-          <article class="lineup-card reveal">
-            <span class="lineup-tag">Защита от солнца · SPF 50</span>
-            <h3>Солнцезащитный крем</h3>
-            <p>Солнцезащитный крем на каждый день: мощная защита от УФ-лучей завершает уход Лаэзел</p>
-            <span class="lineup-meta">Защита от УФ-лучей SPF 50</span>
-          </article>
-        </div>
-        <p class="results-note">※ Состав, объём и упаковка будущих продуктов могут измениться в ходе разработки. Концентрации указаны по разрабатываемой рецептуре.</p>
-      </div>
-    </section>
+      </section>
+    </main>
 
-    <!-- ===== 7. Clinical Results ===== -->
-    <section class="results bg-ivory" id="results">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow center">Исследование на людях</span>
-          <h2 class="section-title">Результаты, <span class="title-accent">измеренные на коже людей</span></h2>
-          <p class="section-sub">Измерения после однократного применения трёх продуктов, Human Skin Clinical Trials Center (Корея)</p>
-        </div>
-        <div class="results-grid results-grid--4">
-          <div class="result-card reveal">
-            <div class="result-icon"><i class="fas fa-tint"></i></div>
-            <div class="result-number">138.10%</div>
-            <h3 class="result-title">Улучшение увлажнённости</h3>
-            <p class="result-desc">После 1 применения трёх продуктов</p>
-          </div>
-          <div class="result-card reveal d1">
-            <div class="result-icon"><i class="fas fa-compress"></i></div>
-            <div class="result-number">20.01%</div>
-            <h3 class="result-title">Улучшение состояния пор</h3>
-            <p class="result-desc">После 1 применения трёх продуктов</p>
-          </div>
-          <div class="result-card reveal d2">
-            <div class="result-icon"><i class="fas fa-leaf"></i></div>
-            <div class="result-number">8.26%</div>
-            <h3 class="result-title">Улучшение по показателю успокоения кожи</h3>
-            <p class="result-desc">После 1 применения трёх продуктов</p>
-          </div>
-          <div class="result-card reveal d3">
-            <div class="result-icon"><i class="fas fa-gem"></i></div>
-            <div class="result-number">7.40%</div>
-            <h3 class="result-title">Улучшение рельефа кожи</h3>
-            <p class="result-desc">После 1 применения трёх продуктов</p>
-          </div>
-        </div>
-        <figure class="proof-figure reveal">
-          <img src="images/005.png"
-               alt="LaEzer 3-step routine: before and after skin measurement"
-               loading="lazy" decoding="async" />
-        </figure>
-
-        <p class="results-note">* Испытательная лаборатория: Human Skin Clinical Trials Center · измерение после однократного применения трёх продуктов · удовлетворённость пользователей 100% по 8 пунктам · первичный тест на раздражение кожи: «не раздражает» · оригиналы протоколов покажем на встрече · результат может различаться индивидуально</p>
-      </div>
-    </section>
-
-    <!-- ===== 8. Ingredients ===== -->
-    <section class="ingredients" id="ingredients">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow center">Состав</span>
-          <h2 class="section-title">Только те компоненты, <span class="title-accent">которым можно доверять</span></h2>
-          <p class="section-sub">Приведённые ниже сведения относятся только к свойствам сырья</p>
-        </div>
-
-        <figure class="ing-lead reveal">
-          <img src="images/f1b7e4ceee5b4d438129fa5c83a7d80d.jpg" alt="LaEzer Callus Repair Ampoule"
-               loading="lazy" decoding="async" />
-        </figure>
-        <div class="ing-grid">
-          <div class="ing-card reveal">
-            <div class="ing-icon"><img src="images/ing_edelweiss.png" alt="Эдельвейс" /></div>
-            <h3>Растительные стволовые клетки</h3>
-            <p>Антиоксидантное действие в 2 раза сильнее, чем у витамина C. Экстракт растительных стволовых клеток эдельвейса дарит сухой и чувствительной коже комфортное ощущение увлажнённости.</p>
-            <span class="ing-tag">Вместе с 9 видами пептидов</span>
-          </div>
-          <div class="ing-card reveal d1">
-            <div class="ing-icon"><img src="images/ing_hyaluronic.png" alt="Гиалуроновая кислота" /></div>
-            <h3>11 видов гиалуроновой кислоты</h3>
-            <p>Увлажняющий уход с разными видами гиалуроновой кислоты. 11 видов гиалуроновой кислоты, от высокомолекулярной до низкомолекулярной, равномерно наполняют кожу влагой от поверхности до глубоких слоёв.</p>
-            <span class="ing-tag">Улучшение увлажнённости 138.10%</span>
-          </div>
-          <div class="ing-card reveal d2">
-            <div class="ing-icon"><img src="images/ing_dermaclera.png" alt="Derma-Clera" /></div>
-            <h3>Derma-Clera™ (патент)</h3>
-            <p>Патентованный растительный компонент, полученный из Cynanchum atratum, бережно успокаивает кожу, ставшую чувствительной из-за раздражения, и мягко заботится о её нарушенном балансе.</p>
-            <span class="ing-tag">Патент № 10-1768870</span>
-          </div>
-          <div class="ing-card reveal d3">
-            <div class="ing-icon"><img src="images/ing_cica.png" alt="CICA" /></div>
-            <h3>Успокаивающие компоненты</h3>
-            <p>5 видов экстракта центеллы азиатской, компоненты CICA, бережно ухаживают за чувствительной кожей. Пантенол, бетаин и аллантоин увлажняют и успокаивают кожу, поддерживая её комфортное состояние.</p>
-            <span class="ing-tag">Тест на чувствительной коже пройден</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== 9. How to Use ===== -->
-    <section class="howto bg-cream" id="howto">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow center">Применение</span>
-          <h2 class="section-title">Утренний и вечерний <span class="title-accent">уход</span></h2>
-          <p class="section-sub">Ампулы и крем вместе дают более приятные ощущения от ухода</p>
-        </div>
-        <div class="howto-grid">
-          <div class="routine-card routine-am reveal">
-            <div class="routine-head">
-              <span class="ico"><i class="fas fa-sun"></i></span>
-              <div><h3>Утренний уход</h3><small>Легко, чтобы быстро впитывалось</small></div>
-            </div>
-            <div class="routine-steps">
-              <div class="routine-step"><span class="n">1</span><div><b>Очищение и тонер</b><p>Умойтесь и выровняйте кожу тонером.</p></div></div>
-              <div class="routine-step"><span class="n">2</span><div><b>Ампула Callus</b><p>Наполняет влагой. Быстро впитывается и оставляет сияние.</p></div></div>
-              <div class="routine-step"><span class="n">3</span><div><b>Крем (тонким слоем)</b><p>Нанесите тонким слоем, чтобы удержать влагу.</p></div></div>
-              <div class="routine-step"><span class="n">4</span><div><b>Солнцезащитное средство</b><p>Наносите после того, как крем впитается.</p></div></div>
-            </div>
-            <div class="routine-tip"><i class="fas fa-lightbulb"></i><span>Утром наносите тонким слоем, а после впитывания добавьте солнцезащитное средство.</span></div>
-          </div>
-
-          <div class="routine-card routine-pm reveal d1">
-            <div class="routine-head">
-              <span class="ico"><i class="fas fa-moon"></i></span>
-              <div><h3>Вечерний уход</h3><small>Интенсивный ночной уход</small></div>
-            </div>
-            <div class="routine-steps">
-              <div class="routine-step"><span class="n">1</span><div><b>Очищение и тонер</b><p>Смойте загрязнения дня и выровняйте кожу.</p></div></div>
-              <div class="routine-step"><span class="n">2</span><div><b>CICA-ампула со спикулами (1 раз в 2 дня)</b><p>Выравнивает рельеф кожи. Возможно покалывание: избегайте области вокруг глаз и губ.</p></div></div>
-              <div class="routine-step"><span class="n">3</span><div><b>Ампула Callus (щедро)</b><p>Нанесите щедро, сделав акцент на увлажнении и упругости.</p></div></div>
-              <div class="routine-step"><span class="n">4</span><div><b>Крем (щедро)</b><p>Удерживает влагу на всю ночь и защищает барьер кожи.</p></div></div>
-            </div>
-            <div class="routine-tip"><i class="fas fa-lightbulb"></i><span>Если нанести щедро перед сном, ощущение увлажнённости сохраняется до утра.</span></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== 10. Certifications ===== -->
-    <section class="certs" id="certs">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow center">Сертификаты и подтверждения</span>
-          <h2 class="section-title">Это можно проверить <span class="title-accent">по документам</span></h2>
-          <p class="section-sub">Оригиналы сертификатов и протоколов испытаний покажем на встрече</p>
-        </div>
-        <div class="cert-grid">
-          <div class="cert-card reveal">
-            <div class="cert-visual"><img src="images/001.png" alt="Веганский сертификат" /></div>
-            <div class="cert-body"><h4>Веганский сертификат</h4><p>Только растительное сырьё: получен официальный веганский сертификат</p></div>
-          </div>
-          <div class="cert-card reveal d1">
-            <div class="cert-visual"><img src="images/002.png" alt="Протокол теста на чувствительной коже" /></div>
-            <div class="cert-body"><h4>Тест на пригодность для чувствительной кожи</h4><p>Продукт прошёл тест на чувствительной коже и не вызывает её раздражения</p></div>
-          </div>
-          <div class="cert-card reveal d2">
-            <div class="cert-visual"><img src="images/003.png" alt="Патент" /></div>
-            <div class="cert-body"><h4>Патентованный компонент</h4><p>Derma-Clera™, патентованный растительный компонент из Cynanchum atratum · Патент № 10-1768870</p></div>
-          </div>
-          <div class="cert-card reveal d3">
-            <div class="cert-visual"><img src="images/004.png" alt="Уведомление о функциональной косметике (MFDS, Корея)" /></div>
-            <div class="cert-body"><h4>Осветление и коррекция морщин</h4><p>Функциональная косметика двойного действия: осветление и коррекция морщин (уведомление MFDS, Корея)</p></div>
-          </div>
-        </div>
-        <p class="results-note" style="margin-top:24px">※ Тест на чувствительной коже подтверждает пригодность к применению и не означает отсутствие раздражения у всех без исключения.</p>
-      </div>
-    </section>
-
-    <!-- ===== 12. Buyer inquiry ===== -->
-    <section class="buyer" id="buyer">
-      <div class="container container--narrow">
-        <div class="section-head reveal">
-          <span class="eyebrow center">Образцы и контакты</span>
-          <h2 class="section-title">Для байеров и дистрибьюторов</h2>
-          <p class="section-sub">
-            Если Вы рассматриваете дистрибуцию, импорт или эксклюзивные права, оставьте свои данные.
-            Мы подготовим образцы и презентацию компании и ответим в течение одного рабочего дня.
-          </p>
-        </div>
-
-
-        <div class="buyer-fit reveal">
-          <p class="buyer-fit__title">С кем мы хотим работать</p>
-          <ul class="buyer-fit__list">
-            <li>Импортёры с собственной сетью распространения косметики на своём рынке</li>
-            <li>Дистрибьюторы и специализированные розничные сети в дермокосметике и уходе за кожей</li>
-            <li>Компании, которые готовят собственный бренд через OEM / ODM</li>
-          </ul>
-          <ul class="buyer-fit__trust" aria-label="Сертификаты">
-            <li>Веган-сертификат</li>
-            <li>Осветление · против морщин</li>
-            <li>Исследование на людях</li>
-            <li>Патент 10-1768870</li>
-          </ul>
-        </div>
-
-        <form
-          class="buyer-form reveal"
-          name="buyer-inquiry"
-          method="POST"
-          data-netlify="true"
-          netlify-honeypot="bot-field"
-          action="/thanks-buyer-ru.html">
-          <input type="hidden" name="form-name" value="buyer-inquiry" />
-          <p class="buyer-form__hp">
-            <label>Оставьте это поле пустым <input name="bot-field" tabindex="-1" autocomplete="off" /></label>
-          </p>
-
-          <div class="buyer-form__grid">
-            <div class="field">
-              <label for="bf-company">Компания <span class="req">Обязательно</span></label>
-              <input id="bf-company" name="회사명" type="text" required autocomplete="organization" />
-            </div>
-            <div class="field">
-              <label for="bf-name">Контактное лицо <span class="req">Обязательно</span></label>
-              <input id="bf-name" name="담당자명" type="text" required autocomplete="name" />
-            </div>
-            <div class="field">
-              <label for="bf-email">Email <span class="req">Обязательно</span></label>
-              <input id="bf-email" name="이메일" type="email" required inputmode="email" autocomplete="email" />
-              <span class="field__help">На этот адрес мы пришлём ответ</span>
-            </div>
-            <div class="field">
-              <label for="bf-phone">Телефон <span class="opt">Необязательно</span></label>
-              <input id="bf-phone" name="전화번호" type="tel" inputmode="tel" autocomplete="tel" placeholder="Укажите с кодом страны" />
-            </div>
-            <div class="field">
-              <label for="bf-country">Страна или регион <span class="req">Обязательно</span></label>
-              <input id="bf-country" name="국가" type="text" required autocomplete="country-name" placeholder="например, Монголия, Япония, Корея" />
-            </div>
-            <div class="field">
-              <label for="bf-interest">Интересующие продукты <span class="opt">Необязательно</span></label>
-              <select id="bf-interest" name="관심품목">
-                <option value="">Выберите</option>
-                <option>Полный набор из 3 шагов</option>
-                <option>Ампула CICA Capsule Spicule</option>
-                <option>Ампула Callus Repair</option>
-                <option>Крем Callus Repair</option>
-                <option>Будущие продукты</option>
-                <option>OEM / ODM</option>
-                <option>Пока не определились</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="field field--full">
-            <label for="bf-message">Сообщение <span class="opt">Необязательно</span></label>
-            <textarea id="bf-message" name="문의내용" rows="3" placeholder="Канал продаж, ожидаемый объём, сроки"></textarea>
-          </div>
-
-          <label class="buyer-form__consent">
-            <input type="checkbox" name="개인정보동의" value="동의" required />
-            <span>
-              Мы собираем название компании, имя контактного лица и контактные данные, чтобы ответить на этот запрос, и храним их три года после его закрытия.
-            </span>
-          </label>
-
-          <button type="submit" class="btn btn-primary btn-lg btn-block">Отправить запрос</button>
-
-          <p class="buyer-form__note">
-            Также можно написать нам напрямую: <a href="mailto:laezer@naver.com">laezer@naver.com</a> (генеральный директор Чон Хён Чон).
-          </p>
-        </form>
-      </div>
-    </section>
-
-    <!-- ===== 11. CTA (purchase) ===== -->
-    <section class="cta" id="contact">
-      <div class="container">
-        <div class="cta-inner reveal">
-          <span class="eyebrow center">Продажи в Корее</span>
-          <h2>Так мы продаём<br />в Корее</h2>
-          <p>Три продукта продаются <strong>напрямую покупателям</strong> в официальном
-            интернет-магазине, в Naver SmartStore и на Coupang.</p>
-          <div class="cta-channels">
-            <a href="https://laezer.co.kr" target="_blank" rel="noopener" class="cta-channel primary">
-              <span class="ch-label"><i class="fas fa-shopping-bag"></i> Официальный интернет-магазин</span>
-              <span class="ch-sub">Официальный магазин EZER Co., Ltd.</span>
-              <span class="ch-val">laezer.co.kr</span>
-            </a>
-            <a href="https://smartstore.naver.com/laezer" target="_blank" rel="noopener" class="cta-channel">
-              <span class="ch-label"><i class="fas fa-store"></i> Naver SmartStore</span>
-              <span class="ch-sub">Удобная оплата через Naver Pay</span>
-              <span class="ch-val">smartstore.naver.com/laezer</span>
-            </a>
-          </div>
-          <p class="cta-note">
-            Вопросы покупателей направляйте на <a href="mailto:laezer@naver.com" style="color:var(--green-crystal);text-decoration:underline">laezer@naver.com</a>.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== Footer ===== -->
     <footer class="footer">
-      <div class="container">
-        <div class="footer-top">
-          <div class="footer-brand">
-            <div class="footer-logo">LaEzer</div>
-            <p class="footer-tagline">Timeless Radiance and Beauty<br />Сияние и красота вне времени</p>
-            <div class="footer-social">
-              <a href="https://www.instagram.com/zia.laezer" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-              <a href="https://m.me/soulalpaca" target="_blank" rel="noopener" aria-label="Messenger"><i class="fab fa-facebook-messenger"></i></a>
-              <a href="https://www.youtube.com/watch?v=FHtmHfhk6FY" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-            </div>
-          </div>
-          <div class="footer-col">
-            <h4>Продукты</h4>
-            <ul>
-              <li><a href="#products">CICA-ампула со спикулами в капсулах</a></li>
-              <li><a href="#products">Ампула Callus Repair</a></li>
-              <li><a href="#products">Крем Callus Repair</a></li>
-              <li><a href="#lineup">5 новых продуктов</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h4>Информация</h4>
-            <ul>
-              <li><a href="#company">О компании</a></li>
-              <li><a href="#history">История</a></li>
-              <li><a href="#results">Исследование на людях</a></li>
-              <li><a href="#certs">Сертификаты</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h4>Байерам · Продажи</h4>
-            <ul>
-              <li><a href="#buyer">Для байеров и дистрибьюторов</a></li>
-              <li><a href="https://laezer.co.kr" target="_blank" rel="noopener">Официальный интернет-магазин</a></li>
-              <li><a href="https://smartstore.naver.com/laezer" target="_blank" rel="noopener">Naver SmartStore</a></li>
-              <li><a href="mailto:laezer@naver.com">laezer@naver.com</a></li>
-            </ul>
-          </div>
+      <div class="wrap">
+        <div>
+          <span class="wordmark" role="img" aria-label="LaEzer"><svg class="wm" viewBox="0 0 3136 864" aria-hidden="true" focusable="false"><use href="#wm"></use></svg></span>
+          <p>Timeless Radiance and Beauty</p>
         </div>
-        <div class="footer-bottom">
-          <p>&copy; 2026 LaEzer · EZER Co., Ltd. All rights reserved.</p>
-          <p>EZER Co., Ltd. · Республика Корея, Тэджон, р-н Тэдок, Тэхва-ро 106-беон-гиль 66, оф. 1018 · Директор: Чон Хён Чон</p>
+        <div>
+          <p>&copy; 2026 LaEzer · Ezer Co., Ltd · Генеральный директор Чон Хён Чон</p>
+          <p>Республика Корея, Тэджон, р-н Тэдок, Тэхва-ро 106-беон-гиль 66, оф. 1018</p>
         </div>
       </div>
     </footer>
 
-    <button id="scrollTop" class="scroll-top" aria-label="Наверх"><i class="fas fa-arrow-up"></i></button>
+    <button id="scrollTop" class="scroll-top" type="button" aria-label="Наверх">↑</button>
     <script src="js/script.js"></script>
     <script src="js/lang-pref.js"></script>
   </body>

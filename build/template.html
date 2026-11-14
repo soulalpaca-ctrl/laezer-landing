@@ -1,0 +1,477 @@
+<!doctype html>
+<!-- 이 파일은 build/build.py 가 build/template.html + build/i18n/*.json 으로 만든다. 직접 고치지 말고 그쪽을 고친 뒤 다시 빌드한다. -->
+<html lang="{{_lang}}">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="{{meta_description}}" />
+    <title>{{meta_title}}</title>
+    <link rel="icon" type="image/png" href="images/logo-transparent.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" rel="stylesheet" />
+{{_font_links}}    <link rel="stylesheet" href="css/buyer.css?v=20261114" />
+{{_style}}{{_hreflang}}    <link rel="canonical" href="{{_canonical}}" />
+    <meta property="og:locale" content="{{_og_locale}}" />
+{{_og_alternates}}    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{_canonical}}" />
+    <meta property="og:title" content="{{meta_title}}" />
+    <meta property="og:description" content="{{meta_description}}" />
+    <meta property="og:image" content="https://laezer-landing.netlify.app/images/model-portrait.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script type="application/ld+json">
+{{_jsonld}}
+    </script>
+  </head>
+  <body>
+{{_wm_symbol}}    <header class="header" id="header">
+      <nav class="nav wrap" aria-label="{{nav_aria}}">
+        <a class="wordmark" href="#top" aria-label="LaEzer"><svg class="wm" viewBox="0 0 3136 864" aria-hidden="true" focusable="false"><use href="#wm"></use></svg></a>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#company">{{nav_company}}</a></li>
+          <li><a href="#lineup">{{nav_lineup}}</a></li>
+          <li><a href="#products">{{nav_products}}</a></li>
+          <li><a href="#upcoming">{{nav_upcoming}}</a></li>
+          <li><a href="#results">{{nav_results}}</a></li>
+          <li><a href="#certs">{{nav_certs}}</a></li>
+          <li><a href="#contact" class="btn-nav">{{cta_sample}}</a></li>
+          <li class="lang">
+{{_lang_links}}          </li>
+        </ul>
+        <button class="hamburger" id="hamburger" type="button" aria-label="{{nav_menu_aria}}" aria-controls="navMenu">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </header>
+
+    <main id="top">
+      <!-- 1쪽 표지 -->
+      <section class="cover">
+        <div class="wrap">
+          <h1 aria-label="{{cover_h1_aria}}"><svg class="wm" viewBox="0 0 3136 864" aria-hidden="true" focusable="false"><use href="#wm"></use></svg></h1>
+          <div class="cover-rule"></div>
+          <p class="cover-slogan">Timeless Radiance and Beauty</p>
+          <p class="cover-meta">{{cover_meta}}</p>
+          <div class="cover-cta">
+            <a href="#contact" class="btn btn--light">{{cta_sample}}</a>
+            <a href="#lineup" class="btn btn--line-light">{{cta_lineup}}</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2쪽 회사 -->
+      <section id="company">
+        <div class="wrap spread">
+          <figure class="spread-photo reveal"><img src="images/model-portrait.jpg" alt="{{company_img_alt}}" width="1643" height="2200" /></figure>
+          <div class="spread-body reveal">
+            <span class="label">{{company_label}}</span>
+            <h2 class="h2">{{company_title}}</h2>
+            <p>{{company_p1}}</p>
+            <p>{{company_p2}}</p>
+            <div class="slogan">
+              <span class="label">{{slogan_label}}</span>
+              <p class="slogan-en">Timeless Radiance and Beauty</p>
+{{_slogan_local}}              <p>{{slogan_p}}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3쪽 브랜드 이야기 -->
+      <section id="brand" class="rule-top">
+        <div class="wrap spread">
+          <figure class="spread-photo reveal"><img src="images/buyer/lab.jpg" alt="{{brand_img_alt}}" width="1024" height="1024" loading="lazy" /></figure>
+          <div class="spread-body reveal">
+            <span class="label">{{brand_label}}</span>
+            <h2 class="h2">{{brand_title}}</h2>
+            <p>{{brand_p}}</p>
+            <ol class="principles">
+              <li><div><span class="p-no">01 / RESEARCH</span><span class="p-en">Development &amp; Research</span></div><div><b>{{pr1_title}}</b><p>{{pr1_text}}</p></div></li>
+              <li><div><span class="p-no">02 / FORMULATION</span><span class="p-en">Advanced Ingredient Synergy</span></div><div><b>{{pr2_title}}</b><p>{{pr2_text}}</p></div></li>
+              <li><div><span class="p-no">03 / PHILOSOPHY</span><span class="p-en">Balance</span></div><div><b>{{pr3_title}}</b><p>{{pr3_text}}</p></div></li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4쪽 연혁 -->
+      <section id="history" class="rule-top">
+        <div class="wrap spread">
+          <figure class="spread-photo spread-photo--tall reveal"><img src="images/buyer/history-cream.jpg" alt="{{history_img_alt}}" width="900" height="1350" loading="lazy" /></figure>
+          <div class="spread-body reveal">
+            <span class="label">{{history_label}}</span>
+            <ol class="history-list">
+              <li><time class="num">2024.09</time><div><b>{{h1}}</b><span>{{h1s}}</span></div></li>
+              <li><time class="num">2025</time><div><b>{{h2}}</b><span>{{h2s}}</span></div></li>
+              <li><time class="num">2025</time><div><b>{{h3}}</b><span>{{h3s}}</span></div></li>
+              <li><time class="num">2026.02</time><div><b>{{h4}}</b><span>{{h4s}}</span></div></li>
+              <li><time class="num">2026.04</time><div><b>{{h5}}</b></div></li>
+              <li><time class="num">2026.06</time><div><b>{{h6}}</b><span>{{h6s}}</span></div></li>
+              <li><time class="num">2026.08</time><div><b>{{h7}}</b></div></li>
+              <li><time class="num">2026.09</time><div><b>{{h8}}</b></div></li>
+              <li><time class="num">2026.11</time><div><b>{{h9}}</b></div></li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5쪽 루틴 -->
+      <section id="routine" class="rule-top">
+        <div class="wrap">
+          <span class="label">{{routine_label}}</span>
+          <h2 class="routine-title">AWAKE • REPAIR • SHIELD</h2>
+          <p class="lead">{{routine_lead}}</p>
+          <div class="routine-grid">
+            <article class="reveal">
+              <img src="images/buyer/soil-spicule.jpg" alt="{{p1_name}}" width="900" height="558" loading="lazy" />
+              <h3 class="step-head"><span class="step-tag">STEP 1</span>AWAKE</h3>
+              <p class="step-name">{{p1_name}}</p>
+              <p class="step-first">{{step1_first}}</p>
+              <p class="step-text">{{step1_text}}</p>
+            </article>
+            <article class="reveal">
+              <img src="images/buyer/soil-ampoule.jpg" alt="{{p2_name}}" width="900" height="558" loading="lazy" />
+              <h3 class="step-head"><span class="step-tag">STEP 2</span>REPAIR</h3>
+              <p class="step-name">{{p2_name}}</p>
+              <p class="step-first">{{step2_first}}</p>
+              <p class="step-text">{{step2_text}}</p>
+            </article>
+            <article class="reveal">
+              <img src="images/buyer/soil-cream.jpg" alt="{{p3_name}}" width="900" height="558" loading="lazy" />
+              <h3 class="step-head"><span class="step-tag">STEP 3</span>SHIELD</h3>
+              <p class="step-name">{{p3_name}}</p>
+              <p class="step-first">{{step3_first}}</p>
+              <p class="step-text">{{step3_text}}</p>
+            </article>
+          </div>
+          <p class="note">{{routine_note}}</p>
+        </div>
+      </section>
+
+      <!-- 6쪽 라인업 -->
+      <section id="lineup" class="rule-top">
+        <div class="wrap">
+          <div class="lineup-head">
+            <div>
+              <span class="label">{{lineup_label}}</span>
+              <h2 class="h2">{{lineup_title}}</h2>
+              <p class="lead">{{lineup_lead}}</p>
+            </div>
+            <div class="legend"><span class="tag tag--on">{{tag_on}}</span><span class="tag">{{tag_soon}}</span></div>
+          </div>
+          <div class="lineup-grid">
+            <article class="lineup-cell"><div class="lineup-top"><span>01 {{cat_mask}}</span><span class="tag">{{tag_soon}}</span></div><img src="images/buyer/line-mask.jpg" alt="{{l1_name}}" width="524" height="280" loading="lazy" /><h3>{{l1_name}}</h3><p class="lineup-spec"><span>{{l1_desc}}</span><span>25mL × 10</span></p></article>
+            <article class="lineup-cell"><div class="lineup-top"><span>02 {{cat_cleanser}}</span><span class="tag">{{tag_soon}}</span></div><img src="images/buyer/line-cleanser.jpg" alt="{{l2_name}}" width="524" height="280" loading="lazy" /><h3>{{l2_name}}</h3><p class="lineup-spec"><span>{{l2_desc}}</span><span>50mL</span></p></article>
+            <article class="lineup-cell"><div class="lineup-top"><span>03 {{cat_ampoule}}</span><span class="tag tag--on">{{tag_on}}</span></div><img src="images/buyer/line-box-ampoule.jpg" alt="{{p2_name}}" width="524" height="280" loading="lazy" /><h3>{{p2_name}}</h3><p class="lineup-spec"><span>{{l3_desc}}</span><span>30mL</span></p></article>
+            <article class="lineup-cell"><div class="lineup-top"><span>03 {{cat_ampoule}}</span><span class="tag tag--on">{{tag_on}}</span></div><img src="images/buyer/line-box-spicule.jpg" alt="{{p1_name}}" width="524" height="280" loading="lazy" /><h3>{{p1_name}}</h3><p class="lineup-spec"><span>{{l4_desc}}</span><span>30mL</span></p></article>
+            <article class="lineup-cell"><div class="lineup-top"><span>03 {{cat_ampoule}}</span><span class="tag">{{tag_soon}}</span></div><img src="images/buyer/line-pdrn-core.jpg" alt="{{l5_name}}" width="524" height="280" loading="lazy" /><h3>{{l5_name}}</h3><p class="lineup-spec"><span>{{l5_desc}}</span><span>4mL × 6</span></p></article>
+            <article class="lineup-cell"><div class="lineup-top"><span>03 {{cat_ampoule}}</span><span class="tag">{{tag_soon}}</span></div><img src="images/buyer/line-mela-bright.jpg" alt="{{l6_name}}" width="524" height="280" loading="lazy" /><h3>{{l6_name}}</h3><p class="lineup-spec"><span>{{l6_desc}}</span><span>4mL × 6</span></p></article>
+            <article class="lineup-cell"><div class="lineup-top"><span>04 {{cat_cream}}</span><span class="tag tag--on">{{tag_on}}</span></div><img src="images/buyer/line-box-cream.jpg" alt="{{p3_name}}" width="524" height="280" loading="lazy" /><h3>{{p3_name}}</h3><p class="lineup-spec"><span>{{l7_desc}}</span><span>50mL</span></p></article>
+            <article class="lineup-cell"><div class="lineup-top"><span>05 {{cat_sun}}</span><span class="tag">{{tag_soon}}</span></div><img src="images/buyer/line-sun.jpg" alt="{{l8_name}}" width="524" height="280" loading="lazy" /><h3>{{l8_name}}</h3><p class="lineup-spec"><span>{{l8_desc}}</span><span>SPF 50</span></p></article>
+          </div>
+          <p class="note">{{lineup_note}}</p>
+        </div>
+      </section>
+
+      <!-- 7~9쪽 판매 중 3종 -->
+      <div id="products" class="rule-top">
+        <section class="product">
+          <div class="wrap spread">
+            <figure class="spread-photo spread-photo--tall reveal"><img src="images/buyer/p-spicule.jpg" alt="{{p1_name}}" width="900" height="1350" loading="lazy" /></figure>
+            <div class="reveal">
+              <p class="product-kicker"><span class="tag tag--on">{{tag_on}}</span>{{p1_kicker}}</p>
+              <h2>{{p1_name}}<small>30mL</small></h2>
+              <p class="product-tagline">{{p1_tagline}}</p>
+              <p class="product-desc">{{p1_desc}}</p>
+              <dl class="spec">
+                <div><dt>{{p1_s1k}}</dt><dd>{{p1_s1v}}</dd></div>
+                <div><dt>{{p1_s2k}}</dt><dd>{{p1_s2v}}</dd></div>
+                <div><dt>Derma-Clera™<small>{{dc_small}}</small></dt><dd>{{dc_v}}<br />{{patent_no}}</dd></div>
+                <div><dt>{{centella_k}}</dt><dd>{{p1_s4v}}</dd></div>
+                <div><dt>{{p1_s5k}}</dt><dd>{{p1_s5v}}</dd></div>
+                <div><dt>{{ha_k}}</dt><dd>{{p1_s6v}}</dd></div>
+              </dl>
+              <div class="badges"><span class="tag">{{badge_func}}</span></div>
+              <div class="fit"><b>{{fit_label}}</b><p>{{p1_fit}}</p></div>
+              <div class="product-foot"><p class="note">{{p1_note}}</p><a href="#contact" class="btn btn--ghost">{{cta_sample_short}}</a></div>
+            </div>
+          </div>
+        </section>
+        <section class="product">
+          <div class="wrap spread">
+            <figure class="spread-photo spread-photo--tall reveal"><img src="images/buyer/p-ampoule.jpg" alt="{{p2_name}}" width="900" height="1350" loading="lazy" /></figure>
+            <div class="reveal">
+              <p class="product-kicker"><span class="tag tag--on">{{tag_on}}</span>{{p2_kicker}}</p>
+              <h2>{{p2_name}}<small>30mL</small></h2>
+              <p class="product-tagline">{{p2_tagline}}</p>
+              <p class="product-desc">{{p2_desc}}</p>
+              <dl class="spec">
+                <div><dt>{{edel_k}}</dt><dd>{{edel_v}}</dd></div>
+                <div><dt>{{pep_k}}</dt><dd>{{p2_s2v}}</dd></div>
+                <div><dt>{{centella_k}}</dt><dd>{{centella_v2}}</dd></div>
+                <div><dt>{{ha_k}}</dt><dd>{{p2_s4v}}</dd></div>
+                <div><dt>{{p2_s5k}}</dt><dd>{{p2_s5v}}</dd></div>
+                <div><dt>{{nia_k}}</dt><dd>{{nia_v}}</dd></div>
+              </dl>
+              <div class="badges"><span class="tag">{{badge_func}}</span><span class="tag">{{badge_vegan}}</span></div>
+              <div class="fit"><b>{{fit_label}}</b><p>{{p2_fit}}</p></div>
+              <div class="product-foot"><p class="note">{{p2_note}}</p><a href="#contact" class="btn btn--ghost">{{cta_sample_short}}</a></div>
+            </div>
+          </div>
+        </section>
+        <section class="product">
+          <div class="wrap spread">
+            <figure class="spread-photo spread-photo--tall reveal"><img src="images/buyer/p-cream.jpg" alt="{{p3_name}}" width="900" height="1350" loading="lazy" /></figure>
+            <div class="reveal">
+              <p class="product-kicker"><span class="tag tag--on">{{tag_on}}</span>{{p3_kicker}}</p>
+              <h2>{{p3_name}}<small>50mL</small></h2>
+              <p class="product-tagline">{{p3_tagline}}</p>
+              <p class="product-desc">{{p3_desc}}</p>
+              <dl class="spec">
+                <div><dt>{{edel_k}}</dt><dd>{{edel_v}}</dd></div>
+                <div><dt>Derma-Clera™<small>{{dc_small}}</small></dt><dd>{{dc_v}}<br />{{patent_no}}</dd></div>
+                <div><dt>{{pep_k}}</dt><dd>{{p3_s3v}}</dd></div>
+                <div><dt>{{centella_k}}</dt><dd>{{centella_v2}}</dd></div>
+                <div><dt>{{p3_s5k}}</dt><dd>{{p3_s5v}}</dd></div>
+                <div><dt>{{p3_s6k}}</dt><dd>{{p3_s6v}}</dd></div>
+                <div><dt>{{nia_k}}</dt><dd>{{nia_v}}</dd></div>
+              </dl>
+              <div class="badges"><span class="tag">{{badge_func}}</span><span class="tag">{{badge_vegan}}</span></div>
+              <div class="fit"><b>{{fit_label}}</b><p>{{p3_fit}}</p></div>
+              <div class="product-foot"><p class="note">{{p3_note}}</p><a href="#contact" class="btn btn--ghost">{{cta_sample_short}}</a></div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- 10쪽 출시 예정 앰플 -->
+      <section id="upcoming" class="rule-top">
+        <div class="wrap">
+          <span class="label">{{tag_soon}}</span>
+          <h2 class="h2">{{up1_title}}</h2>
+          <p class="lead">{{up1_lead}}</p>
+          <div class="compare">
+            <div class="compare-imgs">
+              <img src="images/buyer/line-pdrn-core.jpg" alt="{{l5_name}}" width="524" height="280" loading="lazy" />
+              <img src="images/buyer/line-mela-bright.jpg" alt="{{l6_name}}" width="524" height="280" loading="lazy" />
+            </div>
+            <table class="ctable">
+              <thead><tr><th scope="col"></th><th scope="col">{{l5_name}}</th><th scope="col">{{l6_name}}</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">{{ct_concept}}</th><td>{{ct_concept_a}}</td><td>{{ct_concept_b}}</td></tr>
+                <tr><th scope="row">{{ct_concern}}</th><td>{{ct_concern_a}}</td><td>{{ct_concern_b}}</td></tr>
+                <tr><th scope="row">{{ct_care}}</th><td><strong>{{ct_care_a}}</strong></td><td><strong>{{ct_care_b}}</strong></td></tr>
+                <tr><th scope="row">{{ct_ing}}</th><td>{{ct_ing_a}}</td><td>{{ct_ing_b}}</td></tr>
+                <tr><th scope="row">{{ct_pack}}</th><td>{{ct_pack_v}}</td><td>{{ct_pack_v}}</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="note">{{up1_note}}</p>
+        </div>
+      </section>
+
+      <!-- 11쪽 출시 예정 3종 -->
+      <section class="rule-top">
+        <div class="wrap">
+          <span class="label">{{tag_soon}}</span>
+          <h2 class="h2">{{up2_title}}</h2>
+          <p class="lead">{{up2_lead}}</p>
+          <div class="upcoming">
+            <article class="up-row reveal">
+              <img src="images/buyer/line-mask.jpg" alt="{{l1_name}}" width="524" height="280" loading="lazy" />
+              <div>
+                <div class="up-head"><h3>{{l1_name}}</h3><span>{{u1_spec}}</span></div>
+                <p class="up-tag">{{u1_tag}}</p>
+                <div class="up-cols">
+                  <div><b>{{u1_a}}</b><p>{{u1_at}}</p></div>
+                  <div><b>{{u1_b}}</b><p>{{u1_bt}}</p></div>
+                  <div><b>{{u1_c}}</b><p>{{u1_ct}}</p></div>
+                </div>
+              </div>
+            </article>
+            <article class="up-row reveal">
+              <img src="images/buyer/line-cleanser.jpg" alt="{{l2_name}}" width="524" height="280" loading="lazy" />
+              <div>
+                <div class="up-head"><h3>{{l2_name}}</h3><span>50mL</span></div>
+                <p class="up-tag">{{u2_tag}}</p>
+                <div class="up-cols">
+                  <div><b>{{u2_a}}</b><p>{{u2_at}}</p></div>
+                  <div><b>{{u2_b}}</b><p>{{u2_bt}}</p></div>
+                  <div><b>{{u2_c}}</b><p>{{u2_ct}}</p></div>
+                </div>
+              </div>
+            </article>
+            <article class="up-row reveal">
+              <img src="images/buyer/line-sun.jpg" alt="{{l8_name}}" width="524" height="280" loading="lazy" />
+              <div>
+                <div class="up-head"><h3>{{l8_name}}</h3><span>SPF 50</span></div>
+                <p class="up-tag">{{u3_tag}}</p>
+                <div class="up-cols">
+                  <div><b>{{u3_a}}</b><p>{{u3_at}}</p></div>
+                  <div><b>{{u3_b}}</b><p>{{u3_bt}}</p></div>
+                  <div><b>{{u3_c}}</b><p>{{u3_ct}}</p></div>
+                </div>
+              </div>
+            </article>
+          </div>
+          <p class="note">{{up2_note}}</p>
+        </div>
+      </section>
+
+      <!-- 12쪽 인체적용시험 -->
+      <section id="results" class="results">
+        <div class="results-grid">
+          <div class="results-body">
+            <span class="label">{{results_label}}</span>
+            <h2 class="h2">{{results_title}}</h2>
+            <p class="lead">{{results_lead}}</p>
+            <p class="big"><span class="num">138.10<small>%</small></span><span>{{r_moist}}</span></p>
+            <div class="trio">
+{{_trio}}            </div>
+            <p class="results-line">{{results_line}}</p>
+            <p class="note">{{results_note}}</p>
+          </div>
+          <figure class="results-photo"><img src="images/buyer/results-spicule.jpg" alt="{{p1_name}}" width="900" height="1350" loading="lazy" /></figure>
+        </div>
+      </section>
+      <section class="proof">
+        <div class="wrap">
+          <figure>
+            <img src="images/005.png" alt="{{proof_alt}}" width="1408" height="1094" loading="lazy" />
+            <figcaption>{{proof_caption}}</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- 성분 (공식 상세페이지) -->
+      <section id="ingredients" class="rule-top">
+        <div class="wrap">
+          <span class="label">{{ing_label}}</span>
+          <h2 class="h2">{{ing_title}}</h2>
+          <dl class="ing">
+            <div><dt>{{ing1_k}}</dt><dd>{{ing1_v}}</dd><dd class="ing-meta">{{ing1_m}}</dd></div>
+            <div><dt>{{ing2_k}}</dt><dd>{{ing2_v}}</dd><dd class="ing-meta">{{ing2_m}}</dd></div>
+            <div><dt>Derma-Clera™</dt><dd>{{ing3_v}}</dd><dd class="ing-meta">{{patent_no}}</dd></div>
+            <div><dt>{{ing4_k}}</dt><dd>{{ing4_v}}</dd><dd class="ing-meta">{{ing4_m}}</dd></div>
+            <div><dt>{{ing5_k}}</dt><dd>{{ing5_v}}</dd><dd class="ing-meta">{{ing5_m}}</dd></div>
+          </dl>
+          <p class="note">{{ing_note}}</p>
+        </div>
+      </section>
+
+      <!-- 영상 -->
+      <section id="video" class="rule-top">
+        <div class="wrap video-grid">
+          <div class="video-frame">
+            <iframe src="https://www.youtube.com/embed/kkYFzxSf-iE?rel=0" title="{{video_title}}" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <div>
+            <span class="label">{{video_label}}</span>
+            <p class="quote">{{video_quote}}</p>
+            <p class="quote-by">{{video_by}}</p>
+            <p class="note">{{video_note}}</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 13쪽 인증서 -->
+      <section id="certs" class="rule-top">
+        <div class="wrap">
+          <span class="label">{{certs_label}}</span>
+          <h2 class="h2">{{certs_title}}</h2>
+          <p class="lead">{{certs_lead}}</p>
+          <div class="certs-grid">
+            <figure class="cert"><img src="images/001.png" alt="{{c1_title}}" loading="lazy" /><h3>{{c1_title}}</h3><p>{{c1_text}}</p></figure>
+            <figure class="cert"><img src="images/003.png" alt="{{c2_title}}" loading="lazy" /><h3>{{c2_title}}</h3><p>{{c2_text}}</p></figure>
+            <figure class="cert"><img src="images/004.png" alt="{{c3_title}}" loading="lazy" /><h3>{{c3_title}}</h3><p>{{c3_text}}</p></figure>
+            <figure class="cert"><img src="images/002.png" alt="{{c4_title}}" loading="lazy" /><h3>{{c4_title}}</h3><p>{{c4_text}}</p></figure>
+          </div>
+          <p class="note">{{certs_note}}</p>
+        </div>
+      </section>
+
+      <!-- 사용법 (공식 상세페이지) -->
+      <section id="howto" class="rule-top">
+        <div class="wrap">
+          <span class="label">How to use</span>
+          <h2 class="h2">{{howto_title}}</h2>
+          <div class="howto-grid">
+            <div><h3>STEP 01 · {{p1_name}}</h3><ol><li>{{how1_1}}</li><li>{{how1_2}}</li><li>{{how1_3}}</li></ol><p class="note">{{how1_note}}</p></div>
+            <div><h3>STEP 02 · {{p2_name}}</h3><ol><li>{{how2_1}}</li><li>{{how2_2}}</li></ol></div>
+            <div><h3>STEP 03 · {{p3_name}}</h3><ol><li>{{how3_1}}</li><li>{{how3_2}}</li></ol></div>
+          </div>
+        </div>
+      </section>
+{{_extra_before_contact}}
+      <!-- 14쪽 연락처 -->
+      <section id="contact" class="rule-top">
+        <div class="wrap contact-grid">
+          <div>
+            <span class="label">{{contact_label}}</span>
+            <h2 class="h2">{{contact_title}}</h2>
+            <dl class="contact-table">
+              <div><dt>{{ct_company}}</dt><dd>{{ct_company_v}}</dd></div>
+              <div><dt>{{ct_person}}</dt><dd>{{ct_person_v}}</dd></div>
+              <div><dt>{{ct_mail}}</dt><dd><a href="mailto:laezer@naver.com">laezer@naver.com</a></dd></div>
+              <div><dt>{{ct_addr}}</dt><dd>{{ct_addr_v}}</dd></div>
+            </dl>
+            <p class="contact-slogan">TIMELESS RADIANCE AND BEAUTY</p>
+          </div>
+          <form class="buyer-form" name="buyer-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="{{_thanks}}">
+            <input type="hidden" name="form-name" value="buyer-inquiry" />
+            <p class="buyer-form__hp"><label>{{f_hp}} <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
+            <p class="buyer-form__intro">{{f_intro}}</p>
+            <div class="buyer-form__grid">
+              <div class="field"><label for="bf-company">{{f_company}}<span class="req">{{f_req}}</span></label><input id="bf-company" name="회사명" type="text" required autocomplete="organization" /></div>
+              <div class="field"><label for="bf-name">{{f_name}}<span class="req">{{f_req}}</span></label><input id="bf-name" name="담당자명" type="text" required autocomplete="name" /></div>
+              <div class="field"><label for="bf-email">{{f_email}}<span class="req">{{f_req}}</span></label><input id="bf-email" name="이메일" type="email" required inputmode="email" autocomplete="email" spellcheck="false" /></div>
+              <div class="field"><label for="bf-phone">{{f_phone}}<span class="opt">{{f_opt}}</span></label><input id="bf-phone" name="전화번호" type="tel" inputmode="tel" autocomplete="tel" placeholder="{{f_phone_ph}}" /></div>
+              <div class="field"><label for="bf-country">{{f_country}}<span class="req">{{f_req}}</span></label><input id="bf-country" name="국가" type="text" required autocomplete="country-name" placeholder="{{f_country_ph}}" /></div>
+              <div class="field"><label for="bf-interest">{{f_interest}}<span class="opt">{{f_opt}}</span></label>
+                <select id="bf-interest" name="관심품목">
+                  <option value="">{{f_select}}</option>
+                  <option value="3단계 세트 전체">{{f_o1}}</option>
+                  <option value="시카 캡슐 스피큘 앰플">{{p1_name}}</option>
+                  <option value="캘러스 리페어 앰플">{{p2_name}}</option>
+                  <option value="캘러스 리페어 크림">{{p3_name}}</option>
+                  <option value="출시 예정 제품">{{f_o5}}</option>
+                  <option value="OEM · ODM 문의">{{f_o6}}</option>
+                  <option value="아직 정하지 않음">{{f_o7}}</option>
+                </select>
+              </div>
+            </div>
+            <div class="field field--full"><label for="bf-message">{{f_message}}<span class="opt">{{f_opt}}</span></label><textarea id="bf-message" name="문의내용" rows="3" placeholder="{{f_message_ph}}"></textarea></div>
+            <label class="buyer-form__consent"><input type="checkbox" name="개인정보동의" value="동의" required /><span>{{f_consent}}</span></label>
+            <button type="submit" class="btn">{{f_submit}}</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="retail">
+        <div class="wrap">
+          <span>{{retail_text}}</span>
+          <span><a href="https://laezer.co.kr" target="_blank" rel="noopener">laezer.co.kr</a><a href="https://smartstore.naver.com/laezer" target="_blank" rel="noopener">smartstore.naver.com/laezer</a></span>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="wrap">
+        <div>
+          <span class="wordmark" role="img" aria-label="LaEzer"><svg class="wm" viewBox="0 0 3136 864" aria-hidden="true" focusable="false"><use href="#wm"></use></svg></span>
+          <p>Timeless Radiance and Beauty</p>
+{{_footer_extra}}        </div>
+        <div>
+          <p>&copy; 2026 LaEzer · {{footer_company}}</p>
+          <p>{{footer_addr}}</p>
+        </div>
+      </div>
+    </footer>
+
+    <button id="scrollTop" class="scroll-top" type="button" aria-label="{{top_aria}}">↑</button>
+    <script src="js/script.js"></script>
+    <script src="js/lang-pref.js"></script>
+  </body>
+</html>

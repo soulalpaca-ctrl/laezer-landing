@@ -1,60 +1,18 @@
 <!doctype html>
+<!-- 이 파일은 build/build.py 가 build/template.html + build/i18n/*.json 으로 만든다. 직접 고치지 말고 그쪽을 고친 뒤 다시 빌드한다. -->
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="LaEzer — Korean dermocosmetics by Ezer Co., Ltd. Patented Derma-Clera™ from Cynanchum atratum, edelweiss callus culture extract, 5,000 ppm sponge-derived spicules. Buyer inquiries and sample requests welcome."
-    />
-    <meta
-      name="keywords"
-      content="LaEzer, Ezer Co., Ltd, skin barrier, dermocosmetics, Derma-Clera, spicule ampoule, callus repair, vegan skincare, K-Beauty"
-    />
-    <title>LaEzer — K-Beauty Proven by Science | Skin Barrier Care</title>
+    <meta name="description" content="Company profile of LaEzer, the skincare brand of Ezer Co., Ltd. 3 products on sale and 5 coming soon, human application test results, certificates, sample requests and contact." />
+    <title>LaEzer | Ezer Co., Ltd. Company Profile</title>
     <link rel="icon" type="image/png" href="images/logo-transparent.png" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/laezer-2026.css?v=redesign4" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css"
-    />
-    <style>
-      :root {
-        --font-body: "Pretendard Variable", Pretendard, "Noto Sans", -apple-system, sans-serif;
-        --font-head: "Manrope", "Pretendard Variable", Pretendard, sans-serif;
-      }
-      body { word-break: keep-all; }
-      .nav-menu > li > a { white-space: nowrap; }
-      /* EN nav labels are much wider than the 2-3 character KR labels and the
-         switcher has 6 buttons, so between 681px and 1240px the desktop nav wraps and
-         the language buttons overflow. Same fix as index_ru.html: open the hamburger
-         drawer earlier. Page-local on purpose — shared css/style.css is untouched. */
-      @media (max-width: 1240px) and (min-width: 681px) {
-        .nav-menu {
-          position: fixed; top: var(--header-h); left: 0; right: 0;
-          flex-direction: column; align-items: stretch; gap: 0;
-          background: #fff; padding: 14px var(--gutter) 24px;
-          box-shadow: var(--shadow-md); border-top: 1px solid var(--line);
-          transform: translateY(-130%); transition: transform .35s ease; z-index: 999;
-        }
-        .nav-menu.open { transform: translateY(0); }
-        .nav-menu > li { width: 100%; }
-        .nav-menu > li > a:not(.btn-nav) { display: block; padding: 14px 4px; border-bottom: 1px solid var(--line); font-size: .96rem; }
-        .btn-nav { width: 100%; justify-content: center; margin: 10px 0; padding: 14px; }
-        .lang-switcher-container { border-left: none; padding-left: 0; margin-left: 0; justify-content: center; gap: 8px; padding-top: 6px; }
-        .lang-flag { width: 18px; height: 18px; flex-basis: 18px; }
-        .hamburger { display: flex; }
-      }
-    </style>
+    <link rel="stylesheet" href="css/buyer.css?v=20261114" />
     <link rel="alternate" hreflang="mn" href="https://laezer-landing.netlify.app/" />
     <link rel="alternate" hreflang="ko" href="https://laezer-landing.netlify.app/index_kr" />
     <link rel="alternate" hreflang="ja" href="https://laezer-landing.netlify.app/index_jp" />
@@ -64,18 +22,18 @@
     <link rel="alternate" hreflang="x-default" href="https://laezer-landing.netlify.app/" />
     <link rel="canonical" href="https://laezer-landing.netlify.app/index_en" />
     <meta property="og:locale" content="en_US" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://laezer-landing.netlify.app/index_en" />
-    <meta property="og:title" content="LaEzer — K-Beauty Proven by Science | Skin Barrier Care" />
-    <meta property="og:description" content="LaEzer — Korean dermocosmetics by Ezer Co., Ltd. Patented Derma-Clera™ from Cynanchum atratum, edelweiss callus culture extract, 5,000 ppm sponge-derived spicules. Buyer inquiries and sample requests welcome." />
-    <meta property="og:image" content="https://laezer-landing.netlify.app/images/model-portrait.jpg" />
-    <meta name="twitter:card" content="summary_large_image" />
     <meta property="og:locale:alternate" content="mn_MN" />
     <meta property="og:locale:alternate" content="ko_KR" />
     <meta property="og:locale:alternate" content="ja_JP" />
     <meta property="og:locale:alternate" content="ru_RU" />
     <meta property="og:locale:alternate" content="uz_UZ" />
-  <script type="application/ld+json">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://laezer-landing.netlify.app/index_en" />
+    <meta property="og:title" content="LaEzer | Ezer Co., Ltd. Company Profile" />
+    <meta property="og:description" content="Company profile of LaEzer, the skincare brand of Ezer Co., Ltd. 3 products on sale and 5 coming soon, human application test results, certificates, sample requests and contact." />
+    <meta property="og:image" content="https://laezer-landing.netlify.app/images/model-portrait.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
@@ -106,750 +64,667 @@
       }
     },
     {
-      "@type": "WebSite",
-      "@id": "https://laezer-landing.netlify.app/#website",
-      "url": "https://laezer-landing.netlify.app/",
-      "name": "LaEzer",
-      "inLanguage": "en",
-      "publisher": {
-        "@id": "https://laezer-landing.netlify.app/#organization"
-      }
-    },
-    {
       "@type": "WebPage",
       "@id": "https://laezer-landing.netlify.app/index_en#webpage",
       "url": "https://laezer-landing.netlify.app/index_en",
-      "name": "LaEzer — K-Beauty Proven by Science | Skin Barrier Care",
-      "description": "LaEzer — Korean dermocosmetics by Ezer Co., Ltd (Daejeon, Korea): patented Derma-Clera™ derived from Cynanchum atratum, edelweiss callus culture extract, sponge-derived spicules at 5,000 ppm and 11 hyaluronic acids. Buyer inquiries and sample requests welcome.",
+      "name": "LaEzer | Ezer Co., Ltd. Company Profile",
+      "description": "Company profile of LaEzer, the skincare brand of Ezer Co., Ltd. 3 products on sale and 5 coming soon, human application test results, certificates, sample requests and contact.",
       "inLanguage": "en",
-      "isPartOf": {
-        "@id": "https://laezer-landing.netlify.app/#website"
-      },
       "about": {
         "@id": "https://laezer-landing.netlify.app/#organization"
       }
     }
   ]
 }
-  </script>
+    </script>
   </head>
   <body>
-    <!-- ===== Header ===== -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="wm" viewBox="0 0 3136 864"><g transform="translate(0.000000,864.000000) scale(0.100000,-0.100000)"
+fill="currentColor" stroke="none">
+<path d="M121 8352 c-11 -22 -2 -110 13 -120 6 -3 34 -8 63 -9 69 -3 118 -25
+143 -65 20 -33 20 -39 20 -3883 0 -3060 -3 -3855 -13 -3875 -24 -47 -73 -70
+-148 -70 -37 0 -70 -4 -73 -9 -12 -20 -14 -110 -3 -125 11 -15 244 -16 2627
+-16 2575 0 2615 0 2631 19 11 14 18 51 22 133 4 62 11 138 17 168 5 30 14 120
+20 200 6 80 15 170 20 200 5 30 14 123 20 205 6 83 15 177 21 210 5 33 14 121
+19 195 5 74 16 189 25 255 8 66 19 172 24 235 14 153 28 297 52 514 15 135 17
+182 8 192 -15 18 -123 19 -137 2 -5 -7 -13 -71 -16 -143 -4 -71 -11 -164 -17
+-206 -5 -41 -14 -113 -19 -160 -15 -136 -55 -309 -116 -503 -56 -180 -144
+-370 -230 -497 -28 -42 -53 -80 -55 -86 -16 -41 -271 -301 -354 -359 -27 -19
+-68 -49 -90 -65 -46 -34 -294 -158 -375 -187 -111 -41 -232 -71 -385 -97 -44
+-7 -111 -21 -150 -30 -64 -16 -168 -18 -1181 -22 -1026 -4 -1112 -3 -1127 12
+-16 15 -17 290 -15 3893 l3 3877 24 32 c25 34 105 63 173 63 23 0 38 5 42 16
+10 27 7 99 -6 112 -9 9 -187 12 -740 12 -683 0 -728 -1 -737 -18z"/>
+<path d="M12066 8354 c-23 -23 -21 -89 4 -114 15 -15 33 -20 79 -20 71 0 112
+-16 143 -55 l23 -30 3 -3848 2 -3849 -20 -37 c-29 -51 -69 -71 -144 -71 -80 0
+-106 -17 -106 -69 0 -22 8 -48 18 -60 l17 -21 2664 0 c1759 0 2668 4 2676 10
+7 6 15 55 19 120 4 61 11 136 16 166 5 31 14 122 20 203 6 80 15 169 20 196 5
+28 14 120 20 205 6 85 17 196 25 245 7 50 16 139 20 199 4 60 11 134 16 165 5
+31 13 117 19 191 5 74 16 187 25 250 13 105 31 299 56 610 5 63 13 133 19 156
+5 22 14 83 20 135 5 52 16 128 24 169 8 41 24 131 36 200 12 69 30 163 40 210
+10 47 28 130 40 185 12 55 28 127 37 160 8 33 21 87 29 120 17 76 47 198 73
+295 11 41 25 95 32 120 6 25 18 65 26 90 8 25 18 65 23 90 4 25 15 61 23 80 8
+19 25 60 37 90 12 30 30 72 41 92 10 20 19 43 19 50 0 7 18 40 40 73 22 33 40
+65 40 71 0 6 7 17 15 24 8 6 31 37 52 68 46 71 201 224 279 277 32 21 75 51
+94 66 35 27 150 87 245 129 28 12 73 32 100 45 93 43 154 65 176 65 12 0 50 9
+83 19 63 20 125 33 236 52 36 6 84 18 107 26 92 32 510 62 871 62 225 1 253
+-1 259 -15 3 -9 1 -25 -5 -35 -7 -10 -49 -89 -93 -176 -45 -87 -110 -212 -145
+-278 -34 -66 -96 -187 -138 -270 -42 -82 -80 -157 -86 -165 -5 -8 -15 -28 -23
+-45 -12 -27 -107 -209 -134 -260 -6 -11 -24 -45 -39 -75 -16 -30 -49 -95 -75
+-145 -25 -49 -81 -157 -123 -240 -42 -82 -80 -157 -85 -165 -10 -19 -31 -59
+-98 -190 -30 -58 -91 -177 -137 -265 -45 -88 -134 -259 -196 -380 -99 -192
+-141 -274 -207 -400 -9 -16 -22 -43 -31 -60 -17 -35 -193 -379 -212 -415 -7
+-14 -18 -34 -23 -45 -6 -11 -33 -63 -60 -115 -77 -148 -214 -412 -284 -550
+-84 -164 -207 -402 -323 -625 -136 -262 -293 -568 -339 -660 -23 -44 -53 -101
+-67 -127 -15 -26 -24 -54 -21 -62 6 -14 196 -16 1961 -16 l1956 0 14 23 c8 12
+17 62 21 110 4 49 11 103 16 120 5 17 13 78 19 136 6 58 17 142 25 186 8 44
+17 114 20 155 4 41 11 91 16 111 5 19 13 80 19 135 5 54 17 142 25 194 8 52
+19 131 25 175 6 44 14 103 19 130 5 28 10 88 12 135 l4 85 -58 3 c-32 2 -64
+-2 -71 -7 -14 -12 -30 -78 -45 -191 -21 -148 -45 -243 -105 -405 -26 -70 -94
+-193 -150 -268 -66 -89 -192 -224 -226 -242 -14 -8 -39 -26 -56 -42 -29 -27
+-86 -66 -129 -89 -11 -6 -29 -16 -40 -22 -11 -5 -47 -23 -80 -39 -33 -16 -69
+-34 -80 -40 -46 -24 -164 -62 -265 -84 -25 -6 -67 -16 -95 -24 -27 -7 -82 -18
+-122 -24 -39 -6 -84 -16 -100 -22 -60 -23 -428 -39 -919 -39 -553 0 -526 -4
+-480 74 13 22 72 136 131 251 60 116 135 262 168 325 32 63 66 129 74 145 8
+17 18 37 23 46 5 9 30 56 56 105 26 49 100 193 164 319 64 127 142 277 172
+335 61 116 187 358 210 405 9 17 28 55 44 85 16 30 58 112 94 183 94 183 215
+419 264 512 43 83 60 115 142 275 27 52 69 136 95 185 25 50 81 158 123 240
+43 83 96 186 120 230 23 44 63 123 90 175 52 104 53 107 133 260 30 58 91 175
+135 260 44 85 133 259 199 385 65 127 137 266 159 310 22 44 44 87 49 95 5 8
+22 40 37 70 15 30 48 95 73 143 142 274 173 338 167 352 -5 13 -203 15 -1710
+15 l-1705 0 -19 -28 c-11 -15 -25 -47 -32 -72 -7 -24 -18 -53 -26 -64 -8 -11
+-14 -27 -14 -36 -1 -8 -9 -33 -20 -55 -11 -22 -19 -44 -20 -48 0 -5 -7 -23
+-15 -40 -13 -30 -22 -54 -59 -157 -9 -25 -23 -58 -30 -75 -45 -100 -56 -127
+-56 -137 0 -6 -8 -29 -19 -52 -10 -23 -28 -68 -41 -101 -12 -33 -30 -81 -41
+-107 -31 -78 -55 -139 -79 -203 -13 -33 -29 -73 -36 -90 -20 -47 -45 -116 -56
+-160 -6 -22 -17 -60 -25 -85 -8 -25 -19 -69 -24 -99 -5 -29 -16 -65 -23 -80
+-7 -14 -16 -46 -20 -71 -4 -25 -13 -65 -21 -90 -7 -25 -24 -90 -36 -145 -12
+-55 -28 -123 -36 -152 -13 -49 -20 -88 -63 -313 -10 -52 -23 -120 -29 -150
+-23 -123 -50 -288 -56 -345 -4 -33 -10 -76 -16 -96 -5 -19 -13 -80 -19 -135
+-5 -54 -16 -146 -24 -204 -17 -114 -53 -486 -60 -617 -7 -118 -73 -454 -102
+-521 -8 -18 -14 -40 -14 -50 -1 -9 -9 -35 -20 -57 -11 -22 -19 -46 -20 -53 0
+-7 -9 -30 -20 -50 -10 -20 -33 -66 -50 -102 -37 -79 -94 -174 -135 -226 -17
+-22 -38 -50 -47 -64 -25 -40 -168 -181 -249 -246 -80 -65 -151 -109 -269 -167
+-41 -21 -82 -42 -90 -47 -24 -14 -118 -46 -200 -68 -122 -33 -161 -42 -245
+-57 -44 -8 -111 -22 -150 -31 -63 -15 -188 -17 -1298 -21 -948 -4 -1231 -2
+-1242 7 -13 11 -15 270 -15 1959 0 1568 2 1951 13 1965 12 16 68 17 1007 13
+1005 -4 1168 -10 1261 -42 23 -8 50 -15 61 -15 21 0 84 -27 216 -93 97 -49
+223 -161 277 -248 114 -182 186 -401 204 -619 l6 -75 75 0 c74 0 75 0 74 25
+-2 38 -46 357 -74 545 -6 39 -17 117 -24 175 -7 58 -20 152 -29 210 -25 161
+-37 250 -116 815 -11 77 -25 174 -31 215 -6 41 -16 113 -22 160 -16 136 -36
+233 -50 242 -21 13 -104 9 -116 -5 -8 -10 -8 -71 0 -220 14 -266 4 -377 -45
+-494 -39 -92 -73 -140 -149 -208 -69 -62 -197 -119 -322 -144 -22 -5 -68 -17
+-101 -26 -55 -16 -143 -18 -1073 -22 -789 -4 -1016 -2 -1027 7 -13 11 -15 244
+-15 1860 0 1676 1 1848 16 1854 23 9 1879 6 1944 -3 30 -5 96 -14 145 -20 303
+-41 591 -107 685 -156 14 -7 54 -25 90 -40 236 -98 406 -216 600 -419 91 -95
+180 -214 231 -311 17 -33 38 -67 45 -76 8 -8 14 -21 14 -28 0 -7 9 -29 20 -49
+32 -61 60 -127 60 -143 1 -8 9 -32 20 -54 11 -22 19 -50 20 -62 0 -12 9 -45
+20 -73 11 -28 20 -60 20 -71 0 -31 42 -163 54 -171 6 -4 36 -8 67 -8 73 0 90
+17 66 63 -9 18 -21 56 -27 86 -6 30 -14 59 -20 66 -5 6 -12 31 -16 55 -4 25
+-15 67 -25 93 -11 26 -19 58 -19 71 0 13 -9 43 -20 67 -11 24 -20 55 -20 69 0
+14 -9 52 -19 85 -11 33 -29 92 -40 130 -52 183 -61 215 -81 285 -11 41 -30
+109 -41 150 -19 68 -34 124 -74 265 -39 140 -67 237 -88 300 l-22 70 -2417 3
+c-2187 2 -2418 1 -2432 -14z"/>
+<path d="M8000 6201 c-47 -4 -121 -15 -165 -24 -44 -8 -109 -20 -145 -26 -128
+-21 -186 -33 -255 -52 -150 -42 -161 -46 -307 -113 -31 -14 -61 -26 -67 -26
+-13 0 -80 -38 -106 -60 -11 -9 -27 -20 -35 -24 -16 -8 -68 -39 -117 -71 -56
+-37 -225 -199 -260 -250 -19 -27 -47 -68 -63 -90 -37 -52 -111 -200 -120 -242
+-9 -39 3 -58 45 -68 17 -3 38 -13 47 -22 36 -32 60 -13 111 87 27 52 52 97 56
+100 5 3 27 32 49 66 48 70 208 222 282 268 28 17 72 45 98 63 68 46 227 123
+253 123 8 0 27 7 42 15 15 8 45 17 65 21 20 4 53 15 72 25 19 11 46 19 60 19
+14 0 50 7 80 16 69 21 534 32 620 15 127 -24 196 -41 225 -54 16 -8 57 -25 90
+-37 101 -37 197 -86 257 -132 31 -24 73 -54 92 -68 58 -41 207 -212 267 -307
+49 -77 89 -154 134 -258 7 -16 22 -51 34 -76 12 -25 21 -54 21 -63 0 -10 5
+-27 12 -39 11 -21 36 -112 59 -217 6 -25 17 -71 25 -103 8 -31 19 -99 24 -150
+6 -50 15 -119 20 -152 16 -97 25 -572 11 -588 -8 -11 -59 -16 -209 -21 -108
+-4 -228 -12 -267 -17 -38 -5 -117 -14 -175 -19 -178 -19 -361 -47 -470 -74
+-125 -31 -249 -56 -274 -56 -13 0 -37 -5 -53 -11 -15 -6 -64 -19 -108 -29
+-118 -28 -176 -44 -215 -62 -54 -24 -163 -58 -185 -58 -11 0 -29 -6 -40 -14
+-11 -7 -31 -17 -45 -20 -14 -4 -43 -16 -65 -26 -22 -10 -62 -27 -90 -38 -123
+-49 -252 -107 -270 -122 -11 -9 -63 -37 -115 -63 -52 -26 -113 -61 -135 -77
+-22 -16 -76 -53 -120 -83 -44 -30 -93 -67 -109 -82 -15 -14 -56 -49 -90 -77
+-85 -72 -316 -345 -316 -376 0 -5 -8 -20 -19 -33 -39 -50 -141 -274 -141 -309
+0 -10 -9 -42 -19 -72 -22 -60 -40 -188 -48 -331 -7 -112 18 -327 48 -420 11
+-31 19 -63 19 -70 0 -22 90 -217 129 -280 60 -98 152 -209 244 -297 48 -46 96
+-88 106 -94 10 -6 38 -22 61 -36 23 -14 51 -30 61 -36 11 -6 27 -18 36 -27 10
+-8 29 -20 43 -26 14 -6 32 -15 40 -20 40 -24 248 -91 281 -91 13 0 34 -7 46
+-15 29 -20 230 -45 366 -45 138 0 285 16 362 39 33 10 80 24 105 30 200 53
+251 73 425 171 39 22 81 45 95 52 14 7 84 56 157 110 134 100 319 283 431 428
+73 94 200 282 212 316 6 16 15 31 19 34 11 8 61 97 61 110 0 7 8 24 18 38 10
+15 28 52 41 82 13 30 31 73 41 95 31 68 79 201 95 261 8 31 17 59 19 62 24 23
+26 -56 26 -883 0 -860 0 -874 20 -885 27 -15 1109 -13 1127 2 16 13 17 110 1
+126 -7 7 -31 12 -55 12 -73 0 -117 24 -142 78 l-21 47 -3 1930 -2 1930 -23
+140 c-13 77 -32 174 -43 216 -10 42 -19 88 -19 102 0 13 -9 44 -20 68 -11 24
+-20 52 -20 62 0 11 -6 33 -14 50 -7 18 -28 70 -46 117 -18 47 -39 94 -46 105
+-8 11 -14 26 -14 35 0 8 -18 42 -40 75 -22 33 -40 65 -40 70 -1 6 -17 30 -35
+55 -19 25 -50 68 -69 95 -47 69 -228 243 -301 291 -33 21 -78 52 -100 69 -23
+17 -68 43 -100 58 -33 16 -67 32 -75 38 -40 24 -140 67 -173 73 -20 4 -49 13
+-64 21 -15 8 -40 15 -54 15 -15 0 -55 9 -89 20 -34 11 -77 20 -94 20 -17 0
+-63 9 -101 21 -65 20 -98 21 -425 24 -195 2 -393 0 -440 -4z m1515 -3036 c-1
+-300 -3 -359 -18 -411 -9 -34 -17 -76 -17 -93 0 -35 -42 -236 -65 -316 -8 -27
+-19 -68 -25 -90 -17 -74 -46 -170 -58 -192 -7 -12 -12 -30 -12 -40 0 -10 -9
+-35 -20 -56 -11 -20 -20 -43 -20 -50 0 -12 -63 -162 -108 -257 -35 -73 -137
+-248 -190 -325 -124 -180 -295 -358 -432 -451 -160 -109 -185 -124 -197 -124
+-7 0 -30 -9 -50 -20 -21 -11 -45 -20 -53 -20 -9 0 -26 -7 -38 -16 -37 -26
+-197 -54 -307 -54 -113 0 -260 27 -333 60 -26 12 -63 29 -82 37 -127 55 -278
+175 -366 289 -109 142 -157 243 -217 454 -19 66 -21 102 -22 295 0 234 4 266
+62 445 37 113 154 339 194 373 8 6 28 32 44 55 40 60 186 196 279 260 42 29
+86 61 96 70 24 20 86 56 195 111 44 22 87 45 95 50 44 26 100 51 114 51 9 0
+27 6 39 14 12 8 40 19 62 25 61 15 156 51 179 67 11 8 31 14 44 14 12 0 39 7
+59 15 20 8 59 19 87 25 61 11 158 34 246 59 94 27 231 49 475 76 77 8 154 17
+170 19 17 2 66 3 110 2 l80 -1 0 -350z"/>
+<path d="M24525 6200 c-44 -5 -102 -16 -129 -24 -27 -9 -62 -16 -77 -16 -70 0
+-396 -89 -499 -137 -70 -32 -100 -45 -180 -79 -36 -15 -74 -35 -85 -44 -11 -9
+-31 -22 -45 -28 -25 -12 -39 -19 -75 -41 -11 -6 -31 -17 -45 -24 -29 -14 -81
+-49 -160 -108 -30 -22 -67 -48 -81 -57 -80 -53 -345 -310 -441 -427 -86 -106
+-268 -369 -268 -387 0 -5 -8 -21 -18 -36 -43 -65 -142 -262 -142 -283 0 -8 -9
+-29 -20 -47 -11 -18 -20 -38 -20 -44 0 -6 -8 -29 -19 -52 -10 -23 -29 -75 -41
+-116 -13 -41 -31 -100 -41 -130 -10 -30 -21 -75 -25 -99 -3 -24 -12 -58 -19
+-75 -7 -17 -16 -60 -19 -94 -4 -35 -11 -75 -16 -88 -13 -33 -41 -342 -47 -512
+-8 -225 32 -622 83 -822 7 -30 20 -82 29 -115 32 -127 67 -236 96 -300 10 -22
+29 -69 43 -105 39 -102 152 -316 210 -398 18 -27 40 -62 49 -78 8 -16 27 -42
+42 -58 14 -16 41 -50 60 -77 42 -61 101 -125 242 -264 98 -96 174 -160 378
+-314 57 -42 139 -92 235 -140 36 -18 83 -43 105 -57 37 -22 117 -54 255 -105
+30 -11 73 -28 95 -38 72 -34 252 -84 380 -106 44 -7 96 -18 115 -24 19 -6 50
+-11 69 -11 18 0 70 -9 115 -19 98 -23 352 -41 576 -41 184 1 481 22 521 38 14
+6 52 13 85 16 70 8 270 42 334 58 25 6 77 16 115 23 81 15 215 52 260 70 16 7
+66 23 110 35 44 12 94 26 110 32 17 5 57 17 90 25 33 8 64 19 69 24 6 5 17 9
+25 9 9 0 38 11 66 24 27 13 77 34 110 46 94 35 159 63 173 75 7 7 16 60 22
+140 5 72 16 193 24 270 34 316 48 457 57 580 5 72 13 157 19 190 5 33 14 128
+20 210 6 83 15 174 20 204 13 69 13 67 -6 85 -23 23 -119 22 -129 -1 -7 -18
+-26 -145 -45 -298 -14 -116 -71 -342 -106 -423 -8 -18 -14 -38 -14 -44 0 -6
+-10 -32 -21 -57 -12 -25 -33 -71 -47 -101 -14 -30 -31 -62 -38 -70 -6 -8 -15
+-25 -19 -38 -11 -39 -128 -205 -205 -293 -232 -265 -523 -458 -825 -547 -89
+-26 -144 -40 -225 -57 -36 -7 -79 -19 -95 -25 -39 -15 -321 -40 -455 -39 -142
+0 -374 22 -435 42 -73 23 -163 47 -217 57 -27 5 -58 16 -70 24 -12 9 -30 16
+-39 16 -18 0 -124 48 -179 82 -19 11 -64 36 -100 56 -149 80 -453 362 -546
+507 -10 16 -43 63 -71 104 -29 40 -53 78 -53 84 0 6 -7 18 -15 27 -15 17 -145
+273 -145 286 0 9 -47 132 -59 154 -4 8 -19 53 -33 100 -104 344 -148 591 -179
+1010 -14 182 -4 657 16 800 8 58 15 133 15 168 0 35 5 72 10 83 11 19 44 19
+2069 19 1798 0 2060 2 2071 15 21 25 -12 388 -52 565 -22 98 -97 335 -122 386
+-92 189 -120 239 -179 330 -26 38 -67 96 -92 129 -117 151 -367 370 -530 464
+-108 62 -122 71 -157 94 -14 9 -32 17 -38 17 -7 0 -49 18 -94 39 -92 45 -149
+67 -222 85 -27 7 -56 16 -62 20 -6 4 -44 13 -84 21 -137 25 -193 37 -278 57
+-74 18 -124 21 -400 23 -173 2 -351 0 -395 -5z m470 -156 c55 -3 116 -13 135
+-21 19 -8 55 -21 80 -28 98 -29 215 -79 226 -97 3 -5 16 -13 27 -18 24 -10 71
+-39 133 -82 64 -44 195 -176 282 -286 45 -57 82 -107 82 -113 0 -5 15 -31 33
+-57 18 -26 55 -94 81 -152 27 -58 53 -114 58 -124 27 -52 80 -223 118 -376 32
+-135 45 -219 62 -394 11 -122 11 -129 -7 -142 -28 -21 -3132 -20 -3160 0 -19
+13 -19 16 -2 68 9 30 17 64 17 76 0 12 9 52 21 89 11 38 32 106 46 153 14 47
+29 94 34 105 5 11 16 40 25 65 33 94 46 126 78 194 18 39 38 82 45 96 13 29
+82 154 130 237 65 109 217 299 311 389 75 71 215 180 261 203 24 12 64 35 89
+51 64 41 112 62 215 94 50 15 106 35 125 43 35 16 283 43 330 37 14 -2 70 -6
+125 -10z"/>
+<path d="M30850 6135 c-167 -35 -334 -89 -371 -121 -8 -8 -21 -14 -27 -14 -13
+0 -181 -87 -202 -105 -8 -7 -40 -27 -70 -44 -86 -50 -90 -53 -165 -112 -38
+-30 -95 -74 -125 -96 -74 -54 -330 -309 -409 -407 -138 -171 -240 -313 -295
+-410 -15 -28 -34 -58 -41 -66 -11 -13 -78 -136 -128 -235 -33 -65 -95 -202
+-107 -235 -7 -19 -19 -55 -28 -80 -16 -45 -61 -120 -63 -104 0 5 0 453 1 995
+1 898 0 988 -15 1003 -15 14 -73 16 -579 16 -639 0 -593 7 -583 -83 8 -64 24
+-77 95 -77 64 0 84 -9 111 -54 l21 -34 0 -2721 c1 -2459 -1 -2724 -15 -2751
+-23 -44 -71 -70 -128 -70 -74 0 -87 -11 -87 -74 0 -32 5 -58 13 -64 14 -12
+1357 -19 1376 -7 6 3 11 33 11 65 0 69 -11 80 -85 80 -56 0 -101 28 -121 75
+-10 26 -13 309 -14 1531 -2 1462 -1 1501 18 1589 24 109 85 297 106 327 9 12
+16 29 16 38 0 19 118 235 162 295 119 163 252 312 357 398 41 33 85 71 99 84
+14 13 53 40 86 60 34 20 88 55 122 78 56 38 121 72 234 123 25 11 84 39 131
+61 48 22 99 43 115 46 16 4 56 15 89 25 138 43 201 60 217 60 10 0 40 9 68 20
+28 11 67 20 86 20 19 0 66 7 105 16 38 9 145 19 237 22 l167 7 3 70 c2 38 -2
+121 -8 185 -5 63 -15 187 -20 275 -21 323 -28 396 -40 410 -19 23 -182 18
+-320 -10z"/>
+</g></symbol></svg>
     <header class="header" id="header">
-      <nav class="nav container">
-        <div class="nav-brand">
-          <img src="images/logo-transparent.png" alt="LaEzer" class="brand-logo-img" />
-        </div>
+      <nav class="nav wrap" aria-label="Main menu">
+        <a class="wordmark" href="#top" aria-label="LaEzer"><svg class="wm" viewBox="0 0 3136 864" aria-hidden="true" focusable="false"><use href="#wm"></use></svg></a>
         <ul class="nav-menu" id="navMenu">
           <li><a href="#company">Company</a></li>
+          <li><a href="#lineup">Lineup</a></li>
           <li><a href="#products">Products</a></li>
-          <li><a href="#lineup">Upcoming</a></li>
+          <li><a href="#upcoming">Upcoming</a></li>
           <li><a href="#results">Tests</a></li>
-          <li><a href="#buyer" class="btn-nav">Request Samples</a></li>
-          <li class="lang-switcher-container">
-            <a href="index.html" class="lang-btn" data-lang-pick="mn"><span class="lang-flag lang-flag--mn" aria-hidden="true"></span>MGL</a>
-            <a href="index_kr.html" class="lang-btn" data-lang-pick="ko"><span class="lang-flag lang-flag--ko" aria-hidden="true"></span>KOR</a>
-            <a href="index_jp.html" class="lang-btn" data-lang-pick="ja"><span class="lang-flag lang-flag--ja" aria-hidden="true"></span>JPN</a>
-            <a href="index_ru.html" class="lang-btn" data-lang-pick="ru"><span class="lang-flag lang-flag--ru" aria-hidden="true"></span>RUS</a>
-            <a href="#" class="lang-btn active" data-lang-pick="en"><span class="lang-flag lang-flag--en" style="background-image:url(&quot;data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2 2'><rect width='2' height='2' fill='%23012169'/><path d='M0 0L2 2M2 0L0 2' stroke='%23fff' stroke-width='.4'/><path d='M0 0L2 2M2 0L0 2' stroke='%23c8102e' stroke-width='.14'/><path d='M1 0V2M0 1H2' stroke='%23fff' stroke-width='.56'/><path d='M1 0V2M0 1H2' stroke='%23c8102e' stroke-width='.32'/></svg>&quot;)" aria-hidden="true"></span>ENG</a>
-            <a href="index_uz.html" class="lang-btn" data-lang-pick="uz"><span class="lang-flag lang-flag--uz" aria-hidden="true"></span>UZB</a>
+          <li><a href="#certs">Certificates</a></li>
+          <li><a href="#contact" class="btn-nav">Request Samples</a></li>
+          <li class="lang">
+            <a href="index.html" lang="mn" data-lang-pick="mn">MGL</a>
+            <a href="index_kr.html" lang="ko" data-lang-pick="ko">KOR</a>
+            <a href="index_jp.html" lang="ja" data-lang-pick="ja">JPN</a>
+            <a href="index_ru.html" lang="ru" data-lang-pick="ru">RUS</a>
+            <a href="index_en.html" lang="en" data-lang-pick="en" class="active" aria-current="page">ENG</a>
+            <a href="index_uz.html" lang="uz" data-lang-pick="uz">UZB</a>
           </li>
         </ul>
-        <div class="hamburger" id="hamburger">
+        <button class="hamburger" id="hamburger" type="button" aria-label="Open menu" aria-controls="navMenu">
           <span></span><span></span><span></span>
-        </div>
+        </button>
       </nav>
     </header>
 
-    <!-- ===== 1. Hero ===== -->
-    <section class="hero">
-      <img src="images/hero_leaf.png" alt="" class="hero-leaf-deco" aria-hidden="true" />
-      <div class="container hero-grid">
-        <div class="hero-text reveal">
-          <span class="hero-badge"><i class="fas fa-flask"></i> K-Beauty, proven by science</span>
-          <h1>
-            Fills where your skin<br />
-            <span class="highlight">runs dry</span>
-          </h1>
-          <p class="hero-sub">
-            Patented Derma-Clera™ from Cynanchum atratum, edelweiss callus culture extract and sponge-derived spicules at 5,000 ppm.
-            This page gathers the human application test figures and certificates for the three products on sale.
-          </p>
-          <div class="hero-usp">
-            <span class="badge gold"><i class="fas fa-certificate"></i> Patented Ingredient</span>
-            <span class="badge"><i class="fas fa-leaf"></i> Vegan Certified</span>
-            <span class="badge"><i class="fas fa-microscope"></i> Clinically Tested</span>
-          </div>
-          <div class="hero-cta">
-            <a href="#buyer" class="btn btn-primary btn-lg">Request Samples · Inquiry</a>
-            <a href="#products" class="btn btn-ghost btn-lg"><i class="fas fa-box-open"></i> Explore Products</a>
-          </div>
-          <div class="hero-stats">
-            <div class="stat-item"><span class="stat-number">+138%</span><span class="stat-label">Moisture improvement ※</span></div>
-            <div class="stat-item"><span class="stat-number">5,000<small style="font-size:.6em">ppm</small></span><span class="stat-label">Natural spicules</span></div>
-            <div class="stat-item"><span class="stat-number">11</span><span class="stat-label">Types of hyaluronic acid</span></div>
+    <main id="top">
+      <!-- 1쪽 표지 -->
+      <section class="cover">
+        <div class="wrap">
+          <h1 aria-label="LaEzer"><svg class="wm" viewBox="0 0 3136 864" aria-hidden="true" focusable="false"><use href="#wm"></use></svg></h1>
+          <div class="cover-rule"></div>
+          <p class="cover-slogan">Timeless Radiance and Beauty</p>
+          <p class="cover-meta">Ezer Co., Ltd. · Company Profile · November 2026</p>
+          <div class="cover-cta">
+            <a href="#contact" class="btn btn--light">Request Samples</a>
+            <a href="#lineup" class="btn btn--line-light">View Lineup</a>
           </div>
         </div>
-        <div class="hero-visual reveal d1">
-          <img src="images/model-portrait.jpg" alt="LaEzer skincare products with a model" loading="eager" />
-          <div class="hero-float-badge">
-            <span class="ico"><i class="fas fa-seedling"></i></span>
-            <span>Dual functional: brightening · anti-wrinkle<small>Patented Derma-Clera™</small></span>
-          </div>
-        </div>
-      </div>
-      <div class="scroll-cue"><span>Scroll down</span><div class="line"></div></div>
-    </section>
+      </section>
 
-    <!-- ===== Video ===== -->
-    <section class="video bg-mist" id="video">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow center">An actress meets LaEzer</span>
-          <h2 class="section-title">Featured on a <span class="title-accent">Korean TV program</span></h2>
-        </div>
-        <div class="video-wrap reveal d1">
-          <div class="video-frame">
-            <iframe
-              src="https://www.youtube.com/embed/kkYFzxSf-iE?rel=0"
-              title="LaEzer Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-          </div>
-          <div class="video-quote">
-            <p>"You feel it from the very first use. The way moisture fills the skin from within is remarkable!"</p>
-            <p style="font-size:var(--fs-min);opacity:.65;margin-top:6px">※ Personal impression of an individual user.</p>
-            <span class="author">Actress Park Ha-sun</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== 2. Company ===== -->
-    <section class="why" id="company">
-      <div class="container why-grid">
-        <div class="why-content reveal">
-          <span class="eyebrow">Company</span>
-          <h2>Ezer:<br /><em>The One Who Helps</em></h2>
-          <p>
-            Ezer is the Hebrew word for “one who helps.” LaEzer’s philosophy begins with this name:
-            helping each person discover their own unique beauty. We aim to be a company that
-            customers and business partners alike can rely on.
-          </p>
-          <p>
-            Founded in Daejeon, Korea in 2024, we entered Mongolia as our first export market and
-            are now preparing to expand into <strong style="color:#fff">Russia, Central Asia, Japan and Vietnam</strong>.
-          </p>
-          <div class="why-points">
-            <div class="why-point">
-              <i class="fas fa-flask"></i>
-              <div><b>Systematic R&amp;D grounded in scientific evidence</b><span>We design precise formulas from skin science and ingredient efficacy data, and objectively verify efficacy and irritation through human application and irritation tests.</span></div>
-            </div>
-            <div class="why-point">
-              <i class="fas fa-vials"></i>
-              <div><b>Precise ingredient blends tailored to each skin concern</b><span>Each skin concern calls for different ingredients. We analyze the properties and role of each one and develop formulas whose complementary blends deliver what the skin needs.</span></div>
-            </div>
-            <div class="why-point">
-              <i class="fas fa-leaf"></i>
-              <div><b>Harmony between nature and modern science</b><span>By combining naturally derived ingredients with modern skin science, we offer skincare that nurtures the skin’s healthy balance and helps restore its natural radiance.</span></div>
+      <!-- 2쪽 회사 -->
+      <section id="company">
+        <div class="wrap spread">
+          <figure class="spread-photo reveal"><img src="images/model-portrait.jpg" alt="Model holding the LaEzer Callus Repair Ampoule" width="1643" height="2200" /></figure>
+          <div class="spread-body reveal">
+            <span class="label">Ezer Co., Ltd.</span>
+            <h2 class="h2">Ezer: The One Who Helps</h2>
+            <p>Ezer is the Hebrew word for “one who helps.” LaEzer’s philosophy begins with this name: helping each person discover their own unique beauty. We aim to be a company that customers and business partners alike can rely on.</p>
+            <p>Founded in Daejeon, Korea in 2024, we entered Mongolia as our first export market and are now preparing to expand into Russia, Central Asia, Japan and Vietnam.</p>
+            <div class="slogan">
+              <span class="label">Brand slogan</span>
+              <p class="slogan-en">Timeless Radiance and Beauty</p>
+              <p>We combine the principles of nature with modern science to deliver skincare that restores the skin’s natural radiance.</p>
             </div>
           </div>
         </div>
-        <div class="why-visual reveal d1">
-          <img src="images/model-cica.jpg" alt="LaEzer CICA Capsule Spicule Ampoule" />
-          <div class="why-temp">Timeless Radiance and Beauty</div>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ===== 2-1. History ===== -->
-    <section class="history" id="history">
-      <div class="container history-wrap">
-        <div class="section-head reveal">
-          <span class="eyebrow center">History</span>
-          <h2 class="section-title">From Daejeon in 2024 <span class="title-accent">to today</span></h2>
-          <p class="section-sub">The path from our founding to overseas supply contracts</p>
-        </div>
-        <ol class="history-list reveal d1">
-          <li><time>2024.09</time><div><b>Ezer Co., Ltd. founded</b><span>Daejeon, Korea</span></div></li>
-          <li><time>2025</time><div><b>Three products launched in Korea</b><span>Own online store · Naver Smart Store · Coupang</span></div></li>
-          <li><time>2025</time><div><b>Own patent application filed</b><span>No. 10-2025-0184979</span></div></li>
-          <li><time>2026.02</time><div><b>Two trademarks registered</b><span>LaEzer · Dr. LaEzer</span></div></li>
-          <li><time>2026.04</time><div><b>First supply contract, Mongolia</b></div></li>
-          <li><time>2026.06</time><div><b>Pop-up sales event in Ulaanbaatar</b><span>with Daejeon Center for Creative Economy &amp; Innovation</span></div></li>
-          <li><time>2026.08</time><div><b>Second supply contract, Mongolia</b></div></li>
-          <li><time>2026.09</time><div><b>Product supply contract with a Mongolian brand</b></div></li>
-          <li><time>2026.11</time><div><b>Launch at Don Quijote · LOFT, Japan (planned)</b></div></li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- ===== 3. Brand Story ===== -->
-    <section class="brand bg-cream" id="brand">
-      <div class="container brand-grid">
-        <div class="brand-visual reveal">
-          <img src="images/zia-cutout.png" alt="LaEzer 3-step skin barrier care set" />
-        </div>
-        <div class="brand-text reveal d1">
-          <span class="eyebrow">Brand story</span>
-          <p class="brand-quote">
-            We believe in the skin’s own <span class="hl">natural beauty</span>
-          </p>
-          <p>
-            Grounded in scientific evidence such as research papers and ingredient efficacy analyses,
-            LaEzer proposes a skincare routine tailored to each individual’s skin.
-          </p>
-          <p>
-            We combine the principles of nature with modern science to deliver skincare that restores the skin’s natural radiance.
-          </p>
-          <div class="brand-pillars">
-            <div class="brand-pillar"><i class="fas fa-certificate"></i><b>Patented</b><span>Derma-Clera™ · KR 10-1768870 · 1 own application filed</span></div>
-            <div class="brand-pillar"><i class="fas fa-leaf"></i><b>Vegan</b><span>Callus Repair Ampoule & Cream certified</span></div>
-            <div class="brand-pillar"><i class="fas fa-vial-circle-check"></i><b>Verified</b><span>Human application test · Human Skin Clinical Trial Center, Korea</span></div>
+      <!-- 3쪽 브랜드 이야기 -->
+      <section id="brand" class="rule-top">
+        <div class="wrap spread">
+          <figure class="spread-photo reveal"><img src="images/buyer/lab.jpg" alt="Illustrative image of lab glassware and green leaves" width="1024" height="1024" loading="lazy" /></figure>
+          <div class="spread-body reveal">
+            <span class="label">Brand story</span>
+            <h2 class="h2">We believe in the skin’s<br>own natural beauty</h2>
+            <p>Grounded in scientific evidence such as research papers and ingredient efficacy analyses, LaEzer proposes a skincare routine tailored to each individual’s skin.</p>
+            <ol class="principles">
+              <li><div><span class="p-no">01 / RESEARCH</span><span class="p-en">Development &amp; Research</span></div><div><b>Systematic R&amp;D grounded in scientific evidence</b><p>We design precise formulas from skin science and ingredient efficacy data, and objectively verify efficacy and irritation through human application and irritation tests.</p></div></li>
+              <li><div><span class="p-no">02 / FORMULATION</span><span class="p-en">Advanced Ingredient Synergy</span></div><div><b>Precise ingredient blends tailored to each skin concern</b><p>Each skin concern calls for different ingredients. We analyze the properties and role of each one and develop formulas whose complementary blends deliver what the skin needs.</p></div></li>
+              <li><div><span class="p-no">03 / PHILOSOPHY</span><span class="p-en">Balance</span></div><div><b>Harmony between nature and modern science</b><p>By combining naturally derived ingredients with modern skin science, we offer skincare that nurtures the skin’s healthy balance and helps restore its natural radiance.</p></div></li>
+            </ol>
           </div>
-          <div class="ceo-sign">
+        </div>
+      </section>
+
+      <!-- 4쪽 연혁 -->
+      <section id="history" class="rule-top">
+        <div class="wrap spread">
+          <figure class="spread-photo spread-photo--tall reveal"><img src="images/buyer/history-cream.jpg" alt="Callus Repair Cream" width="900" height="1350" loading="lazy" /></figure>
+          <div class="spread-body reveal">
+            <span class="label">History</span>
+            <ol class="history-list">
+              <li><time class="num">2024.09</time><div><b>Ezer Co., Ltd. founded</b><span>Daejeon, Korea</span></div></li>
+              <li><time class="num">2025</time><div><b>Three products launched in Korea</b><span>Own online store · Naver Smart Store · Coupang</span></div></li>
+              <li><time class="num">2025</time><div><b>Own patent application filed</b><span>No. 10-2025-0184979</span></div></li>
+              <li><time class="num">2026.02</time><div><b>Two trademarks registered</b><span>LaEzer · Dr. LaEzer</span></div></li>
+              <li><time class="num">2026.04</time><div><b>First supply contract, Mongolia</b></div></li>
+              <li><time class="num">2026.06</time><div><b>Pop-up sales event in Ulaanbaatar</b><span>with Daejeon Center for Creative Economy &amp; Innovation</span></div></li>
+              <li><time class="num">2026.08</time><div><b>Second supply contract, Mongolia</b></div></li>
+              <li><time class="num">2026.09</time><div><b>Product supply contract with a Mongolian brand</b></div></li>
+              <li><time class="num">2026.11</time><div><b>Launch at Don Quijote · LOFT, Japan (planned)</b></div></li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5쪽 루틴 -->
+      <section id="routine" class="rule-top">
+        <div class="wrap">
+          <span class="label">3-step slow-aging routine</span>
+          <h2 class="routine-title">AWAKE • REPAIR • SHIELD</h2>
+          <p class="lead">Edelweiss plant stem cells and patented Derma-Clera™ awaken the skin’s natural ability to recover.</p>
+          <div class="routine-grid">
+            <article class="reveal">
+              <img src="images/buyer/soil-spicule.jpg" alt="CICA Capsule Spicule Ampoule" width="900" height="558" loading="lazy" />
+              <h3 class="step-head"><span class="step-tag">STEP 1</span>AWAKE</h3>
+              <p class="step-name">CICA Capsule Spicule Ampoule</p>
+              <p class="step-first">Natural micro-needles awaken the skin.</p>
+              <p class="step-text">A pathway made by nature, not needles: natural sponge spicules open micro-channels to help active ingredients absorb. The slight tingle on first application wakes up the skin and boosts the next steps.</p>
+            </article>
+            <article class="reveal">
+              <img src="images/buyer/soil-ampoule.jpg" alt="Callus Repair Ampoule" width="900" height="558" loading="lazy" />
+              <h3 class="step-head"><span class="step-tag">STEP 2</span>REPAIR</h3>
+              <p class="step-name">Callus Repair Ampoule</p>
+              <p class="step-first">Plant stem cells from the Alps for intensive care.</p>
+              <p class="step-text">Ingredients derived from the plant stem cells of edelweiss grown at 3,000 m revitalize the skin, while 9 peptides support firmness and a healthy skin condition.</p>
+            </article>
+            <article class="reveal">
+              <img src="images/buyer/soil-cream.jpg" alt="Callus Repair Cream" width="900" height="558" loading="lazy" />
+              <h3 class="step-head"><span class="step-tag">STEP 3</span>SHIELD</h3>
+              <p class="step-name">Callus Repair Cream</p>
+              <p class="step-first">Long-lasting moisture that protects the skin.</p>
+              <p class="step-text">Patented Derma-Clera™ gently shields the skin from external irritants while supplying rich moisture and nourishment. From week two, skin feels firmer and smoother.</p>
+            </article>
+          </div>
+          <p class="note">Order and frequency follow the official product page · spicules may cause a tingling sensation</p>
+        </div>
+      </section>
+
+      <!-- 6쪽 라인업 -->
+      <section id="lineup" class="rule-top">
+        <div class="wrap">
+          <div class="lineup-head">
             <div>
-              <div class="ceo-name">Hyeonjeong Jeong</div>
-              <div class="ceo-role">CEO & Founder, Ezer Co., Ltd</div>
+              <span class="label">Lineup</span>
+              <h2 class="h2">Cleanser · Ampoule · Cream · Sun Cream · Mask</h2>
+              <p class="lead">3 on sale · 5 coming soon</p>
+            </div>
+            <div class="legend"><span class="tag tag--on">On sale</span><span class="tag">Coming soon</span></div>
+          </div>
+          <div class="lineup-grid">
+            <article class="lineup-cell"><div class="lineup-top"><span>01 Mask</span><span class="tag">Coming soon</span></div><img src="images/buyer/line-mask.jpg" alt="PDRN Semi-Gel Mask" width="524" height="280" loading="lazy" /><h3>PDRN Semi-Gel Mask</h3><p class="lineup-spec"><span>Brightening · hydration · firming</span><span>25mL × 10</span></p></article>
+            <article class="lineup-cell"><div class="lineup-top"><span>02 Cleanser</span><span class="tag">Coming soon</span></div><img src="images/buyer/line-cleanser.jpg" alt="Ginseng Vitamin Powder Cleanser" width="524" height="280" loading="lazy" /><h3>Ginseng Vitamin Powder Cleanser</h3><p class="lineup-spec"><span>Gentle, barrier-supporting cleanse</span><span>50mL</span></p></article>
+            <article class="lineup-cell"><div class="lineup-top"><span>03 Ampoule</span><span class="tag tag--on">On sale</span></div><img src="images/buyer/line-box-ampoule.jpg" alt="Callus Repair Ampoule" width="524" height="280" loading="lazy" /><h3>Callus Repair Ampoule</h3><p class="lineup-spec"><span>Hydration and firmness</span><span>30mL</span></p></article>
+            <article class="lineup-cell"><div class="lineup-top"><span>03 Ampoule</span><span class="tag tag--on">On sale</span></div><img src="images/buyer/line-box-spicule.jpg" alt="CICA Capsule Spicule Ampoule" width="524" height="280" loading="lazy" /><h3>CICA Capsule Spicule Ampoule</h3><p class="lineup-spec"><span>Smoother skin texture</span><span>30mL</span></p></article>
+            <article class="lineup-cell"><div class="lineup-top"><span>03 Ampoule</span><span class="tag">Coming soon</span></div><img src="images/buyer/line-pdrn-core.jpg" alt="PDRN Core Ampoule" width="524" height="280" loading="lazy" /><h3>PDRN Core Ampoule</h3><p class="lineup-spec"><span>Intensive hydration and firmness</span><span>4mL × 6</span></p></article>
+            <article class="lineup-cell"><div class="lineup-top"><span>03 Ampoule</span><span class="tag">Coming soon</span></div><img src="images/buyer/line-mela-bright.jpg" alt="Mela Bright Ampoule" width="524" height="280" loading="lazy" /><h3>Mela Bright Ampoule</h3><p class="lineup-spec"><span>Brightening · hydration</span><span>4mL × 6</span></p></article>
+            <article class="lineup-cell"><div class="lineup-top"><span>04 Cream</span><span class="tag tag--on">On sale</span></div><img src="images/buyer/line-box-cream.jpg" alt="Callus Repair Cream" width="524" height="280" loading="lazy" /><h3>Callus Repair Cream</h3><p class="lineup-spec"><span>Finishing moisture</span><span>50mL</span></p></article>
+            <article class="lineup-cell"><div class="lineup-top"><span>05 Sun Cream</span><span class="tag">Coming soon</span></div><img src="images/buyer/line-sun.jpg" alt="Sun Cream" width="524" height="280" loading="lazy" /><h3>Sun Cream</h3><p class="lineup-spec"><span>Strong UV protection</span><span>SPF 50</span></p></article>
+          </div>
+          <p class="note">Outer boxes shown are renewal design drafts (current packaging of the 3 products on sale differs) · volume, formula and packaging of upcoming products may change</p>
+        </div>
+      </section>
+
+      <!-- 7~9쪽 판매 중 3종 -->
+      <div id="products" class="rule-top">
+        <section class="product">
+          <div class="wrap spread">
+            <figure class="spread-photo spread-photo--tall reveal"><img src="images/buyer/p-spicule.jpg" alt="CICA Capsule Spicule Ampoule" width="900" height="1350" loading="lazy" /></figure>
+            <div class="reveal">
+              <p class="product-kicker"><span class="tag tag--on">On sale</span>Step 1 · Ampoule</p>
+              <h2>CICA Capsule Spicule Ampoule<small>30mL</small></h2>
+              <p class="product-tagline">Smooth skin-texture care that starts with spicules and cica</p>
+              <p class="product-desc">The first step: refines skin texture and adds hydration and soothing to prep the skin.</p>
+              <dl class="spec">
+                <div><dt>Sponge-derived spicules 5,000 ppm</dt><dd>Fine sponge-derived spicules help refine skin texture, while moisturizing ingredients leave a hydrated feel.</dd></div>
+                <div><dt>Green capsules</dt><dd>Capsules filled with moisturizing and soothing ingredients</dd></div>
+                <div><dt>Derma-Clera™<small>(with Baekmi flower extract)</small></dt><dd>Patented Baekmi flower ingredient that helps calm the skin<br />Korean Patent No. 10-1768870</dd></div>
+                <div><dt>5 Centella asiatica extracts</dt><dd>Cica-derived ingredients soothe and comfort sensitized skin</dd></div>
+                <div><dt>Panthenol · Betaine · Allantoin</dt><dd>Hydrates and soothes to keep the skin comfortable</dd></div>
+                <div><dt>11 hyaluronic acids</dt><dd>A range of hyaluronic acids for moisturizing care</dd></div>
+              </dl>
+              <div class="badges"><span class="tag">Dual functional: brightening · anti-wrinkle (MFDS)</span></div>
+              <div class="fit"><b>Recommended for</b><p>Anyone concerned about rough texture and dryness, or looking for a smoother, more refined complexion.</p></div>
+              <div class="product-foot"><p class="note">Recommended every other day · may tingle during use · avoid the eye and lip area</p><a href="#contact" class="btn btn--ghost">Samples</a></div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="showcase" aria-label="LaEzer Callus Repair Ampoule">
-      <img class="showcase__img"
-           src="images/18961f80ca9765f05828022c689c21c4.png"
-           alt="LaEzer Callus Repair Ampoule texture" loading="lazy" decoding="async" />
-    </section>
-
-    <!-- ===== 4. Technology (3 USP) ===== -->
-    <section class="tech" id="tech">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow center">Core Technology</span>
-          <h2 class="section-title">What we put in, <span class="title-accent">stated first</span></h2>
-          <p class="section-sub">The patent number and the concentrations, as they are</p>
-        </div>
-        <div class="tech-grid">
-          <div class="tech-card gold reveal">
-            <span class="tech-num">01</span>
-            <div class="tech-icon"><i class="fas fa-award"></i></div>
-            <h3>Derma-Clera™ Patent</h3>
-            <p>A patented ingredient derived from Cynanchum atratum (Baekmi flower extract) that helps calm the skin and keep it comfortable.</p>
-            <span class="tech-meta"><i class="fas fa-shield-halved"></i> Patent KR 10-1768870</span>
-          </div>
-          <div class="tech-card reveal d1">
-            <span class="tech-num">02</span>
-            <div class="tech-icon"><i class="fas fa-bahai"></i></div>
-            <h3>Natural Spicules 5,000 ppm</h3>
-            <p>Fine needle-like spicules derived from natural marine sponge gently refine dead skin cells
-              the moment they touch the skin and deliver active ingredients deep into it.</p>
-            <span class="tech-meta"><i class="fas fa-arrow-down-long"></i> High-content spicules 5,000 ppm</span>
-          </div>
-          <div class="tech-card reveal d2">
-            <span class="tech-num">03</span>
-            <div class="tech-icon"><i class="fas fa-droplet"></i></div>
-            <h3>11 Types of Hyaluronic Acid</h3>
-            <p>Eleven hyaluronic acids of varied molecular sizes, from high to low molecular weight, replenish moisture
-              evenly from the skin’s surface to its inner layers, keeping skin hydrated and free of dryness.</p>
-            <span class="tech-meta"><i class="fas fa-layer-group"></i> 11-layer hyaluronic acid hydration design</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== 5. 3-Step Solution ===== -->
-    <section class="solution bg-mist" id="solution">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow center">AWAKE · REPAIR · SHIELD</span>
-          <h2 class="section-title">3-step <span class="title-accent">slow-aging routine</span></h2>
-          <p class="section-sub">Edelweiss plant stem cells and patented Derma-Clera™ awaken the skin’s natural ability to recover</p>
-        </div>
-        <figure class="solution-media reveal">
-          <img src="images/products-3set-cutout.png"
-               alt="LaEzer 3-step set" loading="lazy" decoding="async" />
-        </figure>
-
-        <div class="steps-flow">
-          <div class="step-flow-card reveal">
-            <div class="step-flow-num">1</div>
-            <span class="step-verb">AWAKE</span>
-            <h3>CICA Capsule Spicule Ampoule</h3>
-            <p>Natural micro-needles awaken the skin. A pathway made by nature, not needles: natural sponge spicules open micro-channels to help active ingredients absorb. The slight tingle on first application wakes up the skin and boosts the next steps.</p>
-            <i class="fas fa-chevron-right step-arrow"></i>
-          </div>
-          <div class="step-flow-card reveal d1">
-            <div class="step-flow-num">2</div>
-            <span class="step-verb">REPAIR</span>
-            <h3>Callus Repair Ampoule</h3>
-            <p>Plant stem cells from the Alps for intensive care. Ingredients derived from the plant stem cells of edelweiss grown at 3,000 m revitalize the skin, while 9 peptides support firmness and a healthy skin condition.</p>
-            <i class="fas fa-chevron-right step-arrow"></i>
-          </div>
-          <div class="step-flow-card reveal d2">
-            <div class="step-flow-num">3</div>
-            <span class="step-verb">SHIELD</span>
-            <h3>Callus Repair Cream</h3>
-            <p>Long-lasting moisture that protects the skin. Patented Derma-Clera™ gently shields the skin from external irritants while supplying rich moisture and nourishment. From week two, skin feels firmer and smoother.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== 6. Products ===== -->
-    <section class="products" id="products">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow center">Products</span>
-          <h2 class="section-title">Two 30 ml bottles and <span class="title-accent">one 50 ml jar</span></h2>
-          <p class="section-sub">The three products on sale. All three are reported to the MFDS as dual functional: brightening · anti-wrinkle</p>
-        </div>
-        <figure class="products-lead reveal">
-          <img src="images/detail-duo.jpg"
-               alt="LaEzer Callus Repair Cream and Ampoule" loading="lazy" decoding="async" />
-        </figure>
-
-        <div class="products-grid">
-          <!-- STEP 01 — CICA Spicule Ampoule -->
-          <div class="product-card reveal">
-            <div class="product-media">
-              <span class="product-step-tag">Step 1 · Ampoule</span>
-              <img src="images/products/LZ-001_cica-ampoule.png" alt="LaEzer CICA Capsule Spicule Ampoule" loading="lazy" />
+        </section>
+        <section class="product">
+          <div class="wrap spread">
+            <figure class="spread-photo spread-photo--tall reveal"><img src="images/buyer/p-ampoule.jpg" alt="Callus Repair Ampoule" width="900" height="1350" loading="lazy" /></figure>
+            <div class="reveal">
+              <p class="product-kicker"><span class="tag tag--on">On sale</span>Step 2 · Ampoule</p>
+              <h2>Callus Repair Ampoule<small>30mL</small></h2>
+              <p class="product-tagline">An intensive ampoule that deeply hydrates and adds firmness and vitality</p>
+              <p class="product-desc">With edelweiss callus and 9 peptides, it provides intensive care for dry skin lacking firmness.</p>
+              <dl class="spec">
+                <div><dt>Edelweiss callus culture extract</dt><dd>Edelweiss callus culture extract adds vitality and moisture</dd></div>
+                <div><dt>9 peptides</dt><dd>A range of peptides helps maintain firm, smooth skin</dd></div>
+                <div><dt>5 Centella asiatica extracts</dt><dd>Cica-derived ingredients soothe and comfort sensitized skin</dd></div>
+                <div><dt>11 hyaluronic acids</dt><dd>A range of hyaluronic acids delivers rich hydration</dd></div>
+                <div><dt>Panthenol · Betaine</dt><dd>Moisturizers that help retain hydration and condition the skin</dd></div>
+                <div><dt>Niacinamide · Adenosine</dt><dd>Functional ingredients that care for both skin tone and fine lines</dd></div>
+              </dl>
+              <div class="badges"><span class="tag">Dual functional: brightening · anti-wrinkle (MFDS)</span><span class="tag">Vegan certified</span></div>
+              <div class="fit"><b>Recommended for</b><p>Anyone dealing with both dryness and loss of firmness, or looking for a hydrating vegan ampoule.</p></div>
+              <div class="product-foot"><p class="note">Apply gently over the entire face after the Spicule Ampoule</p><a href="#contact" class="btn btn--ghost">Samples</a></div>
             </div>
-            <div class="product-body">
-              <span class="product-role">Smooth skin-texture care that starts with spicules and cica</span>
-              <h3 class="product-name">CICA Capsule Spicule Ampoule</h3>
-              <span class="product-name-en">30mL</span>
-              <p class="product-desc">The first step: refines skin texture and adds hydration and soothing to prep the skin.
-                Recommended every other day · may tingle during use · avoid the eye and lip area.</p>
-              <div class="product-ingredients">
-                <span>Spicules 5,000 ppm</span><span>5 Centella extracts</span><span>Derma-Clera™</span><span>11 hyaluronic acids</span>
+          </div>
+        </section>
+        <section class="product">
+          <div class="wrap spread">
+            <figure class="spread-photo spread-photo--tall reveal"><img src="images/buyer/p-cream.jpg" alt="Callus Repair Cream" width="900" height="1350" loading="lazy" /></figure>
+            <div class="reveal">
+              <p class="product-kicker"><span class="tag tag--on">On sale</span>Step 3 · Cream</p>
+              <h2>Callus Repair Cream<small>50mL</small></h2>
+              <p class="product-tagline">A barrier-strengthening cream that locks in moisture and keeps skin comfortable</p>
+              <p class="product-desc">With edelweiss callus and Derma-Clera™, it completes your hydrating, soothing and firming care.</p>
+              <dl class="spec">
+                <div><dt>Edelweiss callus culture extract</dt><dd>Edelweiss callus culture extract adds vitality and moisture</dd></div>
+                <div><dt>Derma-Clera™<small>(with Baekmi flower extract)</small></dt><dd>Patented Baekmi flower ingredient that helps calm the skin<br />Korean Patent No. 10-1768870</dd></div>
+                <div><dt>9 peptides</dt><dd>Peptides help maintain firm, smooth skin</dd></div>
+                <div><dt>5 Centella asiatica extracts</dt><dd>Cica-derived ingredients soothe and comfort sensitized skin</dd></div>
+                <div><dt>11 hyaluronic acids · Panthenol</dt><dd>Hyaluronic acids and panthenol add a moist, hydrated feel</dd></div>
+                <div><dt>Betaine · Allantoin</dt><dd>Helps retain moisture and keeps skin comfortable</dd></div>
+                <div><dt>Niacinamide · Adenosine</dt><dd>Functional ingredients that care for both skin tone and fine lines</dd></div>
+              </dl>
+              <div class="badges"><span class="tag">Dual functional: brightening · anti-wrinkle (MFDS)</span><span class="tag">Vegan certified</span></div>
+              <div class="fit"><b>Recommended for</b><p>Anyone with dry, sensitive skin who wants a protective moisture layer and a hydrated finish.</p></div>
+              <div class="product-foot"><p class="note">Apply after the Callus Repair Ampoule</p><a href="#contact" class="btn btn--ghost">Samples</a></div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- 10쪽 출시 예정 앰플 -->
+      <section id="upcoming" class="rule-top">
+        <div class="wrap">
+          <span class="label">Coming soon</span>
+          <h2 class="h2">PDRN Core Ampoule · Mela Bright Ampoule</h2>
+          <p class="lead">Kits of six 4 mL vials, chosen by skin concern · ideal for salon care and gift sets</p>
+          <div class="compare">
+            <div class="compare-imgs">
+              <img src="images/buyer/line-pdrn-core.jpg" alt="PDRN Core Ampoule" width="524" height="280" loading="lazy" />
+              <img src="images/buyer/line-mela-bright.jpg" alt="Mela Bright Ampoule" width="524" height="280" loading="lazy" />
+            </div>
+            <table class="ctable">
+              <thead><tr><th scope="col"></th><th scope="col">PDRN Core Ampoule</th><th scope="col">Mela Bright Ampoule</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">Concept</th><td>Core care that restores basic hydration for firm, resilient skin</td><td>Targets dull skin tone and dark spots: a brightening ampoule for a clear, even glow</td></tr>
+                <tr><th scope="row">Concerns</th><td>Dryness, dullness, rough texture, firmness</td><td>Visible dark spots · dullness · uneven tone</td></tr>
+                <tr><th scope="row">Care focus</th><td><strong>Hydration and firmness</strong></td><td><strong>Brightening · even tone · hydration</strong></td></tr>
+                <tr><th scope="row">Key ingredients</th><td>Panthenol 10% · PDRN 2%<br>9 peptides</td><td>Niacinamide 10% · Tranexamic acid 3%<br>Panthenol 10% · PDRN 0.3% · 9 peptides</td></tr>
+                <tr><th scope="row">Contents</th><td>4 mL × 6 vials</td><td>4 mL × 6 vials</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="note">Ingredient percentages are based on development formulas and may change at launch · product images are design drafts</p>
+        </div>
+      </section>
+
+      <!-- 11쪽 출시 예정 3종 -->
+      <section class="rule-top">
+        <div class="wrap">
+          <span class="label">Coming soon</span>
+          <h2 class="h2">Mask · Cleanser · Sun Cream</h2>
+          <p class="lead">Expanding the LaEzer routine from cleansing and intensive care to final UV protection</p>
+          <div class="upcoming">
+            <article class="up-row reveal">
+              <img src="images/buyer/line-mask.jpg" alt="PDRN Semi-Gel Mask" width="524" height="280" loading="lazy" />
+              <div>
+                <div class="up-head"><h3>PDRN Semi-Gel Mask</h3><span>25 mL × 10 sheets</span></div>
+                <p class="up-tag">A semi-gel sheet mask with rose water and PDRN that clings closely for lasting hydration</p>
+                <div class="up-cols">
+                  <div><b>Rose water 5% · PDRN</b><p>Replenishes moisture in dry, tired skin for a hydrated, comfortable feel</p></div>
+                  <div><b>Niacinamide 5% · Adenosine</b><p>Brightening and anti-wrinkle dual function for clearer, smoother-looking skin</p></div>
+                  <div><b>Close-fitting semi-gel sheet</b><p>Adheres gently to the face for 10–20 min for revitalized, firmer-looking skin</p></div>
+                </div>
               </div>
-              <div class="product-foot">
-                <a href="#buyer" class="btn btn-primary" style="padding:11px 18px;font-size:.9rem;width:100%">Request samples</a>
+            </article>
+            <article class="up-row reveal">
+              <img src="images/buyer/line-cleanser.jpg" alt="Ginseng Vitamin Powder Cleanser" width="524" height="280" loading="lazy" />
+              <div>
+                <div class="up-head"><h3>Ginseng Vitamin Powder Cleanser</h3><span>50mL</span></div>
+                <p class="up-tag">A tonic for your skin: a daily powder cleanser with ginseng and vitamin therapy</p>
+                <div class="up-cols">
+                  <div><b>Ginseng · Vitamins</b><p>Revitalizes dull-looking skin for a clear, fresh complexion</p></div>
+                  <div><b>Fine deep-cleansing powder</b><p>Lathers into a rich foam with water to gently remove dead skin and impurities</p></div>
+                  <div><b>Zero chemical surfactants · Gentle</b><p>100% naturally derived enzymes reduce tightness and protect the skin barrier</p></div>
+                </div>
+              </div>
+            </article>
+            <article class="up-row reveal">
+              <img src="images/buyer/line-sun.jpg" alt="Sun Cream" width="524" height="280" loading="lazy" />
+              <div>
+                <div class="up-head"><h3>Sun Cream</h3><span>SPF 50</span></div>
+                <p class="up-tag">A daily sun cream with strong UV protection that completes the LaEzer routine</p>
+                <div class="up-cols">
+                  <div><b>SPF 50 UV protection</b><p>Reliably protects skin from strong UV rays in daily life and outdoors</p></div>
+                  <div><b>Light, fresh texture</b><p>Spreads smoothly with minimal stickiness for comfortable everyday wear</p></div>
+                  <div><b>Hydration · Makeup base</b><p>Its moist finish also works well as a base before makeup</p></div>
+                </div>
+              </div>
+            </article>
+          </div>
+          <p class="note">Ingredients, volume and packaging of upcoming products may change during development · product images are design drafts</p>
+        </div>
+      </section>
+
+      <!-- 12쪽 인체적용시험 -->
+      <section id="results" class="results">
+        <div class="results-grid">
+          <div class="results-body">
+            <span class="label">Human application test</span>
+            <h2 class="h2">Human Application Test Results</h2>
+            <p class="lead">After one use of the 3-step set · Human Skin Clinical Trial Center, Korea</p>
+            <p class="big"><span class="num">138.10<small>%</small></span><span>Moisture improvement</span></p>
+            <div class="trio">
+              <div><span class="num">20.01%</span><span>Pore improvement</span></div>
+              <div><span class="num">7.40%</span><span>Skin texture improvement</span></div>
+              <div><span class="num">8.26%</span><span>Soothing improvement</span></div>
+            </div>
+            <p class="results-line">100% user satisfaction across 8 items · rated “non-irritating” in a primary skin irritation test</p>
+            <p class="note">Human Skin Clinical Trial Center, Korea · after one use of the 3-step set · original reports available at meetings · results may vary</p>
+          </div>
+          <figure class="results-photo"><img src="images/buyer/results-spicule.jpg" alt="CICA Capsule Spicule Ampoule" width="900" height="1350" loading="lazy" /></figure>
+        </div>
+      </section>
+      <section class="proof">
+        <div class="wrap">
+          <figure>
+            <img src="images/005.png" alt="Skin measurement photos before and after one use of the 3-step set. Firmer pores 20.01%, smoother skin texture 7.40%, moisture 138.10%, skin soothing 8.26%" width="1408" height="1094" loading="lazy" />
+            <figcaption>Before use · after one use · Human Skin Clinical Trial Center, Korea</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- 성분 (공식 상세페이지) -->
+      <section id="ingredients" class="rule-top">
+        <div class="wrap">
+          <span class="label">Ingredients</span>
+          <h2 class="h2">Ingredients of the LaEzer Callus Repair line</h2>
+          <dl class="ing">
+            <div><dt>Edelweiss</dt><dd>Antioxidant power 2 times stronger than vitamin C. Edelweiss plant stem cell extract delivers a comfortable feeling of moisture to dry, sensitized skin.</dd><dd class="ing-meta">Edelweiss that changes the skin’s time</dd></div>
+            <div><dt>9 peptides</dt><dd>Peptide boosting wraps the skin in firm inner elasticity. It firmly protects a skin balance that is easily upset by even minor irritation and supports care for a condition that does not break down.</dd><dd class="ing-meta">The key ingredient of slow aging</dd></div>
+            <div><dt>Derma-Clera™</dt><dd>A plant-derived patented ingredient from Baekmi flower comfortably soothes skin sensitized by irritation and gently cares for disrupted skin balance.</dd><dd class="ing-meta">Korean Patent No. 10-1768870</dd></div>
+            <div><dt>11 hyaluronic acids</dt><dd>11 hyaluronic acids of varied molecular sizes, from high to low molecular weight, replenish moisture evenly from the skin’s surface to its inner layers, keeping skin hydrated and free of dryness.</dd><dd class="ing-meta">11-layer hyaluronic acid hydration design</dd></div>
+            <div><dt>Spicules 5,000 ppm</dt><dd>Fine needle-like spicules derived from natural marine sponge gently refine dead skin cells the moment they touch the skin and deliver active ingredients deep into it.</dd><dd class="ing-meta">High-content spicules 5,000 ppm</dd></div>
+          </dl>
+          <p class="note">* The above applies to the properties of the raw ingredients only.</p>
+        </div>
+      </section>
+
+      <!-- 영상 -->
+      <section id="video" class="rule-top">
+        <div class="wrap video-grid">
+          <div class="video-frame">
+            <iframe src="https://www.youtube.com/embed/kkYFzxSf-iE?rel=0" title="LaEzer introduction video" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <div>
+            <span class="label">Featured on a Korean TV program</span>
+            <p class="quote">“You feel it from the very first use. The way moisture fills the skin from within is remarkable!”</p>
+            <p class="quote-by">Actress Park Ha-sun</p>
+            <p class="note">※ This is a personal impression of use.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 13쪽 인증서 -->
+      <section id="certs" class="rule-top">
+        <div class="wrap">
+          <span class="label">Certificates · documents</span>
+          <h2 class="h2">Certificates</h2>
+          <p class="lead">LaEzer’s quality and safety, verified through official certifications and tests</p>
+          <div class="certs-grid">
+            <figure class="cert"><img src="images/001.png" alt="Vegan Certification" loading="lazy" /><h3>Vegan Certification</h3><p>Made only with plant-based ingredients and officially vegan certified</p></figure>
+            <figure class="cert"><img src="images/003.png" alt="Patented Ingredient" loading="lazy" /><h3>Patented Ingredient</h3><p>Derma-Clera™, a plant-derived patented ingredient from Baekmi flower</p></figure>
+            <figure class="cert"><img src="images/004.png" alt="Brightening &amp; Anti-wrinkle" loading="lazy" /><h3>Brightening &amp; Anti-wrinkle</h3><p>A dual functional product for brightening and wrinkle care</p></figure>
+            <figure class="cert"><img src="images/002.png" alt="Sensitive Skin Test" loading="lazy" /><h3>Sensitive Skin Test</h3><p>Tested on sensitive skin and confirmed non-irritating</p></figure>
+          </div>
+          <p class="note">Original certificates and test reports are available at meetings</p>
+        </div>
+      </section>
+
+      <!-- 사용법 (공식 상세페이지) -->
+      <section id="howto" class="rule-top">
+        <div class="wrap">
+          <span class="label">How to use</span>
+          <h2 class="h2">LaEzer’s 3-step repair routine that replenishes the skin’s own strength</h2>
+          <div class="howto-grid">
+            <div><h3>STEP 01 · CICA Capsule Spicule Ampoule</h3><ol><li>After cleansing, prep your skin with toner, then apply a suitable amount of the CICA Capsule Spicule Ampoule.</li><li>Apply over the entire face, except the eye and lip area, with a gentle rolling motion.</li><li>Apply gently along the direction of the skin’s texture, then finish by pressing firmly with your fingers.</li></ol><p class="note">* We recommend using the CICA Capsule Spicule Ampoule once every 2 days. (The interval may be lengthened depending on your skin type.)</p></div>
+            <div><h3>STEP 02 · Callus Repair Ampoule</h3><ol><li>After cleansing, prep your skin with toner, then apply a suitable amount of the Callus Repair Ampoule.</li><li>Apply over the entire face with a gentle rolling motion.</li></ol></div>
+            <div><h3>STEP 03 · Callus Repair Cream</h3><ol><li>After cleansing, at the last step of your basic skincare, take a suitable amount, spread it thinly, then pat lightly to help it absorb.</li><li>Once the first layer has absorbed, apply a second layer and let it absorb to stay even more hydrated, with no worry about inner dryness.</li></ol></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 14쪽 연락처 -->
+      <section id="contact" class="rule-top">
+        <div class="wrap contact-grid">
+          <div>
+            <span class="label">Contact</span>
+            <h2 class="h2">Samples and contact</h2>
+            <dl class="contact-table">
+              <div><dt>Company</dt><dd>Ezer Co., Ltd.</dd></div>
+              <div><dt>Contact</dt><dd>Hyeonjeong Jeong, CEO</dd></div>
+              <div><dt>Email</dt><dd><a href="mailto:laezer@naver.com">laezer@naver.com</a></dd></div>
+              <div><dt>Address</dt><dd>#1018, 66 Daehwa-ro 106beon-gil, Daedeok-gu, Daejeon, Korea</dd></div>
+            </dl>
+            <p class="contact-slogan">TIMELESS RADIANCE AND BEAUTY</p>
+          </div>
+          <form class="buyer-form" name="buyer-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks-buyer-en.html">
+            <input type="hidden" name="form-name" value="buyer-inquiry" />
+            <p class="buyer-form__hp"><label>Leave this field empty <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
+            <p class="buyer-form__intro">If you need samples or trade terms, leave your details below. We will reply by email within 1 business day.</p>
+            <div class="buyer-form__grid">
+              <div class="field"><label for="bf-company">Company<span class="req">Required</span></label><input id="bf-company" name="회사명" type="text" required autocomplete="organization" /></div>
+              <div class="field"><label for="bf-name">Contact name<span class="req">Required</span></label><input id="bf-name" name="담당자명" type="text" required autocomplete="name" /></div>
+              <div class="field"><label for="bf-email">Email<span class="req">Required</span></label><input id="bf-email" name="이메일" type="email" required inputmode="email" autocomplete="email" spellcheck="false" /></div>
+              <div class="field"><label for="bf-phone">Phone<span class="opt">Optional</span></label><input id="bf-phone" name="전화번호" type="tel" inputmode="tel" autocomplete="tel" placeholder="Include country code" /></div>
+              <div class="field"><label for="bf-country">Country / Region<span class="req">Required</span></label><input id="bf-country" name="국가" type="text" required autocomplete="country-name" placeholder="e.g. Mongolia, Japan, Uzbekistan" /></div>
+              <div class="field"><label for="bf-interest">Product interest<span class="opt">Optional</span></label>
+                <select id="bf-interest" name="관심품목">
+                  <option value="">Please select</option>
+                  <option value="3단계 세트 전체">All 3 products on sale</option>
+                  <option value="시카 캡슐 스피큘 앰플">CICA Capsule Spicule Ampoule</option>
+                  <option value="캘러스 리페어 앰플">Callus Repair Ampoule</option>
+                  <option value="캘러스 리페어 크림">Callus Repair Cream</option>
+                  <option value="출시 예정 제품">Upcoming products</option>
+                  <option value="OEM · ODM 문의">OEM · ODM inquiry</option>
+                  <option value="아직 정하지 않음">Not decided yet</option>
+                </select>
               </div>
             </div>
-          </div>
-
-          <!-- STEP 02 — Callus Repair Ampoule -->
-          <div class="product-card reveal d1">
-            <div class="product-media">
-              <span class="product-step-tag">Step 2 · Ampoule</span>
-              <img src="images/products/LZ-002_peptide-ampoule.png" alt="LaEzer Callus Repair Ampoule" loading="lazy" />
-            </div>
-            <div class="product-body">
-              <span class="product-role">An intensive ampoule that deeply hydrates and adds firmness and vitality</span>
-              <h3 class="product-name">Callus Repair Ampoule</h3>
-              <span class="product-name-en">30mL</span>
-              <p class="product-desc">With edelweiss callus and 9 peptides, it provides intensive care for dry skin lacking firmness.
-                Apply gently over the entire face after the Spicule Ampoule.</p>
-              <div class="product-ingredients">
-                <span>Edelweiss callus</span><span>9 peptides</span><span>11 hyaluronic acids</span><span>Vegan certified</span>
-              </div>
-              <div class="product-foot">
-                <a href="#buyer" class="btn btn-primary" style="padding:11px 18px;font-size:.9rem;width:100%">Request samples</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- STEP 03 — Callus Repair Cream -->
-          <div class="product-card reveal d2">
-            <div class="product-media">
-              <span class="product-step-tag">Step 3 · Cream</span>
-              <img src="images/products/LZ-003_callus-cream.png" alt="LaEzer Callus Repair Cream" loading="lazy" />
-            </div>
-            <div class="product-body">
-              <span class="product-role">A barrier-strengthening cream that locks in moisture and keeps skin comfortable</span>
-              <h3 class="product-name">Callus Repair Cream</h3>
-              <span class="product-name-en">50mL</span>
-              <p class="product-desc">With edelweiss callus and Derma-Clera™, it completes your hydrating, soothing and firming care.
-                Apply after the Callus Repair Ampoule.</p>
-              <div class="product-ingredients">
-                <span>Edelweiss callus</span><span>Derma-Clera™</span><span>9 peptides</span><span>Vegan certified</span>
-              </div>
-              <div class="product-foot">
-                <a href="#buyer" class="btn btn-primary" style="padding:11px 18px;font-size:.9rem;width:100%">Request samples</a>
-              </div>
-            </div>
-          </div>
+            <div class="field field--full"><label for="bf-message">Message<span class="opt">Optional</span></label><textarea id="bf-message" name="문의내용" rows="3" placeholder="Distribution channel, expected volume, timeline"></textarea></div>
+            <label class="buyer-form__consent"><input type="checkbox" name="개인정보동의" value="동의" required /><span>We collect your company name, contact name and contact details to reply to your inquiry, keep them for 3 years after the inquiry closes, and then destroy them. You may decline to consent, but in that case we will be unable to reply.</span></label>
+            <button type="submit" class="btn">Send sample request</button>
+          </form>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ===== 6-1. Upcoming lineup ===== -->
-    <section class="lineup bg-mist" id="lineup">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow center">Coming Soon</span>
-          <h2 class="section-title">Five products <span class="title-accent">on the way</span></h2>
-          <p class="section-sub">Expanding the LaEzer routine from cleansing and intensive care to final UV protection</p>
+      <section class="retail">
+        <div class="wrap">
+          <span>Retail in Korea: Own online store · Naver Smart Store · Coupang</span>
+          <span><a href="https://laezer.co.kr" target="_blank" rel="noopener">laezer.co.kr</a><a href="https://smartstore.naver.com/laezer" target="_blank" rel="noopener">smartstore.naver.com/laezer</a></span>
         </div>
-        <div class="lineup-grid">
-          <article class="lineup-card reveal">
-            <span class="lineup-tag">Mask · 25 mL × 10 sheets</span>
-            <h3>PDRN Semi-Gel Mask</h3>
-            <p>A semi-gel sheet mask with rose water and PDRN that clings closely for lasting hydration</p>
-            <span class="lineup-meta">Rose water 5% · PDRN · Niacinamide 5% · Adenosine</span>
-          </article>
-          <article class="lineup-card reveal">
-            <span class="lineup-tag">Cleanser · 50 mL</span>
-            <h3>Ginseng Vitamin Powder Cleanser</h3>
-            <p>A tonic for your skin: a daily powder cleanser with ginseng and vitamin therapy</p>
-            <span class="lineup-meta">Ginseng · Vitamins · Zero chemical surfactants · 100% naturally derived enzymes</span>
-          </article>
-          <article class="lineup-card reveal">
-            <span class="lineup-tag">Ampoule · 4 mL × 6 vials</span>
-            <h3>PDRN Core Ampoule</h3>
-            <p>Core care that restores basic hydration for firm, resilient skin</p>
-            <span class="lineup-meta">Panthenol 10% · PDRN 2% · 9 peptides</span>
-          </article>
-          <article class="lineup-card reveal">
-            <span class="lineup-tag">Ampoule · 4 mL × 6 vials</span>
-            <h3>Mela Bright Ampoule</h3>
-            <p>Targets dull skin tone and dark spots — a brightening ampoule for a clear, even glow</p>
-            <span class="lineup-meta">Niacinamide 10% · Tranexamic acid 3% · Panthenol 10% · PDRN 0.3% · 9 peptides</span>
-          </article>
-          <article class="lineup-card reveal">
-            <span class="lineup-tag">Sun Cream · SPF 50</span>
-            <h3>Sun Cream</h3>
-            <p>A daily sun cream with strong UV protection that completes the LaEzer routine</p>
-            <span class="lineup-meta">SPF 50 UV protection</span>
-          </article>
-        </div>
-        <p class="results-note">※ Ingredients, volume and packaging of upcoming products may change during development. Ingredient percentages are based on development formulas.</p>
-      </div>
-    </section>
+      </section>
+    </main>
 
-    <!-- ===== 7. Clinical Results ===== -->
-    <section class="results bg-ivory" id="results">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow center">Human Application Test</span>
-          <h2 class="section-title">Measured on <span class="title-accent">human skin</span></h2>
-          <p class="section-sub">Measured after one use of the 3-step set at the Human Skin Clinical Trial Center, Korea</p>
-        </div>
-        <div class="results-grid results-grid--4">
-          <div class="result-card reveal">
-            <div class="result-icon"><i class="fas fa-tint"></i></div>
-            <div class="result-number">138.10%</div>
-            <h3 class="result-title">Moisture improvement</h3>
-            <p class="result-desc">After one use of the 3-step set</p>
-          </div>
-          <div class="result-card reveal d1">
-            <div class="result-icon"><i class="fas fa-compress"></i></div>
-            <div class="result-number">20.01%</div>
-            <h3 class="result-title">Pore improvement</h3>
-            <p class="result-desc">After one use of the 3-step set</p>
-          </div>
-          <div class="result-card reveal d2">
-            <div class="result-icon"><i class="fas fa-leaf"></i></div>
-            <div class="result-number">8.26%</div>
-            <h3 class="result-title">Soothing improvement</h3>
-            <p class="result-desc">After one use of the 3-step set</p>
-          </div>
-          <div class="result-card reveal d3">
-            <div class="result-icon"><i class="fas fa-gem"></i></div>
-            <div class="result-number">7.40%</div>
-            <h3 class="result-title">Skin texture improvement</h3>
-            <p class="result-desc">After one use of the 3-step set</p>
-          </div>
-        </div>
-        <figure class="proof-figure reveal">
-          <img src="images/005.png"
-               alt="Skin measurements before and after one use of the 3-step routine: pores 20.01%, skin texture 7.40%, moisture 138.10%, soothing 8.26% improvement"
-               loading="lazy" decoding="async" />
-        </figure>
-
-        <p class="results-note">* Human Skin Clinical Trial Center, Korea · after one use of the 3-step set · 100% user satisfaction across 8 items · rated “non-irritating” in a primary skin irritation test · original reports available at meetings · results may vary</p>
-      </div>
-    </section>
-
-    <!-- ===== 8. Ingredients ===== -->
-    <section class="ingredients" id="ingredients">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow center">Ingredients</span>
-          <h2 class="section-title">Four ingredients, <span class="title-accent">chosen</span></h2>
-          <p class="section-sub">The descriptions below refer to ingredient properties only</p>
-        </div>
-
-        <figure class="ing-lead reveal">
-          <img src="images/f1b7e4ceee5b4d438129fa5c83a7d80d.jpg" alt="LaEzer Callus Repair Ampoule"
-               loading="lazy" decoding="async" />
-        </figure>
-        <div class="ing-grid">
-          <div class="ing-card reveal">
-            <div class="ing-icon"><img src="images/ing_edelweiss.png" alt="Edelweiss" /></div>
-            <h3>Plant Stem Cells</h3>
-            <p>Antioxidant power twice as strong as vitamin C. Edelweiss plant stem cell extract delivers a comfortable feeling of moisture to dry, sensitized skin.</p>
-            <span class="ing-tag">With 9 peptides</span>
-          </div>
-          <div class="ing-card reveal d1">
-            <div class="ing-icon"><img src="images/ing_hyaluronic.png" alt="Hyaluronic acid" /></div>
-            <h3>11 Types of Hyaluronic Acid</h3>
-            <p>A range of hyaluronic acids for moisturizing care. Eleven hyaluronic acids, from high to low molecular weight, replenish moisture evenly from the skin’s surface to its inner layers.</p>
-            <span class="ing-tag">Moisture improvement 138.10%</span>
-          </div>
-          <div class="ing-card reveal d2">
-            <div class="ing-icon"><img src="images/ing_dermaclera.png" alt="Derma-Clera" /></div>
-            <h3>Derma-Clera™ (Patented)</h3>
-            <p>A plant-derived patented ingredient from Baekmi flower (Cynanchum atratum) comfortably soothes skin sensitized by irritation and gently cares for disrupted skin balance.</p>
-            <span class="ing-tag">Patent KR 10-1768870</span>
-          </div>
-          <div class="ing-card reveal d3">
-            <div class="ing-icon"><img src="images/ing_cica.png" alt="CICA" /></div>
-            <h3>Soothing Ingredients</h3>
-            <p>5 Centella asiatica extracts are cica-derived ingredients that soothe and comfort sensitized skin. Panthenol · Betaine · Allantoin hydrate and soothe to keep the skin comfortable.</p>
-            <span class="ing-tag">Sensitive-skin tested</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== 9. How to Use ===== -->
-    <section class="howto bg-cream" id="howto">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow center">How to Use</span>
-          <h2 class="section-title">Morning & Evening <span class="title-accent">Care Routine</span></h2>
-          <p class="section-sub">Use the ampoules and the cream together</p>
-        </div>
-        <div class="howto-grid">
-          <div class="routine-card routine-am reveal">
-            <div class="routine-head">
-              <span class="ico"><i class="fas fa-sun"></i></span>
-              <div><h3>Morning Routine</h3><small>Light, and fast to absorb</small></div>
-            </div>
-            <div class="routine-steps">
-              <div class="routine-step"><span class="n">1</span><div><b>Cleanse & Tone</b><p>Wash your face and prep the skin with toner.</p></div></div>
-              <div class="routine-step"><span class="n">2</span><div><b>Callus Repair Ampoule</b><p>Fills with moisture. Absorbs quickly and leaves a soft glow.</p></div></div>
-              <div class="routine-step"><span class="n">3</span><div><b>Cream (thin layer)</b><p>Spread a thin layer to lock in moisture.</p></div></div>
-              <div class="routine-step"><span class="n">4</span><div><b>Sunscreen</b><p>Apply once the cream has absorbed.</p></div></div>
-            </div>
-            <div class="routine-tip"><i class="fas fa-lightbulb"></i><span>In the morning, spread a thin layer and apply sunscreen once it has absorbed.</span></div>
-          </div>
-
-          <div class="routine-card routine-pm reveal d1">
-            <div class="routine-head">
-              <span class="ico"><i class="fas fa-moon"></i></span>
-              <div><h3>Evening Routine</h3><small>Intensive overnight care</small></div>
-            </div>
-            <div class="routine-steps">
-              <div class="routine-step"><span class="n">1</span><div><b>Cleanse & Tone</b><p>Wash away the day and prep the skin.</p></div></div>
-              <div class="routine-step"><span class="n">2</span><div><b>CICA Spicule Ampoule (every other day)</b><p>Refines skin texture. It may tingle, so avoid the eye and lip area.</p></div></div>
-              <div class="routine-step"><span class="n">3</span><div><b>Callus Repair Ampoule (generous)</b><p>Apply generously to focus on hydration and firmness.</p></div></div>
-              <div class="routine-step"><span class="n">4</span><div><b>Cream (generous)</b><p>Seals in moisture overnight and protects the skin barrier.</p></div></div>
-            </div>
-            <div class="routine-tip"><i class="fas fa-lightbulb"></i><span>Apply generously before bed and the moisture lasts until morning.</span></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== 10. Certifications ===== -->
-    <section class="certs" id="certs">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow center">Certifications & Verification</span>
-          <h2 class="section-title">You can check <span class="title-accent">the documents</span></h2>
-          <p class="section-sub">Original certificates and test reports are available at meetings</p>
-        </div>
-        <div class="cert-grid">
-          <div class="cert-card reveal">
-            <div class="cert-visual"><img src="images/001.png" alt="Vegan certificate" /></div>
-            <div class="cert-body"><h4>Vegan Certification</h4><p>Made only with plant-based ingredients and officially vegan certified</p></div>
-          </div>
-          <div class="cert-card reveal d1">
-            <div class="cert-visual"><img src="images/002.png" alt="Sensitive skin test report" /></div>
-            <div class="cert-body"><h4>Sensitive Skin Test</h4><p>Tested on sensitive skin and confirmed non-irritating</p></div>
-          </div>
-          <div class="cert-card reveal d2">
-            <div class="cert-visual"><img src="images/003.png" alt="Patent certificate" /></div>
-            <div class="cert-body"><h4>Patented Ingredient</h4><p>Derma-Clera™, a plant-derived patented ingredient from Baekmi flower · Patent KR 10-1768870</p></div>
-          </div>
-          <div class="cert-card reveal d3">
-            <div class="cert-visual"><img src="images/004.png" alt="Report for functional cosmetics exempt from review" /></div>
-            <div class="cert-body"><h4>Brightening &amp; Anti-wrinkle</h4><p>A dual functional product for brightening and wrinkle care (reported to the MFDS)</p></div>
-          </div>
-        </div>
-        <p class="results-note" style="margin-top:24px">※ The sensitive-skin test confirms suitability for use; it does not mean that no one will ever experience irritation.</p>
-      </div>
-    </section>
-
-    <!-- ===== 12. Buyer inquiry ===== -->
-    <section class="buyer" id="buyer">
-      <div class="container container--narrow">
-        <div class="section-head reveal">
-          <span class="eyebrow center">Samples and contact</span>
-          <h2 class="section-title">Buyer Inquiries</h2>
-          <p class="section-sub">
-            If you are considering distribution, import or exclusive rights, leave your details.
-            We will prepare samples and our company profile and reply within one business day.
-          </p>
-        </div>
-
-
-        <div class="buyer-fit reveal">
-          <p class="buyer-fit__title">We are looking to work with</p>
-          <ul class="buyer-fit__list">
-            <li>Importers running a cosmetics distribution network in their market</li>
-            <li>Distributors and select retailers in dermo-cosmetics and skincare</li>
-            <li>Companies preparing their own brand through OEM / ODM</li>
-          </ul>
-          <ul class="buyer-fit__trust" aria-label="Certifications">
-            <li>Vegan certified</li>
-            <li>Dual functional: brightening · anti-wrinkle</li>
-            <li>Human application test</li>
-            <li>Patent 10-1768870</li>
-          </ul>
-        </div>
-
-        <form
-          class="buyer-form reveal"
-          name="buyer-inquiry"
-          method="POST"
-          data-netlify="true"
-          netlify-honeypot="bot-field"
-          action="/thanks-buyer-en.html">
-          <input type="hidden" name="form-name" value="buyer-inquiry" />
-          <p class="buyer-form__hp">
-            <label>Leave this field empty <input name="bot-field" tabindex="-1" autocomplete="off" /></label>
-          </p>
-
-          <div class="buyer-form__grid">
-            <div class="field">
-              <label for="bf-company">Company <span class="req">Required</span></label>
-              <input id="bf-company" name="회사명" type="text" required autocomplete="organization" />
-            </div>
-            <div class="field">
-              <label for="bf-name">Contact name <span class="req">Required</span></label>
-              <input id="bf-name" name="담당자명" type="text" required autocomplete="name" />
-            </div>
-            <div class="field">
-              <label for="bf-email">Email <span class="req">Required</span></label>
-              <input id="bf-email" name="이메일" type="email" required inputmode="email" autocomplete="email" />
-              <span class="field__help">We will reply to this address</span>
-            </div>
-            <div class="field">
-              <label for="bf-phone">Phone <span class="opt">Optional</span></label>
-              <input id="bf-phone" name="전화번호" type="tel" inputmode="tel" autocomplete="tel" placeholder="Include country code" />
-            </div>
-            <div class="field">
-              <label for="bf-country">Country / Region <span class="req">Required</span></label>
-              <input id="bf-country" name="국가" type="text" required autocomplete="country-name" placeholder="e.g. Mongolia, Japan, Korea" />
-            </div>
-            <div class="field">
-              <label for="bf-interest">Product interest <span class="opt">Optional</span></label>
-              <select id="bf-interest" name="관심품목">
-                <option value="">Please select</option>
-                <option>Full 3-step set</option>
-                <option>CICA Capsule Spicule Ampoule</option>
-                <option>Callus Repair Ampoule</option>
-                <option>Callus Repair Cream</option>
-                <option>Upcoming products</option>
-                <option>OEM / ODM</option>
-                <option>Not decided yet</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="field field--full">
-            <label for="bf-message">Message <span class="opt">Optional</span></label>
-            <textarea id="bf-message" name="문의내용" rows="3" placeholder="Distribution channel, expected volume, timeline"></textarea>
-          </div>
-
-          <label class="buyer-form__consent">
-            <input type="checkbox" name="개인정보동의" value="동의" required />
-            <span>
-              We collect your company name, contact name and contact details to respond to this
-              inquiry, and keep them for three years after the inquiry closes.
-            </span>
-          </label>
-
-          <button type="submit" class="btn btn-primary btn-lg btn-block">Send inquiry</button>
-
-          <p class="buyer-form__note">
-            You can also email us directly at <a href="mailto:laezer@naver.com">laezer@naver.com</a> (contact: Hyeon-jeong Jeong, CEO).
-          </p>
-        </form>
-      </div>
-    </section>
-
-    <!-- ===== 11. CTA (purchase) ===== -->
-    <section class="cta" id="contact">
-      <div class="container">
-        <div class="cta-inner reveal">
-          <span class="eyebrow center">Retail in Korea</span>
-          <h2>How we sell<br />in Korea</h2>
-          <p>The three products on sale are sold <strong>directly to consumers</strong> through our own online store,
-            Naver Smart Store and Coupang.</p>
-          <div class="cta-channels">
-            <a href="https://laezer.co.kr" target="_blank" rel="noopener" class="cta-channel primary">
-              <span class="ch-label"><i class="fas fa-shopping-bag"></i> Official Online Store</span>
-              <span class="ch-sub">Ezer Co., Ltd official store</span>
-              <span class="ch-val">laezer.co.kr</span>
-            </a>
-            <a href="https://smartstore.naver.com/laezer" target="_blank" rel="noopener" class="cta-channel">
-              <span class="ch-label"><i class="fas fa-store"></i> Naver Smart Store</span>
-              <span class="ch-sub">Easy checkout with Naver Pay</span>
-              <span class="ch-val">smartstore.naver.com/laezer</span>
-            </a>
-          </div>
-          <p class="cta-note">
-            Consumer questions: <a href="mailto:laezer@naver.com" style="color:var(--green-crystal);text-decoration:underline">laezer@naver.com</a>.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== Footer ===== -->
     <footer class="footer">
-      <div class="container">
-        <div class="footer-top">
-          <div class="footer-brand">
-            <div class="footer-logo">LaEzer</div>
-            <p class="footer-tagline">Timeless Radiance and Beauty<br />Radiant beauty that transcends time</p>
-            <div class="footer-social">
-              <a href="https://www.instagram.com/zia.laezer" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-              <a href="https://m.me/soulalpaca" target="_blank" rel="noopener" aria-label="Messenger"><i class="fab fa-facebook-messenger"></i></a>
-              <a href="https://www.youtube.com/watch?v=FHtmHfhk6FY" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-            </div>
-          </div>
-          <div class="footer-col">
-            <h4>Products</h4>
-            <ul>
-              <li><a href="#products">CICA Capsule Spicule Ampoule</a></li>
-              <li><a href="#products">Callus Repair Ampoule</a></li>
-              <li><a href="#products">Callus Repair Cream</a></li>
-              <li><a href="#lineup">5 products coming soon</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h4>Information</h4>
-            <ul>
-              <li><a href="#company">Company</a></li>
-              <li><a href="#history">History</a></li>
-              <li><a href="#results">Human Application Test</a></li>
-              <li><a href="#certs">Certificates</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h4>Inquiry &amp; Retail</h4>
-            <ul>
-              <li><a href="#buyer">Buyer Inquiries</a></li>
-              <li><a href="https://laezer.co.kr" target="_blank" rel="noopener">Official Online Store</a></li>
-              <li><a href="https://smartstore.naver.com/laezer" target="_blank" rel="noopener">Naver Smart Store</a></li>
-              <li><a href="mailto:laezer@naver.com">laezer@naver.com</a></li>
-            </ul>
-          </div>
+      <div class="wrap">
+        <div>
+          <span class="wordmark" role="img" aria-label="LaEzer"><svg class="wm" viewBox="0 0 3136 864" aria-hidden="true" focusable="false"><use href="#wm"></use></svg></span>
+          <p>Timeless Radiance and Beauty</p>
         </div>
-        <div class="footer-bottom">
-          <p>&copy; 2026 LaEzer · Ezer Co., Ltd. All rights reserved.</p>
-          <p>Ezer Co., Ltd · #1018, 66 Daehwa-ro 106beon-gil, Daedeok-gu, Daejeon, Republic of Korea · CEO: Hyeonjeong Jeong</p>
+        <div>
+          <p>&copy; 2026 LaEzer · Ezer Co., Ltd. · CEO Hyeonjeong Jeong</p>
+          <p>#1018, 66 Daehwa-ro 106beon-gil, Daedeok-gu, Daejeon, Korea</p>
         </div>
       </div>
     </footer>
 
-    <button id="scrollTop" class="scroll-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+    <button id="scrollTop" class="scroll-top" type="button" aria-label="Back to top">↑</button>
     <script src="js/script.js"></script>
     <script src="js/lang-pref.js"></script>
   </body>
